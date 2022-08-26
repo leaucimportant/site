@@ -10,7 +10,9 @@
     "test": "ng test",
     "git:prune": "git remote prune origin",
     "git:rebase": "git rebase -i --autosquash main",
-    "git:push": "git push --force-with-lease"
+    "git:push": "git push --force-with-lease",
+    "scully": "npx scully --project impactiv --scanRoutes",
+    "scully:serve": "npx scully serve --project impactiv"
   },
   "private": true,
   "dependencies": {
@@ -22,9 +24,15 @@
     "@angular/localize": "^14.1.0",
     "@angular/platform-browser": "^14.1.0",
     "@angular/platform-browser-dynamic": "^14.1.0",
+    "@angular/platform-server": "^14.1.0",
     "@angular/router": "^14.1.0",
     "@ng-bootstrap/ng-bootstrap": "^13.0.0",
     "@popperjs/core": "^2.10.2",
+    "@scullyio/init": "2.1.36",
+    "@scullyio/ng-lib": "^2.1.0",
+    "@scullyio/platform-server": "^2.1.0",
+    "@scullyio/scully": "^2.1.0",
+    "@scullyio/scully-plugin-puppeteer": "^2.1.36",
     "bootstrap": "^5.2.0",
     "primeicons": "^5.0.0",
     "primeng": "^14.0.2",
