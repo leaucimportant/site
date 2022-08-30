@@ -1,11 +1,10 @@
-.parent {
+.grid-container {
     display: grid;
-    grid-template-columns: repeat(12, 2fr);
-    grid-template-rows: repeat(4, 2fr);
-    grid-auto-rows: 200px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     grid-column-gap: 24px;
     grid-row-gap: 24px;
-    height: 28rem;
+    height: 26rem;
     
     div {
         background-color: #0575E6;
