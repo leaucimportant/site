@@ -55,9 +55,11 @@
 }
 .div15 {
     grid-area: 2 / 10 / 4 / 13;
+    margin-right: 15px;
 }
 .div16 {
     grid-area: 4 / 10 / 5 / 13;
+    margin-right: 15px;
 }
 
 .marquee {
@@ -76,7 +78,6 @@
     justify-content: space-around;
     gap: var(--gap);
     min-width: 100%;
-    margin-left: 15px;
 }
 
 @keyframes scroll {
