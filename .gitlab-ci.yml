@@ -1,8 +1,13 @@
 # The Docker image that will be used to build your app
 image: node:16.17.0-alpine
+
+variables:
+    PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: 'true'
+
 # Functions that should be executed before the build script is run
 before_script:
   - corepack enable
+  - apk add --no-cache nss chromium freetype harfbuzz ca-certificates ttf-freefont
   - yarn
 pages:
   script:
@@ -10,9 +15,6 @@ pages:
     - yarn run scully
   artifacts:
     paths:
-      # The folder that contains the files to be exposed at the Page URL
       - public
   rules:
-    # This ensures that only pushes to the default branch will trigger
-    # a pages deploy
     - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
