@@ -1,0 +1,21 @@
+# The Docker image that will be used to build your app
+image: node:16.17.0-alpine
+
+variables:
+    PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: 'true'
+    SCULLY_PUPPETEER_EXECUTABLE_PATH: /usr/bin/chromium-browser
+
+# Functions that should be executed before the build script is run
+before_script:
+  - corepack enable
+  - apk add --no-cache nss chromium freetype harfbuzz ca-certificates ttf-freefont
+  - yarn
+pages:
+  script:
+    - yarn run build
+    - yarn run scully
+  artifacts:
+    paths:
+      - public
+  rules:
+    - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
