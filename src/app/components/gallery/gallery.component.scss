@@ -6,12 +6,15 @@
     grid-row-gap: 24px;
     height: 26rem;
 
-    // Temporairement le temps du dev
     div {
-        background-color: #0575e6;
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+    }
+
+    .square {
+        padding-top: 100%; /* padding trick pour les images carrés */
+        box-sizing: border-box;
     }
 }
 
@@ -90,16 +93,17 @@
     user-select: none;
     gap: var(--gap);
     height: 31rem;
+
+    &__content {
+        flex-shrink: 0;
+        display: flex;
+        justify-content: space-around;
+        gap: var(--gap);
+        min-width: 100%;
+    }
 }
 
-.marquee__content {
-    flex-shrink: 0;
-    display: flex;
-    justify-content: space-around;
-    gap: var(--gap);
-    min-width: 100%;
-}
-
+// Animation 
 @keyframes scroll {
     from {
         transform: translateX(0);
