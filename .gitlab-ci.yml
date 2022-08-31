@@ -3,6 +3,7 @@ image: node:16.17.0-alpine
 
 variables:
     PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: 'true'
+    PUPPETEER_EXECUTABLE_PATH: /usr/bin/chromium-browser
 
 # Functions that should be executed before the build script is run
 before_script:
