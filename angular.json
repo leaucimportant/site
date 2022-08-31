@@ -94,5 +94,8 @@
       }
     }
   },
-  "defaultProject": "impactiv"
+  "defaultProject": "impactiv",
+  "cli": {
+    "analytics": false
+  }
 }
