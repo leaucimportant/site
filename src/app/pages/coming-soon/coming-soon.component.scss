@@ -42,6 +42,16 @@
         background-size: auto;
         opacity: 0.05;
     }
+
+    @media (max-width: 576px) {
+        padding-top: 2rem;
+        .impactiv-display-large {
+            max-width: 80%;
+        }
+        .impactiv-body-large {
+            max-width: 80%;
+        }
+      }
 }
 
 @keyframes slide {
@@ -61,3 +71,6 @@
         transform: translate(0, 0);
       }
   }
+
+ 
+  
