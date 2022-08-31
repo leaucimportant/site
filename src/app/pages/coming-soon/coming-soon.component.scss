@@ -23,6 +23,11 @@
     }
     .btn {
         padding: 0.75rem 1.5rem 0.75rem 1.5rem;
+        &:hover {
+            img {
+                animation: slide 1s ease-in-out infinite;
+            }
+        }
     }
     .noise {
         position: fixed;
@@ -30,11 +35,29 @@
         top: -80%;
         right: 0;
         bottom: -80%;
-        z-index: 0;
+        z-index: -1;
         display: block;
         background-image: url("../../../assets/images/bg/noise.gif");
         background-position: 0 0;
         background-size: auto;
-        opacity: .05;
+        opacity: 0.05;
     }
 }
+
+@keyframes slide {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    30% {
+        transform: translate(-5px, 5px);
+    }
+  
+    50% {
+      transform: translate(5px, -5px);
+    }
+    
+    100% {
+        transform: translate(0, 0);
+      }
+  }
