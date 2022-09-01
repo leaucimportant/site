@@ -100,10 +100,11 @@
         justify-content: space-around;
         gap: var(--gap);
         min-width: 100%;
+        animation: scroll 15s linear infinite;
     }
 }
 
-// Animation 
+// Animation
 @keyframes scroll {
     from {
         transform: translateX(0);
@@ -112,6 +113,29 @@
         transform: translateX(calc(-100% - var(--gap)));
     }
 }
-.marquee__content {
-    animation: scroll 15s linear infinite;
+
+@media (max-width: 992px) {
+    .marquee {
+        height: 38rem;
+        &__content {
+            min-width: 200%;
+        }
+    }
+    .grid-container {
+        height: 33rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .grid-container {
+        grid-column-gap: 16px;
+        grid-row-gap: 16px;
+        height: 26rem;
+    }
+    .marquee {
+        height: 28rem;
+        &__content {
+            min-width: 300%;
+        }
+    }
 }

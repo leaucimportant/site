@@ -64,7 +64,22 @@ body {
 }
 
 // Titles mobiles
-@media (max-width: 576px) {
+@media (max-width: 992px) {
+    .impactiv-display-large {
+        font-size: 3rem;
+        line-height: 3.5rem;
+    }
+    .impactiv-body-large {
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+    }
+    .impactiv-button-large {
+        font-size: 1.1rem;
+        line-height: 1.5rem;
+    }
+  }
+
+@media (max-width: 768px) {
     .impactiv-display-large {
         font-size: 2rem;
         line-height: 2.5rem;
@@ -78,4 +93,6 @@ body {
         line-height: 1.5rem;
     }
   }
+  
+
   
