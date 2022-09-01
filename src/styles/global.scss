@@ -94,5 +94,19 @@ body {
     }
   }
   
+  @media (max-width: 400px) {
+    .impactiv-display-large {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+    .impactiv-body-large {
+        font-size: 0.8rem;
+        line-height: 1.25rem;
+    }
+    .impactiv-button-large {
+        font-size: 0.75rem;
+        line-height: 1rem;
+    }
+  }
 
   
