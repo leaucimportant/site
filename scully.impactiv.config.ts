@@ -8,7 +8,7 @@ const RegexPlugin = getRegexPlugin();
 setPluginConfig(RegexPlugin, {
   replacements: [
     {
-      from: 'href="mailto:test@example.fr"',
+      from: 'href="mailto:bonjour@impactiv.fr"',
       to: '',
     },
   ],

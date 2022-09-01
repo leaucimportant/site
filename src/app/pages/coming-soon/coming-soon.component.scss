@@ -2,6 +2,7 @@
     padding-top: 3.5rem;
     .impactiv-display-large {
         max-width: 80%;
+        padding-top: 3rem;
     }
     .impactiv-body-large {
         max-width: 60%;
@@ -15,6 +16,9 @@
             width: 12rem;
             height: 7rem;
         }
+    }
+    .arrow {
+        margin-left: 1.5rem;
     }
     .btn {
         padding: 0.75rem 1.5rem 0.75rem 1.5rem;
@@ -42,6 +46,7 @@
         padding-top: 2rem;
         .impactiv-display-large {
             max-width: 80%;
+            padding-top: 2rem;
         }
         .impactiv-body-large {
             max-width: 90%;
@@ -54,6 +59,9 @@
         }
         .btn {
             padding: 0.75rem 1.25rem 0.75rem 1.25rem;
+        }
+        .arrow {
+            margin-left: 1rem;
         }
       }
 }
