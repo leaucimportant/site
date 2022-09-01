@@ -4,12 +4,12 @@ html {
 }
 
 body {
-    background-color: #111;
+    background-color: #101B26;
     color: white;
     font-family: "Poppins";
     width: 100%;
     height: 100%;
-    background: url("../assets/images/bg/grid.png"), #111;
+    background: url("../assets/images/bg/grid.png"), #101B26;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -64,7 +64,22 @@ body {
 }
 
 // Titles mobiles
-@media (max-width: 576px) {
+@media (max-width: 992px) {
+    .impactiv-display-large {
+        font-size: 3rem;
+        line-height: 3.5rem;
+    }
+    .impactiv-body-large {
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+    }
+    .impactiv-button-large {
+        font-size: 1.1rem;
+        line-height: 1.5rem;
+    }
+  }
+
+@media (max-width: 768px) {
     .impactiv-display-large {
         font-size: 2rem;
         line-height: 2.5rem;
@@ -73,5 +88,25 @@ body {
         font-size: 0.9rem;
         line-height: 1.5rem;
     }
+    .impactiv-button-large {
+        font-size: 0.875rem;
+        line-height: 1.5rem;
+    }
   }
+  
+  @media (max-width: 380px) {
+    .impactiv-display-large {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+    .impactiv-body-large {
+        font-size: 0.8rem;
+        line-height: 1.25rem;
+    }
+    .impactiv-button-large {
+        font-size: 0.75rem;
+        line-height: 1rem;
+    }
+  }
+
   

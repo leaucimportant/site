@@ -1,25 +1,24 @@
 .impactiv-coming-soon {
-    padding-top: 4rem;
+    padding-top: 3.5rem;
     .impactiv-display-large {
         max-width: 80%;
+        padding-top: 3rem;
     }
     .impactiv-body-large {
         max-width: 60%;
         opacity: 0.87;
     }
     .img__container {
-        width: 4rem;
-        height: 4rem;
-        background: linear-gradient(136.81deg, rgba(255, 255, 255, 0.4) 2.02%, rgba(255, 255, 255, 0.1) 101.07%);
-        border: 1px solid rgba(255, 255, 255, 0.4);
-        border-radius: 8px;
         display: flex;
         justify-content: center;
         align-items: center;
         .img {
-            width: 2rem;
-            height: 2rem;
+            width: 12rem;
+            height: 7rem;
         }
+    }
+    .arrow {
+        margin-left: 1.5rem;
     }
     .btn {
         padding: 0.75rem 1.5rem 0.75rem 1.5rem;
@@ -43,15 +42,39 @@
         opacity: 0.05;
     }
 
+    @media (max-width: 992px) {
+        padding-top: 2rem;
+        .impactiv-body-large {
+            max-width: 90%;
+        }
+    }
+
     @media (max-width: 576px) {
         padding-top: 2rem;
         .impactiv-display-large {
             max-width: 80%;
+            padding-top: 2rem;
         }
         .impactiv-body-large {
-            max-width: 80%;
+            max-width: 90%;
         }
-      }
+        .img__container {
+            .img {
+                width: 8rem;
+                height: 5rem;
+            }
+        }
+        .btn {
+            padding: 0.75rem 1.25rem 0.75rem 1.25rem;
+        }
+        .arrow {
+            margin-left: 1rem;
+        }
+    }
+
+    @media (max-width: 380px) {
+        padding-top: 6rem;
+    }
 }
 
 @keyframes slide {
@@ -62,15 +85,12 @@
     30% {
         transform: translate(-5px, 5px);
     }
-  
+
     50% {
-      transform: translate(5px, -5px);
+        transform: translate(5px, -5px);
     }
-    
+
     100% {
         transform: translate(0, 0);
-      }
-  }
-
- 
-  
+    }
+}
