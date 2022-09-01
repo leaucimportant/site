@@ -1,5 +1,5 @@
 .impactiv-coming-soon {
-    padding-top: 4rem;
+    padding-top: 3.5rem;
     .impactiv-display-large {
         max-width: 80%;
     }
@@ -8,17 +8,12 @@
         opacity: 0.87;
     }
     .img__container {
-        width: 4rem;
-        height: 4rem;
-        background: linear-gradient(136.81deg, rgba(255, 255, 255, 0.4) 2.02%, rgba(255, 255, 255, 0.1) 101.07%);
-        border: 1px solid rgba(255, 255, 255, 0.4);
-        border-radius: 8px;
         display: flex;
         justify-content: center;
         align-items: center;
         .img {
-            width: 2rem;
-            height: 2rem;
+            width: 12rem;
+            height: 7rem;
         }
     }
     .btn {
