@@ -1,6 +1,7 @@
 .footer {
     background: rgba(16, 27, 38, 0.85);
     border-top: 1px solid #1D1D1D;
+    -webkit-backdrop-filter: blur(40px);
     backdrop-filter: blur(40px);
     z-index: 2000;
     &__row {
