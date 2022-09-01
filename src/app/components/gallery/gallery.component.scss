@@ -36,11 +36,11 @@
 }
 .div5 {
     grid-area: 2 / 3 / 3 / 5;
-    background-image: url("../../../assets/images/gallery/3d.png");
+    background-image: url("../../../assets/images/gallery/affichage.png");
 }
 .div6 {
     grid-area: 3 / 3 / 5 / 4;
-    background-image: url("../../../assets/images/gallery/total.png");
+    background-image: url("../../../assets/images/gallery/tour.png");
 }
 .div7 {
     grid-area: 3 / 4 / 4 / 5;
@@ -60,11 +60,11 @@
 }
 .div11 {
     grid-area: 2 / 7 / 5 / 9;
-    background-image: url("../../../assets/images/gallery/defense.png");
+    background-image: url("../../../assets/images/gallery/hall.png");
 }
 .div12 {
     grid-area: 1 / 9 / 2 / 10;
-    background-image: url("../../../assets/images/gallery/notion.svg");
+    background-image: url("../../../assets/images/gallery/gitlab.png");
 }
 .div13 {
     grid-area: 2 / 9 / 3 / 10;
@@ -140,7 +140,7 @@
     }
 }
 
-@media (max-width: 400px)  {
+@media (max-width: 380px)  {
     .marquee {
         display: none;
     }
