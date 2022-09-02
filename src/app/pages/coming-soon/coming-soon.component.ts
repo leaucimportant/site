@@ -8,6 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class ComingSoonComponent implements OnInit {
   email = '';
 
+  name = 'bonjour';
+  domain = 'impactiv.fr';
+
   constructor() {}
 
   ngOnInit(): void {}
