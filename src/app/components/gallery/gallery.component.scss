@@ -1,6 +1,6 @@
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(17, 1fr);
+    grid-template-columns: repeat(29, 1fr);
     grid-template-rows: repeat(4, 1fr);
     grid-column-gap: 24px;
     grid-row-gap: 24px;
@@ -27,66 +27,120 @@
     background-image: url("../../../assets/images/gallery/angular.svg");
 }
 .div3 {
-    grid-area: 3 / 1 / 4 / 3;
-    background-image: url("../../../assets/images/gallery/composant.png");
+    grid-area: 3 / 1 / 5 / 5;
+    background-image: url("../../../assets/images/gallery/coding.gif");
 }
 .div4 {
     grid-area: 2 / 2 / 3 / 4;
-    background-image: url("../../../assets/images/gallery/affichage.png");
+    background-image: url("../../../assets/images/gallery/solutions.gif");
 }
 .div5 {
-    grid-area: 3 / 3 / 4 / 5;
-    background-image: url("../../../assets/images/gallery/coding.gif");
-}
-.div6 {
     grid-area: 1 / 4 / 3 / 6;
     background-image: url("../../../assets/images/gallery/consultation.png");
 }
-.div7 {
-    grid-area: 3 / 5 / 5 / 6;
+.div6 {
+    grid-area: 3 / 5 / 5 / 7;
     background-image: url("../../../assets/images/gallery/tour.png");
+}
+.div7 {
+    grid-area: 1 / 6 / 2 / 7;
+    background-image: url("../../../assets/images/gallery/sodexo.svg");
 }
 .div8 {
     grid-area: 2 / 6 / 3 / 7;
-    background-image: url("../../../assets/images/gallery/sodexo.svg");
-}
-.div9 {
-    grid-area: 3 / 6 / 4 / 7;
     background-image: url("../../../assets/images/gallery/vscode.svg");
 }
-.div10 {
+.div9 {
     grid-area: 2 / 7 / 5 / 9;
     background-image: url("../../../assets/images/gallery/hall.png");
 }
-.div11 {
+.div10 {
     grid-area: 1 / 9 / 2 / 10;
     background-image: url("../../../assets/images/gallery/gitlab.png");
 }
-.div12 {
+.div11 {
     grid-area: 2 / 9 / 3 / 10;
-    background-image: url("../../../assets/images/gallery/sport.svg");
+    background-image: url("../../../assets/images/gallery/sport.png");
+}
+.div12 {
+    grid-area: 3 / 9 / 5 / 12;
+    background-image: url("../../../assets/images/gallery/print.png");
 }
 .div13 {
-    grid-area: 3 / 9 / 5 / 12;
+    // remplacer
+    grid-area: 1 / 10 / 3 / 12;
     background-image: url("../../../assets/images/gallery/postman.png");
 }
 .div14 {
-    grid-area: 1 / 10 / 3 / 13;
-    background-image: url("../../../assets/images/gallery/restaurant.png");
+    grid-area: 1 / 12 / 2 / 13;
+    background-image: url("../../../assets/images/gallery/party.png");
 }
 .div15 {
-    grid-area: 3 / 12 / 4 / 13;
-    background-image: url("../../../assets/images/gallery/mcdo.png");
-}
-.div16 {
-    grid-area: 1 / 13 / 3 / 15;
+    grid-area: 2 / 12 / 4 / 14;
     background-image: url("../../../assets/images/gallery/vin.png");
 }
-.div17 { grid-area: 3 / 13 / 4 / 15; background-image: url("../../../assets/images/gallery/mesure.png");}
-.div18 { grid-area: 1 / 15 / 2 / 16; background-image: url("../../../assets/images/gallery/elior.png");}
-.div19 { grid-area: 2 / 15 / 3 / 16; background-image: url("../../../assets/images/gallery/party.png");}
-.div20 { grid-area: 3 / 15 / 4 / 18; background-image: url("../../../assets/images/gallery/equipe.png"); margin-right: 15px;}
-.div21 { grid-area: 1 / 16 / 3 / 18; background-image: url("../../../assets/images/gallery/composant2.png"); margin-right: 15px;}
+.div16 {
+    grid-area: 1 / 15 / 2 / 16;
+    background-image: url("../../../assets/images/gallery/affluence.png");
+}
+.div17 {
+    grid-area: 2 / 14 / 4 / 16;
+    background-image: url("../../../assets/images/gallery/affluence.png");
+}
+.div18 {
+    grid-area: 1 / 16 / 3 / 19;
+    background-image: url("../../../assets/images/gallery/resto.png");
+}
+.div19 {
+    grid-area: 3 / 16 / 4 / 17;
+    background-image: url("../../../assets/images/gallery/mcdo.png");
+}
+.div20 {
+    grid-area: 3 / 17 / 4 / 19;
+    background-image: url("../../../assets/images/gallery/equipe.png");
+}
+.div21 {
+    grid-area: 1 / 19 / 2 / 21;
+    background-image: url("../../../assets/images/gallery/composant.png");
+}
+.div22 {
+    grid-area: 1 / 21 / 2 / 22;
+    background-image: url("../../../assets/images/gallery/constructa.png");
+}
+.div23 {
+    grid-area: 2 / 19 / 4 / 22;
+    background-image: url("../../../assets/images/gallery/webapp1.png");
+}
+.div24 {
+    grid-area: 2 / 22 / 3 / 23;
+    background-image: url("../../../assets/images/gallery/bootstrap.png");
+}
+.div25 {
+    grid-area: 3 / 22 / 4 / 23;
+    background-image: url("../../../assets/images/gallery/unilever.png");
+}
+.div26 {
+    grid-area: 1 / 23 / 3 / 26;
+    background-image: url("../../../assets/images/gallery/etc.gif");
+}
+.div27 {
+    grid-area: 3 / 23 / 3 / 26;
+    background-image: url("../../../assets/images/gallery/dev.png");
+}
+.div28 {
+    grid-area: 2 / 26 / 3 / 27;
+    background-image: url("../../../assets/images/gallery/cbre.png");
+}
+.div29 {
+    grid-area: 3 / 26 / 4 / 27;
+    background-image: url("../../../assets/images/gallery/figma.png");
+    margin-right: 15px;
+}
+.div30 {
+    grid-area: 2 / 27 / 4 / 30;
+    background-image: url("../../../assets/images/gallery/metro.png");
+    margin-right: 15px;
+}
 
 .marquee {
     --gap: 0.5rem;
@@ -143,7 +197,7 @@
     }
 }
 
-@media (max-width: 380px)  {
+@media (max-width: 380px) {
     .marquee {
         display: none;
     }
