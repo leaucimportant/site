@@ -1,4 +1,8 @@
 .impactiv-coming-soon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
     padding-top: 3.5rem;
     .impactiv-display-large {
         max-width: 80%;
@@ -28,6 +32,8 @@
             }
         }
     }
+
+    // Effet noise continu
     .noise {
         position: fixed;
         left: 0;
@@ -42,6 +48,26 @@
         opacity: 0.05;
     }
 
+    // Animation de la flèche du bouton contactez-nous
+    @keyframes slide {
+        0% {
+            transform: translate(0, 0);
+        }
+
+        30% {
+            transform: translate(-5px, 5px);
+        }
+
+        50% {
+            transform: translate(5px, -5px);
+        }
+
+        100% {
+            transform: translate(0, 0);
+        }
+    }
+
+    // Responsive
     @media (max-width: 992px) {
         padding-top: 2rem;
         .impactiv-body-large {
@@ -74,23 +100,5 @@
 
     @media (max-width: 380px) {
         padding-top: 6rem;
-    }
-}
-
-@keyframes slide {
-    0% {
-        transform: translate(0, 0);
-    }
-
-    30% {
-        transform: translate(-5px, 5px);
-    }
-
-    50% {
-        transform: translate(5px, -5px);
-    }
-
-    100% {
-        transform: translate(0, 0);
     }
 }

@@ -68,7 +68,7 @@
 }
 .div13 {
     grid-area: 1 / 10 / 3 / 12;
-    background-image: url("../../../assets/images/gallery/etc.gif");
+    background-image: url("../../../assets/images/gallery/etiquette.gif");
 }
 .div14 {
     grid-area: 1 / 12 / 2 / 13;
@@ -120,7 +120,7 @@
 }
 .div26 {
     grid-area: 1 / 23 / 3 / 26;
-    background-image: url("../../../assets/images/gallery/etcduo.gif");
+    background-image: url("../../../assets/images/gallery/etiquetteduo.gif");
 }
 .div27 {
     grid-area: 3 / 23 / 3 / 26;
@@ -187,7 +187,7 @@
     .marquee {
         height: 38rem;
         &__content {
-            min-width: 200%;
+            min-width: 400%;
         }
     }
     .grid-container {
@@ -208,7 +208,7 @@
     .marquee {
         height: 28rem;
         &__content {
-            min-width: 740%;
+            min-width: 820%;
             animation: scroll 30s linear infinite;
         }
     }
