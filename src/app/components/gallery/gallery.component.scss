@@ -186,11 +186,11 @@
     .marquee {
         height: 38rem;
         &__content {
-            min-width: 400%;
+            min-width: 450%;
         }
     }
     .grid-container {
-        height: 33rem;
+        height: 29rem;
     }
 }
 
@@ -213,7 +213,7 @@
     }
 }
 
-@media (max-width: 380px) {
+@media (max-width: 380px) and (max-height: 700px) {
     .marquee {
         display: none;
     }
