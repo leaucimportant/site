@@ -17,124 +17,123 @@
         box-sizing: border-box;
     }
 }
-
-.div1 {
+.grid-item-1 {
     grid-area: 1 / 1 / 2 / 2;
     background-image: url("../../../assets/images/gallery/docker.svg");
 }
-.div2 {
+.grid-item-2 {
     grid-area: 2 / 1 / 3 / 2;
     background-image: url("../../../assets/images/gallery/angular.svg");
 }
-.div3 {
+.grid-item-3 {
     grid-area: 3 / 1 / 5 / 5;
     background-image: url("../../../assets/images/gallery/coding.gif");
 }
-.div4 {
+.grid-item-4 {
     grid-area: 2 / 2 / 3 / 4;
     background-image: url("../../../assets/images/gallery/solutions.gif");
 }
-.div5 {
+.grid-item-5 {
     grid-area: 1 / 4 / 3 / 6;
     background-image: url("../../../assets/images/gallery/consultation.png");
 }
-.div6 {
+.grid-item-6 {
     grid-area: 3 / 5 / 5 / 7;
     background-image: url("../../../assets/images/gallery/tour.png");
 }
-.div7 {
+.grid-item-7 {
     grid-area: 1 / 6 / 2 / 7;
     background-image: url("../../../assets/images/gallery/sodexo.svg");
 }
-.div8 {
+.grid-item-8 {
     grid-area: 2 / 6 / 3 / 7;
     background-image: url("../../../assets/images/gallery/vscode.svg");
 }
-.div9 {
+.grid-item-9 {
     grid-area: 2 / 7 / 5 / 9;
     background-image: url("../../../assets/images/gallery/hotel.png");
 }
-.div10 {
+.grid-item-10 {
     grid-area: 1 / 9 / 2 / 10;
     background-image: url("../../../assets/images/gallery/gitlab.png");
 }
-.div11 {
+.grid-item-11 {
     grid-area: 2 / 9 / 3 / 10;
     background-image: url("../../../assets/images/gallery/sport.png");
 }
-.div12 {
+.grid-item-12 {
     grid-area: 3 / 9 / 5 / 12;
     background-image: url("../../../assets/images/gallery/print.png");
 }
-.div13 {
+.grid-item-13 {
     grid-area: 1 / 10 / 3 / 12;
     background-image: url("../../../assets/images/gallery/etiquette.gif");
 }
-.div14 {
+.grid-item-14 {
     grid-area: 1 / 12 / 2 / 13;
     background-image: url("../../../assets/images/gallery/party.png");
 }
-.div15 {
+.grid-item-15 {
     grid-area: 2 / 12 / 4 / 14;
     background-image: url("../../../assets/images/gallery/vin.png");
 }
-.div16 {
+.grid-item-16 {
     grid-area: 1 / 15 / 2 / 16;
     background-image: url("../../../assets/images/gallery/elior.png");
 }
-.div17 {
+.grid-item-17 {
     grid-area: 2 / 14 / 4 / 16;
     background-image: url("../../../assets/images/gallery/affluence.png");
 }
-.div18 {
+.grid-item-18 {
     grid-area: 1 / 16 / 3 / 19;
     background-image: url("../../../assets/images/gallery/resto.png");
 }
-.div19 {
+.grid-item-19 {
     grid-area: 3 / 16 / 4 / 17;
     background-image: url("../../../assets/images/gallery/mcdo.png");
 }
-.div20 {
+.grid-item-20 {
     grid-area: 3 / 17 / 4 / 19;
     background-image: url("../../../assets/images/gallery/equipe.png");
 }
-.div21 {
+.grid-item-21 {
     grid-area: 1 / 19 / 2 / 21;
     background-image: url("../../../assets/images/gallery/composant.png");
 }
-.div22 {
+.grid-item-22 {
     grid-area: 1 / 21 / 2 / 22;
     background-image: url("../../../assets/images/gallery/constructa.png");
 }
-.div23 {
+.grid-item-23 {
     grid-area: 2 / 19 / 4 / 22;
     background-image: url("../../../assets/images/gallery/webapp1.png");
 }
-.div24 {
+.grid-item-24 {
     grid-area: 2 / 22 / 3 / 23;
     background-image: url("../../../assets/images/gallery/bootstrap.png");
 }
-.div25 {
+.grid-item-25 {
     grid-area: 3 / 22 / 4 / 23;
     background-image: url("../../../assets/images/gallery/unilever.png");
 }
-.div26 {
+.grid-item-26 {
     grid-area: 1 / 23 / 3 / 26;
     background-image: url("../../../assets/images/gallery/etiquetteduo.gif");
 }
-.div27 {
+.grid-item-27 {
     grid-area: 3 / 23 / 3 / 26;
     background-image: url("../../../assets/images/gallery/dev.png");
 }
-.div28 {
+.grid-item-28 {
     grid-area: 2 / 26 / 3 / 27;
     background-image: url("../../../assets/images/gallery/cbre.png");
 }
-.div29 {
+.grid-item-29 {
     grid-area: 3 / 26 / 4 / 27;
     background-image: url("../../../assets/images/gallery/figma.png");
 }
-.div30 {
+.grid-item-30 {
     grid-area: 2 / 27 / 4 / 30;
     background-image: url("../../../assets/images/gallery/metro.png");
     margin-right: 20px;
@@ -201,7 +200,7 @@
         grid-column-gap: 16px;
         grid-row-gap: 16px;
         height: 26rem;
-        .div30 {
+        .grid-item-30 {
             margin-right: 10px;
         }
     }

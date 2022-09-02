@@ -28,7 +28,7 @@
         padding: 0.75rem 1.5rem 0.75rem 1.5rem;
         &:hover {
             img {
-                animation: slide 1s ease-in-out infinite;
+                animation: slide 1.2s ease-in-out infinite;
             }
         }
     }
@@ -54,7 +54,7 @@
             transform: translate(0, 0);
         }
 
-        30% {
+        25% {
             transform: translate(-5px, 5px);
         }
 
