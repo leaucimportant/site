@@ -1,21 +1,72 @@
-# The Docker image that will be used to build your app
-image: node:16.17.0-alpine
-
 variables:
-    PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: 'true'
-    SCULLY_PUPPETEER_EXECUTABLE_PATH: /usr/bin/chromium-browser
+  AUTO_BUILD_IMAGE_VERSION: v1.4.1
+  POSTGRES_ENABLED: 'false'
+  TEST_DISABLED: 'true'
+  CODE_QUALITY_DISABLED: 'true'
+  LICENSE_MANAGEMENT_DISABLED: 'true'
+  PERFORMANCE_DISABLED: 'true'
+  OAD_PERFORMANCE_DISABLED: 'true'
+  BROWSER_PERFORMANCE_DISABLED: 'true'
+  SAST_DISABLED: 'true'
+  DAST_DISABLED: 'true'
+  REVIEW_DISABLED: 'true'
+  ROLLOUT_RESOURCE_TYPE: deployment
 
-# Functions that should be executed before the build script is run
-before_script:
-  - corepack enable
-  - apk add --no-cache nss chromium freetype harfbuzz ca-certificates ttf-freefont
-  - yarn
-pages:
-  script:
-    - yarn run build
-    - yarn run scully
-  artifacts:
-    paths:
-      - public
+stages:
+  - setup
+  - build_staging
+  - staging
+  - build
+  - test
+  - deploy
+  - review
+  - dast
+  - canary
+  - production
+  - incremental rollout 10%
+  - incremental rollout 25%
+  - incremental rollout 50%
+  - incremental rollout 100%
+  - performance
+  - cleanup
+
+include:
+  - template: Jobs/Build.gitlab-ci.yml
+  - template: Jobs/Deploy.gitlab-ci.yml
+
+.production_vars:
+  variables: &production_vars
+    K8S_SECRET_NODE_ENV: production
+    # Deux replicas pour les productions
+    REPLICAS: 1
+
+build:
+  variables:
+    # Cette variable va nommer l'image construite pour ce client
+    CI_APPLICATION_REPOSITORY: ${CI_APPLICATION_REPOSITORY_BASE}-production
+
+production:
+  variables:
+    <<: *production_vars
+    CI_APPLICATION_REPOSITORY: ${CI_APPLICATION_REPOSITORY_BASE}-production
+  environment:
+    name: production
+    url: https://impactiv.fr
   rules:
-    - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
+  - if: "$CI_DEPLOY_FREEZE"
+    when: never
+  - if: ($CI_KUBERNETES_ACTIVE == null || $CI_KUBERNETES_ACTIVE == "") && ($KUBECONFIG
+      == null || $KUBECONFIG == "")
+    when: never
+  - if: "$STAGING_ENABLED"
+    when: never
+  - if: "$CANARY_ENABLED"
+    when: never
+  - if: "$INCREMENTAL_ROLLOUT_ENABLED"
+    when: never
+  - if: "$INCREMENTAL_ROLLOUT_MODE"
+    when: never
+  - if: "$CI_COMMIT_BRANCH != $CI_DEFAULT_BRANCH"
+    when: never
+  - when: manual
+# ====================
