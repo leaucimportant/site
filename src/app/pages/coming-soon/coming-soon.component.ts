@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatomoService } from 'src/app/services';
+import { impactivRoutes } from 'src/app/services/config';
 
 @Component({
   selector: 'impactiv-coming-soon',
@@ -11,7 +13,16 @@ export class ComingSoonComponent implements OnInit {
   name = 'bonjour';
   domain = 'impactiv.fr';
 
-  constructor() {}
+  constructor(private matomoService: MatomoService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.matomoTrack();
+  }
+
+  private matomoTrack(): void {
+    this.matomoService.trackPageView({
+      title: 'Coming Soon',
+      url: impactivRoutes.comingSoon,
+    });
+  }
 }
