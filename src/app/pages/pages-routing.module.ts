@@ -9,9 +9,13 @@ const routes: Routes = [
     path: Config.impactivRoutes.comingSoon,
     component: ComingSoonComponent,
   },
+  // {
+  //   path: Config.impactivRoutes.contact,
+  //   component: ContactComponent,
+  // },
   {
-    path: Config.impactivRoutes.contact,
-    component: ContactComponent,
+    path: '**',
+    redirectTo: Config.impactivRoutes.comingSoon,
   },
 ];
 
