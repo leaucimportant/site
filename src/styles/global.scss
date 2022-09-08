@@ -1,112 +1,142 @@
 html {
-    width:100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 body {
-    background-color: #101B26;
-    color: white;
-    font-family: "Poppins";
-    width: 100%;
-    height: 100%;
-    background: url("../assets/images/bg/grid.png"), #101B26;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+  background-color: #101b26;
+  color: white;
+  font-family: "Poppins";
+  width: 100%;
+  height: 100%;
+  background: url("../assets/images/bg/grid.png"), #101b26;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 
-    // Pour les besoins de la coming soon à enlever après !
-    overflow: hidden;
+  // Pour les besoins de la coming soon à enlever après !
+  // overflow: hidden;
 }
 
 // Titles
 .impactiv-display-large {
-    font-family: "Poppins";
-    font-size: 4.5rem;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 5.25rem;
+  font-family: "Poppins";
+  // font-size: 4.5rem;
+  font-size: 3.5rem;
+  font-style: normal;
+  font-weight: 600;
+  // line-height: 5.25rem;
+  line-height: 4.25rem;
 }
 
 .impactiv-body-large {
-    font-family: "Poppins";
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1.5rem;
-    letter-spacing: 0px;
+  font-family: "Poppins";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5rem;
+  letter-spacing: 0px;
 }
 
 .impactiv-body-regular {
-    font-family: "Poppins";
-    font-size: 0.9rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1.5rem;
-    letter-spacing: 0px;
+  font-family: "Poppins";
+  font-size: 0.9rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5rem;
+  letter-spacing: 0px;
 }
 
 .impactiv-body-small {
-    font-family: "Poppins";
-    font-size: 0.75rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1.5rem;
-    letter-spacing: 0px;
+  font-family: "Poppins";
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5rem;
+  letter-spacing: 0px;
 }
 
 .impactiv-button-large {
-    font-family: "Poppins";
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 1.5rem;
-    letter-spacing: 0px;
+  font-family: "Poppins";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.5rem;
+  letter-spacing: 0px;
 }
 
 // Titles mobiles
-@media (max-width: 992px) {
-    .impactiv-display-large {
-        font-size: 3rem;
-        line-height: 3.5rem;
-    }
-    .impactiv-body-large {
-        font-size: 1.5rem;
-        line-height: 2.5rem;
-    }
-    .impactiv-button-large {
-        font-size: 1.1rem;
-        line-height: 1.5rem;
-    }
+@media (max-width: 1600px) {
+  .impactiv-display-large {
+    font-size: 2.5rem;
+    line-height: 2.75rem;
   }
+  .impactiv-body-large {
+    font-size: 1rem;
+    line-height: 1.75rem;
+  }
+  .impactiv-button-large {
+    font-size: 1 rem;
+    line-height: 1rem;
+  }
+}
+
+@media (max-width: 1300px) {
+  .impactiv-display-large {
+    font-size: 1.75rem;
+    line-height: 2rem;
+  }
+  .impactiv-body-large {
+    font-size: 1rem;
+    line-height: 1.6rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .impactiv-display-large {
+    // font-size: 3rem;
+    font-size: 2rem;
+    // line-height: 3.5rem;
+    line-height: 2rem;
+  }
+  .impactiv-body-large {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  .impactiv-button-large {
+    font-size: 1rem;
+    line-height: 1rem;
+  }
+}
 
 @media (max-width: 768px) {
-    .impactiv-display-large {
-        font-size: 2rem;
-        line-height: 2.5rem;
-    }
-    .impactiv-body-large {
-        font-size: 0.9rem;
-        line-height: 1.5rem;
-    }
-    .impactiv-button-large {
-        font-size: 0.875rem;
-        line-height: 1.5rem;
-    }
+  .impactiv-display-large {
+    // font-size: 2rem;
+    font-size: 1.5rem;
+    // line-height: 2.5rem;
+    line-height: 2rem;
   }
-  
-  @media (max-width: 380px) {
-    .impactiv-display-large {
-        font-size: 1.5rem;
-        line-height: 2rem;
-    }
-    .impactiv-body-large {
-        font-size: 0.8rem;
-        line-height: 1.25rem;
-    }
-    .impactiv-button-large {
-        font-size: 0.75rem;
-        line-height: 1rem;
-    }
+  .impactiv-body-large {
+    font-size: 0.9rem;
+    line-height: 1.5rem;
   }
+  .impactiv-button-large {
+    font-size: 0.875rem;
+    line-height: 1rem;
+  }
+}
 
-  
+@media (max-width: 380px) {
+  .impactiv-display-large {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  .impactiv-body-large {
+    font-size: 0.8rem;
+    line-height: 1.25rem;
+  }
+  .impactiv-button-large {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
