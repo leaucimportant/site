@@ -1,0 +1,84 @@
+.contact-container {
+  padding: 4.5rem;
+  display: flex;
+  flex-direction: row;
+  @media (max-width: 767.98px) {
+    padding: 1rem;
+    flex-wrap: wrap;
+  }
+  &__infos {
+    padding-right: 4.5rem;
+    flex-basis: 50%;
+    @media (max-width: 767.98px) {
+      flex-basis: 100%;
+    }
+    @media (max-width: 767.98px) {
+      padding-right: 0;
+    }
+    &--buttons {
+      margin: 2.5rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      button:first-child {
+        margin: 0 1rem 0 0;
+      }
+      @media (max-width: 1199.98px) {
+        button {
+          flex-basis: 100%;
+        }
+        button:first-child {
+          margin: 0 0 1rem 0;
+        }
+      }
+
+      &--arrow-icon {
+        color: var(--bs-gray-200);
+      }
+    }
+  }
+  &__form {
+    flex-basis: 50%;
+    width: 100%;
+    background-color: var(--bs-gray-005);
+    padding: 2rem;
+    @media (max-width: 767.98px) {
+      flex-basis: 100%;
+      padding: 1rem;
+    }
+    &--single-row {
+      padding-top: 2rem;
+      @media (max-width: 1199.98px) {
+        padding-top: 0rem;
+      }
+    }
+    &--row {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      padding-top: 2rem;
+      @media (max-width: 1199.98px) {
+        flex-direction: column;
+        padding-top: 0rem;
+      }
+      &--input:first-child {
+        padding: 0 1rem 0 0;
+        @media (max-width: 1199.98px) {
+          padding: 1rem 0 0 0;
+        }
+      }
+      &--input {
+        flex-basis: 50%;
+        @media (max-width: 1199.98px) {
+          flex-basis: 100%;
+          padding: 1rem 0 0 0;
+        }
+      }
+    }
+    &--button,
+    &--text {
+      @media (max-width: 1199.98px) {
+        padding-top: 1rem;
+      }
+    }
+  }
+}
