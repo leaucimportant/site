@@ -1,6 +1,7 @@
-export type ImpactivRoutesEnum = 'comingSoon' | 'contact';
+export type ImpactivRoutesEnum = 'home' | 'contact' | 'mobile';
 
 export const impactivRoutes: Record<ImpactivRoutesEnum, string> = {
-  comingSoon: '',
+  home: '',
   contact: 'contact',
+  mobile: 'mobile',
 };

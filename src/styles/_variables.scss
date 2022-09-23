@@ -1,8 +1,25 @@
 $primary: #0575e6;
-$secondary: #101B26;
-$info: #DBE6F2;
+$secondary: #101b26;
+$info: #dbe6f2;
+$light: #fff;
+$gray-100: #e7e8ea;
+$gray-200: #cfd1d4;
+$gray-300: #b7b9bf;
+$gray-400: #9fa2aa;
+$gray-500: #878b94;
+$gray-600: #6f747f;
+$gray-700: #575d6a;
+$gray-800: #3f4555;
+$gray-900: #272e3f;
 
-$font-family-base: Poppins, system-ui, -apple-system, Roboto, Arial, sans-serif;
-$font-family-sans-serif: Poppins, system-ui, -apple-system, Roboto, Arial, sans-serif;
+$gradient: linear-gradient(90deg, #ee5959 0%, #512888 49.31%, $primary 100%);
+
+$border-radius: 4px !default;
+$border-radius-sm: 8px !default;
+$border-radius-lg: 16px !default;
+
+$font-family-base: Inter, system-ui, -apple-system, Roboto, Arial, sans-serif;
+$font-family-sans-serif: Inter, system-ui, -apple-system, Roboto, Arial,
+  sans-serif;
 $font-weight-normal: 500;
-$headings-font-family: 'Poppins';
+$headings-font-family: "Inter";
