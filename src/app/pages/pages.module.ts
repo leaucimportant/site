@@ -7,9 +7,17 @@ import { NgBootstrapModule } from '../libs-external/ng-bootstrap/ng-bootstrap.mo
 import { ContactComponent } from './contact/contact.component';
 
 import { PagesRoutingModule } from './pages-routing.module';
+import { HomeComponent } from './home/home.component';
+import { CompanyComponent } from './company/company.component';
+import { SolutionMobileComponent } from './solution-mobile/solution-mobile.component';
 
 @NgModule({
-  declarations: [ContactComponent],
+  declarations: [
+    ContactComponent,
+    HomeComponent,
+    CompanyComponent,
+    SolutionMobileComponent,
+  ],
   imports: [
     CommonModule,
     PagesRoutingModule,
