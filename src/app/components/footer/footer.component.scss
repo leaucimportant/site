@@ -1,15 +1,33 @@
 .footer {
-  -webkit-backdrop-filter: blur(40px);
-  backdrop-filter: blur(40px);
-
-  &__row {
-    display: flex;
-    align-items: center;
-    height: 4rem;
-  }
   &__love {
     color: var(--bs-primary);
     width: 1.2rem;
     height: 1.2rem;
+  }
+  &__separator {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(
+      89.99deg,
+      rgba(238, 89, 89, 0) 3.65%,
+      #ee5959 33.85%,
+      #512888 51.56%,
+      #0575e6 71.87%,
+      rgba(5, 117, 230, 0) 100%
+    );
+    filter: blur(1px);
+    transform: matrix(1, 0, 0, -1, 0, 0);
+  }
+  &__credits {
+    border-top: 1px solid #e7e8ea;
+  }
+  &__cookies {
+    a {
+      text-decoration: none;
+      color: var(--bs-gray-600);
+    }
+  }
+  &__date {
+    color: var(--bs-gray-1000);
   }
 }
