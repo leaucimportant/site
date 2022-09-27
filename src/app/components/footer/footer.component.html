@@ -1,15 +1,86 @@
-<footer class="footer impactiv-body-small">
-  <div class="container-xl">
-    <div class="footer__row row d-flex justify-content-center">
-      <div class="d-flex justify-content-center align-items-center text-center">
-        © Impactiv {{ year }} - Réalisé avec
-        <img
-          class="footer__love mx-1"
-          src="assets/images/icons/heart.png"
-          alt="Love by Impactiv"
-        />
-        par notre équipe.
-      </div>
+<footer class="container-xl print:hidden d-print-none impactiv-body-small mt-5">
+  <div class="row mb-5 mb-lg-0" style="min-height: 240px">
+    <div class="col-12 col-lg-2 mb-4 me-4 text-center">
+      <img src="assets/images/icons/logo_color.svg" alt="Love Impactiv" />
+    </div>
+    <div class="col-6 col-md-3 col-lg-2 me-lg-4 mt-4 mt-sm-0">
+      <span class="impactiv-headline-small">Solutions</span>
+      <ul class="list-unstyled impactiv-body-sub-regular mt-4">
+        <li class="mb-2">
+          <a [routerLink]="">Affichage dynamique</a>
+        </li>
+        <li class="mb-2">
+          <a [routerLink]="">Applications mobiles</a>
+        </li>
+        <li class="mb-2">
+          <a [routerLink]="">Mesure d’affluence</a>
+        </li>
+        <li>
+          <a [routerLink]="">Intégrations</a>
+        </li>
+      </ul>
+    </div>
+    <div class="col-6 col-md-3 col-lg-2 me-lg-4 mt-4 mt-sm-0">
+      <span class="mb-2 impactiv-headline-small">Expertises</span>
+      <ul class="list-unstyled impactiv-body-sub-regular mt-4">
+        <li class="mb-2">
+          <a [routerLink]="">Collective</a>
+        </li>
+        <li class="mb-2">
+          <a [routerLink]="">Commerciale</a>
+        </li>
+        <li class="mb-2">
+          <a [routerLink]="">Property management</a>
+        </li>
+        <li class="mb-2">
+          <a [routerLink]="">Besoin sur mesure</a>
+        </li>
+      </ul>
+    </div>
+    <div class="col-6 col-md-3 col-lg-2 me-lg-4 mt-4 mt-sm-0">
+      <span class="mb-2 impactiv-headline-small">Entreprise</span>
+      <ul class="list-unstyled impactiv-body-sub-regular mt-4">
+        <li class="mb-2">
+          <a [routerLink]="">À propos</a>
+        </li>
+        <li class="mb-2">
+          <a [routerLink]="">Contact</a>
+        </li>
+        <li class="mb-2">
+          <a [routerLink]="">Nous rejoindre</a>
+        </li>
+      </ul>
+    </div>
+    <div class="col-6 col-md-3 col-lg-2 me-lg-4 mt-4 mt-sm-0">
+      <span class="mb-2 impactiv-headline-small">Nous contacter</span>
+      <ul class="list-unstyled impactiv-body-sub-regular mt-4">
+        <li class="mb-2">
+          <a [routerLink]=""
+            ><i class="bi bi-telephone-forward"></i> +33 9 53 33 03 60</a
+          >
+        </li>
+        <li>
+          <a [routerLink]=""><i class="bi bi-linkedin"></i> Linkedin</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="m-md-0 footer__separator"></div>
+  <div class="footer__credits row d-flex align-items-center py-sm-5 py-4">
+    <div
+      class="footer__date col-12 col-md-6 text-md-start text-center impactiv-body-small mb-3 mb-sm-0"
+    >
+      © Impactiv {{ year }} - Réalisé avec
+      <img
+        class="footer__love"
+        src="assets/images/icons/heart.png"
+        alt="Love by Impactiv"
+      />
+      par notre équipe.
+    </div>
+    <div class="footer__cookies text-center col-12 col-md-6 text-md-end">
+      <a [routerLink]="" class="me-4">Cookies</a>
+      <a [routerLink]="">Confidentialités</a>
     </div>
   </div>
 </footer>
