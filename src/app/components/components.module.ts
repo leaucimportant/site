@@ -6,8 +6,9 @@ import { NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
 import { PrimengModule } from '../libs-external/primeng/primeng.module';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
+import { BannerComponent } from './banner/banner.component';
 
-const impactivComponentsExports = [FooterComponent, HeaderComponent];
+const impactivComponentsExports = [FooterComponent, HeaderComponent, BannerComponent];
 
 @NgModule({
   imports: [
