@@ -1,19 +1,4 @@
 <div class="container numbers d-flex" style="min-height: 214px">
-    <!-- <div class="col col-lg-4 col-12">
-            <h1 class="numbers__title impactiv-display-large mb-1">{{numbers.number}}</h1>
-            <p class="impactiv-headline-small text-primary">{{numbers.title}}</p>
-            <p class="impactiv-body-regular">{{numbers.description}}</p>
-        </div> 
-        <div class="numbers__col col col-lg-4 col-12 pe-5">
-            <h1 class="numbers__title impactiv-display-large mb-1">10 ans</h1>
-            <p class="impactiv-headline-small text-primary">D’expérience</p>
-            <p class="impactiv-body-regular">Écoute, agilité et satisfaction, sont au coeur de nos préoccupations.</p>
-        </div>
-        <div class="numbers__col col col-lg-4 col-12">
-            <h1 class="numbers__title impactiv-display-large mb-1">6K</h1>
-            <p class="impactiv-headline-small text-primary">Écrans déployés</p>
-            <p class="impactiv-body-regular">Un parc d’affichage dynamique monitoré en temps-réel !</p>
-        </div>-->
     <ng-container *ngFor="let number of numbers">
         <div class="numbers__col">
             <h1 class="numbers__title impactiv-display-large mb-1">{{number.data}}</h1>
