@@ -2,6 +2,8 @@ $primary: #0575e6;
 $secondary: #101b26;
 $info: #dbe6f2;
 $light: #fff;
+
+$gray-005: #f3f3f4;
 $gray-100: #e7e8ea;
 $gray-200: #cfd1d4;
 $gray-300: #b7b9bf;
@@ -11,8 +13,15 @@ $gray-600: #6f747f;
 $gray-700: #575d6a;
 $gray-800: #3f4555;
 $gray-900: #272e3f;
+$gray-950: #1b2335;
+$gray-1000: #0f172a;
+
+$blue-003: #f8fbfe;
+$blue-100: #e6f1fc;
 
 $gradient: linear-gradient(90deg, #ee5959 0%, #512888 49.31%, $primary 100%);
+
+$body-color: $gray-1000;
 
 $border-radius: 4px !default;
 $border-radius-sm: 8px !default;

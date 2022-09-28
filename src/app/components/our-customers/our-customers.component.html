@@ -1,0 +1,31 @@
+<div class="our-customers">
+  <div class="container our-customers__content text-center">
+    <h1 class="impactiv-display-small">
+      Reconnus par des acteurs majeurs dans leur domaine.
+    </h1>
+    <p class="impactiv-body-regular our-customers__content--text">
+      Plus de 900 000 convives utilisent déjà nos solutions au quotidien.
+      <br />
+      Comme eux, poursuivez votre développement en adoptant nos solutions.
+    </p>
+  </div>
+
+  <div class="our-customers__marquee">
+    <div class="our-customers__marquee--content">
+      <div
+        *ngFor="let customer of customers"
+        class="our-customers__marquee--card"
+      >
+        <img [src]="customer.url" class="" [alt]="customer.alt" />
+      </div>
+    </div>
+    <div class="our-customers__marquee--content" aria-hidden="true">
+      <div
+        *ngFor="let customer of customers"
+        class="our-customers__marquee--card"
+      >
+        <img [src]="customer.url" class="" [alt]="customer.alt" />
+      </div>
+    </div>
+  </div>
+</div>
