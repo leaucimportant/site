@@ -1,3 +1,7 @@
 {
-  "cSpell.words": ["matomo", "Matomo"]
+  "cSpell.words": [
+    "matomo",
+    "Matomo"
+  ],
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
 }
