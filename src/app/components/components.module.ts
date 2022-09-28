@@ -7,8 +7,14 @@ import { PrimengModule } from '../libs-external/primeng/primeng.module';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { BannerComponent } from './banner/banner.component';
+import { OurCustomersComponent } from './our-customers/our-customers.component';
 
-const impactivComponentsExports = [FooterComponent, HeaderComponent, BannerComponent];
+const impactivComponentsExports = [
+  BannerComponent,
+  FooterComponent,
+  HeaderComponent,
+  OurCustomersComponent,
+];
 
 @NgModule({
   imports: [
