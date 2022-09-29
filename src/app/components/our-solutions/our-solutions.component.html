@@ -1,0 +1,81 @@
+<div class="solutions sticky">
+  <div class="accordion-wrapper">
+    <div
+      *ngFor="let solution of solutions; let i = index"
+      class="solution-slide"
+      [class]="'slide-' + (i + 1)"
+    >
+      <div class="solution-container">
+        <div class="solution-wrapper">
+          <div class="solution-wrapper__content">
+            <div class="d-flex d-md-none align-items-center">
+              <div class="solution-wrapper__content--picture d-flex">
+                <picture>
+                  <source
+                    [srcset]="
+                      'assets/images/icons/header/bleu/' + solution.icon.src
+                    "
+                    type="image/svg+xml"
+                  />
+                  <img
+                    [srcset]="
+                      'assets/images/icons/header/bleu/' + solution.icon.src
+                    "
+                    [alt]="solution.icon.alt"
+                  />
+                </picture>
+              </div>
+              <h1 class="impactiv-headline-small m-0">
+                {{ solution.title }}
+              </h1>
+            </div>
+            <div class="solution-wrapper__content--picture d-none d-md-flex">
+              <picture>
+                <source
+                  [srcset]="
+                    'assets/images/icons/header/bleu/' + solution.icon.src
+                  "
+                  type="image/svg+xml"
+                />
+                <img
+                  [srcset]="
+                    'assets/images/icons/header/bleu/' + solution.icon.src
+                  "
+                  [alt]="solution.icon.alt"
+                />
+              </picture>
+            </div>
+            <div class="solution-wrapper__content--text">
+              <h1 class="impactiv-headline-regular d-none d-md-flex">
+                {{ solution.title }}
+              </h1>
+              <p class="impactiv-body-regular">
+                {{ solution.description }}
+              </p>
+              <div>
+                <button type="button btn-sm" class="btn">
+                  <span class="align-middle impactiv-button-regular"
+                    >Découvrir la solution</span
+                  ><i
+                    class="bi bi-arrow-right-short ms-2 align-middle demo__arrow-icon"
+                    aria-hidden="true"
+                  ></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="solution-wrapper__image">
+            <img
+              [src]="'assets/images/contents/solutions/' + solution.image.src"
+              loading="lazy"
+              class="img-fluid"
+            />
+          </div>
+        </div>
+        <div class="solution-index impactiv-headline-regular d-none d-lg-block">
+          0{{ i + 1 }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
