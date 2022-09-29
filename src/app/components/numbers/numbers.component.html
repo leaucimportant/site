@@ -1,0 +1,9 @@
+<div class="container numbers d-flex" style="min-height: 214px">
+    <ng-container *ngFor="let number of numbers">
+        <div class="numbers__col">
+            <h1 class="numbers__title impactiv-display-large mb-1">{{number.data}}</h1>
+            <p class="impactiv-headline-small text-primary">{{number.title}}</p>
+            <p class="impactiv-body-regular">{{number.description}}</p>
+        </div>
+    </ng-container>
+</div>

@@ -6,6 +6,7 @@ import { NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
 import { PrimengModule } from '../libs-external/primeng/primeng.module';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
+import { NumbersComponent } from './numbers/numbers.component';
 import { BannerComponent } from './banner/banner.component';
 import { OurCustomersComponent } from './our-customers/our-customers.component';
 import { OurSolutionsComponent } from './our-solutions/our-solutions.component';
@@ -14,6 +15,7 @@ const impactivComponentsExports = [
   BannerComponent,
   FooterComponent,
   HeaderComponent,
+  NumbersComponent,
   OurCustomersComponent,
   OurSolutionsComponent,
 ];
