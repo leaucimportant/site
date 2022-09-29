@@ -8,12 +8,14 @@ import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { BannerComponent } from './banner/banner.component';
 import { OurCustomersComponent } from './our-customers/our-customers.component';
+import { OurSolutionsComponent } from './our-solutions/our-solutions.component';
 
 const impactivComponentsExports = [
   BannerComponent,
   FooterComponent,
   HeaderComponent,
   OurCustomersComponent,
+  OurSolutionsComponent,
 ];
 
 @NgModule({
