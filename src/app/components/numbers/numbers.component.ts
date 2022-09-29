@@ -5,8 +5,8 @@ import { Component, Input } from '@angular/core';
   templateUrl: './numbers.component.html',
   styleUrls: ['./numbers.component.scss'],
 })
-export class numbersComponent {
+export class NumbersComponent {
   constructor() {}
 
-  @Input() numbers!: { data: string, title: string, description: string }[];
+  @Input() numbers!: { data: string; title: string; description: string }[];
 }
