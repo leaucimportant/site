@@ -11,6 +11,7 @@ import { BannerComponent } from './banner/banner.component';
 import { OurCustomersComponent } from './our-customers/our-customers.component';
 import { OurSolutionsComponent } from './our-solutions/our-solutions.component';
 import { OurSkillsComponent } from './our-skills/our-skills.component';
+import { QuoteComponent } from './quote/quote.component';
 
 const impactivComponentsExports = [
   BannerComponent,
@@ -20,6 +21,7 @@ const impactivComponentsExports = [
   OurCustomersComponent,
   OurSolutionsComponent,
   OurSkillsComponent,
+  QuoteComponent,
 ];
 
 @NgModule({
