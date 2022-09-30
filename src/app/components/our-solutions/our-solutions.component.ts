@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { impactivRoutes } from 'src/app/services/config';
 
 @Component({
   selector: 'impactiv-our-solutions',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./our-solutions.component.scss'],
 })
 export class OurSolutionsComponent {
+  impactivRoutes = impactivRoutes;
   solutions = [
     {
       title: 'Affichage dynamique',
@@ -19,6 +21,7 @@ export class OurSolutionsComponent {
         src: 'ecran.png',
         alt: 'ecran',
       },
+      route: impactivRoutes.screenSolution,
     },
     {
       title: 'Application mobiles',
@@ -32,6 +35,7 @@ export class OurSolutionsComponent {
         src: 'mobile.png',
         alt: 'mobile',
       },
+      route: impactivRoutes.mobileSolution,
     },
     {
       title: 'Mesure d’affluence',
@@ -45,6 +49,7 @@ export class OurSolutionsComponent {
         src: 'affluence.png',
         alt: 'affluence',
       },
+      route: impactivRoutes.affluenceSolution,
     },
     {
       title: 'Intégration',
@@ -58,6 +63,7 @@ export class OurSolutionsComponent {
         src: 'integration.png',
         alt: 'integration',
       },
+      route: impactivRoutes.integrationSolution,
     },
   ];
 }

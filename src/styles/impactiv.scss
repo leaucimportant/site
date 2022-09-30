@@ -86,3 +86,12 @@
   font-weight: 500;
   line-height: 1rem;
 }
+
+.with-underline {
+  display: inline-block;
+  padding: 0.25rem 0.125rem 0.5rem;
+  background-image: url("../assets/images/effects/underline_effect.svg");
+  background-position: 50% 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}

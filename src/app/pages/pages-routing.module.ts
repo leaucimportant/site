@@ -20,7 +20,7 @@ const routes: Routes = [
     component: CompanyComponent,
   },
   {
-    path: Config.impactivRoutes.mobile,
+    path: Config.impactivRoutes.mobileSolution,
     component: SolutionMobileComponent,
   },
   {
