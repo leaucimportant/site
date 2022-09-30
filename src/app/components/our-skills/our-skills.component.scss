@@ -1,0 +1,59 @@
+.skills-container {
+  padding: 2rem 0;
+  &__title,
+  &__carousel {
+    padding-bottom: 2rem;
+  }
+}
+
+.skill {
+  padding: 2rem;
+  background-color: var(--bs-blue-003);
+  display: flex;
+  justify-content: space-between;
+  white-space: initial;
+  border-radius: var(--bs-border-radius-sm);
+  border: 2px solid var(--bs-gray-100);
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-basis: 60%;
+  }
+  &__picture {
+    flex-basis: 40%;
+  }
+}
+
+.progress {
+  height: 0.2rem;
+}
+
+.progress,
+.progress-bar {
+  border-radius: 0;
+}
+
+@media (max-width: 1199.98px) {
+  .skills-container {
+    padding: 2rem 1rem;
+  }
+
+  .skill {
+    padding: 1rem;
+    flex-wrap: wrap;
+
+    &__content {
+      flex-basis: 100%;
+      img {
+        width: 48px;
+        height: 48px;
+        margin-bottom: 1rem;
+        object-fit: cover;
+      }
+      h1 {
+        padding-bottom: 1rem;
+      }
+    }
+  }
+}

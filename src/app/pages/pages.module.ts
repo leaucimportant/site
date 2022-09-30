@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ComponentsModule } from '../components/components.module';
-import { NgBootstrapModule } from '../libs-external/ng-bootstrap/ng-bootstrap.module';
+// import { NgBootstrapModule } from '../libs-external/ng-bootstrap/ng-bootstrap.module';
 
 import { ContactComponent } from './contact/contact.component';
 
@@ -22,7 +22,7 @@ import { SolutionMobileComponent } from './solution-mobile/solution-mobile.compo
     CommonModule,
     PagesRoutingModule,
     ComponentsModule,
-    NgBootstrapModule,
+    // NgBootstrapModule,
     FormsModule,
     ReactiveFormsModule,
   ],
