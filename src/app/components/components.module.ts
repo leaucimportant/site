@@ -13,6 +13,7 @@ import { OurSolutionsComponent } from './our-solutions/our-solutions.component';
 import { OurSkillsComponent } from './our-skills/our-skills.component';
 import { QuoteComponent } from './quote/quote.component';
 import { SolutionFeaturesComponent } from './solution-features/solution-features.component';
+import { HomeHeroComponent } from './home-hero/home-hero.component';
 
 const impactivComponentsExports = [
   BannerComponent,
@@ -24,6 +25,7 @@ const impactivComponentsExports = [
   OurSkillsComponent,
   QuoteComponent,
   SolutionFeaturesComponent,
+  HomeHeroComponent,
 ];
 
 @NgModule({
