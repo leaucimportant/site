@@ -1,0 +1,45 @@
+.solutions-container {
+  padding: 8rem 0 0;
+  &__description {
+    max-width: 50%;
+  }
+  .solutions {
+    .solution-card {
+      padding: 1rem;
+      &__picture {
+        display: flex;
+        justify-content: center;
+        background: var(--bs-gray-005);
+        border: 1px solid rgba(15, 23, 42, 0.05);
+        border-radius: var(--bs-border-radius-sm);
+        padding: 2rem 0;
+      }
+      &__content {
+        padding-top: 1rem;
+        p {
+          opacity: 0.6;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1199.98px) {
+    &__description {
+      max-width: 70%;
+    }
+  }
+
+  @media (max-width: 991.98px) {
+    padding: 1rem 1rem 0;
+    &__description {
+      max-width: 90%;
+    }
+    .solutions {
+      .solution-card {
+        &__picture {
+          padding: 2rem 1rem;
+        }
+      }
+    }
+  }
+}

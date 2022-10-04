@@ -77,7 +77,10 @@
             </div>
             <div class="solution-wrapper__image">
               <img
-                [src]="'assets/images/contents/solutions/' + solution.image.src"
+                [src]="
+                  'assets/images/contents/solutions/common/' +
+                  solution.image.src
+                "
                 loading="lazy"
                 class="img-fluid"
               />
