@@ -1,0 +1,34 @@
+<div class="container solutions-container">
+  <h1 class="impactiv-display-small">
+    Plongez dans un écosystème complet et performant<span class="text-primary"
+      >.</span
+    >
+  </h1>
+  <p class="impactiv-body-regular solutions-container__description">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fames sed et
+    tincidunt ultrices sed tristique et, rhoncus. A in enim ut adipiscing
+    vestibulum. Volutpat placerat quis tellus cursus at.
+  </p>
+
+  <div class="solutions">
+    <div class="row">
+      <div
+        class="solution-card col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3"
+        *ngFor="let solution of solutions"
+      >
+        <div class="solution-card__picture">
+          <img
+            [src]="'assets/images/contents/solutions/' + solution.image.src"
+            loading="lazy"
+            class="img-fluid"
+            [alt]="solution.image.alt"
+          />
+        </div>
+        <div class="solution-card__content">
+          <h1 class="impactiv-button-regular">{{ solution.title }}</h1>
+          <p class="impactiv-body-sub-regular">{{ solution.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
