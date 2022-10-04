@@ -5,7 +5,13 @@ export type ImpactivRoutesEnum =
   | 'screenSolution'
   | 'affluenceSolution'
   | 'integrationSolution'
-  | 'company';
+  | 'company'
+  | 'collectiveExpertise'
+  | 'commercialeExpertise'
+  | 'propertyExpertise'
+  | 'surmesureExpertise'
+  | 'cookies'
+  | 'confidentialites';
 
 export const impactivRoutes: Record<ImpactivRoutesEnum, string> = {
   home: '',
@@ -15,4 +21,10 @@ export const impactivRoutes: Record<ImpactivRoutesEnum, string> = {
   affluenceSolution: 'solutions/affluence',
   integrationSolution: 'solutions/integration',
   company: 'entreprise',
+  cookies: 'cookies',
+  confidentialites: 'confidentialites',
+  collectiveExpertise: 'expertises/collective',
+  commercialeExpertise: 'expertises/commerciale',
+  propertyExpertise: 'expertises/property',
+  surmesureExpertise: 'expertises/surmesure',
 };
