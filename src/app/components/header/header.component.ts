@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { impactivRoutes } from 'src/app/services/config';
 
 @Component({
   selector: 'impactiv-header',
@@ -7,34 +8,42 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent {
   hoveringIndex: null | number = null;
+  contactRoute = impactivRoutes.contact;
+  homeRoute = impactivRoutes.home;
   solutions = [
     {
       title: 'Affichage dynamique',
-      description: 'Communiquer et informer efficacement en temps réel.',
+      description: 'Communiquer efficacement en temps réel.',
       icon: 'rectangle.svg',
       alt: 'rectangle',
+      route: impactivRoutes.screenSolution,
     },
     {
       title: 'Application mobiles',
-      description:
-        'Créez des applications dédiées pour le web et les appareils mobiles grâce à notre expertise.',
+      description: 'Créez des applications dédiées pour le web.',
       icon: 'affichage.svg',
       alt: 'affichage',
+      route: impactivRoutes.mobileSolution,
     },
     {
       title: 'Mesure d’affluence',
-      description: 'Communiquer et informer efficacement en temps réel.',
+      description: 'Mesurez l’affluence en temps-réel.',
       icon: 'affluence.svg',
       alt: 'affluence',
+      route: impactivRoutes.affluenceSolution,
     },
     {
       title: 'Intégration',
-      description:
-        'Accélérez votre développement en nous confiant un développement sur-mesure.',
+      description: 'Développement sur-mesure.',
       icon: 'security.svg',
       alt: 'sécurité',
+      route: impactivRoutes.integrationSolution,
     },
   ];
-
   expertises = [];
+
+  phone = '';
+  phoneAreaCode = '+339';
+  phoneStart = '5333';
+  phoneEnd = '0360';
 }

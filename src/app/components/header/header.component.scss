@@ -1,14 +1,21 @@
 .navbar {
   background: transparent;
-  color: white;
+  color: var(--bs-white);
   height: 5.75rem;
-  padding: 0 4.5rem;
-  z-index: 1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
   &-brand {
     img {
       height: auto;
       width: 10.4rem;
     }
+  }
+  button,
+  a {
+    border-radius: var(--bs-border-radius-sm);
   }
 
   .navbar-toggler {
@@ -19,6 +26,9 @@
   }
   .nav-item {
     padding: 0 0.25rem;
+  }
+  .nav-title {
+    padding: 0.5rem;
   }
   .nav-link {
     color: var(--bs-secondary);
@@ -31,18 +41,13 @@
     justify-content: flex-end;
   }
   .dropdown-menu {
-    padding: 2rem;
-    li {
-      padding-top: 0.5rem;
-    }
-    li:first-child {
-      padding-top: 0rem;
-    }
+    padding: 1rem;
     .dropdown-item {
       display: flex;
       justify-content: space-between;
       border-radius: var(--bs-border-radius);
-      padding: 1rem;
+      white-space: initial !important;
+      padding: 0.5rem;
       .picture {
         min-height: 3rem;
         min-width: 3rem;
@@ -58,12 +63,12 @@
       .content {
         padding-left: 1rem;
         width: 100%;
+        min-width: 18.75rem;
         p {
           color: var(--bs-gray-600);
         }
       }
     }
-
     .dropdown-item:hover,
     .dropdown-item:active {
       background-color: var(--bs-blue-100);
@@ -74,6 +79,42 @@
     }
   }
 
+  .solutions {
+    display: flex;
+    flex-direction: row;
+    &__article {
+      padding: 0.5rem 0.5rem 0.5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      flex-grow: 1;
+      background-color: var(--bs-white);
+      border-radius: var(--bs-border-radius);
+      p {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+      }
+      img {
+        width: 18rem;
+        height: 6.75rem;
+        flex-grow: 1;
+      }
+      button {
+        border: 1px solid var(--bs-gray-100);
+        border-radius: var(--bs-border-radius-sm);
+      }
+    }
+  }
+
+  .phone-call {
+    &:hover {
+      color: var(--bs-body-color);
+    }
+  }
+
   .demo {
     background-color: var(--bs-secondary);
     color: var(--bs-white);
@@ -81,6 +122,12 @@
       color: var(--bs-gray-200);
       font-size: 1rem;
     }
+  }
+
+  a[aria-expanded="true"],
+  button[aria-expanded="true"] {
+    background-color: var(--bs-gray-100);
+    color: var(--bs-body-color);
   }
 
   a[aria-expanded="true"] .bi-chevron-down,
@@ -106,7 +153,7 @@
     }
 
     .dropdown-menu {
-      padding: 0rem;
+      padding: 0.5rem;
       background-color: var(--bs-gray-1000);
       border: none;
       li {
@@ -116,7 +163,7 @@
         padding-top: 1rem;
       }
       .dropdown-item {
-        padding: 1rem 0 0 0.75rem;
+        padding: 0;
         color: var(--bs-white);
         .picture {
           background: var(--bs-gray-900);
@@ -124,15 +171,27 @@
         }
         .content {
           padding-left: 1rem;
+          min-width: auto;
           p {
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            max-width: 90%;
           }
         }
       }
     }
+    .solutions {
+      flex-wrap: wrap;
+      &__article {
+        margin-top: 1rem;
+        padding: 1rem;
+        img {
+          width: 100%;
+          height: auto;
+        }
+        button {
+          color: var(--bs-secondary);
+        }
+      }
+    }
+
     .divider {
       background: linear-gradient(
         to right,
@@ -147,7 +206,14 @@
     .btn {
       width: 100%;
     }
+    .phone-call {
+      color: var(--bs-body-white);
+      &:hover {
+        color: var(--bs-body-white);
+      }
+    }
     .demo {
+      margin-top: 1rem;
       background-color: var(--bs-white);
       color: var(--bs-secondary);
     }
