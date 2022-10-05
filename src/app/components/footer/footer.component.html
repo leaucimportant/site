@@ -82,8 +82,10 @@
           <a
             [href]="phone"
             (click)="phone = 'tel:' + phoneAreaCode + phoneStart + phoneEnd"
-            ><i class="bi bi-telephone-forward"></i> +33 9 {{ phoneStart }}
-            {{ phoneEnd }}</a
+            ><i class="bi bi-telephone-forward"></i
+            ><span>{{ setPhone().phoneAreaCode }}</span
+            ><span>{{ setPhone().phoneStart }}</span
+            ><span>{{ setPhone().phoneEnd }}</span></a
           >
         </li>
         <li>

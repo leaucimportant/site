@@ -15,4 +15,12 @@ export class FooterComponent {
   phoneAreaCode = '+339';
   phoneStart = '5333';
   phoneEnd = '0360';
+
+  setPhone() {
+    return {
+      phoneAreaCode: '+33 9',
+      phoneStart: ' 53 33',
+      phoneEnd: ' 03 60',
+    };
+  }
 }
