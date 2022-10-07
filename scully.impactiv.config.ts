@@ -21,6 +21,20 @@ export const config: ScullyConfig = {
   routes: {},
   defaultPostRenderers: [RegexPlugin],
   puppeteerLaunchOptions: {
-    args: ['--no-sandbox', '--disable-setuid--sandbox'],
+    args: [
+      '--no-sandbox',
+      '--disable-setuid--sandbox',
+      //Config WSL
+      // '--disable-gpu',
+      // '--renderer',
+      // '--no-service-autorun',
+      // '--no-experiments',
+      // '--no-default-browser-check',
+      // '--disable-dev-shm-usage',
+      // '--no-first-run',
+      // '--no-zygote',
+      // '--single-process',
+      // '--disable-extensions',
+    ],
   },
 };

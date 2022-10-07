@@ -1,0 +1,149 @@
+.hero {
+  background-image: url("../../../assets/images/bg/bg_home.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid #e7e8ea;
+  display: flex;
+  align-items: center;
+  height: 812px;
+  &__container {
+    display: flex;
+    align-items: center;
+  }
+  .bi::before {
+    margin-left: 0.2rem;
+  }
+  &__button {
+    position: relative;
+    &:hover {
+      .bi::before {
+        animation: slide-right 0.8s ease-in-out infinite;
+      }
+    }
+    &-light {
+      border: 1px solid var(--bs-gray-100);
+      border-radius: var(--bs-border-radius-sm);
+      .bi-arrow-right-short {
+        color: var(--bs-gray-200);
+      }
+      &:hover {
+        background-color: var(--bs-gray-100);
+        transition: background-color 0.2s ease;
+        .bi-arrow-right-short {
+          color: var(--bs-gray-1000);
+          transition: color 0.2s ease;
+        }
+      }
+    }
+    &-dark {
+      border-radius: var(--bs-border-radius-sm);
+      &:hover {
+        background-color: var(--bs-gray-900);
+        transition: background-color 0.2s ease;
+      }
+    }
+  }
+  &__content {
+    width: 55%;
+    position: relative;
+    z-index: 3;
+  }
+  &__container--image {
+    position: absolute;
+    top: 10%;
+    right: -40%;
+    bottom: auto;
+    width: 80%;
+  }
+  &__image {
+    width: 55rem;
+    height: 100%;
+  }
+
+  @media (max-width: 1500px) {
+    &__container--image {
+      top: 14%;
+      width: 90%;
+      right: -45%;
+    }
+  }
+
+  @media (max-width: 991.98px) {
+    display: flex;
+    align-items: flex-start;
+    padding-top: 6rem;
+    height: 720px;
+    margin-bottom: 4rem;
+    &__container {
+      flex-direction: column;
+    }
+    &__title {
+      width: 100%;
+    }
+    &__content,
+    .btn {
+      width: 100%;
+    }
+    &__subtitle {
+      font-size: 1rem;
+      line-height: 1.5rem;
+    }
+    &__container--image {
+      top: initial;
+      bottom: -10%;
+      right: initial;
+      left: 0;
+      width: 105%;
+    }
+    &__image {
+      width: 100%;
+      &-mobile {
+        width: 100%;
+      }
+    }
+    &__container--image-mobile {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 767.98px) {
+    &__title {
+      width: 85%;
+    }
+  }
+
+  @media (max-width: 500px) {
+    background-position: 80% 0%;
+    &__title {
+      width: 100%;
+      font-size: 2rem;
+      line-height: 2.5rem;
+    }
+  }
+
+  @media (max-width: 380px) {
+    &__title {
+      font-size: 2.5rem;
+      line-height: 3rem;
+      font-weight: 700;
+      width: 100%;
+    }
+  }
+}
+
+// Animation arrow
+@keyframes slide-right {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(5px, 0);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}

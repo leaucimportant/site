@@ -1,3 +1,5 @@
+import { ExtraOptions } from '@angular/router';
+
 export type ImpactivRoutesEnum =
   | 'home'
   | 'contact'
@@ -27,4 +29,10 @@ export const impactivRoutes: Record<ImpactivRoutesEnum, string> = {
   commercialeExpertise: 'expertises/commerciale',
   propertyExpertise: 'expertises/property',
   surmesureExpertise: 'expertises/surmesure',
+};
+
+export const routerOptions: ExtraOptions = {
+  scrollPositionRestoration: 'top',
+  anchorScrolling: 'enabled',
+  scrollOffset: [0, 120],
 };
