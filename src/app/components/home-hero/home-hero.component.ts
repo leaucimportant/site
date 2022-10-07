@@ -1,4 +1,5 @@
-import { Component, HostListener } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { Component, HostListener, Inject } from '@angular/core';
 
 @Component({
   selector: 'impactiv-home-hero',
@@ -6,6 +7,8 @@ import { Component, HostListener } from '@angular/core';
   styleUrls: ['./home-hero.component.scss'],
 })
 export class HomeHeroComponent {
+  constructor(@Inject(DOCUMENT) private document: Document) {}
+
   prevPosition = 0;
   positionItem1 = -30;
   positionItem2 = 50;
@@ -13,9 +16,9 @@ export class HomeHeroComponent {
 
   @HostListener('window:scroll', [])
   diagonaleScroll() {
-    const gridItem1 = document.getElementById('parallax-item--1');
-    const gridItem2 = document.getElementById('parallax-item--2');
-    const gridItem3 = document.getElementById('parallax-item--3');
+    const gridItem1 = this.document.getElementById('parallax-item--1');
+    const gridItem2 = this.document.getElementById('parallax-item--2');
+    const gridItem3 = this.document.getElementById('parallax-item--3');
     const currentPosition = window.scrollY;
 
     if (gridItem1 && gridItem2 && gridItem3 && currentPosition < 650)
