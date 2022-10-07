@@ -7,7 +7,10 @@ import { Component, HostListener, Inject } from '@angular/core';
   styleUrls: ['./home-hero.component.scss'],
 })
 export class HomeHeroComponent {
-  constructor(@Inject(DOCUMENT) private document: Document) {}
+  constructor(
+    @Inject(DOCUMENT) private document: Document,
+    private window: Window
+  ) {}
 
   prevPosition = 0;
   positionItem1 = -30;
@@ -19,7 +22,7 @@ export class HomeHeroComponent {
     const gridItem1 = this.document.getElementById('parallax-item--1');
     const gridItem2 = this.document.getElementById('parallax-item--2');
     const gridItem3 = this.document.getElementById('parallax-item--3');
-    const currentPosition = window.scrollY;
+    const currentPosition = this.window.scrollY;
 
     if (gridItem1 && gridItem2 && gridItem3 && currentPosition < 650)
       if (this.prevPosition < currentPosition) {
