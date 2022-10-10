@@ -16,6 +16,7 @@ import { SolutionFeaturesComponent } from './solution-features/solution-features
 import { HomeHeroComponent } from './home-hero/home-hero.component';
 import { StatsNumbersComponent } from './stats-numbers/stats-numbers.component';
 import { SolutionsHeroComponent } from './solutions-hero/solutions-hero.component';
+import { SolutionCarouselComponent } from './solution-carousel/solution-carousel.component';
 
 const impactivComponentsExports = [
   BannerComponent,
@@ -29,7 +30,8 @@ const impactivComponentsExports = [
   SolutionFeaturesComponent,
   HomeHeroComponent,
   StatsNumbersComponent,
-  SolutionsHeroComponent
+  SolutionsHeroComponent,
+  SolutionCarouselComponent,
 ];
 
 @NgModule({
