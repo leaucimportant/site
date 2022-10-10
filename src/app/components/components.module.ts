@@ -14,6 +14,7 @@ import { OurSkillsComponent } from './our-skills/our-skills.component';
 import { QuoteComponent } from './quote/quote.component';
 import { SolutionFeaturesComponent } from './solution-features/solution-features.component';
 import { HomeHeroComponent } from './home-hero/home-hero.component';
+import { StatsNumbersComponent } from './stats-numbers/stats-numbers.component';
 import { SolutionsHeroComponent } from './solutions-hero/solutions-hero.component';
 
 const impactivComponentsExports = [
@@ -27,6 +28,7 @@ const impactivComponentsExports = [
   QuoteComponent,
   SolutionFeaturesComponent,
   HomeHeroComponent,
+  StatsNumbersComponent,
   SolutionsHeroComponent
 ];
 
