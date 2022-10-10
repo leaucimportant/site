@@ -42,7 +42,6 @@ export class BannerComponent {
       bottomScrollPosition >= document.body.offsetHeight - 600
     )
       if (this.prevPosition < currentPosition) {
-        console.log(currentPosition);
         this.bannerPositionItem1 += 2;
         this.bannerPositionItem2 -= 2;
         this.bannerPositionItem3 += 2;
