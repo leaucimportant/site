@@ -1,25 +1,28 @@
 import { ScullyConfig, setPluginConfig } from '@scullyio/scully';
-import { getRegexPlugin } from '@gammastream/scully-plugin-regex';
+// import { getRegexPlugin } from '@gammastream/scully-plugin-regex';
 
 /** this loads the default render plugin, remove when switching to something else. */
 import '@scullyio/scully-plugin-puppeteer';
 
-const RegexPlugin = getRegexPlugin();
-setPluginConfig(RegexPlugin, {
-  replacements: [
-    {
-      from: 'href="mailto:bonjour@impactiv.fr"',
-      to: '',
-    },
-  ],
-});
+// const RegexPlugin = getRegexPlugin();
+// setPluginConfig(RegexPlugin, {
+//   replacements: [],
+// });
 
 export const config: ScullyConfig = {
   projectRoot: './src',
   projectName: 'impactiv',
   outDir: './public',
-  routes: {},
-  defaultPostRenderers: [RegexPlugin],
+  routes: {
+    // '/usecase/:id': {
+    //   type: 'json',
+    //   productId: {
+    //     url: 'https://scully-snipcart-api.netlify.com/products.json',
+    //     property: 'id',
+    //   },
+    // },
+  },
+  // defaultPostRenderers: [RegexPlugin],
   puppeteerLaunchOptions: {
     args: [
       '--no-sandbox',

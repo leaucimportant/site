@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatomoService, Config } from 'src/app/services';
+import { SeoService } from 'src/app/services/seo.service';
 
 @Component({
   selector: 'impactiv-solution-mobile',
@@ -6,6 +8,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./solution-mobile.component.scss'],
 })
 export class SolutionMobileComponent implements OnInit {
+  constructor(
+    private seoService: SeoService,
+    private matomoService: MatomoService
+  ) {}
   banner = {
     title: 'Votre expérience commence ici !',
     description:
@@ -25,7 +31,24 @@ export class SolutionMobileComponent implements OnInit {
       "Le groupe Elior cherche toujours des solutions digitales innovantes et rapides à mettre en œuvre. C’est une des raisons essentielles qui nous a fait choisir Impactiv. Nous avons toujours apprécié l’agilité et la rapidité d'exécution dont ils font preuve sur tous nos projets. Mais ce que j’apprécie le plus reste leur professionnalisme.",
   };
 
-  constructor() {}
+  ngOnInit(): void {
+    this.setSeo();
+    this.matomoTrack();
+  }
 
-  ngOnInit(): void {}
+  private setSeo(): void {
+    if (Config.seoMeta.mobileSolution) {
+      this.seoService.setPageSeo(Config.seoMeta.mobileSolution);
+    } else {
+      console.warn('missing seoMeta.mobileSolution');
+    }
+  }
+
+  private matomoTrack(): void {
+    if (Config.seoMeta.mobileSolution) {
+      this.matomoService.trackPageView(Config.seoMeta.mobileSolution);
+    } else {
+      console.warn('missing seoMeta.mobileSolution');
+    }
+  }
 }

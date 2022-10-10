@@ -7,26 +7,32 @@ import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
 import { SolutionMobileComponent } from './solution-mobile/solution-mobile.component';
 
+// IMPORTANT: ne pas refactor les paths par une variable, lors du build static la route n'est pas reconnue !
 const routes: Routes = [
   {
-    path: Config.impactivRoutes.home,
+    path: '',
     component: HomeComponent,
   },
   {
-    path: Config.impactivRoutes.contact,
+    path: 'contact',
     component: ContactComponent,
   },
   {
-    path: Config.impactivRoutes.company,
+    path: 'entreprise',
     component: CompanyComponent,
   },
   {
-    path: Config.impactivRoutes.mobileSolution,
+    path: 'solutions/mobile',
     component: SolutionMobileComponent,
   },
+  // {
+  //   path: 'usecase/:id',
+  //   component: SolutionMobileComponent,
+  // },
+
   {
     path: '**',
-    redirectTo: Config.impactivRoutes.home,
+    redirectTo: '',
   },
 ];
 
