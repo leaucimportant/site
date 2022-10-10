@@ -1,0 +1,12 @@
+<impactiv-solution-dsm-hero></impactiv-solution-dsm-hero>
+<impactiv-solution-block
+  *ngFor="let block of blocks; let i = index"
+  [isReversed]="i % 2 === 0"
+  [data]="block"
+></impactiv-solution-block>
+<impactiv-our-expertise></impactiv-our-expertise>
+<impactiv-infrastructure-masonry></impactiv-infrastructure-masonry>
+<impactiv-solution-carousel></impactiv-solution-carousel>
+<impactiv-numbers></impactiv-numbers>
+<impactiv-use-case-resume></impactiv-use-case-resume>
+<impactiv-banner [banner]="banner"></impactiv-banner>

@@ -4,19 +4,24 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { NgxGlideModule } from 'ngx-glide';
 
-import { FooterComponent } from './footer/footer.component';
-import { HeaderComponent } from './header/header.component';
-import { NumbersComponent } from './numbers/numbers.component';
-import { BannerComponent } from './banner/banner.component';
-import { OurCustomersComponent } from './our-customers/our-customers.component';
-import { OurSolutionsComponent } from './our-solutions/our-solutions.component';
-import { OurSkillsComponent } from './our-skills/our-skills.component';
-import { QuoteComponent } from './quote/quote.component';
-import { SolutionFeaturesComponent } from './solution-features/solution-features.component';
-import { HomeHeroComponent } from './home-hero/home-hero.component';
-import { StatsNumbersComponent } from './stats-numbers/stats-numbers.component';
-import { SolutionsHeroComponent } from './solutions-hero/solutions-hero.component';
-import { SolutionCarouselComponent } from './solution-carousel/solution-carousel.component';
+import { FooterComponent } from './core/footer/footer.component';
+import { HeaderComponent } from './core/header/header.component';
+import { NumbersComponent } from './core/numbers/numbers.component';
+import { BannerComponent } from './core/banner/banner.component';
+import { OurCustomersComponent } from './home/our-customers/our-customers.component';
+import { OurSolutionsComponent } from './home/our-solutions/our-solutions.component';
+import { OurSkillsComponent } from './home/our-skills/our-skills.component';
+import { QuoteComponent } from './core/quote/quote.component';
+import { SolutionFeaturesComponent } from './solutions/solution-features/solution-features.component';
+import { HomeHeroComponent } from './home/home-hero/home-hero.component';
+import { StatsNumbersComponent } from './core/stats-numbers/stats-numbers.component';
+import { SolutionsHeroComponent } from './solutions/solutions-hero/solutions-hero.component';
+import { SolutionCarouselComponent } from './solutions/solution-carousel/solution-carousel.component';
+import { SolutionBlockComponent } from './solutions/solution-block/solution-block.component';
+import { SolutionDsmHeroComponent } from './solutions/solution-dsm-hero/solution-dsm-hero.component';
+import { OurExpertiseComponent } from './solutions/our-expertise/our-expertise.component';
+import { InfrastructureMasonryComponent } from './solutions/infrastructure-masonry/infrastructure-masonry.component';
+import { UseCaseResumeComponent } from './core/use-case-resume/use-case-resume.component';
 
 const impactivComponentsExports = [
   BannerComponent,
@@ -32,6 +37,11 @@ const impactivComponentsExports = [
   StatsNumbersComponent,
   SolutionsHeroComponent,
   SolutionCarouselComponent,
+  SolutionBlockComponent,
+  SolutionDsmHeroComponent,
+  OurExpertiseComponent,
+  InfrastructureMasonryComponent,
+  UseCaseResumeComponent,
 ];
 
 @NgModule({
