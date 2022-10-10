@@ -1,21 +1,6 @@
 .solution-carousel {
   padding: 8rem 0 0;
 
-  .btn-contact-us {
-    border: none;
-    border-radius: 0;
-    padding: 1rem 0;
-    &:hover {
-      .bi::before {
-        animation: slide-right 0.8s ease-in-out infinite;
-      }
-    }
-    span {
-      padding: 0.5rem 0;
-      border-bottom: 2px solid #0f172a;
-    }
-  }
-
   &__description {
     max-width: 60%;
   }
@@ -37,20 +22,5 @@
       margin-top: 1rem;
       padding: 1rem 0;
     }
-  }
-}
-
-// Animation arrow
-@keyframes slide-right {
-  0% {
-    transform: translate(0, 0);
-  }
-
-  50% {
-    transform: translate(5px, 0);
-  }
-
-  100% {
-    transform: translate(0, 0);
   }
 }

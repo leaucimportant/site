@@ -10,6 +10,7 @@ import { PagesRoutingModule } from './pages-routing.module';
 import { HomeComponent } from './home/home.component';
 import { CompanyComponent } from './company/company.component';
 import { SolutionMobileComponent } from './solution-mobile/solution-mobile.component';
+import { SolutionDSMComponent } from './solution-dsm/solution-dsm.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { SolutionMobileComponent } from './solution-mobile/solution-mobile.compo
     HomeComponent,
     CompanyComponent,
     SolutionMobileComponent,
+    SolutionDSMComponent,
   ],
   imports: [
     CommonModule,
