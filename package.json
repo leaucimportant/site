@@ -11,7 +11,7 @@
     "git:prune": "git remote prune origin",
     "git:rebase": "git rebase -i --autosquash develop",
     "git:push": "git push --force-with-lease",
-    "scully": "npx scully --project impactiv --scanRoutes",
+    "scully": "npx scully --project impactiv --scanRoutes --stats",
     "scully:serve": "npx scully serve --project impactiv"
   },
   "private": true,

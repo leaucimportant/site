@@ -1,0 +1,40 @@
+<div class="container solution-carousel">
+  <h1 class="impactiv-display-small">Un backoffice simple et puissant.</h1>
+  <p class="impactiv-body-regular solution-carousel__description">
+    Pour nous, l’expérience de vos clients est toute aussi importante que celle
+    de votre équipe. Pilotez l’ensemble des services déployés depuis un outil
+    simple et intuitif.
+  </p>
+
+  <a name="" id="" class="btn btn-contact-us" href="#" role="button"
+    ><span class=""
+      >Contactez-nous
+      <i
+        class="hero__arrow bi bi-arrow-right-short fs-5 align-middle"
+        aria-hidden="true"
+      ></i></span
+  ></a>
+
+  <div class="solution-carousel__container">
+    <ng-container *ngIf="images && images.length > 0">
+      <ngx-glide
+        #ngxGlide
+        [showArrows]="false"
+        [showBullets]="false"
+        [perView]="1.75"
+        [breakpoints]="{ '768': { perView: 1 }, '1200': { perView: 1.75 } }"
+        [gap]="20"
+        [type]="'carousel'"
+        [listenToEvents]="false"
+        [autoplay]="5000"
+        [animationDuration]="700"
+      >
+        <ng-container *ngFor="let image of images">
+          <div class="d-flex align-center justify-content-center">
+            <img class="img-fluid" [src]="image.src" [alt]="image.alt" />
+          </div>
+        </ng-container>
+      </ngx-glide>
+    </ng-container>
+  </div>
+</div>
