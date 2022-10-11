@@ -31,6 +31,10 @@ export class SolutionMobileComponent implements OnInit {
       "Le groupe Elior cherche toujours des solutions digitales innovantes et rapides à mettre en œuvre. C’est une des raisons essentielles qui nous a fait choisir Impactiv. Nous avons toujours apprécié l’agilité et la rapidité d'exécution dont ils font preuve sur tous nos projets. Mais ce que j’apprécie le plus reste leur professionnalisme.",
   };
 
+  solutionsFilter = {
+    id: 'application',
+  };
+
   ngOnInit(): void {
     this.setSeo();
     this.matomoTrack();

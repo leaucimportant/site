@@ -22,6 +22,7 @@ import { SolutionDsmHeroComponent } from './solutions/solution-dsm-hero/solution
 import { OurExpertiseComponent } from './solutions/our-expertise/our-expertise.component';
 import { InfrastructureMasonryComponent } from './solutions/infrastructure-masonry/infrastructure-masonry.component';
 import { UseCaseResumeComponent } from './core/use-case-resume/use-case-resume.component';
+import { OtherSolutionsComponent } from './solutions/other-solutions/other-solutions.component';
 
 const impactivComponentsExports = [
   BannerComponent,
@@ -42,6 +43,7 @@ const impactivComponentsExports = [
   OurExpertiseComponent,
   InfrastructureMasonryComponent,
   UseCaseResumeComponent,
+  OtherSolutionsComponent,
 ];
 
 @NgModule({
