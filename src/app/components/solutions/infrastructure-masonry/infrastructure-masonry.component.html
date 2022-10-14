@@ -1,1 +1,195 @@
-<p>infrastructure-masonry works!</p>
+<div class="container-fluid masonry">
+  <div class="container">
+    <h1 class="impactiv-display-small">Gestion des infrastructures</h1>
+    <p class="impactiv-body-regular masonry__description">
+      Le passage au cloud est un investissement judicieux pour l'avenir de votre
+      business : vous devenez plus agile, vous pouvez adapter votre
+      infrastructure à votre croissance et améliorer la sécurité. Quel que soit
+      votre objectif, notre expertise peut vous aider à mener facilement à bien
+      vos projets cloud.
+    </p>
+    <a name="" id="" class="btn btn-contact-us" href="#" role="button"
+      ><span class=""
+        >Contactez-nous
+        <i
+          class="hero__arrow bi bi-arrow-right-short fs-5 align-middle"
+          aria-hidden="true"
+        ></i></span
+    ></a>
+    <div class="masonry__grid">
+      <div class="masonry__card masonry__item1">
+        <picture class="masonry__picture">
+          <img src="assets/images/icons/infrastructure/architecture.svg" />
+        </picture>
+        <h1 class="impactiv-headline-small">Architecture Cloud</h1>
+        <p class="impactiv-body-regular m-0 masonry__body">
+          L'architecture Cloud est la manière dont les composants technologiques
+          se combinent pour créer un Cloud.
+        </p>
+      </div>
+
+      <div
+        class="masonry__card masonry__card-black masonry__item2 masonry__card-withImage"
+      >
+        <div class="masonry__card-content">
+          <picture class="masonry__picture">
+            <img src="assets/images/icons/infrastructure/infrastructure.svg" />
+          </picture>
+          <h1 class="impactiv-headline-small masonry__title">
+            Infrastructure as a code
+          </h1>
+          <p class="impactiv-body-regular m-0 masonry__body">
+            L'IaC (Infrastructure-as-Code) consiste à gérer et à approvisionner
+            une infrastructure à l'aide de lignes de code plutôt que par des
+            processus manuels. Ceci permet d'assurer que le même environnement
+            est fourni à chaque fois.
+          </p>
+        </div>
+        <img class="masonry__image" src="assets/images/bg/masonry_test.png" />
+      </div>
+
+      <div class="masonry__card masonry__item3 masonry__card-withImage no-fill">
+        <div class="masonry__card-content">
+          <picture class="masonry__picture">
+            <img src="assets/images/icons/infrastructure/stockage.svg" />
+          </picture>
+          <h1 class="impactiv-headline-small masonry__title">Stockage</h1>
+          <p class="impactiv-body-regular m-0 masonry__body">
+            Le stockage cloud est un service qui vous permet de stocker des
+            données en les transférant via Internet ou via un autre réseau vers
+            un système de stockage hors site géré par une tierce partie.
+          </p>
+        </div>
+        <img
+          class="masonry__image"
+          src="assets/images/bg/masonry_stockage.png"
+        />
+      </div>
+
+      <div class="masonry__card masonry__card-withImage masonry__item4">
+        <img
+          class="masonry__image"
+          src="assets/images/bg/masonry_scalabilite.png"
+        />
+        <div class="masonry__card-content">
+          <picture class="masonry__picture">
+            <img src="assets/images/icons/infrastructure/scalabitile.svg" />
+          </picture>
+          <h1 class="impactiv-headline-small masonry__title">Scalabilité</h1>
+          <p class="impactiv-body-regular m-0 masonry__body">
+            La scalabilité d'un service désigne la capacité de l'application et
+            de l'infrastructure à s'adapter automatiquement pour traiter un
+            niveau de sollicitation variable.
+          </p>
+        </div>
+      </div>
+
+      <div class="masonry__card masonry__item5">
+        <picture class="masonry__picture">
+          <img src="assets/images/icons/infrastructure/securite.svg" />
+        </picture>
+        <h1 class="impactiv-headline-small masonry__title">Sécurité</h1>
+        <p class="impactiv-body-regular m-0 masonry__body">
+          Le cloud comporte ses propres risques de sécurité en matière de
+          cybersécurité. Il est donc impératif de s’en protéger !
+        </p>
+      </div>
+
+      <div
+        class="masonry__card masonry__card-black masonry__item6 masonry__card-withImage no-fill"
+      >
+        <div class="masonry__card-content">
+          <picture class="masonry__picture">
+            <img src="assets/images/icons/infrastructure/sla.svg" />
+          </picture>
+          <h1 class="impactiv-headline-small masonry__title">SLA</h1>
+          <p class="impactiv-body-regular m-0 masonry__body">
+            Le service-level agreement (SLA) ou « accord de niveau de service »
+            est un document qui définit la qualité de service entre un
+            fournisseur de service et son client.
+          </p>
+        </div>
+        <img class="masonry__image" src="assets/images/bg/masonry_sla.png" />
+        <div
+          class="masonry__gradient-mobile"
+          [ngClass]="isActive ? 'hide' : 'show'"
+        ></div>
+      </div>
+    </div>
+
+    <div class="masonry__grid2" [ngClass]="isActive ? 'show' : 'hide'">
+      <div class="masonry__card masonry__card-withImage-right masonry__item1">
+        <div class="masonry__card-content">
+          <picture class="masonry__picture">
+            <img src="assets/images/icons/infrastructure/metriques.svg" />
+          </picture>
+          <h1 class="impactiv-headline-small masonry__title">Métriques</h1>
+          <p class="impactiv-body-regular m-0 masonry__body">
+            Le terme de métrique (ou metric en anglais) désigne une unité ou un
+            indicateur de mesure utilisé pour juger de l'efficacité d'une
+            activité.
+          </p>
+        </div>
+        <img
+          class="masonry__image"
+          src="assets/images/bg/masonry_metrique.png"
+        />
+      </div>
+
+      <div class="masonry__card masonry__card-black masonry__item2">
+        <picture class="masonry__picture">
+          <img src="assets/images/icons/infrastructure/tracabilite.svg" />
+        </picture>
+        <h1 class="impactiv-headline-small masonry__title">
+          Traçabilité (tracing et tracking)
+        </h1>
+        <p class="impactiv-body-regular m-0 masonry__body">
+          Le tracing suggère à la fois l'idée de suivre une piste et retracer
+          son origine. Le tracking est l'aptitude à retrouver l'historique,
+          l'utilisation ou la localisation d'une entité au moyen
+          d'identifications enregistrées.
+        </p>
+      </div>
+
+      <div class="masonry__card masonry__item3">
+        <picture class="masonry__picture">
+          <img src="assets/images/icons/infrastructure/sauvegarde.svg" />
+        </picture>
+        <h1 class="impactiv-headline-small">Sauvegarde</h1>
+        <p class="impactiv-body-regular m-0 masonry__body">
+          La sécurisation des données est un enjeu de plus en plus complexe.
+          Pour obtenir l’assurance que ces données soient toujours disponibles
+          en cas d’incident, et ce peu importe leur localisation, la mise en
+          place d'une stratégie de sauvegarde constitue la réponse idéale.
+        </p>
+      </div>
+
+      <div class="masonry__card masonry__item4 masonry__card-withImage">
+        <div class="masonry__card-content">
+          <picture class="masonry__picture">
+            <img src="assets/images/icons/infrastructure/surveillance.svg" />
+          </picture>
+          <h1 class="impactiv-headline-small masonry__title">Surveillance</h1>
+          <p class="impactiv-body-regular m-0 masonry__body">
+            La surveillance (ou monitoring) est le processus de collecte de
+            métriques sur le fonctionnement du matériel et des logiciels d'un
+            environnement, qui permet de s'assurer que les applications et les
+            services sont pris en charge comme prévu.
+          </p>
+        </div>
+        <img
+          class="masonry__image"
+          src="assets/images/bg/masonry_surveillance.png"
+        />
+      </div>
+    </div>
+    <button
+      type="button"
+      class="btn btn-secondary masonry__button mb-5 mt-3"
+      (click)="isActive = !isActive"
+      [ngClass]="isActive ? 'hide' : 'show'"
+    >
+      En voir plus
+    </button>
+  </div>
+</div>
