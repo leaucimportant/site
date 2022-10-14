@@ -6,6 +6,7 @@ import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
 import { SolutionDSMComponent } from './solution-dsm/solution-dsm.component';
 import { SolutionMobileComponent } from './solution-mobile/solution-mobile.component';
+import { UseCaseComponent } from './use-case/use-case.component';
 
 // IMPORTANT: ne pas refactor les paths par une variable, lors du build static la route n'est pas reconnue !
 const routes: Routes = [
@@ -29,11 +30,10 @@ const routes: Routes = [
     path: 'solutions/integration',
     component: SolutionDSMComponent,
   },
-  // {
-  //   path: 'usecase/:id',
-  //   component: SolutionMobileComponent,
-  // },
-
+  {
+    path: 'usecase/:id',
+    component: UseCaseComponent,
+  },
   {
     path: '**',
     redirectTo: '',

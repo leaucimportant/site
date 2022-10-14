@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MatomoService, Config } from 'src/app/services';
-import { SeoService } from 'src/app/services/seo.service';
+import { MatomoService, Config, SeoService } from 'src/app/services';
 
 @Component({
   selector: 'impactiv-solution-mobile',

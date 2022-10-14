@@ -14,13 +14,13 @@ export const config: ScullyConfig = {
   projectName: 'impactiv',
   outDir: './public',
   routes: {
-    // '/usecase/:id': {
-    //   type: 'json',
-    //   productId: {
-    //     url: 'https://scully-snipcart-api.netlify.com/products.json',
-    //     property: 'id',
-    //   },
-    // },
+    '/usecase/:id': {
+      type: 'json',
+      id: {
+        url: 'https://impactiv.s3.fr-par.scw.cloud/siteweb/casclients.json',
+        property: 'id',
+      },
+    },
   },
   // defaultPostRenderers: [RegexPlugin],
   puppeteerLaunchOptions: {
@@ -28,16 +28,16 @@ export const config: ScullyConfig = {
       '--no-sandbox',
       '--disable-setuid--sandbox',
       //Config WSL
-      // '--disable-gpu',
-      // '--renderer',
-      // '--no-service-autorun',
-      // '--no-experiments',
-      // '--no-default-browser-check',
-      // '--disable-dev-shm-usage',
-      // '--no-first-run',
-      // '--no-zygote',
-      // '--single-process',
-      // '--disable-extensions',
+      '--disable-gpu',
+      '--renderer',
+      '--no-service-autorun',
+      '--no-experiments',
+      '--no-default-browser-check',
+      '--disable-dev-shm-usage',
+      '--no-first-run',
+      '--no-zygote',
+      '--single-process',
+      '--disable-extensions',
     ],
   },
 };
