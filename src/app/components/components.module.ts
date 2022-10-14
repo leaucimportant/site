@@ -23,6 +23,11 @@ import { OurExpertiseComponent } from './solutions/our-expertise/our-expertise.c
 import { InfrastructureMasonryComponent } from './solutions/infrastructure-masonry/infrastructure-masonry.component';
 import { UseCaseResumeComponent } from './core/use-case-resume/use-case-resume.component';
 import { OtherSolutionsComponent } from './solutions/other-solutions/other-solutions.component';
+import { UseCaseHeroComponent } from './usecase/use-case-hero/use-case-hero.component';
+import { CustomerNeedComponent } from './usecase/customer-need/customer-need.component';
+import { ResponseComponent } from './usecase/response/response.component';
+import { UseCaseQuoteComponent } from './usecase/use-case-quote/use-case-quote.component';
+import { ChallengeComponent } from './usecase/challenge/challenge.component';
 
 const impactivComponentsExports = [
   BannerComponent,
@@ -44,6 +49,11 @@ const impactivComponentsExports = [
   InfrastructureMasonryComponent,
   UseCaseResumeComponent,
   OtherSolutionsComponent,
+  UseCaseHeroComponent,
+  CustomerNeedComponent,
+  ResponseComponent,
+  UseCaseQuoteComponent,
+  ChallengeComponent,
 ];
 
 @NgModule({

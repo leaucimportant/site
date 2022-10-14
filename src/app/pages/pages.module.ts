@@ -11,6 +11,7 @@ import { HomeComponent } from './home/home.component';
 import { CompanyComponent } from './company/company.component';
 import { SolutionMobileComponent } from './solution-mobile/solution-mobile.component';
 import { SolutionDSMComponent } from './solution-dsm/solution-dsm.component';
+import { UseCaseComponent } from './use-case/use-case.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { SolutionDSMComponent } from './solution-dsm/solution-dsm.component';
     CompanyComponent,
     SolutionMobileComponent,
     SolutionDSMComponent,
+    UseCaseComponent,
   ],
   imports: [
     CommonModule,

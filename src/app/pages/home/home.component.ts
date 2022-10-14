@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Config, MatomoService } from 'src/app/services';
-import { SeoService } from 'src/app/services/seo.service';
+import { Config, MatomoService, SeoService } from 'src/app/services';
 
 @Component({
   selector: 'impactiv-home',
