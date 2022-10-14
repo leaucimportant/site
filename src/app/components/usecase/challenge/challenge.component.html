@@ -1,7 +1,7 @@
-<p [innerHTML]="challenge?.text"></p>
+<p [innerHTML]="challenge.text"></p>
 <ng-container
   *ngIf="
-    challenge && challenge.images && challenge.images.length > 1;
+    challenge.images && challenge.images.length > 1;
     else singleImageTemplate
   "
 >
@@ -28,7 +28,7 @@
 <ng-template #singleImageTemplate>
   <img
     [src]="
-      challenge && challenge.images && challenge.images[0]
+      challenge.images && challenge.images[0]
         ? challenge.images[0]
         : 'assets/images/contents/customers/logoipsum.svg'
     "

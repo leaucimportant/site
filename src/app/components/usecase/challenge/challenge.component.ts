@@ -9,7 +9,7 @@ import { Block } from 'src/app/interfaces';
 export class ChallengeComponent implements OnInit {
   constructor() {}
 
-  @Input() challenge?: Block;
+  @Input() challenge!: Block;
 
   ngOnInit(): void {}
 }
