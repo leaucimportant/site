@@ -39,8 +39,7 @@
   line-height: 2rem;
 }
 
-.impactiv-headline-small,
-.custom-bold {
+.impactiv-headline-small {
   font-family: "Inter";
   font-size: 1rem;
   font-style: normal;
@@ -164,4 +163,8 @@
   100% {
     transform: translate(0, 0);
   }
+}
+
+.custom-bold {
+  font-weight: 700;
 }
