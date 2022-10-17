@@ -1,0 +1,59 @@
+.quote {
+  margin-top: 5rem;
+  padding-left: 2rem;
+  border-left: 2px solid var(--bs-primary);
+  &-logo {
+    width: 2rem;
+    height: 2rem;
+  }
+  &-texte {
+    font-style: italic;
+  }
+  &-picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 3rem;
+    max-width: 3rem;
+    width: 3rem;
+    height: 3rem;
+    border: 1px solid var(--bs-gray-100);
+    border-radius: var(--bs-border-radius);
+    margin-right: 1rem;
+  }
+  &-company {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &-people {
+    display: flex;
+    margin-top: 2rem;
+  }
+  &-name {
+    &::after {
+      content: ",";
+      margin-right: 0.3rem;
+    }
+  }
+  &-job {
+    color: var(--bs-gray-600);
+  }
+
+  @media (max-width: 991.98px) {
+    &-people {
+      flex-direction: column;
+    }
+    &-company-mobile {
+      flex-direction: column;
+    }
+    &-picture {
+      margin-bottom: 1rem;
+    }
+  }
+
+  @media (max-width: 575.98px) {
+    border-left: none;
+    padding-left: 1rem;
+  }
+}
