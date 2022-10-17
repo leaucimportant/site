@@ -1,6 +1,6 @@
 <div *ngIf="useCase">
   <impactiv-use-case-hero></impactiv-use-case-hero>
-  <impactiv-customer-need></impactiv-customer-need>
+  <impactiv-customer-need [customerNeed]="useCase.customerNeed"></impactiv-customer-need>
   <impactiv-challenge [challenge]="useCase.challenge"></impactiv-challenge>
   <impactiv-response></impactiv-response>
   <impactiv-use-case-quote></impactiv-use-case-quote>
