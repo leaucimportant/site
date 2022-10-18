@@ -92,7 +92,16 @@
   padding: 0.25rem 0.125rem 0.5rem;
   background-image: url("../assets/images/effects/underline_effect.svg");
   background-position: 50% 100%;
-  background-size: contain;
+  background-size: auto;
+  background-repeat: no-repeat;
+}
+
+.with-highlight {
+  display: inline-block;
+  padding: 0.25rem 0.125rem 0.5rem;
+  background-image: url("../assets/images/effects/highlight_effect.svg");
+  background-position: 50% 100%;
+  background-size: auto;
   background-repeat: no-repeat;
 }
 
@@ -147,6 +156,12 @@
     .bi::before {
       animation: slide-right 0.8s ease-in-out infinite;
     }
+  }
+}
+
+.container-use-case {
+  @media (min-width: 1400px) {
+    max-width: 900px;
   }
 }
 
