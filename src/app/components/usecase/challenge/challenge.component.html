@@ -2,7 +2,10 @@
   <h1 class="impactiv-display-small mb-3">
     Le <span class="with-highlight">challenge</span>.
   </h1>
-  <p [innerHTML]="challenge.text" class="impactiv-body-regular challenge-text"></p>
+  <p
+    [innerHTML]="challenge.text"
+    class="impactiv-body-regular challenge-text"
+  ></p>
   <ng-container
     *ngIf="
       challenge.images && challenge.images.length > 1;
@@ -14,15 +17,17 @@
       [showArrows]="false"
       [showBullets]="false"
       [perView]="1"
-      [gap]="0"
+      [gap]="20"
       [type]="'carousel'"
       [listenToEvents]="false"
       [autoplay]="5000"
-      [animationDuration]="700"
+      [animationDuration]="500"
     >
       <ng-container *ngFor="let image of challenge.images">
-        <div class="d-flex align-center justify-content-center">
-          <img [src]="image" class="img-fluid challenge-image"/>
+        <div
+          class="d-flex align-center justify-content-center challenge-image-container"
+        >
+          <img [src]="image" class="img-fluid challenge-image" />
         </div>
       </ng-container>
     </ngx-glide>
@@ -36,5 +41,6 @@
           : 'assets/images/contents/customers/logoipsum.svg'
       "
       alt=""
+      class="img-fluid challenge-image"
   /></ng-template>
 </div>

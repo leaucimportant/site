@@ -1,1 +1,58 @@
-<p>response works!</p>
+<div class="container response container-use-case">
+  <h1 class="impactiv-display-small mb-3">
+    Notre <span class="with-underline">réponse</span>.
+  </h1>
+  <p
+    [innerHTML]="response.text"
+    class="impactiv-body-regular response-text"
+  ></p>
+  <div class="response-list" *ngIf="response.items">
+    <div *ngFor="let item of response.items" class="d-flex">
+      <div class="d-flex response-items">
+        <img
+          class="me-3 response-icon"
+          src="assets/images/icons/usecase/check.svg"
+        />
+        <p [innerHTML]="item" class="m-0"></p>
+      </div>
+    </div>
+  </div>
+
+  <ng-container
+    *ngIf="
+      response.images && response.images.length > 1;
+      else singleImageTemplate
+    "
+  >
+    <ngx-glide
+      #ngxGlide
+      [showArrows]="false"
+      [showBullets]="false"
+      [perView]="1"
+      [gap]="20"
+      [type]="'carousel'"
+      [listenToEvents]="false"
+      [autoplay]="5000"
+      [animationDuration]="500"
+    >
+      <ng-container *ngFor="let image of response.images">
+        <div
+          class="d-flex align-center justify-content-center response-image-container"
+        >
+          <img [src]="image" class="img-fluid response-image" />
+        </div>
+      </ng-container>
+    </ngx-glide>
+  </ng-container>
+
+  <ng-template #singleImageTemplate>
+    <img
+      [src]="
+        response.images && response.images[0]
+          ? response.images[0]
+          : 'assets/images/contents/customers/logoipsum.svg'
+      "
+      alt=""
+      class="img-fluid response-image"
+  /></ng-template>
+</div>
