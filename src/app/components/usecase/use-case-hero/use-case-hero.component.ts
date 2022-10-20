@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'impactiv-use-case-hero',
@@ -7,9 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UseCaseHeroComponent implements OnInit {
 
-  constructor() { }
+  @Input() title!: string;
+  @Input() subtitle!: string;
+  @Input() logo!: string;
+  @Input() media!: string;
+  @Input() tags!: string[];
 
+  extension: string | undefined;
+  isVideo: boolean | undefined;
+  
   ngOnInit(): void {
   }
 
+  constructor() {}
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes['media'] && this.media)
+      this.extension = this.media.split('.').pop();
+      this.isVideo = this.extension === 'mp4';
+  }
 }

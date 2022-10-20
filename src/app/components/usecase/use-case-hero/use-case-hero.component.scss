@@ -1,0 +1,99 @@
+.hero {
+  background-image: url("../../../../assets/images/bg/bg_home.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--bs-gray-100);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 1100px;
+  &-title {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+  }
+  &-subtitle {
+    margin-bottom: 2rem;
+  }
+  &-picture {
+    border-radius: var(--bs-border-radius-sm);
+    background-color: var(--bs-light);
+    width: 7.5rem;
+    height: 3.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &-logo {
+    width: 4.5rem;
+    height: 1.5rem;
+  }
+  &-image,
+  &-video {
+    border-radius: var(--bs-border-radius-sm);
+    border: 1px solid var(--bs-gray-100);
+    border-style: outset;
+    &-container {
+      position: relative;
+    }
+    &-gradient {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: var(--bs-border-radius-sm);
+      background: linear-gradient(
+        180deg,
+        rgba(15, 23, 42, 0) 46.88%,
+        rgba(15, 23, 42, 0.9) 100%
+      );
+    }
+  }
+  &-tags {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: space-around;
+    width: 100%;
+    position: absolute;
+    bottom: 5%;
+    z-index: 5;
+  }
+  &-tag {
+    border-radius: var(--bs-border-radius-sm);
+    background-color: var(--bs-light);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    margin: 0 0.3rem;
+  }
+
+  @media (max-width: 767.98px) {
+    &-tags {
+      height: 30%;
+      justify-content: flex-start;
+      padding-left: 1rem;
+    }
+  }
+
+  @media (max-width: 575.98px) {
+    height: 875px;
+    &-title {
+      font-size: 2rem;
+      line-height: 2.25rem;
+    }
+    &-tags {
+      height: 40%;
+    }
+  }
+
+  @media (max-width: 425px) {
+    &-tags {
+      height: 60%;
+    }
+  }
+}
