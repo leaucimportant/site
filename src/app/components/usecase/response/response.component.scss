@@ -17,6 +17,7 @@
   &-image {
     border-radius: var(--bs-border-radius-sm);
     border: 1px solid var(--bs-gray-100);
+    border-style: outset;
     &-container {
       border-radius: var(--bs-border-radius-sm);
     }

@@ -1,6 +1,14 @@
 <div *ngIf="useCase">
-  <impactiv-use-case-hero></impactiv-use-case-hero>
-  <impactiv-customer-need [customerNeed]="useCase.customerNeed"></impactiv-customer-need>
+  <impactiv-use-case-hero
+    [title]="useCase.title"
+    [subtitle]="useCase.subtitle"
+    [logo]="useCase.logo"
+    [media]="useCase.media"
+    [tags]="useCase.tags"
+  ></impactiv-use-case-hero>
+  <impactiv-customer-need
+    [customerNeed]="useCase.customerNeed"
+  ></impactiv-customer-need>
   <impactiv-challenge [challenge]="useCase.challenge"></impactiv-challenge>
   <impactiv-response [response]="useCase.response"></impactiv-response>
   <impactiv-use-case-quote [quote]="useCase.quote"></impactiv-use-case-quote>
