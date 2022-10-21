@@ -1,203 +1,219 @@
-<div class="container contact-container">
-  <section class="contact-container__infos">
-    <h1 class="impactiv-display-small">Contactez nos experts</h1>
-    <p class="impactiv-body-regular">
-      Une demande d’information, de présentation ou démonstration de nos
-      solutions, un dépôt de candidature, une suggestion ou un commentaire
-      relatif à notre site, ce formulaire est fait pour vous !
-    </p>
-    <div class="contact-container__infos--buttons">
-      <button type="button" class="btn btn-secondary">
-        <span class="align-middle impactiv-button-regular">Appelez-nous</span
-        ><i
-          class="bi bi-arrow-right-short ms-2 fs-5 align-middle contact-container__infos--buttons--arrow-icon"
-          aria-hidden="true"
-        ></i>
-      </button>
-      <button type="button" class="btn btn-outline-gray-005">
-        <span class="align-middle impactiv-button-regular text-secondary"
-          >Retrouvez-nous sur Linkedin</span
-        >
-        <i
-          class="bi bi-arrow-right-short ms-2 fs-5 align-middle contact-container__infos--buttons--arrow-icon"
-          aria-hidden="true"
-        ></i>
-      </button>
-    </div>
-
-    <div>
-      <figure class="figure">
-        <img
-          src="assets/images/bg/maps.png"
-          class="figure-img img-fluid rounded"
-          alt="maps"
-        />
-        <figcaption class="text-start impactiv-body-small">
-          4 Av. de l'Obiou, 38700 La Tronche
-        </figcaption>
-      </figure>
-    </div>
-  </section>
-  <section class="contact-container__form">
-    <form [formGroup]="form" novalidate>
-      <div>
-        <label for="activityInput" *ngIf="!submitted || !f['activity'].errors"
-          >Votre secteur d’activité</label
-        >
-        <select
-          class="form-select"
-          aria-label="Default select example"
-          formControlName="activity"
-        >
-          <option value="1">One</option>
-          <option value="2">Two</option>
-          <option value="3">Three</option>
-        </select>
-      </div>
-      <div class="contact-container__form--row">
-        <div class="contact-container__form--row--input">
-          <label for="nameInput">Nom</label>
-          <input
-            type="text"
-            name="name"
-            class="form-control"
-            placeholder="Nom"
-            aria-label="nom"
-            formControlName="name"
-            minlength="2"
-            required
-            [class.is-invalid]="
-              f['name'].errors && (f['name'].dirty || f['name'].touched)
-            "
-            [class.is-valid]="
-              !f['name'].errors && (f['name'].dirty || f['name'].touched)
-            "
-          />
-
-          <label for="nameInput" *ngIf="submitted && f['name'].errors"
-            >Veuillez saisir un nom valide</label
-          >
-        </div>
-        <div class="contact-container__form--row--input">
-          <label for="companyInput">Société</label>
-          <input
-            type="text"
-            name="company"
-            class="form-control"
-            placeholder="Société"
-            aria-label="société"
-            formControlName="company"
-            minlength="2"
-            required
-            [class.is-invalid]="
-              f['company'].errors &&
-              (f['company'].dirty || f['company'].touched)
-            "
-            [class.is-valid]="
-              !f['company'].errors &&
-              (f['company'].dirty || f['company'].touched)
-            "
-          />
-
-          <label for="companyInput" *ngIf="submitted && f['company'].errors"
-            >Veuillez saisir un nom valide</label
-          >
-        </div>
-      </div>
-      <div class="contact-container__form--row">
-        <div class="contact-container__form--row--input">
-          <label for="phoneInput">Téléphone</label>
-          <input
-            type="text"
-            name="phone"
-            class="form-control"
-            placeholder="Téléphone"
-            aria-label="phone"
-            formControlName="phone"
-            minlength="2"
-            required
-            [class.is-invalid]="
-              f['phone'].errors && (f['phone'].dirty || f['phone'].touched)
-            "
-            [class.is-valid]="
-              !f['phone'].errors && (f['phone'].dirty || f['phone'].touched)
-            "
-          />
-
-          <label for="phoneInput" *ngIf="submitted && f['phone'].errors"
-            >Veuillez saisir un nom valide</label
-          >
-        </div>
-        <div class="contact-container__form--row--input">
-          <label for="emailInput">Email professionnel</label>
-          <input
-            type="text"
-            name="email"
-            class="form-control"
-            placeholder="Email"
-            aria-label="email"
-            formControlName="email"
-            minlength="2"
-            required
-            [class.is-invalid]="
-              f['email'].errors && (f['email'].dirty || f['email'].touched)
-            "
-            [class.is-valid]="
-              !f['email'].errors && (f['email'].dirty || f['email'].touched)
-            "
-          />
-
-          <label for="emailInput" *ngIf="submitted && f['email'].errors"
-            >Veuillez saisir un nom valide</label
-          >
-        </div>
-      </div>
-      <div class="contact-container__form--single-row">
-        <label for="textarea1" class="form-label"
-          >Comment pouvons-nous vous aider ?</label
-        >
-        <textarea
-          class="form-control"
-          aria-label="message"
-          id="exampleFormControlTextarea1"
-          formControlName="message"
-          rows="3"
-          [class.is-invalid]="
-            f['message'].errors && (f['message'].dirty || f['message'].touched)
-          "
-          [class.is-valid]="
-            !f['message'].errors && (f['message'].dirty || f['message'].touched)
-          "
-        ></textarea>
-        <label for="textarea1" *ngIf="submitted && f['message'].errors">
-          <span *ngIf="f['message'].errors['required']"
-            >Veuillez saisir votre message</span
-          >
-          <span *ngIf="f['message'].errors['minlength']"
-            >Minimum de 5 caractères</span
-          >
-        </label>
-      </div>
-
-      <div
-        class="d-grid gap-2 contact-container__form--single-row contact-container__form--button"
-      >
-        <button type="button" class="btn btn-secondary">
-          <span class="align-middle impactiv-button-regular"
-            >Envoyer le message</span
+<div class="contact-container">
+  <div class="container d-flex contact-container-column">
+    <section class="contact-container__infos">
+      <h1 class="impactiv-display-small">Contactez nos experts</h1>
+      <p class="impactiv-body-regular">
+        Une demande d’information, de présentation ou démonstration de nos
+        solutions, un dépôt de candidature, une suggestion ou un commentaire
+        relatif à notre site, ce formulaire est fait pour vous !
+      </p>
+      <div class="contact-container__infos--buttons">
+        <button type="button" class="btn btn btn-secondary btn-contact-us-fill">
+          <span class="align-middle impactiv-button-regular">Appelez-nous</span
           ><i
             class="bi bi-arrow-right-short ms-2 fs-5 align-middle contact-container__infos--buttons--arrow-icon"
             aria-hidden="true"
           ></i>
         </button>
+        <button type="button" class="btn btn-gray-outline">
+          <span class="align-middle impactiv-button-regular text-secondary"
+            >Retrouvez-nous sur Linkedin</span
+          >
+          <i
+            class="bi bi-arrow-right-short ms-2 fs-5 align-middle contact-container__infos--buttons--arrow-icon"
+            aria-hidden="true"
+          ></i>
+        </button>
       </div>
-      <p
-        class="impactiv-body-sub-regular contact-container__form--single-row contact-container__form--text"
-      >
-        By clicking "Create account" above, you acknowledge that you have read
-        and understood, and agree to Impactiv Terms & Conditions, Licensing
-        Agreement and Privacy Policy.
-      </p>
-    </form>
-  </section>
+
+      <div>
+        <figure class="figure contact-container-figure">
+          <img
+            src="assets/images/bg/maps.png"
+            class="figure-img img-fluid rounded"
+            alt="maps"
+          />
+          <figcaption class="text-start impactiv-body-small">
+            4 Av. de l'Obiou, 38700 La Tronche
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+    <section class="contact-container__form impactiv-button-regular">
+      <form [formGroup]="form" novalidate>
+        <div>
+          <label
+            for="activityInput"
+            *ngIf="!submitted || !f['activity'].errors"
+            class="mb-1"
+            >Votre secteur d’activité</label
+          >
+          <select
+            class="form-select"
+            aria-label="Default select example"
+            formControlName="activity"
+          >
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+        <div class="contact-container__form--row">
+          <div
+            class="contact-container__form--row--input impactiv-button-regular"
+          >
+            <label for="nameInput" class="mb-1">Nom</label>
+            <input
+              type="text"
+              name="name"
+              class="form-control"
+              placeholder="Nom"
+              aria-label="nom"
+              formControlName="name"
+              minlength="2"
+              required
+              [class.is-invalid]="
+                f['name'].errors && (f['name'].dirty || f['name'].touched)
+              "
+              [class.is-valid]="
+                !f['name'].errors && (f['name'].dirty || f['name'].touched)
+              "
+            />
+
+            <label for="nameInput" *ngIf="submitted && f['name'].errors"
+              >Veuillez saisir un nom valide</label
+            >
+          </div>
+          <div
+            class="contact-container__form--row--input impactiv-button-regular"
+          >
+            <label for="companyInput" class="mb-1">Société</label>
+            <input
+              type="text"
+              name="company"
+              class="form-control"
+              placeholder="Société"
+              aria-label="société"
+              formControlName="company"
+              minlength="2"
+              required
+              [class.is-invalid]="
+                f['company'].errors &&
+                (f['company'].dirty || f['company'].touched)
+              "
+              [class.is-valid]="
+                !f['company'].errors &&
+                (f['company'].dirty || f['company'].touched)
+              "
+            />
+
+            <label for="companyInput" *ngIf="submitted && f['company'].errors"
+              >Veuillez saisir un nom valide</label
+            >
+          </div>
+        </div>
+        <div class="contact-container__form--row">
+          <div
+            class="contact-container__form--row--input impactiv-button-regular"
+          >
+            <label for="phoneInput" class="mb-1">Téléphone</label>
+            <input
+              type="text"
+              name="phone"
+              class="form-control"
+              placeholder="00 00 00 00 00"
+              aria-label="phone"
+              formControlName="phone"
+              minlength="2"
+              required
+              [class.is-invalid]="
+                f['phone'].errors && (f['phone'].dirty || f['phone'].touched)
+              "
+              [class.is-valid]="
+                !f['phone'].errors && (f['phone'].dirty || f['phone'].touched)
+              "
+            />
+
+            <label for="phoneInput" *ngIf="submitted && f['phone'].errors"
+              >Veuillez saisir un nom valide</label
+            >
+          </div>
+          <div
+            class="contact-container__form--row--input impactiv-button-regular"
+          >
+            <label for="emailInput" class="mb-1">Email professionnel</label>
+            <input
+              type="text"
+              name="email"
+              class="form-control"
+              placeholder="exemple@gmail.com"
+              aria-label="email"
+              formControlName="email"
+              minlength="2"
+              required
+              [class.is-invalid]="
+                f['email'].errors && (f['email'].dirty || f['email'].touched)
+              "
+              [class.is-valid]="
+                !f['email'].errors && (f['email'].dirty || f['email'].touched)
+              "
+            />
+
+            <label for="emailInput" *ngIf="submitted && f['email'].errors"
+              >Veuillez saisir un nom valide</label
+            >
+          </div>
+        </div>
+        <div class="contact-container__form--single-row">
+          <label for="textarea1" class="form-label impactiv-button-regular"
+            >Comment pouvons-nous vous aider ?</label
+          >
+          <textarea
+            class="form-control"
+            aria-label="message"
+            id="exampleFormControlTextarea1"
+            formControlName="message"
+            placeholder="Votre message..."
+            rows="3"
+            [class.is-invalid]="
+              f['message'].errors &&
+              (f['message'].dirty || f['message'].touched)
+            "
+            [class.is-valid]="
+              !f['message'].errors &&
+              (f['message'].dirty || f['message'].touched)
+            "
+          ></textarea>
+          <label for="textarea1" *ngIf="submitted && f['message'].errors">
+            <span *ngIf="f['message'].errors['required']"
+              >Veuillez saisir votre message</span
+            >
+            <span *ngIf="f['message'].errors['minlength']"
+              >Minimum de 5 caractères</span
+            >
+          </label>
+        </div>
+
+        <div
+          class="d-grid gap-2 contact-container__form--single-row contact-container__form--button"
+        >
+          <button type="button" class="btn btn-secondary">
+            <span class="align-middle impactiv-button-regular"
+              >Envoyer le message</span
+            ><i
+              class="bi bi-arrow-right-short ms-2 fs-5 align-middle contact-container__infos--buttons--arrow-icon"
+              aria-hidden="true"
+            ></i>
+          </button>
+        </div>
+        <p
+          class="impactiv-body-sub-regular contact-container__form--single-row contact-container__form--text mb-0"
+        >
+          En cliquant sur "Envoyer" ci-dessus, vous reconnaissez avoir lu,
+          compris et accepté les <span class="custom-bold">conditions générales</span> d'Impactiv et la <span class="custom-bold">politique
+          de confidentialité</span>.
+        </p>
+      </form>
+    </section>
+  </div>
 </div>
