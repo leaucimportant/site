@@ -1,0 +1,49 @@
+<div class="container grid-container">
+  <h1 class="impactiv-display-small">
+    {{ data.title }}
+  </h1>
+  <p class="impactiv-body-regular grid-container__description">
+    {{ data.description }}
+  </p>
+
+  <a class="btn btn-contact-us" [routerLink]="['/', routes.contact]" role="button"
+    ><span 
+      >Contactez-nous
+      <i
+        class="hero__arrow bi bi-arrow-right-short fs-5 align-middle"
+        aria-hidden="true"
+      ></i></span
+  ></a>
+
+  <div class="grid">
+    <div class="row">
+      <div
+        class="grid-card col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3"
+        *ngFor="let item of data.items"
+      >
+        <div class="grid-card__picture">
+          <img
+            [src]="'assets/images/contents/solutions/affluence/' + item.image"
+            loading="lazy"
+            class="img-fluid grid-image"
+          />
+          <div class="grid-card__content">
+            <picture class="grid-icon-picture">
+              <img
+                [src]="
+                  'assets/images/contents/solutions/affluence/icons/' +
+                  item.icon
+                "
+                loading="lazy"
+                class="img-fluid grid-icon"
+              />
+            </picture>
+            <h1 class="grid-subtitle impactiv-button-regular">
+              {{ item.subtitle }}
+            </h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

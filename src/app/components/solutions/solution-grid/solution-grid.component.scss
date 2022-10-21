@@ -1,0 +1,52 @@
+.grid-container {
+  padding: 8rem 0 0;
+  &__description {
+    max-width: 50%;
+  }
+  .grid {
+    &-icon-picture {
+      width: 1.3rem;
+      height: 1.3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &-image {
+      border-radius: var(--bs-border-radius-sm);
+    }
+    &-card {
+      padding: 1rem 1rem 1rem 0.7rem;
+      &__picture {
+        display: flex;
+        justify-content: center;
+        position: relative;
+      }
+      &__content {
+        background: linear-gradient(
+          180deg,
+          rgba(15, 23, 42, 0) 0%,
+          #0f172a 100%
+        );
+        color: var(--bs-light);
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        border-radius: var(--bs-border-radius-sm);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 1rem;
+      }
+    }
+  }
+
+  @media (max-width: 1199.98px) {
+    &__description {
+      max-width: 100%;
+    }
+  }
+
+  @media (max-width: 991.98px) {
+    padding: 1rem 1rem 0;
+  }
+}
