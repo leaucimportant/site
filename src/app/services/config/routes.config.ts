@@ -8,11 +8,10 @@ export type ImpactivRoutesEnum =
   | 'affluenceSolution'
   | 'integrationSolution'
   | 'company'
-  | 'collectiveExpertise'
-  | 'commercialeExpertise'
-  | 'propertyExpertise'
-  | 'surmesureExpertise'
   | 'cookies'
+  | 'usecaseSodexo'
+  | 'usecaseLaMira'
+  | 'usecaseAspp'
   | 'confidentialites';
 
 export const impactivRoutes: Record<ImpactivRoutesEnum, string> = {
@@ -25,10 +24,9 @@ export const impactivRoutes: Record<ImpactivRoutesEnum, string> = {
   company: 'entreprise',
   cookies: 'cookies',
   confidentialites: 'confidentialites',
-  collectiveExpertise: 'expertises/collective',
-  commercialeExpertise: 'expertises/commerciale',
-  propertyExpertise: 'expertises/property',
-  surmesureExpertise: 'expertises/surmesure',
+  usecaseSodexo: 'usecase/sodexo',
+  usecaseLaMira: 'usecase/lamira',
+  usecaseAspp: 'usecase/aspp',
 };
 
 export const routerOptions: ExtraOptions = {
