@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Config } from 'src/app/services';
 import { impactivRoutes } from 'src/app/services/config';
 
 @Component({
@@ -7,6 +8,7 @@ import { impactivRoutes } from 'src/app/services/config';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
+  readonly routes = Config.impactivRoutes;
   hoveringIndex: null | number = null;
   contactRoute = impactivRoutes.contact;
   homeRoute = impactivRoutes.home;
