@@ -29,6 +29,7 @@ import { ResponseComponent } from './usecase/response/response.component';
 import { UseCaseQuoteComponent } from './usecase/use-case-quote/use-case-quote.component';
 import { ChallengeComponent } from './usecase/challenge/challenge.component';
 import { SolutionAffluenceHeroComponent } from './solutions/solution-affluence-hero/solution-affluence-hero.component';
+import { SolutionGridComponent } from './solutions/solution-grid/solution-grid.component';
 
 const impactivComponentsExports = [
   BannerComponent,
@@ -55,6 +56,7 @@ const impactivComponentsExports = [
   ResponseComponent,
   UseCaseQuoteComponent,
   ChallengeComponent,
+  SolutionGridComponent,
   SolutionAffluenceHeroComponent
 ];
 
