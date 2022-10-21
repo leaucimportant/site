@@ -4,6 +4,7 @@ import { routerOptions } from '../services/config';
 import { CompanyComponent } from './company/company.component';
 import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
+import { SolutionAffluenceComponent } from './solution-affluence/solution-affluence.component';
 import { SolutionDSMComponent } from './solution-dsm/solution-dsm.component';
 import { SolutionMobileComponent } from './solution-mobile/solution-mobile.component';
 import { UseCaseComponent } from './use-case/use-case.component';
@@ -29,6 +30,10 @@ const routes: Routes = [
   {
     path: 'solutions/integration',
     component: SolutionDSMComponent,
+  },
+  {
+    path: 'solutions/affluence',
+    component: SolutionAffluenceComponent,
   },
   {
     path: 'usecase/:id',

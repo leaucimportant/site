@@ -28,6 +28,7 @@ import { CustomerNeedComponent } from './usecase/customer-need/customer-need.com
 import { ResponseComponent } from './usecase/response/response.component';
 import { UseCaseQuoteComponent } from './usecase/use-case-quote/use-case-quote.component';
 import { ChallengeComponent } from './usecase/challenge/challenge.component';
+import { SolutionAffluenceHeroComponent } from './solutions/solution-affluence-hero/solution-affluence-hero.component';
 
 const impactivComponentsExports = [
   BannerComponent,
@@ -54,6 +55,7 @@ const impactivComponentsExports = [
   ResponseComponent,
   UseCaseQuoteComponent,
   ChallengeComponent,
+  SolutionAffluenceHeroComponent
 ];
 
 @NgModule({

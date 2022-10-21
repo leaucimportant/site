@@ -1,0 +1,43 @@
+<div class="hero container-fluid">
+  <div class="hero__container container">
+    <div class="hero__content">
+      <h1 class="impactiv-display-large mb-3 hero__title">
+        Nos capteurs d’affluence au service de votre transformation digitale !
+      </h1>
+      <p class="hero__subtitle impactiv-body-sub-regular mb-4">
+        Mesurez et analysez l’affluence dans votre établissement, améliorez la
+        fluidité et l’expérience de vos clients ! En retail ou restauration, un
+        outil au service de vos décisions stratégiques.
+      </p>
+      <div>
+        <a
+          class="btn btn-secondary btn-contact-us-fill"
+          [routerLink]="['/', routes.contact]"
+        >
+          <span class="align-middle impactiv-button-regular"
+            >Nous contacter</span
+          ><i
+            class="hero__arrow bi bi-arrow-right-short fs-5 align-middle"
+            aria-hidden="true"
+          ></i>
+        </a>
+        <a
+          type="button"
+          class="ms-0 ms-lg-2 mt-3 mt-lg-0 btn btn-gray-outline"
+          (click)="scrollTo('SolutionAffluenceGrid')"
+        >
+          <span class="align-middle impactiv-button-regular text-secondary"
+            >Découvrir la solution</span
+          >
+          <i
+            class="hero__arrow bi bi-arrow-right-short fs-5 align-middle"
+            aria-hidden="true"
+          ></i>
+        </a>
+      </div>
+    </div>
+    <div class="hero__container--image">
+      <img class="hero__image" src="../../../assets/images/bg/dsm_hero.png" />
+    </div>
+  </div>
+</div>
