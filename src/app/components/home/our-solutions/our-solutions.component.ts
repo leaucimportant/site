@@ -24,9 +24,9 @@ export class OurSolutionsComponent {
       route: impactivRoutes.screenSolution,
     },
     {
-      title: 'Application mobiles',
+      title: 'Application collaborateurs',
       description:
-        'Créez des applications dédiées pour le web et les appareils mobiles grâce à notre expertise. De la Web App aux applications natives & PWA.',
+        'De la Web App aux applications natives & PWA. La solution tout-en-un au service de vos collaborateurs. Une solution digitale déployée à votre identité intégrant l’ensemble des services mis à disposition de vos clients/consommateurs !',
       icon: {
         src: 'affichage.svg',
         alt: 'affichage',
@@ -38,9 +38,9 @@ export class OurSolutionsComponent {
       route: impactivRoutes.mobileSolution,
     },
     {
-      title: 'Mesure d’affluence',
+      title: 'Gestion d’affluence',
       description:
-        'Mesurez l’affluence en temps-réel et améliorez la fluidité et l’expérience utilisateur. Du comptage à l’analyse de votre affluence pour adapter votre stratégie.',
+        'Mesurez et analysez l’affluence dans votre établissement, améliorez la fluidité et l’expérience de vos clients !  En retail ou restauration, un outil au service de vos décisions stratégiques.',
       icon: {
         src: 'affluence.svg',
         alt: 'affluence',
@@ -52,9 +52,9 @@ export class OurSolutionsComponent {
       route: impactivRoutes.affluenceSolution,
     },
     {
-      title: 'Intégration',
+      title: 'Développement sur mesure',
       description:
-        'Accélérez votre développement en nous confiant un développement sur-mesure.',
+        'Accélérez votre développement en nous confiant un développement sur-mesure ou en réalisant une intégration ambitieuse.',
       icon: {
         src: 'security.svg',
         alt: 'sécurité',
