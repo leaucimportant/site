@@ -11,35 +11,51 @@ export class OurExpertiseComponent implements OnInit {
 
   expertises = [
     {
-      title: 'La conception de l’expérience utilisateur. 1',
-      items: ['Item 1', 'Item 2', 'Item 3', 'Item 4', 'Item 5'],
+      title: 'Méthodologies',
+      items: [
+        'Cahier des charges et recettages',
+        'Intégration continue',
+        'Déploiement continu',
+        'Tests unitaires et fonctionnels',
+        'Privacy by Design & Privacy by Default',
+      ],
       image: 'affluence.png',
       alt: 'alt',
     },
     {
-      title: 'Designer avec un objectif en tête. 2',
-      items: ['Item 1', 'Item 2', 'Item 3', 'Item 4', 'Item 5'],
+      title: 'Développements',
+      items: [
+        'Développement Frontend',
+        'Développement Backend',
+        'Progressive Web App',
+        'Applications natives',
+      ],
 
       image: 'affluence.png',
       alt: 'alt',
     },
     {
-      title: 'Designer avec un objectif en tête. 3',
-      items: ['Item 1', 'Item 2', 'Item 3', 'Item 4', 'Item 5'],
+      title: 'Technologies',
+      items: [
+        'Serverless',
+        'Micro Services',
+        'Micro Frontends',
+        'BDD relationnelle & orientée documents',
+        'Agent de messages',
+      ],
 
       image: 'affluence.png',
       alt: 'alt',
     },
     {
-      title: 'Designer avec un objectif en tête. 4',
-      items: ['Item 1', 'Item 2', 'Item 3', 'Item 4', 'Item 5'],
-
-      image: 'affluence.png',
-      alt: 'alt',
-    },
-    {
-      title: 'Designer avec un objectif en tête. 5',
-      items: ['Item 1', 'Item 2', 'Item 3', 'Item 4', 'Item 5'],
+      title: 'API & services',
+      items: [
+        'Authentification (SSO, OpenID…)',
+        'API (GraphQL, REST)',
+        'Emailing',
+        'Analytics',
+        'Passerelles de paiement (VAD)',
+      ],
 
       image: 'affluence.png',
       alt: 'alt',
