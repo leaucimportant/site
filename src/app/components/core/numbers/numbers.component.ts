@@ -12,29 +12,25 @@ export class NumbersComponent {
       data: 1000,
       suffix: '+',
       title: 'Déploiement en Europe',
-      description: 'Et ce n’est qu’un début !',
     },
     {
       data: 10,
       suffix: 'ans',
       title: 'D’expérience',
-      description:
-        'Écoute, agilité et satisfaction, sont au coeur de nos préoccupations.',
     },
     {
       data: 6000,
       suffix: '+',
       title: 'Écrans déployés',
-      description: 'Un parc d’affichage dynamique monitoré en temps-réel !',
     },
     {
       data: 1,
-      suffix: 'M',
+      suffix: 'Milion',
       title: 'De personnes utilisent nos solutions au quotidien !',
     },
     {
       data: 2,
-      suffix: 'M',
+      suffix: 'Milion',
       title: 'De lignes de code',
     },
   ];
