@@ -4,7 +4,7 @@
       Reconnus par des acteurs majeurs dans leur domaine.
     </h1>
     <p class="impactiv-body-regular our-customers__content--text">
-      Plus de 900 000 convives utilisent déjà nos solutions au quotidien.
+      Plus d’1 million de convives utilisent déjà nos solutions au quotidien.
       <br />
       Comme eux, poursuivez votre développement en adoptant nos solutions.
     </p>
@@ -16,7 +16,10 @@
         *ngFor="let customer of customers"
         class="our-customers__marquee--card"
       >
-        <img [src]="customer.url" class="" [alt]="customer.alt" />
+        <img [src]="customer.url" class="img-fluid" [alt]="customer.alt" />
+      </div>
+      <div class="our-customers__marquee--card">
+        <span>et bien d'autres</span>
       </div>
     </div>
     <div class="our-customers__marquee--content" aria-hidden="true">
@@ -24,7 +27,10 @@
         *ngFor="let customer of customers"
         class="our-customers__marquee--card"
       >
-        <img [src]="customer.url" class="" [alt]="customer.alt" />
+        <img [src]="customer.url" class="img-fluid" [alt]="customer.alt" />
+      </div>
+      <div class="our-customers__marquee--card">
+        <span>et bien d'autres</span>
       </div>
     </div>
   </div>
