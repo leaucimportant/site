@@ -7,28 +7,6 @@ import { Config } from 'src/app/services';
 })
 export class SolutionDSMComponent {
   solution = Config.impactivSolutions.dsm;
-  useCasesName: string[] = [];
-
-  names = ['Sodexo', 'La Mira', 'Aspp'];
-
-  usecaseCard = [
-    {
-      title: 'Plateforme e-commerce centralisée.',
-      subtitle:
-        'Sodexo, en qualité de leader mondial des services aux entreprises, souhaitait uniformiser et améliorer sa solution e-commerce à destination des collaborateurs de ses clients.',
-    },
-    {
-      title:
-        'La Mira accélère son activité au travers de sa transformation digitale.',
-      subtitle:
-        'Le développement de la nouvelle plateforme de e-réservation valorise l’offre, l’expérience client tout en assurant un retour sur investissement (ROI) très important.',
-    },
-    {
-      title: 'Plateforme e-commerce centralisée.',
-      subtitle:
-        'Sodexo, en qualité de leader mondial des services aux entreprises, souhaitait uniformiser et améliorer sa solution e-commerce à destination des collaborateurs de ses clients.',
-    },
-  ];
 
   blocks = [
     {
@@ -41,18 +19,18 @@ export class SolutionDSMComponent {
       },
     },
     {
-      title: 'Une application sur mesure à forte valeur ajoutée.',
+      title: 'Une implication en permanence sans mauvaise surprise.',
       description:
-        "La qualité est importante mais ce n'est certainement pas le seul ingrédient d'une application réussie. Il est important que vous développiez le bon produit et une application à valeur ajoutée, adaptée aux besoins de votre groupe. ",
+        "Vous souhaitez pouvoir y répondre lors du développement, c'est pourquoi les méthodologies et technologies employées doivent être en parfaite adéquation avec vos projets. En tant que propriétaire de produit, vous restez impliqué en permanence dans son développement et n'avez jamais de surprises.",
       image: {
         src: 'assets/images/contents/solutions/common/affluence.png',
         alt: 'affluence',
       },
     },
     {
-      title: 'Une implication en permanence sans mauvaise surprise.',
+      title: 'Une application sur mesure à forte valeur ajoutée.',
       description:
-        "Vous souhaitez pouvoir y répondre lors du développement, c'est pourquoi les méthodologies et technologies employées doivent être en parfaite adéquation avec vos projets. En tant que propriétaire de produit, vous restez impliqué en permanence dans son développement et n'avez jamais de surprises.",
+        "La qualité est importante mais ce n'est certainement pas le seul ingrédient d'une application réussie. Il est important que vous développiez le bon produit et une application à valeur ajoutée, adaptée aux besoins de votre groupe. ",
       image: {
         src: 'assets/images/contents/solutions/common/affluence.png',
         alt: 'affluence',
