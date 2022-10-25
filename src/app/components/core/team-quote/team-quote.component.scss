@@ -18,9 +18,9 @@
     border-radius: var(--bs-border-radius-sm);
   }
   &-text {
-    padding: 1rem 0 0.5rem;
+    padding: 0.5rem 0;
     color: var(--bs-white);
-    width: 60%;
+    width: 90%;
     text-align: center;
   }
 
@@ -30,8 +30,5 @@
 
   @media (max-width: 1199.98px) {
     padding: 1rem;
-    &-text {
-      width: 90%;
-    }
   }
 }
