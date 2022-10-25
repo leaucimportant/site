@@ -11,6 +11,8 @@ export class OtherSolutionsComponent implements OnChanges {
 
   routes = Config.impactivRoutes;
 
+  impactivSolutions = Config.impactivSolutions;
+
   solutions = [
     {
       icon: 'rectangle.svg',
@@ -19,7 +21,7 @@ export class OtherSolutionsComponent implements OnChanges {
       description:
         'Communiquez et informez efficacement en temps réel. De l’étiquette connectée aux murs LEDs XXL.',
       link: `/${this.routes.screenSolution}`,
-      id: 'affichage',
+      id: this.impactivSolutions.screen,
     },
     {
       icon: 'affluence.png',
@@ -29,7 +31,7 @@ export class OtherSolutionsComponent implements OnChanges {
         'Mesurez et analyser l’affluence dans votre établissement, améliorez la fluidité et l’expérience de vos clients ! En retail ou restauration, un outil au service de vos décisions stratégiques.',
       link: `/${this.routes.affluenceSolution}`,
 
-      id: 'affluence',
+      id: this.impactivSolutions.affluence,
     },
     {
       icon: 'integration.svg',
@@ -37,9 +39,9 @@ export class OtherSolutionsComponent implements OnChanges {
       title: 'Développement sur mesure',
       description:
         'Accélérez votre développement en nous confiant un développement sur-mesure ou en réalisant une intégration ambitieuse.',
-      link: `/${this.routes.integrationSolution}`,
+      link: `/${this.routes.dsmSolution}`,
 
-      id: 'dsm',
+      id: this.impactivSolutions.dsm,
     },
     {
       icon: 'app.svg',
@@ -47,8 +49,8 @@ export class OtherSolutionsComponent implements OnChanges {
       title: 'Applications mobiles',
       description:
         'De la Web App aux applications natives & PWA. La solution tout-en-un au service de vos collaborateurs. Une solution digitale déployée à votre identité intégrant l’ensemble des services mis à disposition de vos clients/consommateurs !',
-      link: `/${this.routes.mobileSolution}`,
-      id: 'webapp',
+      link: `/${this.routes.webAppSolution}`,
+      id: this.impactivSolutions.webApp,
     },
   ];
 

@@ -1,12 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { Config } from 'src/app/services';
 @Component({
   selector: 'impactiv-solution-dsm',
   templateUrl: './solution-dsm.component.html',
   styleUrls: ['./solution-dsm.component.scss'],
 })
 export class SolutionDSMComponent {
+  solution = Config.impactivSolutions.dsm;
   useCasesName: string[] = [];
-
   banner = {
     title: 'Votre expérience commence ici !',
     description:

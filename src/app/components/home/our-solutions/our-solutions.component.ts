@@ -35,7 +35,7 @@ export class OurSolutionsComponent {
         src: 'mobile.png',
         alt: 'mobile',
       },
-      route: impactivRoutes.mobileSolution,
+      route: impactivRoutes.webAppSolution,
     },
     {
       title: 'Gestion d’affluence',
@@ -63,7 +63,7 @@ export class OurSolutionsComponent {
         src: 'integration.png',
         alt: 'integration',
       },
-      route: impactivRoutes.integrationSolution,
+      route: impactivRoutes.dsmSolution,
     },
   ];
 }

@@ -12,6 +12,8 @@ export class HomeComponent implements OnInit {
     private matomoService: MatomoService
   ) {}
 
+  solution = Config.impactivSolutions.all;
+
   quote = {
     description: 'de satisfaction client',
     name: 'Steve Attal',
