@@ -4,10 +4,10 @@ import { Config } from 'src/app/services';
 
 @Component({
   selector: 'impactiv-solution-dsm-hero',
-  templateUrl: './solution-dsm-hero.component.html',
-  styleUrls: ['./solution-dsm-hero.component.scss'],
+  templateUrl: './dsm-hero.component.html',
+  styleUrls: ['./dsm-hero.component.scss'],
 })
-export class SolutionDsmHeroComponent {
+export class DsmHeroComponent {
   readonly routes = Config.impactivRoutes;
 
   constructor(@Inject(DOCUMENT) private document: Document) {}

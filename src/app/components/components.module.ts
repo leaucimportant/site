@@ -18,7 +18,7 @@ import { StatsNumbersComponent } from './core/stats-numbers/stats-numbers.compon
 import { SolutionWebAppHeroComponent } from './solutions/web-app-hero/web-app-hero.component';
 import { SolutionCarouselComponent } from './solutions/solution-carousel/solution-carousel.component';
 import { SolutionBlockComponent } from './solutions/solution-block/solution-block.component';
-import { SolutionDsmHeroComponent } from './solutions/solution-dsm-hero/solution-dsm-hero.component';
+import { DsmHeroComponent } from './solutions/dsm-hero/dsm-hero.component';
 import { OurExpertiseComponent } from './solutions/our-expertise/our-expertise.component';
 import { InfrastructureMasonryComponent } from './solutions/infrastructure-masonry/infrastructure-masonry.component';
 import { UseCaseResumeComponent } from './core/use-case-resume/use-case-resume.component';
@@ -47,7 +47,7 @@ const impactivComponentsExports = [
   SolutionWebAppHeroComponent,
   SolutionCarouselComponent,
   SolutionBlockComponent,
-  SolutionDsmHeroComponent,
+  DsmHeroComponent,
   OurExpertiseComponent,
   InfrastructureMasonryComponent,
   UseCaseResumeComponent,
