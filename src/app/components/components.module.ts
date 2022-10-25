@@ -12,7 +12,7 @@ import { OurCustomersComponent } from './home/our-customers/our-customers.compon
 import { OurSolutionsComponent } from './home/our-solutions/our-solutions.component';
 import { OurSkillsComponent } from './home/our-skills/our-skills.component';
 import { QuoteComponent } from './core/quote/quote.component';
-import { SolutionFeaturesComponent } from './solutions/solution-features/solution-features.component';
+import { WebAppFeaturesComponent } from './solutions/web-app-features/web-app-features.component';
 import { HomeHeroComponent } from './home/home-hero/home-hero.component';
 import { StatsNumbersComponent } from './core/stats-numbers/stats-numbers.component';
 import { SolutionWebAppHeroComponent } from './solutions/solution-web-app-hero/solution-web-app-hero.component';
@@ -40,7 +40,7 @@ const impactivComponentsExports = [
   OurSolutionsComponent,
   OurSkillsComponent,
   QuoteComponent,
-  SolutionFeaturesComponent,
+  WebAppFeaturesComponent,
   HomeHeroComponent,
   StatsNumbersComponent,
   SolutionWebAppHeroComponent,

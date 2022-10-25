@@ -1,11 +1,14 @@
 import { Component, OnInit } from '@angular/core';
+import { Config } from 'src/app/services';
 
 @Component({
   selector: 'impactiv-solution-carousel',
   templateUrl: './solution-carousel.component.html',
   styleUrls: ['./solution-carousel.component.scss'],
 })
-export class SolutionCarouselComponent implements OnInit {
+export class SolutionCarouselComponent {
+  contactRoute = Config.impactivRoutes.contact;
+
   images = [
     {
       src: 'assets/images/contents/solutions/common/affluence.png',
@@ -16,8 +19,4 @@ export class SolutionCarouselComponent implements OnInit {
       alt: 'ecran',
     },
   ];
-
-  constructor() {}
-
-  ngOnInit(): void {}
 }
