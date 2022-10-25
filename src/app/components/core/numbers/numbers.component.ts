@@ -33,6 +33,11 @@ export class NumbersComponent {
       suffix: 'Milion',
       title: 'De lignes de code',
     },
+    {
+      data: 12000,
+      suffix: '+',
+      title: 'Soumissions de code sur les 3 derniers mois',
+    },
   ];
 
   shuffled = this.numbers.sort(() => 0.5 - Math.random());
