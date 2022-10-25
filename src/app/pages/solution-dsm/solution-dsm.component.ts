@@ -8,12 +8,6 @@ import { Config } from 'src/app/services';
 export class SolutionDSMComponent {
   solution = Config.impactivSolutions.dsm;
   useCasesName: string[] = [];
-  banner = {
-    title: 'Votre expérience commence ici !',
-    description:
-      'Pour simplement échanger sur votre projet ou avoir une démonstration de nos solutions, nos équipes se tiennent à votre disposition.',
-    parallax: true,
-  };
 
   names = ['Sodexo', 'La Mira', 'Aspp'];
 

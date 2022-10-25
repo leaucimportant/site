@@ -8,12 +8,6 @@ import { Config } from 'src/app/services';
 })
 export class SolutionAffluenceComponent {
   solution = Config.impactivSolutions.affluence;
-  banner = {
-    title: 'Votre expérience commence ici !',
-    description:
-      'Pour simplement échanger sur votre projet ou avoir une démonstration de nos solutions, nos équipes se tiennent à votre disposition.',
-    parallax: true,
-  };
 
   data = {
     title: 'Une solution de comptage et d’analyse de vos flux.',

@@ -12,13 +12,14 @@ export class BannerComponent {
     @Inject(DOCUMENT) private document: Document,
     private window: Window
   ) {}
+  @Input() parallax!: boolean;
 
   readonly routes = Config.impactivRoutes;
+
   banner = {
     title: 'Votre expérience commence ici !',
     description:
       'Pour simplement échanger sur votre projet ou avoir une démonstration de nos solutions, nos équipes se tiennent à votre disposition.',
-    parallax: false,
   };
 
   prevPosition = 0;

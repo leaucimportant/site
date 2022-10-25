@@ -30,13 +30,6 @@ export class UseCaseComponent implements OnInit, OnDestroy {
   routeSubscription!: Subscription;
   useCase: UseCase | null = null;
 
-  banner = {
-    title: 'Votre expérience commence ici !',
-    description:
-      'Pour simplement échanger sur votre projet ou avoir une démonstration de nos solutions, nos équipes se tiennent à votre disposition.',
-    parallax: true,
-  };
-
   ngOnInit(): void {
     this.routeSubscription = this.route.paramMap.subscribe(
       async (params: ParamMap) => {
