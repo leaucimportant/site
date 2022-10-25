@@ -9,7 +9,7 @@ import { ContactComponent } from './contact/contact.component';
 import { PagesRoutingModule } from './pages-routing.module';
 import { HomeComponent } from './home/home.component';
 import { CompanyComponent } from './company/company.component';
-import { SolutionMobileComponent } from './solution-mobile/solution-mobile.component';
+import { SolutionWebAppComponent } from './solution-web-app/solution-web-app.component';
 import { SolutionDSMComponent } from './solution-dsm/solution-dsm.component';
 import { UseCaseComponent } from './use-case/use-case.component';
 import { SolutionAffluenceComponent } from './solution-affluence/solution-affluence.component';
@@ -19,7 +19,7 @@ import { SolutionAffluenceComponent } from './solution-affluence/solution-afflue
     ContactComponent,
     HomeComponent,
     CompanyComponent,
-    SolutionMobileComponent,
+    SolutionWebAppComponent,
     SolutionDSMComponent,
     UseCaseComponent,
     SolutionAffluenceComponent,

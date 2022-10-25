@@ -26,7 +26,7 @@ export class HeaderComponent implements OnInit {
       description: 'Créez des applications dédiées pour le web.',
       icon: 'affichage.svg',
       alt: 'affichage',
-      route: impactivRoutes.mobileSolution,
+      route: impactivRoutes.webAppSolution,
     },
     {
       title: 'Mesure d’affluence',
@@ -40,7 +40,7 @@ export class HeaderComponent implements OnInit {
       description: 'Développement sur-mesure.',
       icon: 'security.svg',
       alt: 'sécurité',
-      route: impactivRoutes.integrationSolution,
+      route: impactivRoutes.dsmSolution,
     },
   ];
   expertises = [];

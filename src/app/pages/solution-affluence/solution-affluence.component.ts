@@ -1,15 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { Config } from 'src/app/services';
 
 @Component({
   selector: 'impactiv-solution-affluence',
   templateUrl: './solution-affluence.component.html',
   styleUrls: ['./solution-affluence.component.scss'],
 })
-export class SolutionAffluenceComponent implements OnInit {
-  constructor() {}
-
-  ngOnInit(): void {}
-
+export class SolutionAffluenceComponent {
+  solution = Config.impactivSolutions.affluence;
   banner = {
     title: 'Votre expérience commence ici !',
     description:

@@ -3,26 +3,24 @@ import { ExtraOptions } from '@angular/router';
 export type ImpactivRoutesEnum =
   | 'home'
   | 'contact'
-  | 'mobileSolution'
+  | 'webAppSolution'
   | 'screenSolution'
   | 'affluenceSolution'
-  | 'integrationSolution'
+  | 'dsmSolution'
   | 'company'
-  | 'cookies'
   | 'useCase'
-  | 'confidentialites';
+  | 'mentionsLegales';
 
 export const impactivRoutes: Record<ImpactivRoutesEnum, string> = {
   home: '',
   contact: 'contact',
-  mobileSolution: 'solutions/mobile',
-  screenSolution: 'solutions/affichage-dynamique',
-  affluenceSolution: 'solutions/affluence',
-  integrationSolution: 'solutions/integration',
+  webAppSolution: 'solution/application-collaborateurs',
+  screenSolution: 'solution/affichage-dynamique',
+  affluenceSolution: 'solution/affluence',
+  dsmSolution: 'solution/developpement-sur-mesure',
   company: 'entreprise',
-  cookies: 'cookies',
-  confidentialites: 'confidentialites',
-  useCase: 'usecase',
+  mentionsLegales: 'mentions-legales',
+  useCase: 'cas-client',
 };
 
 export const routerOptions: ExtraOptions = {
