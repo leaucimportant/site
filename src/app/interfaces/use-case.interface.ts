@@ -1,7 +1,9 @@
 import { Block } from './block.interface';
 
 export interface UseCase {
-  id: string;
+  name: string;
+  rank: number;
+  slug: string;
   logo: string;
   title: string;
   subtitle: string;

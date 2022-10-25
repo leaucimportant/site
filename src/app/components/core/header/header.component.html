@@ -122,31 +122,23 @@
               <i class="bi bi-chevron-up mx-2"></i>
             </a>
             <ul class="dropdown-menu">
-              <li>
+              <li *ngFor="let useCase of useCases">
                 <a
-                  class="dropdown-item"
-                  [routerLink]="routes.usecaseSodexo" routerLinkActive="active"
+                  class="dropdown-item use-case align-items-center"
+                  [routerLink]="[routes.useCase, useCase.slug]"
+                  routerLinkActive="active"
                   data-bs-toggle="collapse"
                   data-bs-target=".navbar-collapse.show"
-                  >Sodexo</a
                 >
-              </li>
-              <li>
-                <a
-                  class="dropdown-item"
-                  [routerLink]="routes.usecaseLaMira" routerLinkActive="active"
-                  data-bs-toggle="collapse"
-                  data-bs-target=".navbar-collapse.show"
-                  >La Mira</a
-                >
-              </li>
-              <li>
-                <a
-                  class="dropdown-item"
-                  [routerLink]="routes.usecaseAspp" routerLinkActive="active"
-                  data-bs-toggle="collapse"
-                  data-bs-target=".navbar-collapse.show"
-                  >ASPP</a
+                  <picture class="picture" *ngIf="useCase.logo">
+                    <source [srcset]="useCase.logo" type="image/svg+xml" />
+                    <img
+                      [src]="useCase.logo"
+                      class="img-fluid logo"
+                      [alt]="useCase.name + ' logo'"
+                    />
+                  </picture>
+                  <span>{{ useCase.name }}</span></a
                 >
               </li>
             </ul>
@@ -172,7 +164,7 @@
               (click)="phone = 'tel:' + phoneAreaCode + phoneStart + phoneEnd"
             >
               <span class="align-middle impactiv-button-regular"
-                >Appeler-nous</span
+                >Appelez-nous</span
               >
             </a>
           </li>

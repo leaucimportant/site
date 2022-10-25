@@ -13,16 +13,18 @@ export class UseCaseService {
 
   async getUseCases() {
     if (!this.useCases.length) {
-      this.useCases = await lastValueFrom(
-        this.http.get<UseCase[]>(
-          'https://impactiv.s3.fr-par.scw.cloud/siteweb/casclients.json'
+      this.useCases = (
+        await lastValueFrom(
+          this.http.get<UseCase[]>(
+            'https://impactiv.s3.fr-par.scw.cloud/siteweb/casclients.json'
+          )
         )
-      );
+      ).sort((a, b) => (a.rank > b.rank ? 1 : -1));
     }
     return this.useCases;
   }
 
-  async getUseCase(id: string) {
+  async getUseCasesName() {
     if (!this.useCases.length) {
       this.useCases = await lastValueFrom(
         this.http.get<UseCase[]>(
@@ -30,6 +32,23 @@ export class UseCaseService {
         )
       );
     }
-    return this.useCases.filter((usecase) => usecase.id === id)[0] ?? null;
+    return this.useCases
+      .sort((a, b) => (a.rank > b.rank ? 1 : -1))
+      .map((useCase) => ({
+        name: useCase.name,
+        slug: useCase.slug,
+        logo: useCase.quote.logo,
+      }));
+  }
+
+  async getUseCase(slug: string) {
+    if (!this.useCases.length) {
+      this.useCases = await lastValueFrom(
+        this.http.get<UseCase[]>(
+          'https://impactiv.s3.fr-par.scw.cloud/siteweb/casclients.json'
+        )
+      );
+    }
+    return this.useCases.filter((usecase) => usecase.slug === slug)[0] ?? null;
   }
 }

@@ -2,8 +2,16 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { UseCase } from 'src/app/interfaces';
-import { UseCaseService } from 'src/app/services';
+import {
+  Config,
+  MatomoService,
+  OgMeta,
+  SeoService,
+  UseCaseService,
+} from 'src/app/services';
 import { impactivRoutes } from 'src/app/services/config';
+import { environment } from 'src/environments/environment';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'impactiv-use-case',
@@ -14,7 +22,9 @@ export class UseCaseComponent implements OnInit, OnDestroy {
   constructor(
     private useCaseService: UseCaseService,
     private route: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private seoService: SeoService,
+    private matomoService: MatomoService
   ) {}
 
   routeSubscription!: Subscription;
@@ -31,10 +41,24 @@ export class UseCaseComponent implements OnInit, OnDestroy {
     this.routeSubscription = this.route.paramMap.subscribe(
       async (params: ParamMap) => {
         this.useCase = await this.useCaseService.getUseCase(
-          params.get('id') ?? ''
+          params.get('slug') ?? ''
         );
         // A confirmer ce comportement
         if (!this.useCase) this.router.navigate([impactivRoutes.home]);
+        else {
+          const configSeo: Required<OgMeta> = {
+            description: this.useCase.seo.description,
+            image: this.useCase.seo.image,
+            title: this.useCase.seo.title,
+            type: 'website',
+            url: Location.joinWithSlash(
+              environment.siteUri,
+              `${Config.impactivRoutes.useCase}/${this.useCase.slug}`
+            ),
+          };
+          this.seoService.setPageSeo(configSeo);
+          this.matomoService.trackPageView(configSeo);
+        }
       }
     );
   }

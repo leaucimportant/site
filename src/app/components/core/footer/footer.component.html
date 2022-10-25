@@ -33,21 +33,11 @@
     <div class="col-6 col-md-3 col-lg-2 me-lg-4 mt-4 mt-sm-0">
       <span class="mb-2 impactiv-headline-small">Cas clients</span>
       <ul class="list-unstyled impactiv-body-sub-regular mt-4">
-        <li class="mb-2">
+        <li *ngFor="let useCase of useCases" class="mb-2">
           <a
-            [routerLink]="routes.usecaseSodexo"
+            [routerLink]="[routes.useCase, useCase.slug]"
             routerLinkActive="active"
-            >Sodexo</a
-          >
-        </li>
-        <li class="mb-2">
-          <a [routerLink]="routes.usecaseLaMira" routerLinkActive="active"
-            >La Mira</a
-          >
-        </li>
-        <li class="mb-2">
-          <a [routerLink]="routes.usecaseAspp" routerLinkActive="active"
-            >ASPP</a
+            >{{ useCase.name }}</a
           >
         </li>
       </ul>
