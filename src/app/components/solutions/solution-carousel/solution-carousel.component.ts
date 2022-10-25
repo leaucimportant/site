@@ -11,12 +11,16 @@ export class SolutionCarouselComponent {
 
   images = [
     {
-      src: 'assets/images/contents/solutions/common/affluence.png',
-      alt: 'affluence',
+      src: 'assets/images/contents/solutions/webapp/dashboard_web_app.jpg',
+      alt: 'Dashboard Application Collaborateurs',
     },
     {
-      src: 'assets/images/contents/solutions/common/ecran.png',
-      alt: 'ecran',
+      src: 'assets/images/contents/solutions/webapp/list_articles.png',
+      alt: "Liste d'articles",
+    },
+    {
+      src: 'assets/images/contents/solutions/webapp/screen_table_reservation.png',
+      alt: 'Formulaire réservation de table',
     },
   ];
 }
