@@ -14,7 +14,12 @@ export class BannerComponent {
   ) {}
 
   readonly routes = Config.impactivRoutes;
-  @Input() banner!: { title: string; description: string; parallax: boolean };
+  banner = {
+    title: 'Votre expérience commence ici !',
+    description:
+      'Pour simplement échanger sur votre projet ou avoir une démonstration de nos solutions, nos équipes se tiennent à votre disposition.',
+    parallax: false,
+  };
 
   prevPosition = 0;
   bannerPositionItem1 = -100;
