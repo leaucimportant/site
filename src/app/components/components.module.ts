@@ -15,7 +15,7 @@ import { QuoteComponent } from './core/quote/quote.component';
 import { WebAppFeaturesComponent } from './solutions/web-app-features/web-app-features.component';
 import { HomeHeroComponent } from './home/home-hero/home-hero.component';
 import { StatsNumbersComponent } from './core/stats-numbers/stats-numbers.component';
-import { SolutionWebAppHeroComponent } from './solutions/solution-web-app-hero/solution-web-app-hero.component';
+import { SolutionWebAppHeroComponent } from './solutions/web-app-hero/web-app-hero.component';
 import { SolutionCarouselComponent } from './solutions/solution-carousel/solution-carousel.component';
 import { SolutionBlockComponent } from './solutions/solution-block/solution-block.component';
 import { SolutionDsmHeroComponent } from './solutions/solution-dsm-hero/solution-dsm-hero.component';

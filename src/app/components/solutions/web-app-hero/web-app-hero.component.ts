@@ -3,9 +3,9 @@ import { Component, Inject } from '@angular/core';
 import { Config } from 'src/app/services';
 
 @Component({
-  selector: 'impactiv-solution-web-app-hero',
-  templateUrl: './solution-web-app-hero.component.html',
-  styleUrls: ['./solution-web-app-hero.component.scss'],
+  selector: 'impactiv-web-app-hero',
+  templateUrl: './web-app-hero.component.html',
+  styleUrls: ['./web-app-hero.component.scss'],
 })
 export class SolutionWebAppHeroComponent {
   readonly routes = Config.impactivRoutes;
