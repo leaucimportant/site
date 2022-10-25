@@ -13,18 +13,6 @@ export class SolutionWebAppComponent implements OnInit {
   ) {}
   solution = Config.impactivSolutions.webApp;
 
-  quote = {
-    description: 'de satisfaction client',
-    name: 'Steve Attal',
-    number: '100%',
-    job: 'Responsable SI, Groupe Elior',
-    avatar: 'assets/images/contents/quote/avatar_attal.png',
-    logo: 'assets/images/contents/quote/elior.png',
-    alt: 'Logo Elior',
-    content:
-      "Le groupe Elior cherche toujours des solutions digitales innovantes et rapides à mettre en œuvre. C’est une des raisons essentielles qui nous a fait choisir Impactiv. Nous avons toujours apprécié l’agilité et la rapidité d'exécution dont ils font preuve sur tous nos projets. Mais ce que j’apprécie le plus reste leur professionnalisme.",
-  };
-
   ngOnInit(): void {
     this.setSeo();
     this.matomoTrack();
