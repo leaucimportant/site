@@ -1,14 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-
 @Component({
   selector: 'impactiv-solution-dsm',
   templateUrl: './solution-dsm.component.html',
   styleUrls: ['./solution-dsm.component.scss'],
 })
-export class SolutionDSMComponent implements OnInit {
-  constructor() {}
-
-  ngOnInit(): void {}
+export class SolutionDSMComponent {
+  useCasesName: string[] = [];
 
   banner = {
     title: 'Votre expérience commence ici !',
@@ -16,6 +13,27 @@ export class SolutionDSMComponent implements OnInit {
       'Pour simplement échanger sur votre projet ou avoir une démonstration de nos solutions, nos équipes se tiennent à votre disposition.',
     parallax: true,
   };
+
+  names = ['Sodexo', 'La Mira', 'Aspp'];
+
+  usecaseCard = [
+    {
+      title: 'Plateforme e-commerce centralisée.',
+      subtitle:
+        'Sodexo, en qualité de leader mondial des services aux entreprises, souhaitait uniformiser et améliorer sa solution e-commerce à destination des collaborateurs de ses clients.',
+    },
+    {
+      title:
+        'La Mira accélère son activité au travers de sa transformation digitale.',
+      subtitle:
+        'Le développement de la nouvelle plateforme de e-réservation valorise l’offre, l’expérience client tout en assurant un retour sur investissement (ROI) très important.',
+    },
+    {
+      title: 'Plateforme e-commerce centralisée.',
+      subtitle:
+        'Sodexo, en qualité de leader mondial des services aux entreprises, souhaitait uniformiser et améliorer sa solution e-commerce à destination des collaborateurs de ses clients.',
+    },
+  ];
 
   blocks = [
     {

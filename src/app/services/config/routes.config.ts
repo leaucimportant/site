@@ -9,9 +9,7 @@ export type ImpactivRoutesEnum =
   | 'integrationSolution'
   | 'company'
   | 'cookies'
-  | 'usecaseSodexo'
-  | 'usecaseLaMira'
-  | 'usecaseAspp'
+  | 'useCase'
   | 'confidentialites';
 
 export const impactivRoutes: Record<ImpactivRoutesEnum, string> = {
@@ -24,9 +22,7 @@ export const impactivRoutes: Record<ImpactivRoutesEnum, string> = {
   company: 'entreprise',
   cookies: 'cookies',
   confidentialites: 'confidentialites',
-  usecaseSodexo: 'usecase/sodexo',
-  usecaseLaMira: 'usecase/lamira',
-  usecaseAspp: 'usecase/aspp',
+  useCase: 'usecase',
 };
 
 export const routerOptions: ExtraOptions = {

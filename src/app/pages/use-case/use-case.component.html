@@ -11,6 +11,9 @@
   ></impactiv-customer-need>
   <impactiv-challenge [challenge]="useCase.challenge"></impactiv-challenge>
   <impactiv-response [response]="useCase.response"></impactiv-response>
-  <impactiv-use-case-quote [quote]="useCase.quote"></impactiv-use-case-quote>
+  <impactiv-use-case-quote
+    [onResumeComponent]="false"
+    [quote]="useCase.quote"
+  ></impactiv-use-case-quote>
   <impactiv-banner [banner]="banner"></impactiv-banner>
 </div>

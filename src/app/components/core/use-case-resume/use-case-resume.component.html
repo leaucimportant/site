@@ -1,1 +1,87 @@
-<p>use-case-resume works!</p>
+<div class="resume">
+  <div class="container">
+    <h1 class="impactiv-display-small text-center mb-4">
+      Découvrez nos derniers cas client.
+    </h1>
+
+    <div class="resume-nav">
+      <div class="resume-buttonGroup">
+        <button
+          *ngFor="let useCase of useCaseButtons"
+          class="btn btn-small resume-button"
+          type="button"
+          role="tab"
+          [attr.aria-selected]="useCase.slug === currentUseCase?.slug"
+          [ngClass]="{ active: useCase.slug === currentUseCase?.slug }"
+          (click)="selectUseCase(useCase.slug)"
+        >
+          {{ useCase.name }}
+        </button>
+      </div>
+    </div>
+
+    <div *ngIf="currentUseCase" class="tab-content mt-4" id="pills-tabContent">
+      <div
+        class="tab-pane fade show active resume-card"
+        role="tabpanel"
+        aria-labelledby="pills-home-tab"
+        tabindex="0"
+      >
+        <div class="resume-content">
+          <div class="resume-tags" *ngIf="currentUseCase.tags">
+            <div
+              *ngFor="let tag of currentUseCase.tags.slice(0, sliceUseCase)"
+              class="d-flex pe-2 pb-2"
+            >
+              <div class="d-flex resume-tag impactiv-body-sub-regular">
+                <p [innerHTML]="tag" class="m-0"></p>
+              </div>
+            </div>
+            <div class="d-flex pb-2">
+              <div class="d-flex resume-tag impactiv-body-sub-regular">
+                <p class="m-0">
+                  +{{ currentUseCase.tags.length - sliceUseCase }}
+                </p>
+              </div>
+            </div>
+          </div>
+          <h1 class="impactiv-headline-regular resume-title">
+            {{ currentUseCase.title }}
+          </h1>
+          <p>{{ currentUseCase.subtitle }}</p>
+          <impactiv-use-case-quote
+            [quote]="currentUseCase.quote"
+            [onResumeComponent]="true"
+            [companyLogo]="currentUseCase.logo"
+          ></impactiv-use-case-quote>
+          <a
+            name=""
+            id=""
+            class="btn btn-read"
+            role="button"
+            [routerLink]="['/', routes.useCase, currentUseCase.slug]"
+            ><span class=""
+              >Lire le cas client
+              <i
+                class="hero__arrow bi bi-arrow-right-short fs-5 align-middle"
+                aria-hidden="true"
+              ></i></span
+          ></a>
+        </div>
+        <div class="resume-picture">
+          <video
+            loop
+            autoplay
+            class="img-fluid resume-video"
+            *ngIf="isVideo; else image"
+          >
+            <source [src]="currentUseCase.media" />
+          </video>
+          <ng-template #image>
+            <img [src]="currentUseCase.media" class="img-fluid resume-image" />
+          </ng-template>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -9,6 +9,8 @@ import { Block } from 'src/app/interfaces';
 export class UseCaseQuoteComponent implements OnInit {
   constructor() {}
 
+  @Input() onResumeComponent!: boolean;
+  @Input() companyLogo?: string;
   @Input() quote!: Block;
 
   ngOnInit(): void {}

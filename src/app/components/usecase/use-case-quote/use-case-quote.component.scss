@@ -57,3 +57,31 @@
     padding-left: 1rem;
   }
 }
+
+.resume-quote {
+  margin-top: 4rem;
+  &-picture {
+    margin-right: 1rem;
+    border-radius: var(--bs-border-radius-sm);
+    background-color: var(--bs-light);
+    width: 7.5rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media (max-width: 1199.98px) {
+    margin-top: 1rem;
+  }
+
+  @media (max-width: 991.98px) {
+    margin-top: 1rem;
+    &-picture {
+      margin-right: 1rem;
+      width: 100%;
+      height: 3.25rem;
+      margin-bottom: 1rem;
+    }
+  }
+}

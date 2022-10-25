@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { Config } from 'src/app/services';
+import { Component, OnInit } from '@angular/core';
+import { Config, UseCaseService } from 'src/app/services';
 import { impactivRoutes } from 'src/app/services/config';
 
 @Component({
@@ -7,8 +7,9 @@ import { impactivRoutes } from 'src/app/services/config';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
-export class HeaderComponent {
-  readonly routes = Config.impactivRoutes;
+export class HeaderComponent implements OnInit {
+  constructor(private useCaseService: UseCaseService) {}
+  routes = Config.impactivRoutes;
   hoveringIndex: null | number = null;
   contactRoute = impactivRoutes.contact;
   homeRoute = impactivRoutes.home;
@@ -43,9 +44,13 @@ export class HeaderComponent {
     },
   ];
   expertises = [];
-
   phone = '';
   phoneAreaCode = '+339';
   phoneStart = '5333';
   phoneEnd = '0360';
+  useCases: { name: string; slug: string; logo?: string }[] = [];
+
+  async ngOnInit(): Promise<void> {
+    this.useCases = await this.useCaseService.getUseCasesName();
+  }
 }

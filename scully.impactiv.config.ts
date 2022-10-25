@@ -14,11 +14,11 @@ export const config: ScullyConfig = {
   projectName: 'impactiv',
   outDir: './public',
   routes: {
-    '/usecase/:id': {
+    '/usecase/:slug': {
       type: 'json',
-      id: {
+      slug: {
         url: 'https://impactiv.s3.fr-par.scw.cloud/siteweb/casclients.json',
-        property: 'id',
+        property: 'slug',
       },
     },
   },

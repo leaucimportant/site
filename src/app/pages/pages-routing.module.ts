@@ -36,7 +36,7 @@ const routes: Routes = [
     component: SolutionAffluenceComponent,
   },
   {
-    path: 'usecase/:id',
+    path: 'usecase/:slug',
     component: UseCaseComponent,
   },
   {

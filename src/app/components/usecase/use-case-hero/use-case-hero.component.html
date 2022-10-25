@@ -14,14 +14,11 @@
       </p>
       <div class="hero-image-container">
         <video
-          loop
-          muted
-          autoplay
-          preload="auto"
+          loop autoplay
           class="img-fluid hero-video"
           *ngIf="isVideo; else image"
         >
-          <source [src]="media" type="video/mp4" />
+          <source [src]="media" />
         </video>
         <ng-template #image>
           <img [src]="media" class="img-fluid hero-image" />
