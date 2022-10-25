@@ -1,0 +1,37 @@
+.team-quote-container {
+  padding-top: 8rem;
+
+  @media (max-width: 1199.98px) {
+    padding-top: 1rem;
+  }
+}
+
+.team-quote {
+  background: url("../../../../assets/images/bg/bg_team_quote.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: var(--bs-border-radius-sm);
+  padding: 4.5rem;
+  &-picture {
+    background-color: var(--bs-white);
+    padding: 0.5rem;
+    border-radius: var(--bs-border-radius-sm);
+  }
+  &-text {
+    padding: 1rem 0 0.5rem;
+    color: var(--bs-white);
+    width: 60%;
+    text-align: center;
+  }
+
+  &-author {
+    color: var(--bs-gray-400);
+  }
+
+  @media (max-width: 1199.98px) {
+    padding: 1rem;
+    &-text {
+      width: 90%;
+    }
+  }
+}

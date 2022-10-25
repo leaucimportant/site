@@ -1,8 +1,9 @@
 <impactiv-solution-dsm-hero></impactiv-solution-dsm-hero>
+<impactiv-team-quote></impactiv-team-quote>
 <div id="SolutionExpertiseBlock">
   <impactiv-solution-block
     *ngFor="let block of blocks; let i = index"
-    [isReversed]="i % 2 === 0"
+    [isReversed]="!(i % 2 === 0)"
     [data]="block"
   ></impactiv-solution-block>
 </div>

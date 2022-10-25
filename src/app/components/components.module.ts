@@ -30,6 +30,7 @@ import { UseCaseQuoteComponent } from './usecase/use-case-quote/use-case-quote.c
 import { ChallengeComponent } from './usecase/challenge/challenge.component';
 import { SolutionAffluenceHeroComponent } from './solutions/solution-affluence-hero/solution-affluence-hero.component';
 import { SolutionGridComponent } from './solutions/solution-grid/solution-grid.component';
+import { TeamQuoteComponent } from './core/team-quote/team-quote.component';
 
 const impactivComponentsExports = [
   BannerComponent,
@@ -58,6 +59,7 @@ const impactivComponentsExports = [
   ChallengeComponent,
   SolutionGridComponent,
   SolutionAffluenceHeroComponent,
+  TeamQuoteComponent,
 ];
 
 @NgModule({
