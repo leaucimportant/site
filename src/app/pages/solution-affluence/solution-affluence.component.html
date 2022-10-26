@@ -4,7 +4,11 @@
   id="SolutionAffluenceGrid"
 ></impactiv-solution-grid>
 <impactiv-solution-grid [data]="dataprocess"></impactiv-solution-grid>
-<impactiv-solution-carousel></impactiv-solution-carousel>
+<impactiv-solution-carousel
+  [images]="imagesCarousel"
+  [description]="descriptionCarousel"
+  [title]="titleCarousel"
+></impactiv-solution-carousel>
 <impactiv-numbers></impactiv-numbers>
 <impactiv-use-case-resume
   [currentSolution]="solution"

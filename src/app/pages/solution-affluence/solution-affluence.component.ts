@@ -9,6 +9,25 @@ import { Config } from 'src/app/services';
 export class SolutionAffluenceComponent {
   solution = Config.impactivSolutions.affluence;
 
+  titleCarousel = 'A chaque usage, une solution IoT sur mesure.';
+  descriptionCarousel =
+    'Parce que vos besoins métier sont uniques, nous déployons des solutions de gestion d’affluence orientées expérience utilisateur et excellence opérationnelle.';
+
+  imagesCarousel = [
+    {
+      src: 'assets/images/contents/solutions/webapp/dashboard_web_app.jpg',
+      alt: 'Dashboard Application Collaborateurs',
+    },
+    {
+      src: 'assets/images/contents/solutions/webapp/list_articles.png',
+      alt: "Liste d'articles",
+    },
+    {
+      src: 'assets/images/contents/solutions/webapp/screen_table_reservation.png',
+      alt: 'Formulaire réservation de table',
+    },
+  ];
+
   data = {
     title: 'Une solution de comptage et d’analyse de vos flux.',
     description:

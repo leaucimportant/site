@@ -7,7 +7,24 @@ import { Config } from 'src/app/services';
 })
 export class SolutionDSMComponent {
   solution = Config.impactivSolutions.dsm;
+  titleCarousel = 'Des solutions adaptées à vos besoins métier !';
+  descriptionCarousel =
+    'Parce que vos besoins métier sont uniques, nous déployons des solutions sur mesure orientées expérience utilisateur et excellence opérationnelle.';
 
+  imagesCarousel = [
+    {
+      src: 'assets/images/contents/solutions/webapp/dashboard_web_app.jpg',
+      alt: 'Dashboard Application Collaborateurs',
+    },
+    {
+      src: 'assets/images/contents/solutions/webapp/list_articles.png',
+      alt: "Liste d'articles",
+    },
+    {
+      src: 'assets/images/contents/solutions/webapp/screen_table_reservation.png',
+      alt: 'Formulaire réservation de table',
+    },
+  ];
   blocks = [
     {
       title: 'Une équipe à l’écoute de vos besoins !',

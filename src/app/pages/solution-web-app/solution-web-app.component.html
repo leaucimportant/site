@@ -1,7 +1,11 @@
 <impactiv-web-app-hero></impactiv-web-app-hero>
 <impactiv-web-app-features></impactiv-web-app-features>
-<impactiv-solution-carousel></impactiv-solution-carousel>
-<impactiv-numbers></impactiv-numbers>
+<impactiv-solution-carousel
+  [images]="imagesCarousel"
+  [description]="descriptionCarousel"
+  [title]="titleCarousel"
+></impactiv-solution-carousel
+><impactiv-numbers></impactiv-numbers>
 <impactiv-use-case-resume
   [currentSolution]="solution"
 ></impactiv-use-case-resume>

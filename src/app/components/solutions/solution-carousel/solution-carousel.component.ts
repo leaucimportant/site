@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Config } from 'src/app/services';
 
 @Component({
@@ -9,18 +9,7 @@ import { Config } from 'src/app/services';
 export class SolutionCarouselComponent {
   contactRoute = Config.impactivRoutes.contact;
 
-  images = [
-    {
-      src: 'assets/images/contents/solutions/webapp/dashboard_web_app.jpg',
-      alt: 'Dashboard Application Collaborateurs',
-    },
-    {
-      src: 'assets/images/contents/solutions/webapp/list_articles.png',
-      alt: "Liste d'articles",
-    },
-    {
-      src: 'assets/images/contents/solutions/webapp/screen_table_reservation.png',
-      alt: 'Formulaire réservation de table',
-    },
-  ];
+  @Input() title!: string;
+  @Input() description!: string;
+  @Input() images!: { src: string; alt: string }[];
 }
