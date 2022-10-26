@@ -1,4 +1,11 @@
-import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
+import {
+  Component,
+  Input,
+  OnChanges,
+  OnDestroy,
+  SimpleChanges,
+} from '@angular/core';
+import { Subscription } from 'rxjs';
 import { UseCase } from 'src/app/interfaces';
 import { UseCaseService } from 'src/app/services';
 import { impactivRoutes } from 'src/app/services/config';
@@ -8,7 +15,7 @@ import { impactivRoutes } from 'src/app/services/config';
   templateUrl: './use-case-resume.component.html',
   styleUrls: ['./use-case-resume.component.scss'],
 })
-export class UseCaseResumeComponent implements OnChanges {
+export class UseCaseResumeComponent implements OnChanges, OnDestroy {
   constructor(private useCaseService: UseCaseService) {}
   @Input() currentSolution!: string;
   currentUseCase: null | UseCase = null;
@@ -17,23 +24,30 @@ export class UseCaseResumeComponent implements OnChanges {
   sliceUseCase = 4;
   isVideo = false;
   routes = impactivRoutes;
+  useCasesSubscription!: Subscription;
 
-  async ngOnChanges(changes: SimpleChanges): Promise<void> {
+  ngOnChanges(changes: SimpleChanges): void {
     if (changes['currentSolution']) {
-      if (!this.useCases.length)
-        this.useCases = await this.useCaseService.getUseCases();
-      if (this.currentSolution !== '*')
-        this.useCases = this.useCases.filter((useCase) =>
-          useCase.solutionsFiltered.some(
-            (solution) =>
-              solution.toLowerCase() ===
-              this.currentSolution?.toLocaleLowerCase()
-          )
-        );
-      this.setUseCaseName();
-      this.currentUseCase = this.useCases[0];
-      this.verifyIsVideo();
+      this.useCasesSubscription = this.useCaseService
+        .getUseCases$()
+        .subscribe((useCases) => {
+          this.useCases = useCases.sort((a, b) => (a.rank > b.rank ? 1 : -1));
+          if (this.currentSolution !== '*')
+            this.useCases = this.useCases.filter((useCase) =>
+              useCase.solutionsFiltered.some(
+                (solution) =>
+                  solution.toLowerCase() ===
+                  this.currentSolution?.toLocaleLowerCase()
+              )
+            );
+          this.setUseCaseName();
+          this.currentUseCase = this.useCases[0];
+          this.verifyIsVideo();
+        });
     }
+  }
+  ngOnDestroy(): void {
+    this.useCasesSubscription.unsubscribe();
   }
 
   selectUseCase(slug: string) {

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { Config, UseCaseService } from 'src/app/services';
 
 @Component({
@@ -6,7 +7,7 @@ import { Config, UseCaseService } from 'src/app/services';
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.scss'],
 })
-export class FooterComponent implements OnInit {
+export class FooterComponent implements OnInit, OnDestroy {
   constructor(private useCaseService: UseCaseService) {}
 
   readonly routes = Config.impactivRoutes;
@@ -17,6 +18,7 @@ export class FooterComponent implements OnInit {
   phoneStart = '5333';
   phoneEnd = '0360';
   useCases: { name: string; slug: string }[] = [];
+  useCasesSubscription!: Subscription;
 
   setPhone() {
     return {
@@ -26,7 +28,20 @@ export class FooterComponent implements OnInit {
     };
   }
 
-  async ngOnInit(): Promise<void> {
-    this.useCases = await this.useCaseService.getUseCasesName();
+  ngOnInit(): void {
+    this.useCasesSubscription = this.useCaseService
+      .getUseCases$()
+      .subscribe((response) => {
+        this.useCases = response
+          .sort((a, b) => (a.rank > b.rank ? 1 : -1))
+          .map((useCase) => ({
+            name: useCase.name,
+            slug: useCase.slug,
+          }));
+      });
+  }
+
+  ngOnDestroy(): void {
+    this.useCasesSubscription.unsubscribe();
   }
 }

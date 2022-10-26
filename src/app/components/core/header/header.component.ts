@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { Config, UseCaseService } from 'src/app/services';
 import { impactivRoutes } from 'src/app/services/config';
 
@@ -7,7 +8,7 @@ import { impactivRoutes } from 'src/app/services/config';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent implements OnInit, OnDestroy {
   constructor(private useCaseService: UseCaseService) {}
   routes = Config.impactivRoutes;
   hoveringIndex: null | number = null;
@@ -49,8 +50,23 @@ export class HeaderComponent implements OnInit {
   phoneStart = '5333';
   phoneEnd = '0360';
   useCases: { name: string; slug: string; logo?: string }[] = [];
+  useCasesSubscription!: Subscription;
 
-  async ngOnInit(): Promise<void> {
-    this.useCases = await this.useCaseService.getUseCasesName();
+  ngOnInit(): void {
+    this.useCasesSubscription = this.useCaseService
+      .getUseCases$()
+      .subscribe((response) => {
+        this.useCases = response
+          .sort((a, b) => (a.rank > b.rank ? 1 : -1))
+          .map((useCase) => ({
+            name: useCase.name,
+            slug: useCase.slug,
+            logo: useCase.quote.logo,
+          }));
+      });
+  }
+
+  ngOnDestroy(): void {
+    this.useCasesSubscription.unsubscribe();
   }
 }

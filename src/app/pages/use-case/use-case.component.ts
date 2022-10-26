@@ -1,3 +1,4 @@
+import { Location } from '@angular/common';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
@@ -11,7 +12,6 @@ import {
 } from 'src/app/services';
 import { impactivRoutes } from 'src/app/services/config';
 import { environment } from 'src/environments/environment';
-import { Location } from '@angular/common';
 
 @Component({
   selector: 'impactiv-use-case',
@@ -29,34 +29,41 @@ export class UseCaseComponent implements OnInit, OnDestroy {
 
   routeSubscription!: Subscription;
   useCase: UseCase | null = null;
+  useCasesSubscription!: Subscription;
 
   ngOnInit(): void {
     this.routeSubscription = this.route.paramMap.subscribe(
-      async (params: ParamMap) => {
-        this.useCase = await this.useCaseService.getUseCase(
-          params.get('slug') ?? ''
-        );
-        // A confirmer ce comportement
-        if (!this.useCase) this.router.navigate([impactivRoutes.home]);
-        else {
-          const configSeo: Required<OgMeta> = {
-            description: this.useCase.seo.description,
-            image: this.useCase.seo.image,
-            title: this.useCase.seo.title,
-            type: 'website',
-            url: Location.joinWithSlash(
-              environment.siteUri,
-              `${Config.impactivRoutes.useCase}/${this.useCase.slug}`
-            ),
-          };
-          this.seoService.setPageSeo(configSeo);
-          this.matomoService.trackPageView(configSeo);
-        }
+      (params: ParamMap) => {
+        this.useCasesSubscription = this.useCaseService
+          .getUseCases$()
+          .subscribe((response) => {
+            this.useCase =
+              response.filter(
+                (usecase) => usecase.slug === params.get('slug') ?? ''
+              )[0] ?? null;
+            // A confirmer ce comportement
+            if (!this.useCase) this.router.navigate([impactivRoutes.home]);
+            else {
+              const configSeo: Required<OgMeta> = {
+                description: this.useCase.seo.description,
+                image: this.useCase.seo.image,
+                title: this.useCase.seo.title,
+                type: 'website',
+                url: Location.joinWithSlash(
+                  environment.siteUri,
+                  `${Config.impactivRoutes.useCase}/${this.useCase.slug}`
+                ),
+              };
+              this.seoService.setPageSeo(configSeo);
+              this.matomoService.trackPageView(configSeo);
+            }
+          });
       }
     );
   }
 
   ngOnDestroy(): void {
     this.routeSubscription.unsubscribe();
+    this.useCasesSubscription.unsubscribe();
   }
 }
