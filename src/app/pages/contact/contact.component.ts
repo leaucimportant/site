@@ -1,6 +1,12 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, AbstractControl } from '@angular/forms';
-import { MatomoService, Config, SeoService } from 'src/app/services';
+import {
+  AbstractControl,
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  Validators,
+} from '@angular/forms';
+import { Config, MatomoService, SeoService } from 'src/app/services';
 
 @Component({
   selector: 'impactiv-contact',
@@ -11,13 +17,14 @@ import { MatomoService, Config, SeoService } from 'src/app/services';
 export class ContactComponent implements OnInit {
   constructor(
     private seoService: SeoService,
-    private matomoService: MatomoService
+    private matomoService: MatomoService,
+    private formBuilder: FormBuilder
   ) {}
   form: FormGroup = new FormGroup({
     name: new FormControl(''),
     email: new FormControl(''),
     message: new FormControl(''),
-    activity: new FormControl(''),
+    subject: new FormControl(''),
     company: new FormControl(''),
     phone: new FormControl(''),
   });
@@ -27,6 +34,27 @@ export class ContactComponent implements OnInit {
   ngOnInit(): void {
     this.setSeo();
     this.matomoTrack();
+    this.initializeForm();
+  }
+
+  private initializeForm(): void {
+    this.form = this.formBuilder.group({
+      name: ['', [Validators.required, Validators.minLength(2)]],
+      email: [
+        '',
+        [
+          Validators.required,
+          Validators.pattern(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/),
+        ],
+      ],
+      subject: ['', [Validators.required]],
+      message: [''],
+      company: [''],
+      phone: [
+        '',
+        [Validators.pattern(new RegExp(/^(0|\+33)[1-9]([-.: ]?[0-9]{2}){4}$/))],
+      ],
+    });
   }
 
   private setSeo(): void {
@@ -50,6 +78,9 @@ export class ContactComponent implements OnInit {
   }
 
   submit() {
-    console.log(this.form);
+    if (this.form.valid) {
+      this.submitted = true;
+      console.log(this.form.getRawValue());
+    }
   }
 }

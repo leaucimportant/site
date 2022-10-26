@@ -40,29 +40,50 @@
       </div>
     </section>
     <section class="contact-container__form impactiv-button-regular">
-      <form [formGroup]="form" novalidate>
+      <form [formGroup]="form" novalidate (submit)="submit()">
         <div>
           <label
-            for="activityInput"
-            *ngIf="!submitted || !f['activity'].errors"
+            for="subjectInput"
+            *ngIf="!submitted || !f['subject'].errors"
             class="mb-1"
-            >Votre secteur d’activité</label
+            >Objet de votre demande</label
           >
           <select
             class="form-select"
             aria-label="Default select example"
-            formControlName="activity"
+            formControlName="subject"
+            required
+            [class.is-invalid]="
+              f['subject'].errors &&
+              (f['subject'].dirty || f['subject'].touched)
+            "
+            [class.is-valid]="
+              !f['subject'].errors &&
+              (f['subject'].dirty || f['subject'].touched)
+            "
           >
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
+            <option value="Proposer un partenariat">
+              Proposer un partenariat
+            </option>
+            <option value="Postuler">Postuler</option>
+            <option value="Echanger sur un projet">
+              Echanger sur un projet
+            </option>
+            <option value="Demander une démo">Demander une démo</option>
+            <option value="Une demande SAV / hotline">
+              Une demande SAV / hotline
+            </option>
+            <option value="Autre">Autre</option>
           </select>
+          <label for="subject" *ngIf="submitted && f['subject'].errors"
+            >Veuillez sélectionner l'objet de votre demande.
+          </label>
         </div>
         <div class="contact-container__form--row">
           <div
             class="contact-container__form--row--input impactiv-button-regular"
           >
-            <label for="nameInput" class="mb-1">Nom</label>
+            <label for="nameInput" class="mb-1">Nom et Prénom</label>
             <input
               type="text"
               name="name"
@@ -96,20 +117,7 @@
               aria-label="société"
               formControlName="company"
               minlength="2"
-              required
-              [class.is-invalid]="
-                f['company'].errors &&
-                (f['company'].dirty || f['company'].touched)
-              "
-              [class.is-valid]="
-                !f['company'].errors &&
-                (f['company'].dirty || f['company'].touched)
-              "
             />
-
-            <label for="companyInput" *ngIf="submitted && f['company'].errors"
-              >Veuillez saisir un nom valide</label
-            >
           </div>
         </div>
         <div class="contact-container__form--row">
@@ -127,15 +135,14 @@
               minlength="2"
               required
               [class.is-invalid]="
-                f['phone'].errors && (f['phone'].dirty || f['phone'].touched)
+                f['phone'].errors && f['phone'].dirty && f['phone'].value
               "
               [class.is-valid]="
-                !f['phone'].errors && (f['phone'].dirty || f['phone'].touched)
+                !f['phone'].errors && f['phone'].dirty && f['phone'].value
               "
             />
-
             <label for="phoneInput" *ngIf="submitted && f['phone'].errors"
-              >Veuillez saisir un nom valide</label
+              >Veuillez saisir un numéro valide</label
             >
           </div>
           <div
@@ -160,7 +167,7 @@
             />
 
             <label for="emailInput" *ngIf="submitted && f['email'].errors"
-              >Veuillez saisir un nom valide</label
+              >Veuillez saisir un email valide</label
             >
           </div>
         </div>
@@ -175,29 +182,13 @@
             formControlName="message"
             placeholder="Votre message..."
             rows="3"
-            [class.is-invalid]="
-              f['message'].errors &&
-              (f['message'].dirty || f['message'].touched)
-            "
-            [class.is-valid]="
-              !f['message'].errors &&
-              (f['message'].dirty || f['message'].touched)
-            "
           ></textarea>
-          <label for="textarea1" *ngIf="submitted && f['message'].errors">
-            <span *ngIf="f['message'].errors['required']"
-              >Veuillez saisir votre message</span
-            >
-            <span *ngIf="f['message'].errors['minlength']"
-              >Minimum de 5 caractères</span
-            >
-          </label>
         </div>
 
         <div
           class="d-grid gap-2 contact-container__form--single-row contact-container__form--button"
         >
-          <button type="button" class="btn btn-secondary">
+          <button type="submit" class="btn btn-secondary">
             <span class="align-middle impactiv-button-regular"
               >Envoyer le message</span
             ><i
@@ -209,9 +200,20 @@
         <p
           class="impactiv-body-sub-regular contact-container__form--single-row contact-container__form--text mb-0"
         >
-          En cliquant sur "Envoyer" ci-dessus, vous reconnaissez avoir lu,
-          compris et accepté les <span class="custom-bold">conditions générales</span> d'Impactiv et la <span class="custom-bold">politique
-          de confidentialité</span>.
+          <small>
+            Ce site est protégé par reCAPTCHA et par
+            <a
+              href="https://www.google.com/intl/fr/policies/privacy/"
+              class="text-reset"
+              >les règles de confidentialité de Google</a
+            >.
+            <a
+              href="https://www.google.com/intl/fr/policies/terms/"
+              class="text-reset"
+              >Les conditions de service</a
+            >
+            s'appliquent.
+          </small>
         </p>
       </form>
     </section>
