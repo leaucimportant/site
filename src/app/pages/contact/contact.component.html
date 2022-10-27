@@ -42,12 +42,7 @@
     <section class="contact-container__form impactiv-button-regular">
       <form [formGroup]="form" novalidate (submit)="submit()">
         <div>
-          <label
-            for="subjectInput"
-            *ngIf="!submitted || !f['subject'].errors"
-            class="mb-1"
-            >Objet de votre demande</label
-          >
+          <label for="subjectInput" class="mb-1">Objet de votre demande</label>
           <select
             class="form-select"
             aria-label="Default select example"
@@ -75,7 +70,10 @@
             </option>
             <option value="Autre">Autre</option>
           </select>
-          <label for="subject" *ngIf="submitted && f['subject'].errors"
+          <label
+            class="text-danger"
+            for="subject"
+            *ngIf="submitted && f['subject'].errors"
             >Veuillez sélectionner l'objet de votre demande.
           </label>
         </div>
@@ -101,7 +99,10 @@
               "
             />
 
-            <label for="nameInput" *ngIf="submitted && f['name'].errors"
+            <label
+              class="text-danger"
+              for="nameInput"
+              *ngIf="submitted && f['name'].errors"
               >Veuillez saisir un nom valide</label
             >
           </div>
@@ -141,7 +142,10 @@
                 !f['phone'].errors && f['phone'].dirty && f['phone'].value
               "
             />
-            <label for="phoneInput" *ngIf="submitted && f['phone'].errors"
+            <label
+              class="text-danger"
+              for="phoneInput"
+              *ngIf="submitted && f['phone'].errors && f['phone'].value"
               >Veuillez saisir un numéro valide</label
             >
           </div>
@@ -166,7 +170,10 @@
               "
             />
 
-            <label for="emailInput" *ngIf="submitted && f['email'].errors"
+            <label
+              class="text-danger"
+              for="emailInput"
+              *ngIf="submitted && f['email'].errors"
               >Veuillez saisir un email valide</label
             >
           </div>

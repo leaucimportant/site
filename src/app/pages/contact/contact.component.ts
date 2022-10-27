@@ -78,8 +78,8 @@ export class ContactComponent implements OnInit {
   }
 
   submit() {
+    this.submitted = true;
     if (this.form.valid) {
-      this.submitted = true;
       console.log(this.form.getRawValue());
     }
   }
