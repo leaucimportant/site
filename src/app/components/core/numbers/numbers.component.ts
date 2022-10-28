@@ -25,12 +25,12 @@ export class NumbersComponent {
     },
     {
       data: 1,
-      suffix: 'Milion',
+      suffix: 'Million',
       title: 'De personnes utilisent nos solutions au quotidien !',
     },
     {
       data: 2,
-      suffix: 'Milion',
+      suffix: 'Millions',
       title: 'De lignes de code',
     },
     {
