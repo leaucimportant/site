@@ -1,9 +1,28 @@
 <div class="container solution-carousel">
-  <h1 class="impactiv-display-small">{{ title }}</h1>
+  <div
+    class="d-flex justify-content-between skills-container__title align-items-center"
+  >
+    <h1 class="impactiv-display-small">{{ title }}</h1>
+    <div class="d-none d-lg-flex justify-content-around">
+      <button
+        type="button"
+        class="btn btn-outline-secondary"
+        (click)="selectPage(false)"
+      >
+        <i class="bi bi-arrow-left-short fs-2"></i>
+      </button>
+      <button
+        type="button"
+        class="btn btn-outline-secondary ms-4"
+        (click)="selectPage(true)"
+      >
+        <i class="bi bi-arrow-right-short fs-2"></i>
+      </button>
+    </div>
+  </div>
   <p class="impactiv-body-regular solution-carousel__description">
     {{ description }}
   </p>
-
   <a
     name=""
     id=""
@@ -28,7 +47,7 @@
         [breakpoints]="{ '768': { perView: 1 }, '1200': { perView: 2 } }"
         [gap]="20"
         [type]="'carousel'"
-        [listenToEvents]="false"
+        [listenToEvents]="true"
         [autoplay]="5000"
         [animationDuration]="700"
       >
