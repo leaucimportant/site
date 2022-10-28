@@ -65,7 +65,7 @@
     z-index: -5;
   }
   &__content {
-    width: 45%;
+    width: 50%;
     position: relative;
     z-index: 3;
   }
@@ -144,6 +144,10 @@
     padding-top: 6rem;
     height: 608px;
     margin-bottom: 4rem;
+    &__container {
+      padding-right: 0rem;
+      padding-left: 0rem;
+    }
     &__title {
       width: 100%;
     }
