@@ -14,13 +14,13 @@ export type ImpactivRoutesEnum =
 export const impactivRoutes: Record<ImpactivRoutesEnum, string> = {
   home: '',
   contact: 'contact',
-  webAppSolution: 'solution/application-collaborateurs',
-  screenSolution: 'solution/affichage-dynamique',
-  affluenceSolution: 'solution/affluence',
-  dsmSolution: 'solution/developpement-sur-mesure',
+  webAppSolution: 'solutions/application-collaborateurs',
+  screenSolution: 'solutions/affichage-dynamique',
+  affluenceSolution: 'solutions/affluence',
+  dsmSolution: 'solutions/developpement-sur-mesure',
   company: 'entreprise',
   mentionsLegales: 'mentions-legales',
-  useCase: 'cas-client',
+  useCase: 'cas-clients',
 };
 
 export const routerOptions: ExtraOptions = {

@@ -1,4 +1,4 @@
-import { ScullyConfig, setPluginConfig } from '@scullyio/scully';
+import { ScullyConfig } from '@scullyio/scully';
 // import { getRegexPlugin } from '@gammastream/scully-plugin-regex';
 
 /** this loads the default render plugin, remove when switching to something else. */
@@ -14,7 +14,7 @@ export const config: ScullyConfig = {
   projectName: 'impactiv',
   outDir: './public',
   routes: {
-    '/usecase/:slug': {
+    '/cas-clients/:slug': {
       type: 'json',
       slug: {
         url: 'https://impactiv.s3.fr-par.scw.cloud/siteweb/casclients.json',

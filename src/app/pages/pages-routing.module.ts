@@ -24,19 +24,19 @@ const routes: Routes = [
     component: CompanyComponent,
   },
   {
-    path: 'solution/application-collaborateurs',
+    path: 'solutions/application-collaborateurs',
     component: SolutionWebAppComponent,
   },
   {
-    path: 'solution/developpement-sur-mesure',
+    path: 'solutions/developpement-sur-mesure',
     component: SolutionDSMComponent,
   },
   {
-    path: 'solution/affluence',
+    path: 'solutions/affluence',
     component: SolutionAffluenceComponent,
   },
   {
-    path: 'cas-client/:slug',
+    path: 'cas-clients/:slug',
     component: UseCaseComponent,
   },
   {
