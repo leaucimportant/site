@@ -13,7 +13,6 @@ export class WebAppFeaturesComponent {
       image: {
         src: 'webapp/table_reservation.png',
         alt: 'Réservation de table',
-        noPaddingBottom: true,
       },
       title: 'Réservation de table',
       description:
@@ -23,7 +22,6 @@ export class WebAppFeaturesComponent {
       image: {
         src: 'webapp/product_card.png',
         alt: 'Consultation de menu',
-        noPaddingBottom: false,
       },
       title: 'Consultation de menu',
       description:
@@ -33,7 +31,6 @@ export class WebAppFeaturesComponent {
       image: {
         src: 'webapp/feedback_product.png',
         alt: 'Retour clients',
-        noPaddingBottom: false,
       },
       title: 'Feedback clients',
       description:
@@ -43,7 +40,6 @@ export class WebAppFeaturesComponent {
       image: {
         src: 'webapp/article_card.png',
         alt: 'carte article',
-        noPaddingBottom: false,
       },
       title: 'Communications et évenements',
       description:
@@ -53,7 +49,6 @@ export class WebAppFeaturesComponent {
       image: {
         src: 'webapp/affluence_graph.png',
         alt: 'graphique affluence',
-        noPaddingBottom: false,
       },
       title: 'Affluence en temps réel',
       description:
@@ -63,7 +58,6 @@ export class WebAppFeaturesComponent {
       image: {
         src: 'webapp/online_services.png',
         alt: 'Liens externes',
-        noPaddingBottom: true,
       },
       title: 'Liens externes',
       description:
@@ -73,7 +67,6 @@ export class WebAppFeaturesComponent {
       image: {
         src: 'webapp/selector_restaurants.png',
         alt: 'Sélecteur point de ventes',
-        noPaddingBottom: true,
       },
       title: 'Multi-points de ventes',
       description:
@@ -83,7 +76,6 @@ export class WebAppFeaturesComponent {
       image: {
         src: 'webapp/responsive.png',
         alt: 'Multi-supports',
-        noPaddingBottom: true,
       },
       title: 'Multi-supports',
       description: '... le service privilégié en mobilité comme au bureau.',

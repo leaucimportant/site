@@ -30,14 +30,7 @@
         class="solution-card col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3"
         *ngFor="let solution of solutions"
       >
-        <div
-          class="solution-card__picture"
-          [ngClass]="
-            solution.image.noPaddingBottom
-              ? 'solution-card__picture-bottom'
-              : ''
-          "
-        >
+        <div class="solution-card__picture">
           <img
             [src]="'assets/images/contents/solutions/' + solution.image.src"
             loading="lazy"
