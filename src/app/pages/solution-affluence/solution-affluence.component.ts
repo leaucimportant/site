@@ -15,16 +15,8 @@ export class SolutionAffluenceComponent {
 
   imagesCarousel = [
     {
-      src: 'assets/images/contents/solutions/webapp/dashboard_web_app.jpg',
+      src: 'assets/images/contents/solutions/affluence/app_affluence.png',
       alt: 'Dashboard Application Collaborateurs',
-    },
-    {
-      src: 'assets/images/contents/solutions/webapp/list_articles.png',
-      alt: "Liste d'articles",
-    },
-    {
-      src: 'assets/images/contents/solutions/webapp/screen_table_reservation.png',
-      alt: 'Formulaire réservation de table',
     },
   ];
 
