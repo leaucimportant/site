@@ -74,7 +74,7 @@ export class SolutionAffluenceComponent {
       'Ces données sont retraitées via notre infrastructure Cloud et vous sont accessibles au travers d’une API ou d’une interface dédiée (orientée clients et/ou opérationnels). Elles vous permettront ainsi d’adapter votre stratégie selon la fréquentation et vos objectifs commerciaux au sein de votre établissement.',
     items: [
       {
-        image: 'capteur.png',
+        image: 'ux.png',
         subtitle: 'Améliorez l’expérience utilisateur',
         icon: 'account.png',
       },
@@ -89,17 +89,17 @@ export class SolutionAffluenceComponent {
         icon: 'stats.png',
       },
       {
-        image: 'installation.png',
+        image: 'plug.png',
         subtitle: 'Plug and Play',
         icon: 'electrical.png',
       },
       {
-        image: 'passage.png',
+        image: 'cost.png',
         subtitle: 'Maîtrise des coûts',
         icon: 'credit.png',
       },
       {
-        image: 'sombre.png',
+        image: 'visit.png',
         subtitle: 'Limiter le nombre de visiteurs',
         icon: 'person.png',
       },
@@ -109,7 +109,7 @@ export class SolutionAffluenceComponent {
         icon: 'devices.png',
       },
       {
-        image: 'sombre.png',
+        image: 'graph.png',
         subtitle: 'Graphiques temps réel',
         icon: 'chart.png',
       },
