@@ -37,8 +37,8 @@ export class HeaderComponent implements OnInit, OnDestroy {
       route: impactivRoutes.affluenceSolution,
     },
     {
-      title: 'Intégration',
-      description: 'Développement sur-mesure.',
+      title: 'Développement sur-mesure',
+      description: 'lorem',
       icon: 'security.svg',
       alt: 'sécurité',
       route: impactivRoutes.dsmSolution,
