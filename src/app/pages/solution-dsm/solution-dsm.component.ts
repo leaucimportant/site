@@ -13,16 +13,16 @@ export class SolutionDSMComponent {
 
   imagesCarousel = [
     {
-      src: 'assets/images/contents/solutions/webapp/dashboard_web_app.jpg',
-      alt: 'Dashboard Application Collaborateurs',
+      src: 'assets/images/contents/solutions/dsm/sodexo.png',
+      alt: 'Sodexo',
     },
     {
-      src: 'assets/images/contents/solutions/webapp/list_articles.png',
-      alt: "Liste d'articles",
+      src: 'assets/images/contents/solutions/dsm/la_mira.png',
+      alt: 'La Mira',
     },
     {
-      src: 'assets/images/contents/solutions/webapp/screen_table_reservation.png',
-      alt: 'Formulaire réservation de table',
+      src: 'assets/images/contents/solutions/dsm/cdv.png',
+      alt: 'Carte des vins',
     },
   ];
   blocks = [

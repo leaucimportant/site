@@ -14,6 +14,8 @@ export class SolutionCarouselComponent {
   @Input() title!: string;
   @Input() description!: string;
   @Input() images!: { src: string; alt: string }[];
+  @Input() maxView!: number;
+
   currentStep = 0;
 
   selectPage(isNext: boolean): void {
