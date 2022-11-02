@@ -38,14 +38,14 @@
       margin: 2.5rem 0;
       display: flex;
       flex-wrap: wrap;
-      button:first-child {
+      a:first-child {
         margin: 0 1rem 0 0;
       }
       @media (max-width: 1199.98px) {
-        button {
+        a {
           flex-basis: 100%;
         }
-        button:first-child {
+        a:first-child {
           margin: 0 0 1rem 0;
         }
       }

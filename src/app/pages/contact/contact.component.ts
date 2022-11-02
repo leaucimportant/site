@@ -24,6 +24,12 @@ export class ContactComponent implements OnInit {
     private route: ActivatedRoute,
     private window: Window
   ) {}
+
+  phone = '';
+  phoneAreaCode = '+339';
+  phoneStart = '5333';
+  phoneEnd = '0360';
+
   form: FormGroup = new FormGroup({
     name: new FormControl(''),
     email: new FormControl(''),

@@ -8,14 +8,24 @@
         relatif à notre site, ce formulaire est fait pour vous !
       </p>
       <div class="contact-container__infos--buttons">
-        <button type="button" class="btn btn btn-secondary btn-contact-us-fill">
+        <a
+          type="button"
+          class="btn btn btn-secondary btn-contact-us-fill"
+          [href]="phone"
+          (click)="phone = 'tel:' + phoneAreaCode + phoneStart + phoneEnd"
+        >
           <span class="align-middle impactiv-button-regular">Appelez-nous</span
           ><i
             class="bi bi-arrow-right-short ms-2 fs-5 align-middle contact-container__infos--buttons--arrow-icon"
             aria-hidden="true"
           ></i>
-        </button>
-        <button type="button" class="btn btn-gray-outline">
+        </a>
+        <a
+          type="button"
+          class="btn btn-gray-outline"
+          href="https://linkedin.com/company/impactiv'/"
+          target="_blank"
+        >
           <span class="align-middle impactiv-button-regular text-secondary"
             >Retrouvez-nous sur Linkedin</span
           >
@@ -23,7 +33,7 @@
             class="bi bi-arrow-right-short ms-2 fs-5 align-middle contact-container__infos--buttons--arrow-icon"
             aria-hidden="true"
           ></i>
-        </button>
+        </a>
       </div>
 
       <div>
