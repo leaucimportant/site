@@ -6,6 +6,8 @@ import {
   FormGroup,
   Validators,
 } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
+import { first, map } from 'rxjs';
 import { Config, MatomoService, SeoService } from 'src/app/services';
 
 @Component({
@@ -18,7 +20,9 @@ export class ContactComponent implements OnInit {
   constructor(
     private seoService: SeoService,
     private matomoService: MatomoService,
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private route: ActivatedRoute,
+    private window: Window
   ) {}
   form: FormGroup = new FormGroup({
     name: new FormControl(''),
@@ -35,6 +39,15 @@ export class ContactComponent implements OnInit {
     this.setSeo();
     this.matomoTrack();
     this.initializeForm();
+    this.route.paramMap
+      .pipe(
+        first(),
+        map(() => this.window.history.state)
+      )
+      .subscribe((data) => {
+        if (data.askDemo)
+          this.form.controls['subject'].patchValue('Demander une démo');
+      });
   }
 
   private initializeForm(): void {

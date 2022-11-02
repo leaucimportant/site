@@ -171,8 +171,9 @@
           <li class="nav-item">
             <button
               type="button"
-              [routerLink]="contactRoute"
-              routerLinkActive="active"
+              [routerLink]="[contactRoute]"
+              [state]="{ askDemo: true }"
+              par
               class="btn demo"
               data-bs-toggle="collapse"
               data-bs-target=".navbar-collapse.show"
