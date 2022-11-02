@@ -1,0 +1,25 @@
+<impactiv-solution-dsm-hero></impactiv-solution-dsm-hero>
+<impactiv-team-quote></impactiv-team-quote>
+<div id="SolutionExpertiseBlock">
+  <impactiv-solution-block
+    *ngFor="let block of blocks; let i = index"
+    [isReversed]="!(i % 2 === 0)"
+    [data]="block"
+  ></impactiv-solution-block>
+</div>
+<impactiv-our-expertise></impactiv-our-expertise>
+<impactiv-infrastructure-masonry></impactiv-infrastructure-masonry>
+<impactiv-solution-carousel
+  [images]="imagesCarousel"
+  [description]="descriptionCarousel"
+  [title]="titleCarousel"
+  [maxView]="1"
+></impactiv-solution-carousel
+><impactiv-numbers></impactiv-numbers>
+<impactiv-use-case-resume
+  [currentSolution]="solution"
+></impactiv-use-case-resume>
+<impactiv-other-solutions
+  [solutionToDelete]="solution"
+></impactiv-other-solutions>
+<impactiv-banner [parallax]="true"></impactiv-banner>

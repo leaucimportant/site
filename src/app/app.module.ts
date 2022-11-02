@@ -17,7 +17,10 @@ import { ScullyLibModule } from '@scullyio/ng-lib';
     RouterModule,
     ScullyLibModule,
   ],
-  providers: [{ provide: Window, useValue: window }],
+  providers: [
+    { provide: Window, useValue: window },
+    { provide: Navigator, useValue: navigator },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

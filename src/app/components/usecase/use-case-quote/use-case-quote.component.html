@@ -1,0 +1,26 @@
+<div
+  class="container quote container-use-case"
+  [ngClass]="onResumeComponent ? 'resume-quote' : ''"
+>
+  <p [innerHTML]="quote.text" class="m-0 quote-texte"></p>
+  <div class="quote-people">
+    <picture
+      [ngClass]="onResumeComponent ? 'resume-quote-picture' : 'quote-picture'"
+    >
+      <img
+        [src]="companyLogo ? companyLogo : quote.logo"
+        [ngClass]="onResumeComponent ? 'resume-quote-logo' : 'quote-logo'"
+      />
+    </picture>
+    <div class="quote-company">
+      <div
+        *ngFor="let people of quote.people"
+        class="d-flex quote-company-mobile"
+        [ngClass]="onResumeComponent ? 'flex-wrap flex-column' : ''"
+      >
+        <p [innerHTML]="people.name" class="m-0 quote-name"></p>
+        <p [innerHTML]="people.job" class="m-0 quote-job"></p>
+      </div>
+    </div>
+  </div>
+</div>

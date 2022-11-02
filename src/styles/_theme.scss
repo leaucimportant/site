@@ -1,0 +1,19 @@
+@import "./variables";
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+@import "../../node_modules/bootstrap/scss/maps";
+@import "../../node_modules/bootstrap/scss/utilities";
+
+$custom-colors: (
+  "gray-005": $gray-005,
+  "gray-950": $gray-950,
+  "gray-1000": $gray-1000,
+  "blue-1000": $primary,
+  "blue-100": $blue-100,
+  "blue-003": $blue-003,
+  "blue-200": $blue-200,
+);
+
+// Merge the maps
+$theme-colors: map-merge($theme-colors, $custom-colors);

@@ -1,0 +1,193 @@
+<header class="print:hidden d-print-none">
+  <nav id="navbar" class="navbar navbar-expand-xl">
+    <div class="container">
+      <a class="navbar-brand" [routerLink]="homeRoute">
+        <img
+          src="assets/images/icons/logo_h_color.svg"
+          alt="Love Impactiv"
+          class="d-inline-block align-text-top"
+      /></a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <!-- <span class="navbar-toggler-icon"></span> -->
+        <i class="bi bi-list mx-2"></i>
+        <i class="bi bi-x mx-2"></i>
+      </button>
+      <div class="collapse navbar-collapse rounded" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link nav-title dropdown-toggle d-flex justify-content-between"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <span>Solutions</span>
+              <i class="bi bi-chevron-down mx-2"></i>
+              <i class="bi bi-chevron-up mx-2"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <div class="solutions">
+                <div class="w-100">
+                  <li *ngFor="let item of solutions; let i = index">
+                    <a
+                      class="dropdown-item"
+                      [routerLink]="item.route"
+                      routerLinkActive="active"
+                      (mouseover)="hoveringIndex = i"
+                      (mouseout)="hoveringIndex = null"
+                      data-bs-toggle="collapse"
+                      data-bs-target=".navbar-collapse.show"
+                    >
+                      <div class="picture d-flex">
+                        <picture>
+                          <source
+                            [srcset]="
+                              'assets/images/icons/header/' +
+                              (hoveringIndex === i ? 'bleu' : 'gris') +
+                              '/' +
+                              item.icon
+                            "
+                            type="image/svg+xml"
+                          />
+                          <img
+                            [srcset]="
+                              'assets/images/icons/header/' +
+                              (hoveringIndex === i ? 'bleu' : 'gris') +
+                              '/' +
+                              item.icon
+                            "
+                            [alt]="item.alt"
+                          />
+                        </picture>
+                      </div>
+                      <div class="content">
+                        <h1 class="impactiv-button-regular">
+                          {{ item.title }}
+                        </h1>
+                        <p class="impactiv-body-small">
+                          {{ item.description }}
+                        </p>
+                      </div>
+                    </a>
+                  </li>
+                </div>
+                <!-- <div class="solutions__article">
+                  <h1 class="impactiv-button-regular">
+                    Lorem ipsum dolor aqua di.
+                  </h1>
+                  <p class="impactiv-body-small">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Repellendus est enim quia doloribus facere? Nihil, voluptas.
+                    Ipsam mollitia aspernatur eaque praesentium atque, veritatis
+                    qui aliquam impedit porro similique sed? Possimus.
+                  </p>
+                  <img
+                    src="
+                      assets/images/contents/solutions/common/ecran.png
+                    "
+                    alt="article"
+                  />
+                  <button
+                    type="button"
+                    class="btn nav-link btn-outline-secondary"
+                  >
+                    <span class="align-middle impactiv-button-regular"
+                      >Redirection article LK</span
+                    ><i
+                      class="bi bi-arrow-right-short ms-2 align-middle demo__arrow-icon"
+                      aria-hidden="true"
+                    ></i>
+                  </button>
+                </div> -->
+              </div>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link nav-title dropdown-toggle d-flex justify-content-between"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <span> Cas clients</span>
+              <i class="bi bi-chevron-down mx-2"></i>
+              <i class="bi bi-chevron-up mx-2"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li *ngFor="let useCase of useCases">
+                <a
+                  class="dropdown-item use-case align-items-center"
+                  [routerLink]="[routes.useCase, useCase.slug]"
+                  routerLinkActive="active"
+                  data-bs-toggle="collapse"
+                  data-bs-target=".navbar-collapse.show"
+                >
+                  <picture class="picture" *ngIf="useCase.logo">
+                    <source [srcset]="useCase.logo" type="image/svg+xml" />
+                    <img
+                      [src]="useCase.logo"
+                      class="img-fluid logo"
+                      [alt]="useCase.name + ' logo'"
+                    />
+                  </picture>
+                  <span>{{ useCase.name }}</span></a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link nav-title"
+              aria-current="page"
+              href="#"
+              data-bs-toggle="collapse"
+              data-bs-target=".navbar-collapse.show"
+              >Entreprise</a
+            >
+          </li>
+          <li class="nav-item divider align-items-center d-xl-flex">
+            <span class="d-none d-xl-flex">|</span>
+          </li>
+          <li class="nav-item">
+            <a
+              type="button"
+              class="btn phone-call"
+              [href]="phone"
+              (click)="phone = 'tel:' + phoneAreaCode + phoneStart + phoneEnd"
+            >
+              <span class="align-middle impactiv-button-regular"
+                >Appelez-nous</span
+              >
+            </a>
+          </li>
+          <li class="nav-item">
+            <button
+              type="button"
+              [routerLink]="[contactRoute]"
+              [state]="{ askDemo: true }"
+              par
+              class="btn demo"
+              data-bs-toggle="collapse"
+              data-bs-target=".navbar-collapse.show"
+            >
+              <span class="align-middle impactiv-button-regular"
+                >Demander une démo</span
+              ><i
+                class="bi bi-arrow-right-short ms-2 align-middle demo__arrow-icon"
+                aria-hidden="true"
+              ></i>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>

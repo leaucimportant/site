@@ -1,0 +1,48 @@
+<div class="container solutions-container" id="ourSolutions">
+  <h1 class="impactiv-display-small">
+    Plongez dans un écosystème complet et performant<span class="text-primary"
+      >.</span
+    >
+  </h1>
+  <p class="impactiv-body-regular solutions-container__description">
+    Améliorez la qualité de vie au travail et le quotidien de vos clients grâce
+    aux nombreuses fonctionnalités existantes et à venir. Facilitez la gestion
+    opérationnelle de vos équipes à travers l’intégration et l’agrégation de vos
+    outils et/ou ceux de vos prestataires.
+  </p>
+  <a
+    name=""
+    id=""
+    class="btn btn-contact-us"
+    [routerLink]="['/', contactRoute]"
+    role="button"
+    ><span class=""
+      >Contactez-nous
+      <i
+        class="hero__arrow bi bi-arrow-right-short fs-5 align-middle"
+        aria-hidden="true"
+      ></i></span
+  ></a>
+
+  <div class="solutions">
+    <div class="row">
+      <div
+        class="solution-card col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3"
+        *ngFor="let solution of solutions"
+      >
+        <div class="solution-card__picture">
+          <img
+            [src]="'assets/images/contents/solutions/' + solution.image.src"
+            loading="lazy"
+            class="img-fluid"
+            [alt]="solution.image.alt"
+          />
+        </div>
+        <div class="solution-card__content">
+          <h1 class="impactiv-button-regular">{{ solution.title }}</h1>
+          <p class="impactiv-body-sub-regular">{{ solution.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

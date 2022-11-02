@@ -1,8 +1,38 @@
 $primary: #0575e6;
-$secondary: #101B26;
-$info: #DBE6F2;
+$secondary: #101b26;
+$info: #dbe6f2;
+$light: #fff;
 
-$font-family-base: Poppins, system-ui, -apple-system, Roboto, Arial, sans-serif;
-$font-family-sans-serif: Poppins, system-ui, -apple-system, Roboto, Arial, sans-serif;
+$gray-005: #f3f3f4;
+$gray-100: #e7e8ea;
+$gray-200: #cfd1d4;
+$gray-300: #b7b9bf;
+$gray-400: #9fa2aa;
+$gray-500: #878b94;
+$gray-600: #6f747f;
+$gray-700: #575d6a;
+$gray-800: #3f4555;
+$gray-900: #272e3f;
+$gray-950: #1b2335;
+$gray-1000: #0f172a;
+
+$blue-003: #f8fbfe;
+$blue-100: #e6f1fc;
+$blue-200: #0f172acc;
+
+$gradient: linear-gradient(90deg, #ee5959 0%, #512888 49.31%, $primary 100%);
+
+$body-color: $gray-1000;
+
+$border-radius: 4px !default;
+$border-radius-sm: 8px !default;
+$border-radius-lg: 16px !default;
+
+$font-family-base: Inter, system-ui, -apple-system, Roboto, Arial, sans-serif;
+$font-family-sans-serif: Inter, system-ui, -apple-system, Roboto, Arial,
+  sans-serif;
 $font-weight-normal: 500;
-$headings-font-family: 'Poppins';
+$headings-font-family: "Inter";
+$enable-caret: false;
+
+$grid-gutter-width: 2.5rem;

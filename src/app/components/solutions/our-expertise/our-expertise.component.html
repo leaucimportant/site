@@ -1,0 +1,73 @@
+<div class="container expertise-container">
+  <div
+    class="d-flex justify-content-between expertise-container__title align-items-center"
+  >
+    <h1 class="impactiv-display-small">Notre expertise</h1>
+    <div class="d-none d-lg-flex justify-content-around">
+      <button
+        type="button"
+        class="btn btn-outline-secondary"
+        (click)="selectPage(false)"
+      >
+        <i class="bi bi-arrow-left-short fs-2"></i>
+      </button>
+      <button
+        type="button"
+        class="btn btn-outline-secondary ms-4"
+        (click)="selectPage(true)"
+      >
+        <i class="bi bi-arrow-right-short fs-2"></i>
+      </button>
+    </div>
+  </div>
+
+  <div class="expertise-container__carousel">
+    <ng-container *ngIf="expertises && expertises.length > 0">
+      <ngx-glide
+        #ngxGlide
+        [showArrows]="false"
+        [showBullets]="false"
+        [perView]="3"
+        [breakpoints]="{
+          '768': { perView: 1 },
+          '998': { perView: 2 },
+          '1200': { perView: 3 }
+        }"
+        [gap]="20"
+        [type]="'carousel'"
+        [listenToEvents]="true"
+        (ranAfter)="onRanAfter()"
+      >
+        <ng-container *ngFor="let expertise of expertises">
+          <div class="expertise">
+            <div class="expertise__picture">
+              <!-- [src]=" 'assets/images/contents/solutions/common/' +
+              expertise.image " -->
+              <img
+                [src]="'assets/images/bg/no_image.svg'"
+                [alt]="expertise.alt"
+                class="img-fluid"
+              />
+            </div>
+            <div class="expertise__content">
+              <h1 class="impactiv-headline-regular">{{ expertise.title }}</h1>
+              <div class="impactiv-body-regular d-flex flex-column">
+                <div
+                  class="d-flex align-center expertise__content--item"
+                  *ngFor="let item of expertise.items"
+                >
+                  <div
+                    class="expertise__content--item--bullet d-flex align-center justify-content-center"
+                  >
+                    <i class="bi bi-check2"></i>
+                  </div>
+                  <span>{{ item }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ng-container>
+      </ngx-glide>
+    </ng-container>
+  </div>
+</div>

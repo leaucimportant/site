@@ -2,20 +2,33 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ComponentsModule } from '../components/components.module';
-import { NgBootstrapModule } from '../libs-external/ng-bootstrap/ng-bootstrap.module';
-import { ComingSoonComponent } from './coming-soon/coming-soon.component';
+// import { NgBootstrapModule } from '../libs-external/ng-bootstrap/ng-bootstrap.module';
 
 import { ContactComponent } from './contact/contact.component';
 
 import { PagesRoutingModule } from './pages-routing.module';
+import { HomeComponent } from './home/home.component';
+import { CompanyComponent } from './company/company.component';
+import { SolutionWebAppComponent } from './solution-web-app/solution-web-app.component';
+import { SolutionDSMComponent } from './solution-dsm/solution-dsm.component';
+import { UseCaseComponent } from './use-case/use-case.component';
+import { SolutionAffluenceComponent } from './solution-affluence/solution-affluence.component';
 
 @NgModule({
-  declarations: [ComingSoonComponent, ContactComponent],
+  declarations: [
+    ContactComponent,
+    HomeComponent,
+    CompanyComponent,
+    SolutionWebAppComponent,
+    SolutionDSMComponent,
+    UseCaseComponent,
+    SolutionAffluenceComponent,
+  ],
   imports: [
     CommonModule,
     PagesRoutingModule,
     ComponentsModule,
-    NgBootstrapModule,
+    // NgBootstrapModule,
     FormsModule,
     ReactiveFormsModule,
   ],

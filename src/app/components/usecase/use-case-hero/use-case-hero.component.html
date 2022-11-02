@@ -1,0 +1,37 @@
+<div class="hero">
+  <div class="container container-use-case">
+    <div
+      class="text-center d-flex flex-column justify-content-center align-items-center"
+    >
+      <picture class="hero-picture">
+        <img [src]="logo" class="hero-logo" />
+      </picture>
+      <h1 class="hero-title impactiv-display-large">
+        {{ title }}
+      </h1>
+      <p class="hero-subtitle impactiv-body-regular">
+        {{ subtitle }}
+      </p>
+      <div class="hero-image-container">
+        <video
+          loop autoplay
+          class="img-fluid hero-video"
+          *ngIf="isVideo; else image"
+        >
+          <source [src]="media" />
+        </video>
+        <ng-template #image>
+          <img [src]="media" class="img-fluid hero-image" />
+        </ng-template>
+        <div class="hero-tags" *ngIf="tags">
+          <div *ngFor="let tag of tags" class="d-flex">
+            <div class="d-flex hero-tag impactiv-body-sub-regular">
+              <p [innerHTML]="tag" class="m-0"></p>
+            </div>
+          </div>
+        </div>
+        <div class="hero-image-gradient"></div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,46 @@
+<div class="container other-solutions-container">
+  <h1 class="impactiv-display-small">
+    Des solutions qui couvrent tous vos besoins<span class="text-primary"
+      >.</span
+    >
+  </h1>
+  <p class="impactiv-body-regular">
+    Pour une digitalisation maîtrisée, orientée expérience utilisateur et
+    excellence opérationnelle.
+  </p>
+
+  <div class="other-solutions">
+    <div class="row gy-4">
+      <div
+        class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4"
+        *ngFor="let solution of solutions"
+      >
+        <div [class]="'other-solutions-card p-4 card-' + solution.id">
+          <div class="other-solutions__picture">
+            <picture>
+              <img
+                [srcset]="'assets/images/icons/header/bleu/' + solution.icon"
+                [alt]="solution.alt"
+              />
+            </picture>
+          </div>
+          <div class="other-solutions-card__content">
+            <h1 class="impactiv-headline-regular">{{ solution.title }}</h1>
+            <p class="impactiv-body-sub-regular">{{ solution.description }}</p>
+          </div>
+          <a
+            class="btn btn-secondary other-solutions__button other-solutions__button-dark"
+            [routerLink]="[solution.link]"
+          >
+            <span class="align-middle impactiv-button-regular"
+              >Découvrir la solution</span
+            ><i
+              class="other-solutions__arrow bi bi-arrow-right-short fs-5 align-middle"
+              aria-hidden="true"
+            ></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

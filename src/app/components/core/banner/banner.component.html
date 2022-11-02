@@ -1,0 +1,46 @@
+<div class="container banner mb-4" style="min-height: 392px">
+  <div class="banner__text">
+    <h1 class="impactiv-display-small mb-3">{{ banner.title }}</h1>
+    <p class="impactiv-body-regular">{{ banner.description }}</p>
+    <a
+      [routerLink]="['/', routes.contact]"
+      class="banner__btn btn mt-2 mt-sm-4"
+    >
+      <span class="align-middle impactiv-body-sub-regular text-white"
+        >Parler à un expert</span
+      >
+      <i
+        class="bi bi-arrow-right-short ms-2 fs-5 align-middle"
+        aria-hidden="true"
+      ></i>
+    </a>
+  </div>
+  <div class="banner__gradient"></div>
+  <div class="banner__parallax" *ngIf="parallax; else image">
+    <img
+      class="banner__parallaxItem banner__parallaxItem-item--1"
+      id="banner-parallax-item--1"
+      src="assets/images/bg/hero1.png"
+    />
+    <img
+      class="banner__parallaxItem banner__parallaxItem-item--2"
+      id="banner-parallax-item--2"
+      src="assets/images/bg/hero2.png"
+    />
+    <img
+      class="banner__parallaxItem banner__parallaxItem-item--3"
+      id="banner-parallax-item--3"
+      src="assets/images/bg/hero3.png"
+    />
+  </div>
+  <ng-template #image>
+    <div class="banner__image-container">
+      <img
+        src="assets/images/bg/banner_experience.png"
+        alt="Banner Impactiv"
+        class="banner__image d-none d-lg-block"
+      />
+      <div class="banner__image banner__image-mb d-lg-none"></div>
+    </div>
+  </ng-template>
+</div>

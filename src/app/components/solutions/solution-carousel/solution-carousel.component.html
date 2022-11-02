@@ -1,0 +1,62 @@
+<div class="container solution-carousel">
+  <div
+    class="d-flex justify-content-between skills-container__title align-items-center"
+  >
+    <h1 class="impactiv-display-small">{{ title }}</h1>
+    <div class="d-none d-lg-flex justify-content-around">
+      <button
+        type="button"
+        class="btn btn-outline-secondary"
+        (click)="selectPage(false)"
+      >
+        <i class="bi bi-arrow-left-short fs-2"></i>
+      </button>
+      <button
+        type="button"
+        class="btn btn-outline-secondary ms-4"
+        (click)="selectPage(true)"
+      >
+        <i class="bi bi-arrow-right-short fs-2"></i>
+      </button>
+    </div>
+  </div>
+  <p class="impactiv-body-regular solution-carousel__description">
+    {{ description }}
+  </p>
+  <a
+    name=""
+    id=""
+    class="btn btn-contact-us"
+    [routerLink]="['/', contactRoute]"
+    role="button"
+    ><span class=""
+      >Contactez-nous
+      <i
+        class="hero__arrow bi bi-arrow-right-short fs-5 align-middle"
+        aria-hidden="true"
+      ></i></span
+  ></a>
+
+  <div class="solution-carousel__container">
+    <ng-container *ngIf="images && images.length > 0">
+      <ngx-glide
+        #ngxGlide
+        [showArrows]="false"
+        [showBullets]="false"
+        [perView]="maxView"
+        [breakpoints]="{ '768': { perView: 1 }, '1200': { perView: maxView } }"
+        [gap]="20"
+        [type]="'carousel'"
+        [listenToEvents]="true"
+        [autoplay]="5000"
+        [animationDuration]="700"
+      >
+        <ng-container *ngFor="let image of images">
+          <div class="d-flex align-center justify-content-center">
+            <img class="img-fluid" [src]="image.src" [alt]="image.alt" />
+          </div>
+        </ng-container>
+      </ngx-glide>
+    </ng-container>
+  </div>
+</div>

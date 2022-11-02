@@ -1,0 +1,35 @@
+.solutions-container {
+  padding: 8rem 0 0;
+  &__description {
+    max-width: 55%;
+  }
+  .solutions {
+    .solution-card {
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      &__picture {
+        flex-grow: 1;
+      }
+      &__content {
+        padding-top: 1rem;
+        p {
+          opacity: 0.6;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1199.98px) {
+    &__description {
+      max-width: 70%;
+    }
+  }
+
+  @media (max-width: 991.98px) {
+    padding: 1rem 1rem 0;
+    &__description {
+      max-width: 90%;
+    }
+  }
+}
