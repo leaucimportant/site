@@ -12,6 +12,7 @@
         <button
           type="button"
           class="btn btn-secondary hero__button hero__button-dark"
+          [routerLink]="contactRoute"
         >
           <span class="align-middle impactiv-button-regular"
             >Nous contacter</span
@@ -23,6 +24,7 @@
         <button
           type="button"
           class="ms-0 ms-lg-2 mt-3 mt-lg-0 btn btn-outline hero__button hero__button-light"
+          (click)="scrollTo('ourSolutions')"
         >
           <span class="align-middle impactiv-button-regular text-secondary"
             >Découvrir nos solutions</span

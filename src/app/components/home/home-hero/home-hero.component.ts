@@ -1,5 +1,6 @@
 import { DOCUMENT } from '@angular/common';
 import { Component, HostListener, Inject } from '@angular/core';
+import { impactivRoutes } from 'src/app/services/config';
 
 @Component({
   selector: 'impactiv-home-hero',
@@ -11,6 +12,8 @@ export class HomeHeroComponent {
     @Inject(DOCUMENT) private document: Document,
     private window: Window
   ) {}
+
+  contactRoute = impactivRoutes.contact;
 
   prevPosition = 0;
   positionItem1 = -30;
@@ -41,5 +44,10 @@ export class HomeHeroComponent {
         gridItem3.style.transform = `translate3d(0px,${this.positionItem3}px,  0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, -20deg)`;
       }
     this.prevPosition = currentPosition;
+  }
+
+  scrollTo(anchor: string) {
+    const anchorElement = this.document.getElementById(anchor);
+    if (anchorElement) anchorElement.scrollIntoView();
   }
 }
