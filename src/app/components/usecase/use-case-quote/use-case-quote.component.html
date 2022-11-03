@@ -2,7 +2,10 @@
   class="container quote container-use-case"
   [ngClass]="onResumeComponent ? 'resume-quote' : ''"
 >
-  <p [innerHTML]="quote.text" class="m-0 quote-texte"></p>
+  <p
+    [innerHTML]="onResumeComponent ? resumeQuote : quote.text"
+    class="m-0 quote-texte"
+  ></p>
   <div class="quote-people">
     <picture
       [ngClass]="onResumeComponent ? 'resume-quote-picture' : 'quote-picture'"
