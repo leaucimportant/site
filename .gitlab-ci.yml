@@ -60,15 +60,15 @@ include:
 
 code_quality:
   stage: test
-  rules:
-    - if: "$CI_COMMIT_BRANCH != $CI_DEFAULT_BRANCH"
-      when: never
+  # rules:
+  #   - if: "$CI_COMMIT_BRANCH != $CI_DEFAULT_BRANCH"
+  #     when: never
 
 browser_performance:
   stage: performance
-  rules:
-    - if: "$CI_COMMIT_BRANCH != $CI_DEFAULT_BRANCH"
-      when: never
+  # rules:
+  #   - if: "$CI_COMMIT_BRANCH != $CI_DEFAULT_BRANCH"
+  #     when: never
 
 container_scanning:
   stage: deploy
@@ -78,9 +78,11 @@ container_scanning:
     # https://docs.gitlab.com/ee/user/application_security/container_scanning/#security-dashboard
     # https://docs.gitlab.com/ee/ci/runners/configure_runners.html#git-strategy
     GIT_STRATEGY: fetch
-  rules:
-    - if: "$CI_COMMIT_BRANCH != $CI_DEFAULT_BRANCH"
-      when: never
+  before_script:
+    - ls
+  # rules:
+  #   - if: "$CI_COMMIT_BRANCH != $CI_DEFAULT_BRANCH"
+  #     when: never
 
 build:
   variables:
@@ -89,9 +91,6 @@ build:
   artifacts:
     reports:
       dotenv: gl-auto-build-variables.env
-  rules:
-    - if: "$CI_COMMIT_BRANCH != $CI_DEFAULT_BRANCH"
-      when: never
 
 review:
   stage: review
