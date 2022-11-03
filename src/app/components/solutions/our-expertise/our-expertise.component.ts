@@ -19,7 +19,7 @@ export class OurExpertiseComponent implements OnInit {
         'Tests unitaires et fonctionnels',
         'Privacy by Design & Privacy by Default',
       ],
-      image: 'affluence.png',
+      image: 'methods.png',
       alt: 'alt',
     },
     {
@@ -31,7 +31,7 @@ export class OurExpertiseComponent implements OnInit {
         'Applications natives',
       ],
 
-      image: 'affluence.png',
+      image: 'dev.png',
       alt: 'alt',
     },
     {
@@ -44,7 +44,7 @@ export class OurExpertiseComponent implements OnInit {
         'Agent de messages',
       ],
 
-      image: 'affluence.png',
+      image: 'stack.png',
       alt: 'alt',
     },
     {
@@ -57,7 +57,7 @@ export class OurExpertiseComponent implements OnInit {
         'Passerelles de paiement (VAD)',
       ],
 
-      image: 'affluence.png',
+      image: 'api.png',
       alt: 'alt',
     },
   ];
