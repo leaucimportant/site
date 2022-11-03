@@ -72,6 +72,9 @@ build:
   variables:
     CI_APPLICATION_REPOSITORY: "${CI_REGISTRY_IMAGE}/sitewebimpactivfr"
 #     AUTO_DEVOPS_BUILD_IMAGE_EXTRA_ARGS: --build-arg=NG_ENV=staging
+  rules:
+    - if: "$CI_COMMIT_BRANCH != $CI_DEFAULT_BRANCH"
+      when: never
 
 review:
   stage: review
