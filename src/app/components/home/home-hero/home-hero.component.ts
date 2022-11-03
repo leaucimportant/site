@@ -32,16 +32,16 @@ export class HomeHeroComponent {
         this.positionItem1 += 2;
         this.positionItem2 -= 2;
         this.positionItem3 += 2;
-        gridItem1.style.transform = `translate3d(0px,${this.positionItem1}px,  0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, -20deg)`;
-        gridItem2.style.transform = `translate3d(0px,${this.positionItem2}px,  0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, -20deg)`;
-        gridItem3.style.transform = `translate3d(0px,${this.positionItem3}px,  0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, -20deg)`;
+        gridItem1.style.transform = `translate3d(0px,${this.positionItem1}px,  0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)`;
+        gridItem2.style.transform = `translate3d(0px,${this.positionItem2}px,  0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)`;
+        gridItem3.style.transform = `translate3d(0px,${this.positionItem3}px,  0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)`;
       } else {
         this.positionItem1 -= 4;
         this.positionItem2 += 2;
         this.positionItem3 -= 4;
-        gridItem1.style.transform = `translate3d(0px,${this.positionItem1}px,  0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, -20deg)`;
-        gridItem2.style.transform = `translate3d(0px,${this.positionItem2}px,  0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, -20deg)`;
-        gridItem3.style.transform = `translate3d(0px,${this.positionItem3}px,  0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, -20deg)`;
+        gridItem1.style.transform = `translate3d(0px,${this.positionItem1}px,  0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)`;
+        gridItem2.style.transform = `translate3d(0px,${this.positionItem2}px,  0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)`;
+        gridItem3.style.transform = `translate3d(0px,${this.positionItem3}px,  0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)`;
       }
     this.prevPosition = currentPosition;
   }

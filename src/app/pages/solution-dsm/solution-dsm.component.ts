@@ -31,7 +31,7 @@ export class SolutionDSMComponent {
       description:
         "Nous avons conscience que la demande de l'utilisateur final est en constant changement, et avec elle, votre produit numérique. L’évolution de votre solution ne doit pas se faire au dépend de vos équipes opérationnelles, nous jugeons de la qualité de notre travail aussi de par la simplicité d’utilisation des applications par vos équipes.",
       image: {
-        src: 'assets/images/bg/no_image.svg',
+        src: 'assets/images/contents/solutions/dsm/team.png',
         alt: 'affluence',
       },
     },
@@ -40,7 +40,7 @@ export class SolutionDSMComponent {
       description:
         "Vous souhaitez pouvoir y répondre lors du développement, c'est pourquoi les méthodologies et technologies employées doivent être en parfaite adéquation avec vos projets. En tant que propriétaire de produit, vous restez impliqué en permanence dans son développement et n'avez jamais de surprises.",
       image: {
-        src: 'assets/images/bg/no_image.svg',
+        src: 'assets/images/contents/solutions/dsm/note.png',
         alt: 'affluence',
       },
     },
@@ -49,7 +49,7 @@ export class SolutionDSMComponent {
       description:
         "La qualité est importante mais ce n'est certainement pas le seul ingrédient d'une application réussie. Il est important que vous développiez le bon produit et une application à valeur ajoutée, adaptée aux besoins de votre groupe. ",
       image: {
-        src: 'assets/images/bg/no_image.svg',
+        src: 'assets/images/contents/solutions/dsm/dev.png',
         alt: 'affluence',
       },
     },
@@ -58,7 +58,7 @@ export class SolutionDSMComponent {
       description:
         "Cela nécessite un état d'esprit ouvert dans lequel, en tant que partenaire stratégique, nous nous devons d’être à même de répondre. Une approche stratégique dans laquelle nous explorons les possibilités avec vous et vos utilisateurs.",
       image: {
-        src: 'assets/images/bg/no_image.svg',
+        src: 'assets/images/contents/solutions/dsm/talk.png',
         alt: 'affluence',
       },
     },

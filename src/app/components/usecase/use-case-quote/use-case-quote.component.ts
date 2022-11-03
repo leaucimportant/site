@@ -12,6 +12,7 @@ export class UseCaseQuoteComponent implements OnInit {
   @Input() onResumeComponent!: boolean;
   @Input() companyLogo?: string;
   @Input() quote!: Block;
+  @Input() resumeQuote?: string;
 
   ngOnInit(): void {}
 }

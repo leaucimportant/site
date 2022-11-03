@@ -1,0 +1,102 @@
+# Attention à ne pas écraser le répertoire du Dr Guillot !!!!
+# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+# Auto DevOps:
+# https://docs.gitlab.com/ee/ci/yaml/README.html
+# Based on auto devops CI file:
+# https://gitlab.com/gitlab-org/gitlab-foss/blob/master/lib/gitlab/ci/templates/Auto-DevOps.gitlab-ci.yml
+
+image: alpine:latest
+
+variables:
+  # KUBE_INGRESS_BASE_DOMAIN is the application deployment domain and should be set as a variable at the group or project level.
+  # KUBE_INGRESS_BASE_DOMAIN: domain.example.com
+  AUTO_BUILD_IMAGE_VERSION: 'v1.21.0'
+
+  POSTGRES_USER: user
+  POSTGRES_PASSWORD: testing-password
+  POSTGRES_ENABLED: "false"
+  POSTGRES_DB: $CI_ENVIRONMENT_SLUG
+  POSTGRES_VERSION: 9.6.2
+  DOCKER_DRIVER: overlay2
+  ROLLOUT_RESOURCE_TYPE: deployment
+
+  # PERFORMANCE_DISABLED: 'true'
+  # OAD_PERFORMANCE_DISABLED: 'true'
+  # BROWSER_PERFORMANCE_DISABLED: 'true'
+  # SAST_DISABLED: 'true'
+  # DAST_DISABLED: 'true'
+  # REVIEW_DISABLED: 'true'
+
+stages:
+  - test
+  - build
+  - deploy  # dummy stage to follow the template guidelines
+  - review
+  - dast
+  - staging
+  - canary
+  - build_production
+  - production
+  - incremental rollout 10%
+  - incremental rollout 25%
+  - incremental rollout 50%
+  - incremental rollout 100%
+  - performance
+  - cleanup
+
+include:
+  - template: Jobs/Test.gitlab-ci.yml  # https://gitlab.com/gitlab-org/gitlab-foss/blob/master/lib/gitlab/ci/templates/Jobs/Test.gitlab-ci.yml
+  - template: Jobs/Build.gitlab-ci.yml  # https://gitlab.com/gitlab-org/gitlab-foss/blob/master/lib/gitlab/ci/templates/Jobs/Build.gitlab-ci.yml
+  - template: Jobs/Code-Quality.gitlab-ci.yml  # https://gitlab.com/gitlab-org/gitlab-foss/blob/master/lib/gitlab/ci/templates/Jobs/Code-Quality.gitlab-ci.yml
+  - template: Jobs/Deploy.gitlab-ci.yml  # https://gitlab.com/gitlab-org/gitlab-foss/blob/master/lib/gitlab/ci/templates/Jobs/Deploy.gitlab-ci.yml
+  - template: Jobs/DAST-Default-Branch-Deploy.gitlab-ci.yml  # https://gitlab.com/gitlab-org/gitlab-foss/blob/master/lib/gitlab/ci/templates/Jobs/DAST-Default-Branch-Deploy.gitlab-ci.yml
+  - template: Jobs/Browser-Performance-Testing.gitlab-ci.yml  # https://gitlab.com/gitlab-org/gitlab-foss/blob/master/lib/gitlab/ci/templates/Jobs/Browser-Performance-Testing.gitlab-ci.yml
+  - template: Security/DAST.gitlab-ci.yml  # https://gitlab.com/gitlab-org/gitlab-foss/blob/master/lib/gitlab/ci/templates/Security/DAST.gitlab-ci.yml
+  - template: Security/Container-Scanning.gitlab-ci.yml  # https://gitlab.com/gitlab-org/gitlab-foss/blob/master/lib/gitlab/ci/templates/Security/Container-Scanning.gitlab-ci.yml
+  - template: Security/Dependency-Scanning.gitlab-ci.yml  # https://gitlab.com/gitlab-org/gitlab-foss/blob/master/lib/gitlab/ci/templates/Security/Dependency-Scanning.gitlab-ci.yml
+  - template: Security/License-Scanning.gitlab-ci.yml  # https://gitlab.com/gitlab-org/gitlab-foss/blob/master/lib/gitlab/ci/templates/Security/License-Scanning.gitlab-ci.yml
+  - template: Security/SAST.gitlab-ci.yml  # https://gitlab.com/gitlab-org/gitlab-foss/blob/master/lib/gitlab/ci/templates/Security/SAST.gitlab-ci.yml
+
+container_scanning:
+  stage: deploy
+  dependencies: [build]
+  variables:
+    CS_IMAGE: ${CI_REGISTRY_IMAGE}/sitewebimpactivfr:${CI_COMMIT_SHA}
+    # https://docs.gitlab.com/ee/user/application_security/container_scanning/#security-dashboard
+    # https://docs.gitlab.com/ee/ci/runners/configure_runners.html#git-strategy
+    GIT_STRATEGY: fetch
+
+
+build:
+  variables:
+    CI_APPLICATION_REPOSITORY: "${CI_REGISTRY_IMAGE}/sitewebimpactivfr"
+#     AUTO_DEVOPS_BUILD_IMAGE_EXTRA_ARGS: --build-arg=NG_ENV=staging
+
+review:
+  stage: review
+  variables:
+    CI_APPLICATION_REPOSITORY: "${CI_REGISTRY_IMAGE}/sitewebimpactivfr:${CI_COMMIT_SHA}"
+
+# Override deployments
+staging:
+  variables:
+    CI_APPLICATION_REPOSITORY: "${CI_REGISTRY_IMAGE}/sitewebimpactivfr:${CI_COMMIT_SHA}"
+
+# DEPLOY : environnement production / défaut
+# production_manual:
+#   needs:
+#     - build_production
+#   variables:
+#     CI_APPLICATION_REPOSITORY: '${CI_REGISTRY_IMAGE}/production'
+#   environment:
+#     name: production
+    # url: https://prod-web.aspp.mpctv.fr
+
+# The latest build job generates a dotenv report artifact with a CI_APPLICATION_TAG
+# that also includes the image digest. This configures Auto Deploy to receive
+# this artifact and use the updated CI_APPLICATION_TAG for deployments.
+.auto-deploy:
+  dependencies: [build]
+dast_environment_deploy:
+  dependencies: [build]

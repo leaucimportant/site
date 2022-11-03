@@ -41,10 +41,10 @@
         <ng-container *ngFor="let expertise of expertises">
           <div class="expertise">
             <div class="expertise__picture">
-              <!-- [src]=" 'assets/images/contents/solutions/common/' +
-              expertise.image " -->
               <img
-                [src]="'assets/images/bg/no_image.svg'"
+                [src]="
+                  'assets/images/contents/solutions/common/' + expertise.image
+                "
                 [alt]="expertise.alt"
                 class="img-fluid"
               />
