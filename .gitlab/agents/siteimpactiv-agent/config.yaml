@@ -1,0 +1,14 @@
+# @see https://docs.gitlab.com/ee/user/clusters/agent/repository.html
+# KUBE_CONTEXT=impactiv/web/site-web-impactiv/front-site-impactiv:siteimpactiv-agent
+gitops:
+  # Manifest projects are watched by the agent. Whenever a project changes,
+  # GitLab deploys the changes using the agent.
+  manifest_projects:
+    # No authentication mechanisms are currently supported.
+    # The `id` is a path to a Git repository with Kubernetes resource definitions
+    # in YAML or JSON format.
+  - id: impactiv/web/site-web-impactiv/front-site-impactiv
+    # Paths inside of the repository to scan for manifest files.
+    # Directories with names starting with a dot are ignored.
+    paths:
+    - glob: '/**/*.yml'

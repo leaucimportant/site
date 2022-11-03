@@ -21,12 +21,12 @@ variables:
   DOCKER_DRIVER: overlay2
   ROLLOUT_RESOURCE_TYPE: deployment
 
-  PERFORMANCE_DISABLED: 'true'
-  OAD_PERFORMANCE_DISABLED: 'true'
-  BROWSER_PERFORMANCE_DISABLED: 'true'
-  SAST_DISABLED: 'true'
-  DAST_DISABLED: 'true'
-  REVIEW_DISABLED: 'true'
+  # PERFORMANCE_DISABLED: 'true'
+  # OAD_PERFORMANCE_DISABLED: 'true'
+  # BROWSER_PERFORMANCE_DISABLED: 'true'
+  # SAST_DISABLED: 'true'
+  # DAST_DISABLED: 'true'
+  # REVIEW_DISABLED: 'true'
 
 stages:
   - test
@@ -78,7 +78,27 @@ container_scanning:
   dependencies: [build]
   variables:
     CS_IMAGE: ${CI_REGISTRY_IMAGE}/sitewebimpactivfr:${CI_COMMIT_SHA}
+    # https://docs.gitlab.com/ee/user/application_security/container_scanning/#security-dashboard
+    # https://docs.gitlab.com/ee/ci/runners/configure_runners.html#git-strategy
+    GIT_STRATEGY: fetch
 
+# Override deployments
+staging:
+  variables:
+    CI_APPLICATION_REPOSITORY: "${CI_REGISTRY_IMAGE}/sitewebimpactivfr:${CI_COMMIT_SHA}"
+  environment:
+    name: staging
+    url: https://siteweb.k8s.impactiv.eu
+
+# DEPLOY : environnement production / défaut
+# production_manual:
+#   needs:
+#     - build_production
+#   variables:
+#     CI_APPLICATION_REPOSITORY: '${CI_REGISTRY_IMAGE}/production'
+#   environment:
+#     name: production
+    # url: https://prod-web.aspp.mpctv.fr
 
 # The latest build job generates a dotenv report artifact with a CI_APPLICATION_TAG
 # that also includes the image digest. This configures Auto Deploy to receive
