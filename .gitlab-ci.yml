@@ -11,7 +11,7 @@ image: alpine:latest
 variables:
   # KUBE_INGRESS_BASE_DOMAIN is the application deployment domain and should be set as a variable at the group or project level.
   # KUBE_INGRESS_BASE_DOMAIN: domain.example.com
-  AUTO_BUILD_IMAGE_VERSION: 'v1.21.0'
+  # AUTO_BUILD_IMAGE_VERSION: 'v1.21.0'
 
   POSTGRES_USER: user
   POSTGRES_PASSWORD: testing-password
@@ -58,6 +58,18 @@ include:
   - template: Security/License-Scanning.gitlab-ci.yml  # https://gitlab.com/gitlab-org/gitlab-foss/blob/master/lib/gitlab/ci/templates/Security/License-Scanning.gitlab-ci.yml
   - template: Security/SAST.gitlab-ci.yml  # https://gitlab.com/gitlab-org/gitlab-foss/blob/master/lib/gitlab/ci/templates/Security/SAST.gitlab-ci.yml
 
+code_quality:
+  stage: test
+  rules:
+    - if: "$CI_COMMIT_BRANCH != $CI_DEFAULT_BRANCH"
+      when: never
+
+browser_performance:
+  stage: performance
+  rules:
+    - if: "$CI_COMMIT_BRANCH != $CI_DEFAULT_BRANCH"
+      when: never
+
 container_scanning:
   stage: deploy
   dependencies: [build]
@@ -66,12 +78,20 @@ container_scanning:
     # https://docs.gitlab.com/ee/user/application_security/container_scanning/#security-dashboard
     # https://docs.gitlab.com/ee/ci/runners/configure_runners.html#git-strategy
     GIT_STRATEGY: fetch
-
+  rules:
+    - if: "$CI_COMMIT_BRANCH != $CI_DEFAULT_BRANCH"
+      when: never
 
 build:
   variables:
     CI_APPLICATION_REPOSITORY: "${CI_REGISTRY_IMAGE}/sitewebimpactivfr"
 #     AUTO_DEVOPS_BUILD_IMAGE_EXTRA_ARGS: --build-arg=NG_ENV=staging
+  artifacts:
+    reports:
+      dotenv: gl-auto-build-variables.env
+  rules:
+    - if: "$CI_COMMIT_BRANCH != $CI_DEFAULT_BRANCH"
+      when: never
 
 review:
   stage: review
