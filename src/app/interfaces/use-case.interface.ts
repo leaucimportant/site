@@ -14,6 +14,7 @@ export interface UseCase {
   challenge: Block;
   response: Block;
   quote: Block;
+  resumeQuote: string;
   seo: {
     title: string;
     description: string;
