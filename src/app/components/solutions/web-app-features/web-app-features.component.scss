@@ -1,5 +1,5 @@
 .solutions-container {
-  padding: 8rem 0 0;
+  padding-top: 8rem;
   &__description {
     max-width: 55%;
   }
@@ -27,7 +27,7 @@
   }
 
   @media (max-width: 991.98px) {
-    padding: 1rem 1rem 0;
+    padding-top: 1rem;
     &__description {
       max-width: 90%;
     }
