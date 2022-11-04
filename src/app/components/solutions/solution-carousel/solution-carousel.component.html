@@ -1,8 +1,11 @@
 <div class="container solution-carousel">
+  <h1 class="impactiv-display-small">{{ title }}</h1>
   <div
     class="d-flex justify-content-between skills-container__title align-items-center"
   >
-    <h1 class="impactiv-display-small">{{ title }}</h1>
+    <p class="impactiv-body-regular solution-carousel__description">
+      {{ description }}
+    </p>
     <div class="d-none d-lg-flex justify-content-around">
       <button
         type="button"
@@ -20,22 +23,6 @@
       </button>
     </div>
   </div>
-  <p class="impactiv-body-regular solution-carousel__description">
-    {{ description }}
-  </p>
-  <a
-    name=""
-    id=""
-    class="btn btn-contact-us"
-    [routerLink]="['/', contactRoute]"
-    role="button"
-    ><span class=""
-      >Contactez-nous
-      <i
-        class="hero__arrow bi bi-arrow-right-short fs-5 align-middle"
-        aria-hidden="true"
-      ></i></span
-  ></a>
 
   <div class="solution-carousel__container">
     <ng-container *ngIf="images && images.length > 0">
