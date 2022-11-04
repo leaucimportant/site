@@ -66,6 +66,13 @@ code_quality:
 
 browser_performance:
   stage: performance
+  rules:
+    - if: '($CI_KUBERNETES_ACTIVE == null || $CI_KUBERNETES_ACTIVE == "") && ($KUBECONFIG == null || $KUBECONFIG == "")'
+      when: never
+    - if: '$BROWSER_PERFORMANCE_DISABLED'
+      when: never
+    - if: '$CI_COMMIT_TAG || $CI_COMMIT_BRANCH== $CI_DEFAULT_BRANCH'
+
   # rules:
   #   - if: "$CI_COMMIT_BRANCH != $CI_DEFAULT_BRANCH"
   #     when: never
@@ -80,17 +87,26 @@ container_scanning:
     GIT_STRATEGY: fetch
   before_script:
     - ls
-  # rules:
-  #   - if: "$CI_COMMIT_BRANCH != $CI_DEFAULT_BRANCH"
-  #     when: never
+  rules:
+    - if: $CONTAINER_SCANNING_DISABLED
+      when: never
+    - if: $CI_COMMIT_BRANCH &&
+          $CI_GITLAB_FIPS_MODE == "true" &&
+          $CS_ANALYZER_IMAGE !~ /-(fips|ubi)\z/
+      variables:
+        CS_IMAGE_SUFFIX: -fips
+    - if: '$CI_COMMIT_TAG || $CI_COMMIT_BRANCH== $CI_DEFAULT_BRANCH'
 
 build:
   variables:
     CI_APPLICATION_REPOSITORY: "${CI_REGISTRY_IMAGE}/sitewebimpactivfr"
 #     AUTO_DEVOPS_BUILD_IMAGE_EXTRA_ARGS: --build-arg=NG_ENV=staging
-  artifacts:
-    reports:
-      dotenv: gl-auto-build-variables.env
+  rules:
+    - if: '$BUILD_DISABLED'
+      when: never
+    - if: '$AUTO_DEVOPS_PLATFORM_TARGET == "EC2"'
+      when: never
+    - if: '$CI_COMMIT_TAG || $CI_COMMIT_BRANCH== $CI_DEFAULT_BRANCH'
 
 review:
   stage: review
@@ -104,18 +120,22 @@ staging:
 
 # DEPLOY : environnement production / défaut
 # production_manual:
-#   needs:
-#     - build_production
 #   variables:
-#     CI_APPLICATION_REPOSITORY: '${CI_REGISTRY_IMAGE}/production'
+#     CI_APPLICATION_REPOSITORY: "${CI_REGISTRY_IMAGE}/sitewebimpactivfr:${CI_COMMIT_SHA}"
 #   environment:
 #     name: production
-    # url: https://prod-web.aspp.mpctv.fr
+#     url: https://www.impactiv.fr
+#   rules:
+#     - if: '$BUILD_DISABLED'
+#       when: never
+#     - if: '$AUTO_DEVOPS_PLATFORM_TARGET == "EC2"'
+#       when: never
+#     - if: '$CI_COMMIT_TAG || $CI_COMMIT_BRANCH== $CI_DEFAULT_BRANCH'
 
 # The latest build job generates a dotenv report artifact with a CI_APPLICATION_TAG
 # that also includes the image digest. This configures Auto Deploy to receive
 # this artifact and use the updated CI_APPLICATION_TAG for deployments.
-.auto-deploy:
-  dependencies: [build]
-dast_environment_deploy:
-  dependencies: [build]
+# .auto-deploy:
+#   dependencies: [build]
+# dast_environment_deploy:
+#   dependencies: [build]
