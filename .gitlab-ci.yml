@@ -78,15 +78,15 @@ browser_performance:
   #     when: never
 
 container_scanning:
-  stage: deploy
+  stage: performance
   dependencies: [build]
   variables:
     CS_IMAGE: ${CI_REGISTRY_IMAGE}/sitewebimpactivfr:${CI_COMMIT_SHA}
     # https://docs.gitlab.com/ee/user/application_security/container_scanning/#security-dashboard
     # https://docs.gitlab.com/ee/ci/runners/configure_runners.html#git-strategy
     GIT_STRATEGY: fetch
-  before_script:
-    - ls
+  # before_script:
+  #   - ls
   rules:
     - if: $CONTAINER_SCANNING_DISABLED
       when: never
@@ -111,17 +111,17 @@ build:
 review:
   stage: review
   variables:
-    CI_APPLICATION_REPOSITORY: "${CI_REGISTRY_IMAGE}/sitewebimpactivfr:${CI_COMMIT_SHA}"
+    CI_APPLICATION_REPOSITORY: "${CI_REGISTRY_IMAGE}/sitewebimpactivfr"
 
 # Override deployments
 staging:
   variables:
-    CI_APPLICATION_REPOSITORY: "${CI_REGISTRY_IMAGE}/sitewebimpactivfr:${CI_COMMIT_SHA}"
+    CI_APPLICATION_REPOSITORY: "${CI_REGISTRY_IMAGE}/sitewebimpactivfr"
 
 # DEPLOY : environnement production / défaut
 # production_manual:
 #   variables:
-#     CI_APPLICATION_REPOSITORY: "${CI_REGISTRY_IMAGE}/sitewebimpactivfr:${CI_COMMIT_SHA}"
+#     CI_APPLICATION_REPOSITORY: "${CI_REGISTRY_IMAGE}/sitewebimpactivfr"
 #   environment:
 #     name: production
 #     url: https://www.impactiv.fr
