@@ -5,6 +5,9 @@
 export const environment = {
   production: false,
   siteUri: 'http://localhost:4200/',
+  useCaseUri: 'https://impactiv.s3.fr-par.scw.cloud/siteweb/casclients.json',
+  recaptchaSiteKey: '6LceU-MiAAAAAKWD_0qAPQ_5JoBDfVPItTn2cI7E',
+  contactUri: 'http://localhost:3000/',
 };
 
 /*
