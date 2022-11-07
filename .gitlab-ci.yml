@@ -12,6 +12,7 @@ variables:
   # KUBE_INGRESS_BASE_DOMAIN is the application deployment domain and should be set as a variable at the group or project level.
   # KUBE_INGRESS_BASE_DOMAIN: domain.example.com
   # AUTO_BUILD_IMAGE_VERSION: 'v1.21.0'
+  CI_APPLICATION_REPOSITORY: "${CI_REGISTRY_IMAGE}/sitewebimpactivfr"
 
   POSTGRES_USER: user
   POSTGRES_PASSWORD: testing-password
@@ -98,8 +99,8 @@ container_scanning:
     - if: '$CI_COMMIT_TAG || $CI_COMMIT_BRANCH== $CI_DEFAULT_BRANCH'
 
 build:
-  variables:
-    CI_APPLICATION_REPOSITORY: "${CI_REGISTRY_IMAGE}/sitewebimpactivfr"
+  # variables:
+  #   CI_APPLICATION_REPOSITORY: "${CI_REGISTRY_IMAGE}/sitewebimpactivfr"
 #     AUTO_DEVOPS_BUILD_IMAGE_EXTRA_ARGS: --build-arg=NG_ENV=staging
   rules:
     - if: '$BUILD_DISABLED'
@@ -110,27 +111,19 @@ build:
 
 review:
   stage: review
-  variables:
-    CI_APPLICATION_REPOSITORY: "${CI_REGISTRY_IMAGE}/sitewebimpactivfr"
+  # variables:
+  #   CI_APPLICATION_REPOSITORY: "${CI_REGISTRY_IMAGE}/sitewebimpactivfr"
 
 # Override deployments
-staging:
-  variables:
-    CI_APPLICATION_REPOSITORY: "${CI_REGISTRY_IMAGE}/sitewebimpactivfr"
-
-# DEPLOY : environnement production / défaut
-# production_manual:
+# staging:
 #   variables:
 #     CI_APPLICATION_REPOSITORY: "${CI_REGISTRY_IMAGE}/sitewebimpactivfr"
-#   environment:
-#     name: production
-#     url: https://www.impactiv.fr
-#   rules:
-#     - if: '$BUILD_DISABLED'
-#       when: never
-#     - if: '$AUTO_DEVOPS_PLATFORM_TARGET == "EC2"'
-#       when: never
-#     - if: '$CI_COMMIT_TAG || $CI_COMMIT_BRANCH== $CI_DEFAULT_BRANCH'
+
+# DEPLOY : environnement production / défaut
+production_manual:
+  environment:
+    name: production
+    url: https://www.impactiv.fr
 
 # The latest build job generates a dotenv report artifact with a CI_APPLICATION_TAG
 # that also includes the image digest. This configures Auto Deploy to receive
