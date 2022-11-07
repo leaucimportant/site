@@ -4,6 +4,7 @@ import { routerOptions } from '../services/config';
 import { CompanyComponent } from './company/company.component';
 import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
+import { MentionsLegalesComponent } from './mentions-legales/mentions-legales.component';
 import { SolutionAffluenceComponent } from './solution-affluence/solution-affluence.component';
 import { SolutionDSMComponent } from './solution-dsm/solution-dsm.component';
 import { SolutionWebAppComponent } from './solution-web-app/solution-web-app.component';
@@ -38,6 +39,10 @@ const routes: Routes = [
   {
     path: 'cas-clients/:slug',
     component: UseCaseComponent,
+  },
+  {
+    path: 'mentions-legales',
+    component: MentionsLegalesComponent,
   },
   {
     path: '**',
