@@ -15,7 +15,7 @@
     display: flex;
     flex-wrap: nowrap;
     &--content {
-      animation: slide 25s linear infinite;
+      animation: slide 65s linear infinite;
       display: flex;
     }
     &--card {
@@ -37,9 +37,10 @@
         max-width: 100%;
       }
     }
-    &__cards {
+
+    &__marquee {
       &--content {
-        animation: slide 10s linear infinite;
+        animation: slide 80s linear infinite;
       }
     }
   }
