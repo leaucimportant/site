@@ -1,0 +1,26 @@
+<div class="our-partners">
+  <div class="container our-partners__content text-center">
+    <h1 class="impactiv-display-small">
+      Des partenaires de confiance depuis 10 ans.
+    </h1>
+    <p class="impactiv-body-regular our-partners__content--text">
+      Plus d’1 million de convives utilisent déjà nos solutions au quotidien.
+      <br />
+      Ainsi qu’un réseau de prestataires sur tout le territoire pour les
+      installations et le SAV.
+    </p>
+  </div>
+
+  <div class="our-partners__marquee">
+    <div class="our-partners__marquee--content">
+      <div *ngFor="let partner of partners" class="our-partners__marquee--card">
+        <img [src]="partner.url" class="img-fluid" [alt]="partner.alt" />
+      </div>
+    </div>
+    <div class="our-partners__marquee--content" aria-hidden="true">
+      <div *ngFor="let partner of partners" class="our-partners__marquee--card">
+        <img [src]="partner.url" class="img-fluid" [alt]="partner.alt" />
+      </div>
+    </div>
+  </div>
+</div>

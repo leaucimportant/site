@@ -1,7 +1,7 @@
 <header class="print:hidden d-print-none">
   <nav id="navbar" class="navbar navbar-expand-xl">
     <div class="container">
-      <a class="navbar-brand" [routerLink]="homeRoute">
+      <a class="navbar-brand" [routerLink]="routes.home">
         <img
           src="assets/images/icons/logo_h_color.svg"
           alt="Love Impactiv"
@@ -150,6 +150,8 @@
               href="#"
               data-bs-toggle="collapse"
               data-bs-target=".navbar-collapse.show"
+              [routerLink]="routes.company"
+              routerLinkActive="active"
               >Entreprise</a
             >
           </li>
@@ -171,7 +173,7 @@
           <li class="nav-item">
             <button
               type="button"
-              [routerLink]="[contactRoute]"
+              [routerLink]="[routes.contact]"
               [state]="{ askDemo: true }"
               par
               class="btn demo"
