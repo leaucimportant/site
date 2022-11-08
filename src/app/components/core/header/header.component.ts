@@ -12,8 +12,6 @@ export class HeaderComponent implements OnInit, OnDestroy {
   constructor(private useCaseService: UseCaseService) {}
   routes = Config.impactivRoutes;
   hoveringIndex: null | number = null;
-  contactRoute = impactivRoutes.contact;
-  homeRoute = impactivRoutes.home;
   solutions = [
     {
       title: 'Affichage dynamique',
