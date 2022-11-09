@@ -159,6 +159,15 @@
   }
 }
 
+.btn-simple-text {
+  border: 1px solid transparent;
+  border-radius: var(--bs-border-radius-sm);
+  &:hover {
+    background-color: var(--bs-gray-100);
+    border: 1px solid var(--bs-gray-100);
+  }
+}
+
 .container-use-case {
   @media (min-width: 1200px) {
     max-width: 900px;
