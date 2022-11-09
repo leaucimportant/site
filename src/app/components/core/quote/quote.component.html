@@ -1,0 +1,15 @@
+<div class="container quote-container">
+  <div class="d-flex flex-column align-items-center align-center quote">
+    <div
+      class="quote-picture"
+      [ngClass]="author.name ? 'quote-picture-company' : ''"
+    >
+      <img [src]="image" alt="" />
+    </div>
+    <p class="quote-text impactiv-quote">“{{ text }}”</p>
+    <p class="impactiv-body-regular text-white">
+      {{ author.name }}
+      <span class="quote-author impactiv-body-regular">{{ author.job }}</span>
+    </p>
+  </div>
+</div>

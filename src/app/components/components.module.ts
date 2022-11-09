@@ -13,8 +13,8 @@ import { FooterComponent } from './core/footer/footer.component';
 import { HeaderComponent } from './core/header/header.component';
 import { NumbersComponent } from './core/numbers/numbers.component';
 import { OurCustomersComponent } from './core/our-customers/our-customers.component';
+import { QuoteComponent } from './core/quote/quote.component';
 import { StatsNumbersComponent } from './core/stats-numbers/stats-numbers.component';
-import { TeamQuoteComponent } from './core/team-quote/team-quote.component';
 import { UseCaseResumeComponent } from './core/use-case-resume/use-case-resume.component';
 import { HomeHeroComponent } from './home/home-hero/home-hero.component';
 import { OurSkillsComponent } from './home/our-skills/our-skills.component';
@@ -60,7 +60,7 @@ const impactivComponentsExports = [
   ChallengeComponent,
   SolutionGridComponent,
   SolutionAffluenceHeroComponent,
-  TeamQuoteComponent,
+  QuoteComponent,
   CompanyHeroComponent,
   OurPartnersComponent,
   TimelineComponent,

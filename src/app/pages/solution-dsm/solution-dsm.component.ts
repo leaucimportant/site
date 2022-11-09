@@ -7,6 +7,16 @@ import { Config } from 'src/app/services';
 })
 export class SolutionDSMComponent {
   solution = Config.impactivSolutions.dsm;
+
+  imageQuote = 'assets/images/icons/short_logo.png';
+
+  textQuote =
+    'Notre philosophie, inspirée de l’agilité, est de toujours intégrer à la réflexion et la conception l’ensemble des parties prenantes du projet. Le principe de cocréation entre nos clients décideurs, les utilisateurs opérationnels et nos équipes nous permet de confronter les idées, besoins et visions pour s’assurer de développer un outil efficace, pertinent et fonctionnel.';
+
+  authorQuote = {
+    job: 'Impactiv’ team',
+  };
+
   blocks = [
     {
       title: 'Une équipe à l’écoute de vos besoins !',
