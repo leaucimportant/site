@@ -1,0 +1,67 @@
+<div class="solution-card">
+  <div class="solution-wrapper">
+    <div class="solution-wrapper__content">
+      <div class="d-flex d-lg-none align-items-center">
+        <div class="solution-wrapper__content--picture d-flex">
+          <picture>
+            <source
+              [srcset]="'assets/images/icons/header/bleu/' + solution.icon.src"
+              type="image/svg+xml"
+            />
+            <img
+              [srcset]="'assets/images/icons/header/bleu/' + solution.icon.src"
+              [alt]="solution.icon.alt"
+            />
+          </picture>
+        </div>
+        <h1 class="impactiv-headline-small m-0">
+          {{ solution.title }}
+        </h1>
+      </div>
+      <div class="solution-wrapper__content--picture d-none d-lg-flex">
+        <picture>
+          <source
+            [srcset]="'assets/images/icons/header/bleu/' + solution.icon.src"
+            type="image/svg+xml"
+          />
+          <img
+            [srcset]="'assets/images/icons/header/bleu/' + solution.icon.src"
+            [alt]="solution.icon.alt"
+          />
+        </picture>
+      </div>
+      <div class="solution-wrapper__content--text">
+        <h1 class="impactiv-headline-regular d-none d-lg-flex">
+          {{ solution.title }}
+        </h1>
+        <p class="impactiv-body-regular">
+          {{ solution.description }}
+        </p>
+        <div>
+          <button
+            type="button"
+            class="btn btn-secondary btn-contact-us-fill"
+            [routerLink]="solution.route"
+            routerLinkActive="active"
+          >
+            <span class="impactiv-button-regular">Découvrir la solution</span
+            ><i
+              class="bi bi-arrow-right-short ms-2 demo__arrow-icon"
+              aria-hidden="true"
+            ></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="solution-wrapper__image">
+      <img
+        [src]="'assets/images/contents/solutions/common/' + solution.image.src"
+        loading="lazy"
+        class="img-fluid"
+      />
+    </div>
+  </div>
+  <div class="solution-index impactiv-headline-regular d-none d-lg-block">
+    0{{ index + 1 }}
+  </div>
+</div>
