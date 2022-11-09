@@ -12,6 +12,16 @@ export class CompanyComponent implements OnInit {
     private matomoService: MatomoService
   ) {}
 
+  imageQuote = 'assets/images/icons/dg-quote.png';
+
+  textQuote =
+    'Nous sommes producteur de solutions à forte valeur ajoutée, nos expertises, compétences et choix technologiques, qui composent notre écosystème, sont totalement impliqués sur chaque projet qu’il soit Ad Hoc ou générique.';
+
+  authorQuote = {
+    name: 'Jean-Christophe Allegret',
+    job: '- Directeur Général, Impactiv',
+  };
+
   titleSkills = 'Une équipe dédiée à chacun de vos besoins.';
   skills = [
     {

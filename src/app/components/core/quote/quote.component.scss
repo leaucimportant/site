@@ -1,4 +1,4 @@
-.team-quote-container {
+.quote-container {
   padding-top: 8rem;
 
   @media (max-width: 1199.98px) {
@@ -6,7 +6,7 @@
   }
 }
 
-.team-quote {
+.quote {
   background: url("../../../../assets/images/bg/bg_team_quote.png");
   background-size: cover;
   background-position: center;
@@ -16,6 +16,16 @@
     background-color: var(--bs-white);
     padding: 0.5rem;
     border-radius: var(--bs-border-radius-sm);
+  }
+  &-picture-company {
+    padding: 0rem;
+    border: 1px solid var(--bs-gray-100);
+    border-radius: 16px;
+    img {
+      border-radius: 16px;
+      width: 48px;
+      height: 48px;
+    }
   }
   &-text {
     padding: 0.5rem 0;

@@ -1,5 +1,9 @@
 <impactiv-solution-dsm-hero></impactiv-solution-dsm-hero>
-<impactiv-team-quote></impactiv-team-quote>
+<impactiv-quote
+  [author]="authorQuote"
+  [image]="imageQuote"
+  [text]="textQuote"
+></impactiv-quote>
 <div id="SolutionExpertiseBlock">
   <impactiv-solution-block
     *ngFor="let block of blocks; let i = index"
