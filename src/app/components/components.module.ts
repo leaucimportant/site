@@ -8,6 +8,7 @@ import { CompanyHeroComponent } from './company/company-hero/company-hero.compon
 import { OurPartnersComponent } from './company/our-partners/our-partners.component';
 import { TimelineComponent } from './company/timeline/timeline.component';
 import { BannerComponent } from './core/banner/banner.component';
+import { CardsComponent } from './core/cards/cards.component';
 import { FooterComponent } from './core/footer/footer.component';
 import { HeaderComponent } from './core/header/header.component';
 import { NumbersComponent } from './core/numbers/numbers.component';
@@ -21,7 +22,6 @@ import { OurSolutionsComponent } from './home/our-solutions/our-solutions.compon
 import { DsmHeroComponent } from './solutions/dsm-hero/dsm-hero.component';
 import { InfrastructureMasonryComponent } from './solutions/infrastructure-masonry/infrastructure-masonry.component';
 import { OtherSolutionsComponent } from './solutions/other-solutions/other-solutions.component';
-import { OurExpertiseComponent } from './solutions/our-expertise/our-expertise.component';
 import { SolutionAffluenceHeroComponent } from './solutions/solution-affluence-hero/solution-affluence-hero.component';
 import { SolutionBlockComponent } from './solutions/solution-block/solution-block.component';
 import { SolutionCarouselComponent } from './solutions/solution-carousel/solution-carousel.component';
@@ -49,7 +49,7 @@ const impactivComponentsExports = [
   SolutionCarouselComponent,
   SolutionBlockComponent,
   DsmHeroComponent,
-  OurExpertiseComponent,
+  CardsComponent,
   InfrastructureMasonryComponent,
   UseCaseResumeComponent,
   OtherSolutionsComponent,

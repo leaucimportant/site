@@ -7,24 +7,6 @@ import { Config } from 'src/app/services';
 })
 export class SolutionDSMComponent {
   solution = Config.impactivSolutions.dsm;
-  titleCarousel = 'Des solutions adaptées à vos besoins métier !';
-  descriptionCarousel =
-    'Parce que vos besoins métier sont uniques, nous déployons des solutions sur mesure orientées expérience utilisateur et excellence opérationnelle.';
-
-  imagesCarousel = [
-    {
-      src: 'assets/images/contents/solutions/dsm/sodexo.png',
-      alt: 'Sodexo',
-    },
-    {
-      src: 'assets/images/contents/solutions/dsm/la_mira.png',
-      alt: 'La Mira',
-    },
-    {
-      src: 'assets/images/contents/solutions/dsm/cdv.png',
-      alt: 'Carte des vins',
-    },
-  ];
   blocks = [
     {
       title: 'Une équipe à l’écoute de vos besoins !',
@@ -61,6 +43,79 @@ export class SolutionDSMComponent {
         src: 'assets/images/contents/solutions/dsm/talk.png',
         alt: 'affluence',
       },
+    },
+  ];
+
+  titleExpertise = 'Notre expertise';
+
+  expertises = [
+    {
+      title: 'Méthodologies',
+      items: [
+        'Cahier des charges et recettages',
+        'Intégration continue',
+        'Déploiement continu',
+        'Tests unitaires et fonctionnels',
+        'Privacy by Design & Privacy by Default',
+      ],
+      image: 'assets/images/contents/solutions/common/methods.png',
+      alt: 'alt',
+    },
+    {
+      title: 'Développements',
+      items: [
+        'Développement Frontend',
+        'Développement Backend',
+        'Progressive Web App',
+        'Applications natives',
+      ],
+
+      image: 'assets/images/contents/solutions/common/dev.png',
+      alt: 'alt',
+    },
+    {
+      title: 'Technologies',
+      items: [
+        'Serverless',
+        'Micro Services',
+        'Micro Frontends',
+        'BDD relationnelle & orientée documents',
+        'Agent de messages',
+      ],
+
+      image: 'assets/images/contents/solutions/common/stack.png',
+      alt: 'alt',
+    },
+    {
+      title: 'API & services',
+      items: [
+        'Authentification (SSO, OpenID…)',
+        'API (GraphQL, REST)',
+        'Emailing',
+        'Analytics',
+        'Passerelles de paiement (VAD)',
+      ],
+
+      image: 'assets/images/contents/solutions/common/api.png',
+      alt: 'alt',
+    },
+  ];
+
+  titleCarousel = 'Des solutions adaptées à vos besoins métier !';
+  descriptionCarousel =
+    'Parce que vos besoins métier sont uniques, nous déployons des solutions sur mesure orientées expérience utilisateur et excellence opérationnelle.';
+  imagesCarousel = [
+    {
+      src: 'assets/images/contents/solutions/dsm/sodexo.png',
+      alt: 'Sodexo',
+    },
+    {
+      src: 'assets/images/contents/solutions/dsm/la_mira.png',
+      alt: 'La Mira',
+    },
+    {
+      src: 'assets/images/contents/solutions/dsm/cdv.png',
+      alt: 'Carte des vins',
     },
   ];
 }
