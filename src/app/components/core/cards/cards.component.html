@@ -1,8 +1,8 @@
-<div class="container expertise-container">
+<div class="container card-container">
   <div
-    class="d-flex justify-content-between expertise-container__title align-items-center"
+    class="d-flex justify-content-between card-container__title align-items-center"
   >
-    <h1 class="impactiv-display-small">Notre expertise</h1>
+    <h1 class="impactiv-display-small">{{ title }}</h1>
     <div class="d-none d-lg-flex justify-content-around">
       <button
         type="button"
@@ -21,8 +21,8 @@
     </div>
   </div>
 
-  <div class="expertise-container__carousel">
-    <ng-container *ngIf="expertises && expertises.length > 0">
+  <div class="card-container__carousel">
+    <ng-container *ngIf="cards && cards.length > 0">
       <ngx-glide
         #ngxGlide
         [showArrows]="false"
@@ -38,26 +38,20 @@
         [listenToEvents]="true"
         (ranAfter)="onRanAfter()"
       >
-        <ng-container *ngFor="let expertise of expertises">
-          <div class="expertise">
-            <div class="expertise__picture">
-              <img
-                [src]="
-                  'assets/images/contents/solutions/common/' + expertise.image
-                "
-                [alt]="expertise.alt"
-                class="img-fluid"
-              />
+        <ng-container *ngFor="let card of cards">
+          <div class="card">
+            <div class="card__picture">
+              <img [src]="card.image" [alt]="card.alt" class="img-fluid" />
             </div>
-            <div class="expertise__content">
-              <h1 class="impactiv-headline-regular">{{ expertise.title }}</h1>
+            <div class="card__content">
+              <h1 class="impactiv-headline-regular">{{ card.title }}</h1>
               <div class="impactiv-body-regular d-flex flex-column">
                 <div
-                  class="d-flex align-center expertise__content--item"
-                  *ngFor="let item of expertise.items"
+                  class="d-flex align-center card__content--item"
+                  *ngFor="let item of card.items"
                 >
                   <div
-                    class="expertise__content--item--bullet d-flex align-center justify-content-center"
+                    class="card__content--item--bullet d-flex align-center justify-content-center"
                   >
                     <i class="bi bi-check2"></i>
                   </div>

@@ -1,4 +1,4 @@
-.expertise-container {
+.card-container {
   padding: 8rem 0 0;
   &__title,
   &__carousel {
@@ -15,7 +15,7 @@
   }
 }
 
-.expertise {
+.card {
   background-color: var(--bs-gray-005);
   display: flex;
   flex-direction: column;
@@ -49,10 +49,10 @@
 }
 
 @media (max-width: 1199.98px) {
-  .expertise-container {
+  .card-container {
     padding: 5rem 1rem 0;
   }
-  .expertise {
+  .card {
     &__content {
       flex-basis: 100%;
       padding: 1rem;

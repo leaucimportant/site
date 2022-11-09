@@ -12,6 +12,46 @@ export class CompanyComponent implements OnInit {
     private matomoService: MatomoService
   ) {}
 
+  titleSkills = 'Une équipe dédiée à chacun de vos besoins.';
+  skills = [
+    {
+      title: 'Design',
+      items: ['UX & UI', 'Direction artistique', 'Motion', 'Print'],
+      image: 'assets/images/contents/solutions/common/design.png',
+      alt: 'alt',
+    },
+    {
+      title: 'Développement',
+      items: [
+        'PWA & App Native',
+        'Micro services',
+        'Micro frontends',
+        'Serverless & CaaS',
+      ],
+
+      image: 'assets/images/contents/solutions/common/dev.png',
+      alt: 'alt',
+    },
+    {
+      title: 'Infrastructure',
+      items: ['Cloud & Sur Site', 'IaC', 'Déploiement continu', 'SLA'],
+
+      image: 'assets/images/contents/solutions/common/stack.png',
+      alt: 'alt',
+    },
+    {
+      title: 'Méthodologies',
+      items: [
+        'Agile',
+        'Intégration continue',
+        'Interlocuteurs dédiés',
+        'Co-création',
+      ],
+      image: 'assets/images/contents/solutions/common/methods.png',
+      alt: 'alt',
+    },
+  ];
+
   ngOnInit(): void {
     this.setSeo();
     this.matomoTrack();
