@@ -9,31 +9,15 @@
   padding-bottom: 2rem;
   display: flex;
   align-items: center;
-  &-column {
-    @media (max-width: 991.98px) {
-      flex-direction: column;
-    }
-  }
   &-figure {
     width: 100%;
     img {
       width: 100%;
     }
   }
-  @media (max-width: 767.98px) {
-    padding: 6rem 0;
-    flex-wrap: wrap;
-    background-position: right;
-  }
   &__infos {
     padding-right: 4.5rem;
     flex-basis: 50%;
-    @media (max-width: 767.98px) {
-      flex-basis: 100%;
-    }
-    @media (max-width: 991.98px) {
-      padding-right: 0;
-    }
     &--buttons {
       margin: 2.5rem 0;
       display: flex;
@@ -41,15 +25,6 @@
       a:first-child {
         margin: 0 1rem 0 0;
       }
-      @media (max-width: 1199.98px) {
-        a {
-          flex-basis: 100%;
-        }
-        a:first-child {
-          margin: 0 0 1rem 0;
-        }
-      }
-
       &--arrow-icon {
         color: var(--bs-gray-200);
       }
@@ -62,49 +37,74 @@
     border: 1px solid var(--bs-gray-100);
     border-radius: var(--bs-border-radius-sm);
     padding: 2rem;
-    @media (max-width: 767.98px) {
-      flex-basis: 100%;
-      padding: 1rem;
-      margin-top: 2rem;
-    }
     &--single-row {
       padding-top: 2rem;
-      @media (max-width: 1199.98px) {
-        padding-top: 1rem;
-      }
     }
     &--row {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
       padding-top: 2rem;
-      @media (max-width: 1199.98px) {
-        flex-direction: column;
-        padding-top: 0rem;
-      }
       &--input:first-child {
         padding: 0 1rem 0 0;
-        @media (max-width: 1199.98px) {
-          padding: 1rem 0 0 0;
-        }
       }
       &--input {
         flex-basis: 50%;
-        @media (max-width: 1199.98px) {
+      }
+    }
+  }
+  @media (max-width: 1199.98px) {
+    &__infos {
+      &--buttons {
+        a {
           flex-basis: 100%;
-          padding: 1rem 0 0 0;
+        }
+        a:first-child {
+          margin: 0 0 1rem 0;
         }
       }
     }
-    &--button,
-    &--text {
-      @media (max-width: 1199.98px) {
+    &__form {
+      &--single-row {
+        padding-top: 1rem;
+      }
+      &--row {
+        flex-direction: column;
+        padding-top: 0rem;
+        &--input:first-child,
+        &--input {
+          flex-basis: 100%;
+          padding: 1rem 0 0;
+        }
+      }
+      &--button,
+      &--text {
         padding-top: 1rem;
       }
     }
   }
+  @media (max-width: 991.98px) {
+    &-column {
+      flex-direction: column;
+    }
+    &__infos {
+      padding-right: 0;
+    }
+  }
+  @media (max-width: 767.98px) {
+    padding: 6rem 0;
+    flex-wrap: wrap;
+    background-position: right;
+    &__infos {
+      flex-basis: 100%;
+    }
+    &__form {
+      flex-basis: 100%;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+  }
 }
-
 .form-control,
 .form-select {
   background-color: var(--bs-gray-005);
