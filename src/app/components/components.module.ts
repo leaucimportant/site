@@ -19,6 +19,7 @@ import { UseCaseResumeComponent } from './core/use-case-resume/use-case-resume.c
 import { HomeHeroComponent } from './home/home-hero/home-hero.component';
 import { OurSkillsComponent } from './home/our-skills/our-skills.component';
 import { OurSolutionsComponent } from './home/our-solutions/our-solutions.component';
+import { SolutionCardComponent } from './home/solution-card/solution-card.component';
 import { DsmHeroComponent } from './solutions/dsm-hero/dsm-hero.component';
 import { InfrastructureMasonryComponent } from './solutions/infrastructure-masonry/infrastructure-masonry.component';
 import { OtherSolutionsComponent } from './solutions/other-solutions/other-solutions.component';
@@ -64,6 +65,7 @@ const impactivComponentsExports = [
   CompanyHeroComponent,
   OurPartnersComponent,
   TimelineComponent,
+  SolutionCardComponent,
 ];
 
 @NgModule({
