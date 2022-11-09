@@ -43,10 +43,6 @@ export class HeaderComponent implements OnInit, OnDestroy {
     },
   ];
   expertises = [];
-  phone = '';
-  phoneAreaCode = '+339';
-  phoneStart = '5333';
-  phoneEnd = '0360';
   useCases: { name: string; slug: string; logo?: string }[] = [];
   useCasesSubscription!: Subscription;
 
