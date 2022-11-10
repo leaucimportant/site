@@ -1,1 +1,39 @@
-<p>company-hero works!</p>
+<div class="hero container-fluid">
+  <div class="hero__container container">
+    <div class="hero__marquee">
+      <div class="hero__marquee--content">
+        <div *ngFor="let people of company" class="hero__marquee--card">
+          <img [src]="people.url" class="img-fluid" [alt]="people.alt" />
+        </div>
+      </div>
+      <div class="hero__marquee--content" aria-hidden="true">
+        <div *ngFor="let people of company" class="hero__marquee--card">
+          <img [src]="people.url" class="img-fluid" [alt]="people.alt" />
+        </div>
+      </div>
+    </div>
+    <div class="hero__content">
+      <h1 class="impactiv-display-large mb-3 hero__title">
+        Notre vision, nos racines.
+      </h1>
+      <p class="hero__subtitle impactiv-body-sub-regular mb-4">
+        Innovation, écoute, agilité sont les principes fondateurs de notre
+        entreprise. Avec les années, l’expertise complète ces valeurs et notre
+        ambition consiste à accompagner durablement celle de nos clients.
+      </p>
+      <div>
+        <a
+          class="btn btn-secondary btn-contact-us-fill"
+          [routerLink]="['/', routes.contact]"
+        >
+          <span class="align-middle impactiv-button-regular"
+            >Nous contacter</span
+          ><i
+            class="hero__arrow bi bi-arrow-right-short fs-5 align-middle"
+            aria-hidden="true"
+          ></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
