@@ -2,14 +2,6 @@
   padding-top: 3rem;
   &-container {
     padding-top: 8rem;
-    @media (max-width: 575.98px) {
-      padding-top: 3rem;
-      margin-bottom: 3rem;
-      width: auto;
-    }
-  }
-  @media (max-width: 575.98px) {
-    padding-top: 1rem;
   }
   &-card {
     background-color: var(--bs-blue-003);
@@ -19,19 +11,11 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
     &:hover {
-      background-image: linear-gradient(
-          0deg,
-          var(--bs-blue-200),
-          var(--bs-blue-200)
-        ),
-        url("../../../../assets/images/bg/bg_other_solution.jpg") !important;
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
       animation: animatedBackground 400ms ease-in-out forwards;
-
       .other-solutions {
         &-card__content {
           color: white;
@@ -48,9 +32,6 @@
           }
         }
       }
-    }
-    @media (max-width: 991.98px) {
-      height: 330px;
     }
   }
   &__button {
@@ -76,8 +57,20 @@
     background: var(--bs-blue-100);
     border-radius: var(--bs-border-radius);
   }
+  @media (max-width: 991.98px) {
+    &-card {
+      height: 330px;
+    }
+  }
+  @media (max-width: 575.98px) {
+    padding-top: 1rem;
+    &-container {
+      padding-top: 3rem;
+      margin-bottom: 3rem;
+      width: auto;
+    }
+  }
 }
-
 .card-developpementSurMesure {
   &:hover {
     background-image: linear-gradient(
@@ -106,29 +99,5 @@
         var(--bs-blue-200)
       ),
       url("../../../../assets/images/bg/other_screen.png") !important;
-  }
-}
-
-// Animation arrow
-@keyframes slide-right {
-  0% {
-    transform: translate(0, 0);
-  }
-
-  50% {
-    transform: translate(5px, 0);
-  }
-
-  100% {
-    transform: translate(0, 0);
-  }
-}
-
-@keyframes animatedBackground {
-  0% {
-    background-size: 100% 100%;
-  }
-  100% {
-    background-size: 120% 120%;
   }
 }
