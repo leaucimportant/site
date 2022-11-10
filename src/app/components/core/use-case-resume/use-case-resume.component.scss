@@ -14,38 +14,46 @@
   &-card {
     background-color: var(--bs-gray-1000);
     border-radius: var(--bs-border-radius-lg);
-    padding: 4.5rem 0 4.5rem 4.5rem;
+    padding: 3rem 0 3rem 3rem;
     color: var(--bs-light);
     width: 100%;
     display: flex;
   }
   &-content {
     flex-basis: 60%;
-    padding-right: 4.5rem;
+    padding-right: 3.5rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
   }
   &-picture {
-    flex-basis: 40%;
-    display: flex;
-    align-items: center;
-  }
-  &-nav {
+    flex-basis: 41%;
+    height: 30rem;
     display: flex;
     justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: var(--bs-border-radius-sm) 0 0 var(--bs-border-radius-sm);
+  }
+  &-nav,
+  &-buttonGroup,
+  &-button,
+  &-tag,
+  &-video,
+  &-image {
     border-radius: var(--bs-border-radius-sm);
   }
+  &-nav,
   &-buttonGroup {
     display: flex;
     justify-content: center;
+  }
+  &-buttonGroup {
     background-color: var(--bs-light);
-    border-radius: var(--bs-border-radius-sm);
     padding: 0.5rem;
   }
   &-button {
-    border-radius: var(--bs-border-radius-sm);
     margin: 0.25rem;
     &.active {
       color: var(--bs-light);
@@ -60,36 +68,25 @@
     background-color: var(--bs-gray-900);
     color: var(--bs-light);
     padding: 0.5rem 1rem;
-    border-radius: var(--bs-border-radius-sm);
   }
   &-title {
     padding-top: 1.5rem;
   }
   &-image,
   &-video {
-    border-radius: var(--bs-border-radius-sm);
+    min-width: 100%;
+    max-width: none;
+    transform: scale(1.7);
     &-container {
       position: relative;
     }
   }
-
-  .btn-read {
-    color: var(--bs-white);
-    border: none;
-    border-radius: 0;
-    padding: 1rem 0 0;
-    margin-top: auto;
-    &:hover {
-      .bi::before {
-        animation: slide-right 0.8s ease-in-out infinite;
-      }
-    }
-    span {
-      padding: 0.5rem 0;
-      border-bottom: 2px solid var(--bs-white);
+  @media (max-width: 1399.98px) {
+    &-image,
+    &-video {
+      transform: scale(2);
     }
   }
-
   @media (max-width: 1199.98px) {
     padding-top: 1rem;
     &-card {
@@ -101,9 +98,14 @@
       padding-right: 0;
       padding-bottom: 1rem;
     }
-
     .btn-read {
       padding: 2.5rem 0 1rem;
+    }
+  }
+  @media (max-width: 991.98px) {
+    &-image,
+    &-video {
+      transform: scale(1);
     }
   }
 }

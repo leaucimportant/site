@@ -45,10 +45,10 @@
               </div>
             </div>
           </div>
-          <h1 class="impactiv-headline-regular resume-title">
+          <h1 class="impactiv-headline-regular resume-title mb-0">
             {{ currentUseCase.title }}
           </h1>
-          <p>{{ currentUseCase.subtitle }}</p>
+          <p class="mb-0">{{ currentUseCase.subtitle }}</p>
           <impactiv-use-case-quote
             [quote]="currentUseCase.quote"
             [onResumeComponent]="true"
@@ -58,7 +58,7 @@
           <a
             name=""
             id=""
-            class="btn btn-read"
+            class="btn btn-read mt-3"
             role="button"
             [routerLink]="['/', routes.useCase, currentUseCase.slug]"
             ><span class=""
