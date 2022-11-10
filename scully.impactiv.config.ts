@@ -1,4 +1,5 @@
-import { ScullyConfig } from '@scullyio/scully';
+import { getSitemapPlugin } from '@gammastream/scully-plugin-sitemap';
+import { ScullyConfig, setPluginConfig } from '@scullyio/scully';
 // import { getRegexPlugin } from '@gammastream/scully-plugin-regex';
 
 /** this loads the default render plugin, remove when switching to something else. */
@@ -8,6 +9,33 @@ import '@scullyio/scully-plugin-puppeteer';
 // setPluginConfig(RegexPlugin, {
 //   replacements: [],
 // });
+
+const SitemapPlugin = getSitemapPlugin();
+setPluginConfig(SitemapPlugin, {
+  urlPrefix: 'https://impactiv.fr',
+  sitemapFilename: 'sitemap.xml',
+  changeFreq: 'monthly',
+  priority: [
+    '1.0',
+    '0.9',
+    '0.8',
+    '0.7',
+    '0.6',
+    '0.5',
+    '0.4',
+    '0.3',
+    '0.2',
+    '0.1',
+    '0.0',
+  ],
+  ignoredRoutes: ['/404'],
+  routes: {
+    '/entreprise': {
+      changeFreq: 'monthly',
+      priority: '0.8',
+    },
+  },
+});
 
 export const config: ScullyConfig = {
   projectRoot: './src',

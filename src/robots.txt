@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://impactiv.fr/sitemap.xml
