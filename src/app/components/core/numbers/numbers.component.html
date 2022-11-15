@@ -1,11 +1,16 @@
 <div class="container numbers d-flex" style="min-height: 214px">
   <ng-container *ngFor="let number of selected">
     <div class="numbers__col">
-      <div class="d-flex align-items-center mb-1 numbers__title">
-        <impactiv-stats-numbers [data]="number.data"></impactiv-stats-numbers>
-        <span class="impactiv-display-large ms-1">{{ number.suffix }}</span>
+      <div class="d-flex align-items-center flex-column numbers__title">
+        <div class="d-flex">
+          <impactiv-stats-numbers [data]="number.data"></impactiv-stats-numbers>
+          <span class="impactiv-display-large ms-1">{{ number.suffix }}</span>
+        </div>
+        <p class="impactiv-headline-small numbers__description">{{ number.title }}</p>
       </div>
-      <p class="impactiv-headline-small text-primary">{{ number.title }}</p>
+      <picture class="numbers__picture">
+      <img [src]="number.src" class="numbers__image img-fluid"/>
+      </picture>
     </div>
   </ng-container>
 </div>
