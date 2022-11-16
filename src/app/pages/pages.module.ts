@@ -13,6 +13,7 @@ import { SolutionAffluenceComponent } from './solution-affluence/solution-afflue
 import { SolutionDSMComponent } from './solution-dsm/solution-dsm.component';
 import { SolutionWebAppComponent } from './solution-web-app/solution-web-app.component';
 import { UseCaseComponent } from './use-case/use-case.component';
+import { SolutionScreenComponent } from './solution-screen/solution-screen.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { UseCaseComponent } from './use-case/use-case.component';
     UseCaseComponent,
     SolutionAffluenceComponent,
     MentionsLegalesComponent,
+    SolutionScreenComponent,
   ],
   imports: [
     CommonModule,
