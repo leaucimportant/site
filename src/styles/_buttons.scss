@@ -52,6 +52,24 @@
   }
 }
 
+.btn-discover-fill {
+  position: relative;
+  border-radius: var(--bs-border-radius-sm);
+  .bi::before {
+    margin-left: 0.5rem;
+    color: var(--bs-gray-400);
+  }
+  &:hover {
+    background-color: var(--bs-gray-900);
+    transition: background-color 0.2s ease;
+    .bi::before {
+      color: var(--bs-white);
+      transition: color 0.2s ease;
+      animation: slide-bottom 0.6s ease-in-out infinite;
+    }
+  }
+}
+
 .btn-simple-text {
   border: 1px solid transparent;
   border-radius: var(--bs-border-radius-sm);
@@ -75,5 +93,25 @@
   span {
     padding: 0.5rem 0;
     border-bottom: 2px solid var(--bs-white);
+  }
+}
+
+.btn-download-outline {
+  position: relative;
+  border: 1px solid var(--bs-gray-100);
+  border-radius: var(--bs-border-radius-sm);
+  .bi::before {
+    margin-left: 0.5rem;
+    color: var(--bs-gray-200);
+  }
+  &:hover {
+    background-color: var(--bs-gray-100);
+    border: 1px solid var(--bs-gray-100);
+    transition: background-color 0.2s ease;
+    .bi::before {
+      color: var(--bs-gray-1000);
+      transition: color 0.2s ease;
+      animation: slide-bottom 0.6s ease-in-out infinite;
+    }
   }
 }

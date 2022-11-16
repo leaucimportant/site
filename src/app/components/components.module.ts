@@ -23,6 +23,7 @@ import { SolutionCardComponent } from './home/solution-card/solution-card.compon
 import { DsmHeroComponent } from './solutions/dsm-hero/dsm-hero.component';
 import { InfrastructureMasonryComponent } from './solutions/infrastructure-masonry/infrastructure-masonry.component';
 import { OtherSolutionsComponent } from './solutions/other-solutions/other-solutions.component';
+import { ScreenHeroComponent } from './solutions/screen-hero/screen-hero.component';
 import { SolutionAffluenceHeroComponent } from './solutions/solution-affluence-hero/solution-affluence-hero.component';
 import { SolutionBlockComponent } from './solutions/solution-block/solution-block.component';
 import { SolutionCarouselComponent } from './solutions/solution-carousel/solution-carousel.component';
@@ -61,10 +62,12 @@ const impactivComponentsExports = [
   ChallengeComponent,
   SolutionGridComponent,
   SolutionAffluenceHeroComponent,
+  ScreenHeroComponent,
   QuoteComponent,
   CompanyHeroComponent,
   OurPartnersComponent,
   TimelineComponent,
+  ScreenHeroComponent,
   SolutionCardComponent,
 ];
 

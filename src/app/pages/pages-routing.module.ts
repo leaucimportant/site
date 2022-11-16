@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { MentionsLegalesComponent } from './mentions-legales/mentions-legales.component';
 import { SolutionAffluenceComponent } from './solution-affluence/solution-affluence.component';
 import { SolutionDSMComponent } from './solution-dsm/solution-dsm.component';
+import { SolutionScreenComponent } from './solution-screen/solution-screen.component';
 import { SolutionWebAppComponent } from './solution-web-app/solution-web-app.component';
 import { UseCaseComponent } from './use-case/use-case.component';
 
@@ -35,6 +36,10 @@ const routes: Routes = [
   {
     path: 'solutions/affluence',
     component: SolutionAffluenceComponent,
+  },
+  {
+    path: 'solutions/affichage-dynamique',
+    component: SolutionScreenComponent,
   },
   {
     path: 'cas-clients/:slug',
