@@ -1,0 +1,9 @@
+<div class="masonry__card" [ngClass]="card.black ? 'masonry__card-black' : ''">
+    <picture class="masonry__picture">
+      <img [src]="card.icon"/>
+    </picture>
+    <h1 class="impactiv-headline-small masonry__title">{{ card.title }}</h1>
+    <p class="impactiv-body-regular m-0 masonry__body">
+        {{ card.description }}
+    </p>
+</div>

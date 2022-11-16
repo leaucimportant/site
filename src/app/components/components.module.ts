@@ -34,6 +34,9 @@ import { CustomerNeedComponent } from './usecase/customer-need/customer-need.com
 import { ResponseComponent } from './usecase/response/response.component';
 import { UseCaseHeroComponent } from './usecase/use-case-hero/use-case-hero.component';
 import { UseCaseQuoteComponent } from './usecase/use-case-quote/use-case-quote.component';
+import { AffluenceMasonryComponent } from './solutions/affluence-masonry/affluence-masonry.component';
+import { MasonryCardTextComponent } from './core/masonry-card-text/masonry-card-text.component';
+import { MasonryCardImageComponent } from './core/masonry-card-image/masonry-card-image.component';
 
 const impactivComponentsExports = [
   BannerComponent,
@@ -66,6 +69,9 @@ const impactivComponentsExports = [
   OurPartnersComponent,
   TimelineComponent,
   SolutionCardComponent,
+  AffluenceMasonryComponent,
+  MasonryCardTextComponent,
+  MasonryCardImageComponent
 ];
 
 @NgModule({
