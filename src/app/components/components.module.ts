@@ -38,6 +38,7 @@ import { UseCaseQuoteComponent } from './usecase/use-case-quote/use-case-quote.c
 import { AffluenceMasonryComponent } from './solutions/affluence-masonry/affluence-masonry.component';
 import { MasonryCardTextComponent } from './core/masonry-card-text/masonry-card-text.component';
 import { MasonryCardImageComponent } from './core/masonry-card-image/masonry-card-image.component';
+import { ScreenMasonryComponent } from './solutions/screen-masonry/screen-masonry.component';
 
 const impactivComponentsExports = [
   BannerComponent,
@@ -74,7 +75,8 @@ const impactivComponentsExports = [
   SolutionCardComponent,
   AffluenceMasonryComponent,
   MasonryCardTextComponent,
-  MasonryCardImageComponent
+  MasonryCardImageComponent,
+  ScreenMasonryComponent
 ];
 
 @NgModule({

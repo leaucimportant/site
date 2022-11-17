@@ -87,3 +87,15 @@
     }
   }
 }
+
+@media (max-width: 767.98px) {
+  .masonry__image {
+    display: flex;
+    padding-top: 1rem;
+  }
+  .masonry__card-withImage-right {
+    .masonry__image {
+      display: none;
+    }
+  }
+}
