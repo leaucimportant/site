@@ -25,6 +25,6 @@ export const seoMeta: Record<ImpactivRoutesEnum, Required<OgMeta> | null> = {
   webAppSolution: null,
   screenSolution: null,
   useCase: null,
-  // notFound: null,
+  notFound: null,
   // mentionsLegales: null,
 };

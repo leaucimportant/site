@@ -14,6 +14,7 @@ import { SolutionDSMComponent } from './solution-dsm/solution-dsm.component';
 import { SolutionWebAppComponent } from './solution-web-app/solution-web-app.component';
 import { UseCaseComponent } from './use-case/use-case.component';
 import { SolutionScreenComponent } from './solution-screen/solution-screen.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { SolutionScreenComponent } from './solution-screen/solution-screen.compo
     SolutionAffluenceComponent,
     MentionsLegalesComponent,
     SolutionScreenComponent,
+    NotFoundComponent,
   ],
   imports: [
     CommonModule,
