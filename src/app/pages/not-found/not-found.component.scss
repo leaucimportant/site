@@ -1,0 +1,26 @@
+.notfound {
+  &__container {
+    background-image: url("../../../assets/images/bg/bg_contact.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 8rem;
+    padding-bottom: 2rem;
+  }
+  &__content {
+    width: 45%;
+  }
+  &__btn {
+    background-color: var(--bs-blue-100);
+  }
+  @media (max-width: 991.98px) {
+    &__contain {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    &__content {
+      width: 100%;
+      padding-top: 3rem;
+    }
+  }
+}

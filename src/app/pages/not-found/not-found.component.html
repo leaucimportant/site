@@ -1,0 +1,29 @@
+<div class="notfound__container">
+  <div class="container notfound__contain d-flex align-items-center justify-content-between">
+    <div class="notfound__content">
+      <a class="btn text-primary notfound__btn">Erreur 404</a>
+
+      <h1 class="impactiv-display-small mb-4 mt-2">
+        Désolé, la page que vous cherchez n'a pas été trouvée.
+      </h1>
+      <a
+        class="btn btn-contact-us"
+        [routerLink]="['/', routes.contact]"
+        role="button"
+        ><span
+          >Contactez-nous
+          <i
+            class="hero__arrow bi bi-arrow-right-short fs-5 align-middle"
+            aria-hidden="true"
+          ></i></span
+      ></a>
+    </div>
+    <div class="">
+      <img
+        class="d-inline-block img-fluid mt-2 mt-lg-5"
+        src="assets/images/contents/404/404.png"
+        alt="image générique"
+      />
+    </div>
+  </div>
+</div>

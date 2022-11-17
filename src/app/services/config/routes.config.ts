@@ -9,6 +9,7 @@ export type ImpactivRoutesEnum =
   | 'dsmSolution'
   | 'company'
   | 'useCase'
+  | 'notFound'
   | 'mentionsLegales';
 
 export const impactivRoutes: Record<ImpactivRoutesEnum, string> = {
@@ -19,6 +20,7 @@ export const impactivRoutes: Record<ImpactivRoutesEnum, string> = {
   affluenceSolution: 'solutions/affluence',
   dsmSolution: 'solutions/developpement-sur-mesure',
   company: 'entreprise',
+  notFound: 'not-found',
   mentionsLegales: 'mentions-legales',
   useCase: 'cas-clients',
 };

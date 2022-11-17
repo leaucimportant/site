@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { Config } from '../services';
 import { routerOptions } from '../services/config';
 import { CompanyComponent } from './company/company.component';
 import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
 import { MentionsLegalesComponent } from './mentions-legales/mentions-legales.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 import { SolutionAffluenceComponent } from './solution-affluence/solution-affluence.component';
 import { SolutionDSMComponent } from './solution-dsm/solution-dsm.component';
 import { SolutionScreenComponent } from './solution-screen/solution-screen.component';
@@ -50,8 +52,12 @@ const routes: Routes = [
     component: MentionsLegalesComponent,
   },
   {
+    path: 'not-found',
+    component: NotFoundComponent,
+  },
+  {
     path: '**',
-    redirectTo: '',
+    redirectTo: Config.impactivRoutes.notFound,
   },
 ];
 
