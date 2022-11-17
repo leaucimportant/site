@@ -1,0 +1,85 @@
+<div class="container-fluid masonry">
+  <div class="container masonry__container">
+    <h1 class="impactiv-display-small">
+      Plongez dans un écosystème complet et performant.
+    </h1>
+    <p class="impactiv-body-regular masonry__description">
+      Intuitives, complémentaires, évolutives, nos solutions sont le parfait
+      allié de vos ambitions digitales. Des outils adaptés pour tous secteurs
+      d’activité au service de vos clients et de votre image de marque.
+    </p>
+    <a name="" id="" class="btn btn-contact-us" href="#" role="button"
+      ><span class=""
+        >Contactez-nous
+        <i
+          class="hero__arrow bi bi-arrow-right-short fs-5 align-middle"
+          aria-hidden="true"
+        ></i></span
+    ></a>
+    <div class="masonry__grid">
+      <impactiv-masonry-card-image
+        [card]="card1"
+        class="masonry__item1"
+      ></impactiv-masonry-card-image>
+
+      <impactiv-masonry-card-image
+        [card]="card2"
+        class="masonry__item2"
+      ></impactiv-masonry-card-image>
+
+      <impactiv-masonry-card-image
+        [card]="card3"
+        class="masonry__item3"
+      ></impactiv-masonry-card-image>
+
+      <impactiv-masonry-card-image
+        [card]="card4"
+        class="masonry__item4"
+      ></impactiv-masonry-card-image>
+
+      <impactiv-masonry-card-text [card]="card5" class="masonry__item5">
+      </impactiv-masonry-card-text>
+
+      <impactiv-masonry-card-image
+        [card]="card6"
+        class="masonry__item6"
+      ></impactiv-masonry-card-image>
+    </div>
+
+    <div class="masonry__grid2" [ngClass]="isActive ? 'show' : 'hide'">
+      <impactiv-masonry-card-image
+        [card]="card7"
+        class="masonry__item1"
+      ></impactiv-masonry-card-image>
+
+      <impactiv-masonry-card-image
+        [card]="card8"
+        class="masonry__item2"
+      ></impactiv-masonry-card-image>
+
+      <impactiv-masonry-card-text [card]="card9" class="masonry__item3">
+      </impactiv-masonry-card-text>
+
+      <impactiv-masonry-card-text [card]="card10" class="masonry__item4">
+      </impactiv-masonry-card-text>
+
+      <impactiv-masonry-card-image
+        [card]="card11"
+        class="masonry__item5"
+      ></impactiv-masonry-card-image>
+
+      <impactiv-masonry-card-image
+        [card]="card12"
+        class="masonry__item6"
+      ></impactiv-masonry-card-image>
+    </div>
+    <button
+      type="button"
+      class="btn btn-secondary masonry__button mb-5 mt-3"
+      (click)="isActive = !isActive"
+      [ngClass]="isActive ? 'hide' : 'show'"
+    >
+      En voir plus
+    </button>
+  </div>
+</div>
