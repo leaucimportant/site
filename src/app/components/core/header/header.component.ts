@@ -21,7 +21,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
       route: impactivRoutes.screenSolution,
     },
     {
-      title: 'Application mobiles',
+      title: 'Application collaborateurs',
       description: 'Créez des applications dédiées pour le web.',
       icon: 'affichage.svg',
       alt: 'affichage',
@@ -36,7 +36,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
     },
     {
       title: 'Développement sur-mesure',
-      description: 'lorem',
+      description: 'Créez des outils métier à forte valeur ajoutée.',
       icon: 'security.svg',
       alt: 'sécurité',
       route: impactivRoutes.dsmSolution,
