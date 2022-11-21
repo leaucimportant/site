@@ -4,6 +4,7 @@ export interface UseCase {
   name: string;
   rank: number;
   slug: string;
+  headerText: string;
   logo: string;
   title: string;
   subtitle: string;

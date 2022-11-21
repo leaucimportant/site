@@ -43,7 +43,12 @@ export class HeaderComponent implements OnInit, OnDestroy {
     },
   ];
   expertises = [];
-  useCases: { name: string; slug: string; logo?: string }[] = [];
+  useCases: {
+    name: string;
+    slug: string;
+    headerText: string;
+    logo?: string;
+  }[] = [];
   useCasesSubscription!: Subscription;
 
   ngOnInit(): void {
@@ -55,6 +60,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
           .map((useCase) => ({
             name: useCase.name,
             slug: useCase.slug,
+            headerText: useCase.headerText,
             logo: useCase.quote.logo,
           }));
       });
