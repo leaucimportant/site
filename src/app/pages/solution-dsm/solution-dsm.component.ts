@@ -21,7 +21,7 @@ export class SolutionDSMComponent {
     {
       title: 'Une équipe à l’écoute de vos besoins !',
       description:
-        "Nous avons conscience que la demande de l'utilisateur final est en constant changement, et avec elle, votre produit numérique. L’évolution de votre solution ne doit pas se faire au dépend de vos équipes opérationnelles, nous jugeons de la qualité de notre travail aussi de par la simplicité d’utilisation des applications par vos équipes.",
+        "Nous avons conscience que la demande de l'utilisateur final change constamment et votre produit numérique doit s'adapter. L’évolution de votre solution ne doit pas se faire au dépend de vos équipes opérationnelles, nous mesurons aussi la réussite d'un projet à la simplicité d’utilisation des applications par vos équipes.",
       image: {
         src: 'assets/images/contents/solutions/dsm/team.png',
         alt: 'affluence',
@@ -30,7 +30,7 @@ export class SolutionDSMComponent {
     {
       title: 'Une implication en permanence sans mauvaise surprise.',
       description:
-        "Vous souhaitez pouvoir y répondre lors du développement, c'est pourquoi les méthodologies et technologies employées doivent être en parfaite adéquation avec vos projets. En tant que propriétaire de produit, vous restez impliqué en permanence dans son développement et n'avez jamais de surprises.",
+        "Pour aligner votre besoin aux développements, les méthodologies et technologies employées doivent être en parfaite adéquation avec vos projets. En tant que propriétaire de produit, vous restez impliqué en permanence dans son développement et n'avez jamais de surprises.",
       image: {
         src: 'assets/images/contents/solutions/dsm/note.png',
         alt: 'affluence',
