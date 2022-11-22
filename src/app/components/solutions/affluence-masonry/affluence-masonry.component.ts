@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Config } from 'src/app/services';
 
 @Component({
   selector: 'impactiv-affluence-masonry',
@@ -7,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AffluenceMasonryComponent implements OnInit {
   isActive: boolean = false;
+
+  readonly routes = Config.impactivRoutes;
 
   constructor() {}
 

@@ -85,7 +85,6 @@
     bottom: auto;
     z-index: 1;
     justify-content: stretch;
-    // justify-items: stretch;
     align-content: stretch;
     align-self: flex-start;
     flex: 0 auto;
@@ -144,10 +143,6 @@
     padding-top: 6rem;
     height: 608px;
     margin-bottom: 4rem;
-    &__container {
-      padding-right: 0rem;
-      padding-left: 0rem;
-    }
     &__title {
       width: 100%;
     }
