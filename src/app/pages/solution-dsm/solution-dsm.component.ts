@@ -1,11 +1,15 @@
-import { Component } from '@angular/core';
-import { Config } from 'src/app/services';
+import { Component, OnInit } from '@angular/core';
+import { Config, MatomoService, SeoService } from 'src/app/services';
 @Component({
   selector: 'impactiv-solution-dsm',
   templateUrl: './solution-dsm.component.html',
   styleUrls: ['./solution-dsm.component.scss'],
 })
-export class SolutionDSMComponent {
+export class SolutionDSMComponent implements OnInit {
+  constructor(
+    private seoService: SeoService,
+    private matomoService: MatomoService
+  ) {}
   solution = Config.impactivSolutions.dsm;
 
   imageQuote = 'assets/images/icons/short_logo.png';
@@ -128,4 +132,24 @@ export class SolutionDSMComponent {
       alt: 'Carte des vins',
     },
   ];
+
+  ngOnInit(): void {
+    this.setSeo();
+    this.matomoTrack();
+  }
+  private setSeo(): void {
+    if (Config.seoMeta.dsmSolution) {
+      this.seoService.setPageSeo(Config.seoMeta.dsmSolution);
+    } else {
+      console.warn('missing seoMeta.dsmSolution');
+    }
+  }
+
+  private matomoTrack(): void {
+    if (Config.seoMeta.dsmSolution) {
+      this.matomoService.trackPageView(Config.seoMeta.dsmSolution);
+    } else {
+      console.warn('missing seoMeta.dsmSolution');
+    }
+  }
 }

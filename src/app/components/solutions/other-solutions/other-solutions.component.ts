@@ -46,7 +46,7 @@ export class OtherSolutionsComponent implements OnChanges {
     {
       icon: 'app.svg',
       alt: 'application',
-      title: 'Applications mobiles',
+      title: 'Application collaborateurs',
       description:
         'De la Web App aux applications natives & PWA. La solution tout-en-un au service de vos collaborateurs. Une solution digitale déployée à votre identité intégrant l’ensemble des services mis à disposition de vos clients/consommateurs !',
       link: `/${this.routes.webAppSolution}`,
