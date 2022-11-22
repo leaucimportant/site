@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Config } from 'src/app/services';
 
 @Component({
   selector: 'impactiv-screen-masonry',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ScreenMasonryComponent implements OnInit {
   isActive: boolean = false;
+  readonly routes = Config.impactivRoutes;
 
   constructor() {}
 
