@@ -1,15 +1,1 @@
-<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="32" height="32" rx="8" fill="url(#paint0_linear_3452_7461)"/>
-<mask id="mask0_3452_7461" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="6" y="6" width="20" height="20">
-<rect x="6" y="6" width="20" height="20" fill="#D9D9D9"/>
-</mask>
-<g mask="url(#mask0_3452_7461)">
-<path d="M10.1667 23.5C9.70833 23.5 9.31583 23.3369 8.98917 23.0108C8.66306 22.6842 8.5 22.2917 8.5 21.8333V10.1667C8.5 9.70833 8.66306 9.31583 8.98917 8.98917C9.31583 8.66306 9.70833 8.5 10.1667 8.5H17.6667V10.1667H10.1667V21.8333H21.8333V14.3333H23.5V21.8333C23.5 22.2917 23.3369 22.6842 23.0108 23.0108C22.6842 23.3369 22.2917 23.5 21.8333 23.5H10.1667ZM11.8333 20.1667H13.5V14.3333H11.8333V20.1667ZM15.1667 20.1667H16.8333V11.8333H15.1667V20.1667ZM18.5 20.1667H20.1667V16.8333H18.5V20.1667ZM20.1667 13.5V11.8333H18.5V10.1667H20.1667V8.5H21.8333V10.1667H23.5V11.8333H21.8333V13.5H20.1667Z" fill="white"/>
-</g>
-<defs>
-<linearGradient id="paint0_linear_3452_7461" x1="32" y1="32" x2="-1.82494e-06" y2="-4" gradientUnits="userSpaceOnUse">
-<stop stop-color="#0462C0"/>
-<stop offset="1" stop-color="#0B82FA"/>
-</linearGradient>
-</defs>
-</svg>
+<svg width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="32" height="32" rx="8" fill="url(#paint0_linear_3452_7461)"/><mask id="mask0_3452_7461" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="6" y="6" width="20" height="20"><rect x="6" y="6" width="20" height="20" fill="#D9D9D9"/></mask><g mask="url(#mask0_3452_7461)"><path d="M10.1667 23.5C9.70833 23.5 9.31583 23.3369 8.98917 23.0108C8.66306 22.6842 8.5 22.2917 8.5 21.8333V10.1667C8.5 9.70833 8.66306 9.31583 8.98917 8.98917C9.31583 8.66306 9.70833 8.5 10.1667 8.5H17.6667V10.1667H10.1667V21.8333H21.8333V14.3333H23.5V21.8333C23.5 22.2917 23.3369 22.6842 23.0108 23.0108C22.6842 23.3369 22.2917 23.5 21.8333 23.5H10.1667ZM11.8333 20.1667H13.5V14.3333H11.8333V20.1667ZM15.1667 20.1667H16.8333V11.8333H15.1667V20.1667ZM18.5 20.1667H20.1667V16.8333H18.5V20.1667ZM20.1667 13.5V11.8333H18.5V10.1667H20.1667V8.5H21.8333V10.1667H23.5V11.8333H21.8333V13.5H20.1667Z" fill="white"/></g><defs><linearGradient id="paint0_linear_3452_7461" x1="32" y1="32" x2="-1.82494e-06" y2="-4" gradientUnits="userSpaceOnUse"><stop stop-color="#0462C0"/><stop offset="1" stop-color="#0B82FA"/></linearGradient></defs></svg>
