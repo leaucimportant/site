@@ -1,7 +1,7 @@
 .grid-container {
-  padding-top: 8rem;
   &__description {
     max-width: 50%;
+    margin-bottom: 3rem;
   }
   .grid {
     &-icon-picture {
@@ -15,7 +15,7 @@
       border-radius: var(--bs-border-radius-sm);
     }
     &-card {
-      padding: 1rem 1rem 1rem 0.7rem;
+      padding-bottom: 2rem;
       &__picture {
         display: flex;
         justify-content: center;
@@ -49,9 +49,5 @@
         padding: 1rem;
       }
     }
-  }
-
-  @media (max-width: 991.98px) {
-    padding-top: 8rem;
   }
 }

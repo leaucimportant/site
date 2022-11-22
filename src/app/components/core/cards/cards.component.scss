@@ -1,5 +1,5 @@
 .card-container {
-  padding: 8rem 0 0;
+  
   &__title,
   &__carousel {
     padding-bottom: 2rem;
@@ -50,7 +50,7 @@
 
 @media (max-width: 1199.98px) {
   .card-container {
-    padding: 5rem 1rem 0;
+    
   }
   .card {
     &__content {

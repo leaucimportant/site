@@ -1,5 +1,5 @@
 .numbers {
-  padding: 8rem 0 0;
+  
   display: flex;
   justify-content: space-between;
   &__col {
@@ -31,7 +31,7 @@
   @media (max-width: 991.98px) {
     display: flex;
     flex-direction: column;
-    padding: 5rem 1rem 0;
+    
     &__col {
       width: 100%;
       padding-bottom: 1rem;
