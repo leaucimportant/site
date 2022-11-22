@@ -1,8 +1,5 @@
 .other-solutions {
   padding-top: 3rem;
-  &-container {
-    padding-top: 8rem;
-  }
   &-card {
     background-color: var(--bs-blue-003);
     border: 1px solid var(--bs-gray-100);
@@ -65,7 +62,6 @@
   @media (max-width: 575.98px) {
     padding-top: 1rem;
     &-container {
-      padding-top: 3rem;
       margin-bottom: 3rem;
       width: auto;
     }

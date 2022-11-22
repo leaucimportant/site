@@ -1,5 +1,4 @@
 .masonry {
-  padding: 8rem 0 0;
   &__description {
     width: 60%;
   }
@@ -77,9 +76,6 @@
 }
 
 @media (max-width: 1399.98px) {
-  .masonry {
-    padding-bottom: 5rem;
-  }
   .masonry__grid, .masonry__grid2 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -116,7 +112,6 @@
 @media (max-width: 991.98px) {
   .masonry {
     padding-top: 3rem;
-    padding-bottom: 3rem;
     &__description {
       width: 100%;
     }

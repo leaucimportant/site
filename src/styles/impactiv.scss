@@ -9,6 +9,18 @@
   }
 }
 
+.container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.container-impactiv {
+  margin-top: 10rem;
+  @media (max-width: 767.98px) { 
+    margin-top: 5rem;
+  }
+}
+
 .grecaptcha-badge {
   visibility: hidden;
 }

@@ -1,10 +1,4 @@
 .footer {
-  &__container {
-    padding-top: 8rem;
-    @media (max-width: 991.98px) {
-      padding-top: 1rem;
-    }
-  }
   &__logo {
     @media (max-width: 991.98px) {
       text-align: center;

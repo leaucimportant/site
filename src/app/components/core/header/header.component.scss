@@ -7,6 +7,12 @@
   right: 0;
   left: 0;
   z-index: 1030;
+  .container {
+    @media (max-width: 767.98px) { 
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
   &-brand {
     img {
       height: auto;
@@ -116,7 +122,7 @@
   }
 
   @media (max-width: 1199.98px) {
-    padding: 0 1rem;
+    padding: 0 1.2rem;
 
     .navbar-collapse {
       margin-top: 1rem;
