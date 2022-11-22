@@ -1,63 +1,80 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { Config } from '../services';
-import { routerOptions } from '../services/config';
-import { CompanyComponent } from './company/company.component';
-import { ContactComponent } from './contact/contact.component';
-import { HomeComponent } from './home/home.component';
-import { MentionsLegalesComponent } from './mentions-legales/mentions-legales.component';
-import { NotFoundComponent } from './not-found/not-found.component';
-import { SolutionAffluenceComponent } from './solution-affluence/solution-affluence.component';
-import { SolutionDSMComponent } from './solution-dsm/solution-dsm.component';
-import { SolutionScreenComponent } from './solution-screen/solution-screen.component';
-import { SolutionWebAppComponent } from './solution-web-app/solution-web-app.component';
-import { UseCaseComponent } from './use-case/use-case.component';
+import { routerOptions } from '../services/config/routes.config';
 
 // IMPORTANT: ne pas refactor les paths par une variable, lors du build static la route n'est pas reconnue !
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent,
+    loadChildren: () =>
+      import('src/app/pages/home/home.module').then((m) => m.HomeModule),
   },
   {
     path: 'contact',
-    component: ContactComponent,
+    loadChildren: () =>
+      import('src/app/pages/contact/contact.module').then(
+        (m) => m.ContactModule
+      ),
   },
   {
     path: 'entreprise',
-    component: CompanyComponent,
+    loadChildren: () =>
+      import('src/app/pages/company/company.module').then(
+        (m) => m.CompanyModule
+      ),
   },
   {
     path: 'solutions/application-collaborateurs',
-    component: SolutionWebAppComponent,
+    loadChildren: () =>
+      import('src/app/pages/solution-web-app/solution-web-app.module').then(
+        (m) => m.SolutionWebAppModule
+      ),
   },
   {
     path: 'solutions/developpement-sur-mesure',
-    component: SolutionDSMComponent,
+    loadChildren: () =>
+      import('src/app/pages/solution-dsm/solution-dsm.module').then(
+        (m) => m.SolutionDSMModule
+      ),
   },
   {
     path: 'solutions/affluence',
-    component: SolutionAffluenceComponent,
+    loadChildren: () =>
+      import('src/app/pages/solution-affluence/solution-affluence.module').then(
+        (m) => m.SolutionAffluenceModule
+      ),
   },
   {
     path: 'solutions/affichage-dynamique',
-    component: SolutionScreenComponent,
+    loadChildren: () =>
+      import('src/app/pages/solution-screen/solution-screen.module').then(
+        (m) => m.SolutionScreenModule
+      ),
   },
   {
     path: 'cas-clients/:slug',
-    component: UseCaseComponent,
+    loadChildren: () =>
+      import('src/app/pages/use-case/use-case-lib.module').then(
+        (m) => m.UseCaseModule
+      ),
   },
   {
     path: 'mentions-legales',
-    component: MentionsLegalesComponent,
+    loadChildren: () =>
+      import('src/app/pages/mentions-legales/mentions-legales.module').then(
+        (m) => m.MentionsLegalesModule
+      ),
   },
   {
     path: 'non-trouvee',
-    component: NotFoundComponent,
+    loadChildren: () =>
+      import('src/app/pages/not-found/not-found.module').then(
+        (m) => m.NotFoundModule
+      ),
   },
   {
     path: '**',
-    redirectTo: Config.impactivRoutes.notFound,
+    redirectTo: 'non-trouvee',
   },
 ];
 
