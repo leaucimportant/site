@@ -41,8 +41,7 @@ export class UseCaseComponent implements OnInit, OnDestroy {
               response.filter(
                 (usecase) => usecase.slug === params.get('slug') ?? ''
               )[0] ?? null;
-            // A confirmer ce comportement
-            if (!this.useCase) this.router.navigate([impactivRoutes.home]);
+            if (!this.useCase) this.router.navigate([impactivRoutes.notFound]);
             else {
               const configSeo: Required<OgMeta> = {
                 description: this.useCase.seo.description,

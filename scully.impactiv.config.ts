@@ -28,11 +28,19 @@ setPluginConfig(SitemapPlugin, {
     '0.1',
     '0.0',
   ],
-  ignoredRoutes: ['/404'],
+  ignoredRoutes: ['/non-trouvee'],
   routes: {
+    '/mentions-legales': {
+      changeFreq: 'monthly',
+      priority: '0.5',
+    },
+    '/contact': {
+      changeFreq: 'monthly',
+      priority: '0.7',
+    },
     '/entreprise': {
       changeFreq: 'monthly',
-      priority: '0.8',
+      priority: '0.7',
     },
   },
 });

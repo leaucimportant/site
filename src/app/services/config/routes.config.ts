@@ -20,7 +20,7 @@ export const impactivRoutes: Record<ImpactivRoutesEnum, string> = {
   affluenceSolution: 'solutions/affluence',
   dsmSolution: 'solutions/developpement-sur-mesure',
   company: 'entreprise',
-  notFound: 'not-found',
+  notFound: 'non-trouvee',
   mentionsLegales: 'mentions-legales',
   useCase: 'cas-clients',
 };

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Config } from 'src/app/services';
+import { Config, MatomoService, SeoService } from 'src/app/services';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'impactiv-not-found',
@@ -8,7 +9,19 @@ import { Config } from 'src/app/services';
 })
 export class NotFoundComponent implements OnInit {
   readonly routes = Config.impactivRoutes;
-  constructor() {}
+  constructor(
+    private seoService: SeoService,
+    private matomoService: MatomoService
+  ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.seoService.setNoIndex();
+    this.matomoService.trackPageView({
+      title: '404',
+      url: environment.siteUri.concat('/', Config.impactivRoutes.notFound),
+    });
+  }
+  ngOnDestroy(): void {
+    this.seoService.removeNoIndex();
+  }
 }

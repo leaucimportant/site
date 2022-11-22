@@ -1,12 +1,16 @@
-import { Component } from '@angular/core';
-import { Config } from 'src/app/services';
+import { Component, OnInit } from '@angular/core';
+import { Config, MatomoService, SeoService } from 'src/app/services';
 
 @Component({
   selector: 'impactiv-solution-affluence',
   templateUrl: './solution-affluence.component.html',
   styleUrls: ['./solution-affluence.component.scss'],
 })
-export class SolutionAffluenceComponent {
+export class SolutionAffluenceComponent implements OnInit {
+  constructor(
+    private seoService: SeoService,
+    private matomoService: MatomoService
+  ) {}
   solution = Config.impactivSolutions.affluence;
 
   titleCarousel = 'A chaque usage, une solution IoT sur mesure.';
@@ -115,4 +119,23 @@ export class SolutionAffluenceComponent {
       },
     ],
   };
+  ngOnInit(): void {
+    this.setSeo();
+    this.matomoTrack();
+  }
+  private setSeo(): void {
+    if (Config.seoMeta.affluenceSolution) {
+      this.seoService.setPageSeo(Config.seoMeta.affluenceSolution);
+    } else {
+      console.warn('missing seoMeta.affluenceSolution');
+    }
+  }
+
+  private matomoTrack(): void {
+    if (Config.seoMeta.affluenceSolution) {
+      this.matomoService.trackPageView(Config.seoMeta.affluenceSolution);
+    } else {
+      console.warn('missing seoMeta.affluenceSolution');
+    }
+  }
 }

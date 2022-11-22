@@ -1,16 +1,20 @@
 import { Component, OnInit } from '@angular/core';
-import { Config } from 'src/app/services';
+import { Config, MatomoService, SeoService } from 'src/app/services';
 
 @Component({
   selector: 'impactiv-solution-screen',
   templateUrl: './solution-screen.component.html',
-  styleUrls: ['./solution-screen.component.scss']
+  styleUrls: ['./solution-screen.component.scss'],
 })
 export class SolutionScreenComponent implements OnInit {
-
-  constructor() { }
+  constructor(
+    private seoService: SeoService,
+    private matomoService: MatomoService
+  ) {}
 
   ngOnInit(): void {
+    this.setSeo();
+    this.matomoTrack();
   }
 
   solution = Config.impactivSolutions.screen;
@@ -32,4 +36,20 @@ export class SolutionScreenComponent implements OnInit {
       alt: 'Carte des vins',
     },
   ];
+
+  private setSeo(): void {
+    if (Config.seoMeta.screenSolution) {
+      this.seoService.setPageSeo(Config.seoMeta.screenSolution);
+    } else {
+      console.warn('missing seoMeta.home');
+    }
+  }
+
+  private matomoTrack(): void {
+    if (Config.seoMeta.screenSolution) {
+      this.matomoService.trackPageView(Config.seoMeta.screenSolution);
+    } else {
+      console.warn('missing seoMeta.home');
+    }
+  }
 }

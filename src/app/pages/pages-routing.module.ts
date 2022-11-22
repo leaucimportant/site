@@ -52,7 +52,7 @@ const routes: Routes = [
     component: MentionsLegalesComponent,
   },
   {
-    path: 'not-found',
+    path: 'non-trouvee',
     component: NotFoundComponent,
   },
   {
