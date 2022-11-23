@@ -24,16 +24,12 @@ export class SolutionScreenComponent implements OnInit {
 
   imagesCarousel = [
     {
-      src: 'assets/images/contents/solutions/dsm/sodexo.png',
-      alt: 'Sodexo',
+      src: 'assets/images/contents/solutions/screen/mp1.png',
+      alt: 'Back Office affichage dynamique',
     },
     {
-      src: 'assets/images/contents/solutions/dsm/la_mira.png',
-      alt: 'La Mira',
-    },
-    {
-      src: 'assets/images/contents/solutions/dsm/cdv.png',
-      alt: 'Carte des vins',
+      src: 'assets/images/contents/solutions/screen/mp2.png',
+      alt: 'Back Office affichage dynamique',
     },
   ];
 
