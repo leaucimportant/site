@@ -30,12 +30,12 @@ export class SolutionAffluenceComponent implements OnInit {
       'Mesurez le nombre de personnes entrantes et/ou sortantes de tout type d’espace tout en protégeant l’anonymat des passants avec une précision sans pareil grâce à l’utilisation de la technologie Time-of-flight. ',
     items: [
       {
-        image: 'capteur.png',
+        image: 'rgpd.gif',
         subtitle: 'Respect de la vie privée (RGPD)',
         icon: 'lock.png',
       },
       {
-        image: 'installation.png',
+        image: 'fiabilite.png',
         subtitle: 'Fiabilité à 98+%',
         icon: 'graph.png',
       },
