@@ -59,7 +59,7 @@ export const seoMeta: Record<ImpactivRoutesEnum, Required<OgMeta> | null> = {
       impactivRoutes.dsmSolution
     ),
     description:
-      "Adaptez vos projets aux process et non l'inverse ! Accélérez votre développement en nous confiant un développement sur-mesure ou en réalisant une intégration ambitieuse",
+      "Adaptez vos projets aux process et non l'inverse ! Développement sur-mesure ou intégration ambitieuse, nous créons pour vous des outils métier à forte valeur ajoutée.",
   },
   company: {
     title: 'Reconnus par des acteurs majeurs dans leur domaine.',

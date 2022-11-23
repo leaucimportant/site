@@ -12,7 +12,8 @@
     "git:rebase": "git rebase -i --autosquash main",
     "git:push": "git push --force-with-lease",
     "scully": "npx scully --project impactiv --scanRoutes --stats",
-    "scully:serve": "npx scully serve --project impactiv"
+    "scully:serve": "npx scully serve --project impactiv",
+    "glup": "glup"
   },
   "private": true,
   "dependencies": {

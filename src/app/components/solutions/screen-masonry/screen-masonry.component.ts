@@ -41,7 +41,7 @@ export class ScreenMasonryComponent implements OnInit {
   card3 = {
     title: 'Un backoffice simple et performant',
     description:
-      'Pour nous, l’expérience de vos clients est toute aussi importante que celle de votre équipe. Pilotez l’ensemble de votre offre et de vos communications depuis un outil simple, performant et intuitif ',
+      'L’expérience de vos clients est toute aussi importante que celle de votre équipe. Pilotez l’ensemble de votre offre et de vos communications depuis un outil simple, performant et intuitif ',
     icon: 'assets/images/icons/screen/backoffice.svg',
     image: 'assets/images/contents/solutions/screen/defaut.png',
     black: false,

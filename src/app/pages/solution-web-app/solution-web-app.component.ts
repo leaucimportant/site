@@ -15,7 +15,7 @@ export class SolutionWebAppComponent implements OnInit {
 
   titleCarousel = 'Un backoffice simple et puissant.';
   descriptionCarousel =
-    'Pour nous, l’expérience de vos clients est toute aussi importante que celle de votre équipe. Pilotez l’ensemble des services déployés depuis un outil simple et intuitif.';
+    'L’expérience de vos clients est toute aussi importante que celle de votre équipe. Pilotez l’ensemble des services déployés depuis un outil simple et intuitif.';
   imagesCarousel = [
     {
       src: 'assets/images/contents/solutions/webapp/admin_menu.png',
