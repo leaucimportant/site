@@ -2,17 +2,12 @@
   background: transparent;
   color: var(--bs-white);
   height: 5.75rem;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   left: 0;
   z-index: 1030;
-  .container {
-    @media (max-width: 767.98px) { 
-      padding-left: 0;
-      padding-right: 0;
-    }
-  }
+  transition: top 0.3s;
   &-brand {
     img {
       height: auto;
@@ -187,20 +182,28 @@
         }
       }
     }
-
     .divider {
-      background: linear-gradient(
-        to right,
-        var(--bs-secondary),
-        var(--bs-gray-800),
-        var(--bs-gray-800),
-        var(--bs-secondary)
-      );
-      height: 0.1rem;
-      margin: 1rem 0;
+      padding: 1rem 0;
     }
     .btn {
       width: 100%;
     }
   }
+  @media (max-width: 767.98px) {
+    padding: 0;
+    .container {
+      padding: 0;
+      .navbar-brand,
+      .navbar-toggler {
+        margin: 0 1.2rem;
+      }
+      .navbar-collapse {
+        border-radius: 0 !important;
+      }
+    }
+  }
+}
+
+.blur {
+  backdrop-filter: blur(8px);
 }

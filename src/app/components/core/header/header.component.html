@@ -15,6 +15,8 @@
         aria-controls="navbarNavDropdown"
         aria-expanded="false"
         aria-label="Toggle navigation"
+        id="navbar-toggler"
+        (click)="deactivateScroll()"
       >
         <!-- <span class="navbar-toggler-icon"></span> -->
         <i class="bi bi-list mx-2"></i>
@@ -45,6 +47,7 @@
                       (mouseout)="hoveringIndex = null"
                       data-bs-toggle="collapse"
                       data-bs-target=".navbar-collapse.show"
+                      (click)="deactivateScroll()"
                     >
                       <div class="picture d-flex">
                         <picture>
@@ -129,6 +132,7 @@
                   routerLinkActive="active"
                   data-bs-toggle="collapse"
                   data-bs-target=".navbar-collapse.show"
+                  (click)="deactivateScroll()"
                 >
                   <picture class="picture" *ngIf="useCase.logo">
                     <source [srcset]="useCase.logo" type="image/svg+xml" />
@@ -159,6 +163,7 @@
               data-bs-target=".navbar-collapse.show"
               [routerLink]="routes.company"
               routerLinkActive="active"
+              (click)="deactivateScroll()"
               >Entreprise</a
             >
           </li>
@@ -171,6 +176,7 @@
               class="btn btn-gray-outline"
               href="https://linkedin.com/company/impactiv'/"
               target="_blank"
+              (click)="deactivateScroll()"
             >
               <span class="impactiv-button-regular text-secondary btn-linkedin"
                 >Suivez-nous <i class="bi bi-linkedin icon-linkedin"></i
@@ -186,6 +192,7 @@
               class="btn btn-secondary btn-contact-us-fill"
               data-bs-toggle="collapse"
               data-bs-target=".navbar-collapse.show"
+              (click)="deactivateScroll()"
             >
               <span class="impactiv-button-regular">Demander une démo</span
               ><i

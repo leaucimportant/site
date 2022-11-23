@@ -2,6 +2,7 @@ import { ViewportScroller } from '@angular/common';
 import { Component, OnDestroy } from '@angular/core';
 import { Event, Router, Scroll } from '@angular/router';
 import { filter, Subscription } from 'rxjs';
+import { HeaderService } from './services';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +12,8 @@ import { filter, Subscription } from 'rxjs';
 export class AppComponent implements OnDestroy {
   constructor(
     private router: Router,
-    private viewportScroller: ViewportScroller
+    private viewportScroller: ViewportScroller,
+    private headerService: HeaderService
   ) {
     this.routerEventsSubscription = this.forceScrollOnRouterScrollEvent(
       this.router,
@@ -42,5 +44,9 @@ export class AppComponent implements OnDestroy {
           }
         });
       });
+  }
+
+  deactivateScroll() {
+    this.headerService.deactivateScroll();
   }
 }
