@@ -21,6 +21,10 @@ export class SolutionWebAppComponent implements OnInit {
       src: 'assets/images/contents/solutions/webapp/admin_menu.png',
       alt: 'Dashboard Application Collaborateurs',
     },
+    {
+      src: 'assets/images/contents/solutions/webapp/admin_actu.png',
+      alt: 'Dashboard Application Collaborateurs Actualités',
+    },
   ];
 
   ngOnInit(): void {

@@ -75,7 +75,7 @@ export class ScreenMasonryComponent implements OnInit {
     description:
       'Développez votre activité en proposant à vos clients une expérience immersive.',
     icon: 'assets/images/icons/screen/ux.svg',
-    image: 'assets/images/contents/solutions/screen/defaut.png',
+    image: 'assets/images/contents/solutions/screen/utilisateur.png',
     black: true,
     imagefill: false,
     imageright: false,
@@ -139,7 +139,7 @@ export class ScreenMasonryComponent implements OnInit {
     description:
       'Parce que le contenu est la clé, nos solutions d’affichage s’adaptent à vos besoins et votre stratégie —> des étiquettes connectées aux écrans LEDs XXL',
     icon: 'assets/images/icons/screen/formats.svg',
-    image: 'assets/images/contents/solutions/screen/defaut_carre.png',
+    image: 'assets/images/contents/solutions/screen/format.png',
     black: false,
     imagefill: false,
     imageright: false,
