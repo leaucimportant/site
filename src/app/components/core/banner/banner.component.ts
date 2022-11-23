@@ -1,5 +1,5 @@
 import { DOCUMENT } from '@angular/common';
-import { Component, Input, HostListener, Inject } from '@angular/core';
+import { Component, HostListener, Inject, Input } from '@angular/core';
 import { Config } from 'src/app/services';
 
 @Component({
@@ -19,7 +19,7 @@ export class BannerComponent {
   banner = {
     title: 'Votre expérience commence ici !',
     description:
-      'Pour simplement échanger sur votre projet ou avoir une démonstration de nos solutions, nos équipes se tiennent à votre disposition.',
+      'Vous souhaitez échanger sur votre projet ? Avoir une démonstration de nos solutions ? Nos équipes se tiennent à votre disposition.',
   };
 
   prevPosition = 0;

@@ -38,7 +38,7 @@ export class OtherSolutionsComponent implements OnChanges {
       alt: 'intégration',
       title: 'Développement sur mesure',
       description:
-        'Accélérez votre développement en nous confiant un développement sur-mesure ou en réalisant une intégration ambitieuse.',
+        'Développement sur-mesure ou intégration ambitieuse, nous créons pour vous des outils métier à forte valeur ajoutée.',
       link: `/${this.routes.dsmSolution}`,
 
       id: this.impactivSolutions.dsm,

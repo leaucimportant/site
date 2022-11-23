@@ -6,7 +6,7 @@ gulp.task('default', () =>
     .pipe(imagemin([
       gifsicle({ interlaced: true }),
       mozjpeg({ quality: 80, progressive: true }),
-      optipng({ optimizationLevel: 7 }),
+      optipng({ optimizationLevel: 7, paletteReduction: true, bitDepthReduction: true, colorTypeReduction: true }),
       svgo({
         plugins: [
           {

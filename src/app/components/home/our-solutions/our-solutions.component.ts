@@ -54,7 +54,7 @@ export class OurSolutionsComponent {
     {
       title: 'Développement sur mesure',
       description:
-        'Accélérez votre développement en nous confiant un développement sur-mesure ou en réalisant une intégration ambitieuse.',
+        'Développement sur-mesure ou intégration ambitieuse, nous créons pour vous des outils métier à forte valeur ajoutée.',
       icon: {
         src: 'security.svg',
         alt: 'sécurité',
