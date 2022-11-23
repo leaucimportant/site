@@ -31,7 +31,7 @@ export class ScreenMasonryComponent implements OnInit {
     description:
       'Proposez vos menus, services et/ou produits à vos clients - à chaque produit son utilisation',
     icon: 'assets/images/icons/screen/applications.svg',
-    image: 'assets/images/contents/solutions/screen/defaut_carre.png',
+    image: 'assets/images/contents/solutions/screen/app.png',
     black: true,
     imagefill: false,
     imageright: false,
@@ -41,9 +41,9 @@ export class ScreenMasonryComponent implements OnInit {
   card3 = {
     title: 'Un backoffice simple et performant',
     description:
-      'L’expérience de vos clients est toute aussi importante que celle de votre équipe. Pilotez l’ensemble de votre offre et de vos communications depuis un outil simple, performant et intuitif ',
+      'L’expérience de vos clients est toute aussi importante que celle de votre équipe. Pilotez l’ensemble de votre offre et de vos communications depuis un outil simple.',
     icon: 'assets/images/icons/screen/backoffice.svg',
-    image: 'assets/images/contents/solutions/screen/defaut.png',
+    image: 'assets/images/contents/solutions/screen/back.png',
     black: false,
     imagefill: false,
     imageright: false,
@@ -55,7 +55,7 @@ export class ScreenMasonryComponent implements OnInit {
     description:
       'Notre réseau de diffusion assure fiabilité et haute disponibilité de vos informations ainsi que des mises à jours en temps réel.',
     icon: 'assets/images/icons/screen/donnees.svg',
-    image: 'assets/images/contents/solutions/screen/defaut.png',
+    image: 'assets/images/contents/solutions/screen/temps.png',
     black: true,
     imagefill: false,
     imageright: false,
@@ -87,9 +87,9 @@ export class ScreenMasonryComponent implements OnInit {
     description:
       'Un socle technologique unique suffisamment flexible pour réaliser des intégrations propres à votre métier',
     icon: 'assets/images/icons/screen/flux.svg',
-    image: 'assets/images/contents/solutions/screen/defaut_carre.png',
+    image: 'assets/images/contents/solutions/screen/integrer.png',
     black: false,
-    imagefill: false,
+    imagefill: true,
     imageright: false,
     imagetop: false,
   };
@@ -99,8 +99,8 @@ export class ScreenMasonryComponent implements OnInit {
     description:
       'Bien plus attractif que le papier, poussez vos communications et vos offres en quelques clics',
     icon: 'assets/images/icons/screen/vente.svg',
-    image: 'assets/images/contents/solutions/screen/defaut.png',
-    black: false,
+    image: 'assets/images/contents/solutions/screen/pdv.png',
+    black: true,
     imagefill: false,
     imageright: false,
     imagetop: false,
@@ -115,23 +115,23 @@ export class ScreenMasonryComponent implements OnInit {
   };
 
   card10 = {
+    title: 'Gestion centralisée et/ou locale',
+    description:
+      'Orientées tous clients, nos solutions favorisent aussi bien l’uniformisation centralisée de vos communications que la créativité propre à chaque point de vente.',
+    icon: 'assets/images/icons/screen/gestion.svg',
+    image: 'assets/images/contents/solutions/screen/gestion.png',
+    black: false,
+    imagefill: false,
+    imageright: false,
+    imagetop: false,
+  };
+
+  card11 = {
     title: 'Modernisez votre communication',
     description:
       'Nos solutions d’affichage dynamique permettent de valoriser votre image de marque et votre communication',
     icon: 'assets/images/icons/screen/moderniser.svg',
     black: false,
-  };
-
-  card11 = {
-    title: 'Gestion centralisée et/ou locale',
-    description:
-      'Orientées tous clients, nos solutions favorisent aussi bien l’uniformisation centralisée de vos communications que la créativité propre à chaque point de vente.',
-    icon: 'assets/images/icons/screen/gestion.svg',
-    image: 'assets/images/contents/solutions/screen/defaut.png',
-    black: true,
-    imagefill: false,
-    imageright: false,
-    imagetop: false,
   };
 
   card12 = {
