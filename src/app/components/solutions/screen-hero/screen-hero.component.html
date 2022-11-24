@@ -15,30 +15,27 @@
           class="btn btn-secondary btn-discover-fill"
           (click)="scrollTo('MasonryScreen')"
         >
-          <span class="impactiv-button-regular"
-            >Découvrir la solution</span
-          >
-          <i
-            class="bi bi-arrow-down-circle fa-xs"
-            aria-hidden="true"
-          ></i>
+          <span class="impactiv-button-regular">Découvrir la solution</span>
+          <i class="bi bi-arrow-down-circle fa-xs" aria-hidden="true"></i>
         </a>
         <a
           type="button"
           class="ms-0 ms-lg-2 mt-3 mt-lg-0 btn btn-download-outline"
+          placement="bottom"
+          ngbTooltip="Bientôt disponible"
         >
           <span class="impactiv-button-regular text-secondary"
             >Télécharger la fiche produit</span
           >
-          <i
-            class="bi bi-download fa-xs"
-            aria-hidden="true"
-          ></i>
+          <i class="bi bi-download fa-xs" aria-hidden="true"></i>
         </a>
       </div>
     </div>
     <div class="hero__container--image">
-      <img class="hero__image" src="assets/images/bg/no_image.svg" />
+      <video loop autoplay class="img-fluid hero__video">
+        <source src="assets/images/contents/solutions/screen/hero.mp4" />
+      </video>
     </div>
+    <div class="hero__icons"></div>
   </div>
 </div>
