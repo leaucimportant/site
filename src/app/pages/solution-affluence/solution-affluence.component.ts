@@ -19,8 +19,20 @@ export class SolutionAffluenceComponent implements OnInit {
 
   imagesCarousel = [
     {
-      src: 'assets/images/contents/solutions/affluence/app_affluence.png',
-      alt: 'Dashboard Application Collaborateurs',
+      src: 'assets/images/contents/solutions/affluence/building.png',
+      alt: 'Affluence - Building',
+    },
+    {
+      src: 'assets/images/contents/solutions/affluence/cafet.png',
+      alt: 'Affluence - Cafeteria',
+    },
+    {
+      src: 'assets/images/contents/solutions/affluence/office.png',
+      alt: 'Affluence - Office',
+    },
+    {
+      src: 'assets/images/contents/solutions/affluence/shop.png',
+      alt: 'Affluence - Shop',
     },
   ];
 
