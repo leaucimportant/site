@@ -12,7 +12,8 @@
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      animation: animatedBackground 400ms ease-in-out forwards;
+      animation: animatedBackground 0.3s ease-in forwards;
+      cursor: default;
       .other-solutions {
         &-card__content {
           color: white;
@@ -56,7 +57,7 @@
   }
   @media (max-width: 991.98px) {
     &-card {
-      height: 330px;
+      height: 100%;
     }
   }
   @media (max-width: 575.98px) {
@@ -64,6 +65,9 @@
     &-container {
       margin-bottom: 3rem;
       width: auto;
+    }
+    &-card__content {
+      margin-top: 0.7rem;
     }
   }
 }
@@ -95,5 +99,15 @@
         var(--bs-blue-200)
       ),
       url("../../../../assets/images/bg/other_screen.png") !important;
+  }
+}
+.card-applicationCollaborateur {
+  &:hover {
+    background-image: linear-gradient(
+        0deg,
+        var(--bs-blue-200),
+        var(--bs-blue-200)
+      ),
+      url("../../../../assets/images/bg/other_app.png") !important;
   }
 }
