@@ -10,8 +10,6 @@ export class ContactService {
   constructor(private http: HttpClient) {}
 
   sendContactForm(contactForm: ContactForm) {
-    return this.http.post<{
-      statusCode: number;
-    }>(environment.contactUri, contactForm);
+    return this.http.post(environment.contactUri, contactForm);
   }
 }

@@ -253,28 +253,25 @@
 >
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content p-3 rounded-2 border-0">
-      <ng-container *ngIf="response$">
-        <div
-          class="modal-body"
-          *ngIf="(response$ | async)?.statusCode as statusCode; else loading"
-        >
-          <div class="d-flex flex-column">
-            <img
-              [src]="statusCode === 201 ? successGif : errorGif"
-              [alt]="statusCode === 201 ? 'Succès' : 'Erreur'"
-            />
-            <span class="py-4 text-center"> {{ message(statusCode) }}</span>
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-              (click)="onCloseModal(statusCode)"
-            >
-              {{ statusCode === 201 ? "Continuer" : "Essayer à nouveau" }}
-            </button>
-          </div>
+      <div class="modal-body" *ngIf="!isLoading; else loading">
+        <div class="d-flex flex-column">
+          <img
+            [src]="success ? successGif : errorGif"
+            [alt]="success ? 'Succès' : 'Erreur'"
+          />
+          <span class="py-4 text-center">
+            {{ success ? "Votre message a bien été envoyé" : errorMsg }}</span
+          >
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+            (click)="onCloseModal(success)"
+          >
+            {{ success ? "Continuer" : "Essayer à nouveau" }}
+          </button>
         </div>
-      </ng-container>
+      </div>
     </div>
   </div>
 </div>
