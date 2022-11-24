@@ -54,7 +54,10 @@
           <a [routerLink]="routes.contact" routerLinkActive="active">Contact</a>
         </li>
         <li class="mb-2">
-          <a [routerLink]="routes.contact" routerLinkActive="active"
+          <a
+            [routerLink]="routes.contact"
+            routerLinkActive="active"
+            [state]="{ askJoinUs: true }"
             >Nous rejoindre</a
           >
         </li>

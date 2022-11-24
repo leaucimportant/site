@@ -8,7 +8,6 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./not-found.component.scss'],
 })
 export class NotFoundComponent implements OnInit {
-  readonly routes = Config.impactivRoutes;
   constructor(
     private seoService: SeoService,
     private matomoService: MatomoService

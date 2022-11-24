@@ -205,7 +205,12 @@
         <div
           class="d-grid gap-2 contact-container__form--single-row contact-container__form--button"
         >
-          <button type="submit" class="btn btn-secondary">
+          <button
+            type="submit"
+            class="btn btn-secondary"
+            data-bs-toggle="modal"
+            data-bs-target="#staticBackdrop"
+          >
             <span class="align-middle impactiv-button-regular"
               >Envoyer le message</span
             ><i
@@ -236,3 +241,46 @@
     </section>
   </div>
 </div>
+
+<div
+  class="modal fade"
+  id="staticBackdrop"
+  data-bs-backdrop="static"
+  data-bs-keyboard="false"
+  tabindex="-1"
+  aria-labelledby="staticBackdropLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content p-3 rounded-2 border-0">
+      <ng-container *ngIf="response$">
+        <div
+          class="modal-body"
+          *ngIf="(response$ | async)?.statusCode as statusCode; else loading"
+        >
+          <div class="d-flex flex-column">
+            <img
+              [src]="statusCode === 201 ? successGif : errorGif"
+              [alt]="statusCode === 201 ? 'Succès' : 'Erreur'"
+            />
+            <span class="py-4 text-center"> {{ message(statusCode) }}</span>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+              (click)="onCloseModal(statusCode)"
+            >
+              {{ statusCode === 201 ? "Continuer" : "Essayer à nouveau" }}
+            </button>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>
+
+<ng-template #loading>
+  <div class="d-flex flex-column">
+    <img src="assets/images/forms/loading.gif" alt="Chargement" />
+  </div>
+</ng-template>
