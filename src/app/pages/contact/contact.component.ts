@@ -1,4 +1,4 @@
-import { HttpErrorResponse, HttpStatusCode } from '@angular/common/http';
+import { HttpStatusCode } from '@angular/common/http';
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import {
   AbstractControl,
@@ -9,7 +9,7 @@ import {
 } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { ReCaptchaV3Service } from 'ng-recaptcha';
-import { catchError, first, map, of, switchMap } from 'rxjs';
+import { first, map, Observable, switchMap } from 'rxjs';
 import {
   Config,
   ContactService,
@@ -39,7 +39,6 @@ export class ContactComponent implements OnInit {
   phoneStart = '5333';
   phoneEnd = '0360';
   errorMsg?: string;
-
   form: FormGroup = new FormGroup({
     name: new FormControl(''),
     email: new FormControl(''),
@@ -50,22 +49,19 @@ export class ContactComponent implements OnInit {
   });
 
   submitted = false;
-  errorString = (error: HttpErrorResponse) => {
-    if (error?.status) {
-      if (error.status === HttpStatusCode.TooManyRequests)
-        return "Trop d'essais. Veuillez réessayer plus tard";
-      if (
-        error.status === HttpStatusCode.InternalServerError ||
-        error.status === HttpStatusCode.BadGateway ||
-        error.status === HttpStatusCode.ServiceUnavailable ||
-        error.status === HttpStatusCode.GatewayTimeout
-      )
-        return 'Erreur Serveur. Veuillez réessayer plus tard';
-    }
-    if (error?.message) {
-      return error.message;
-    }
-    return JSON.stringify(error);
+  response$?: Observable<{
+    statusCode: number;
+  }>;
+
+  successGif = 'assets/images/forms/success.gif';
+  errorGif = 'assets/images/forms/error.gif';
+
+  message = (status: number) => {
+    if (status === HttpStatusCode.Created)
+      return 'Votre message a bien été envoyé';
+    if (status === HttpStatusCode.TooManyRequests)
+      return "Trop d'essais. Veuillez réessayer plus tard";
+    return 'Erreur Serveur. Veuillez réessayer plus tard';
   };
 
   ngOnInit(): void {
@@ -80,9 +76,10 @@ export class ContactComponent implements OnInit {
       .subscribe((data) => {
         if (data.askDemo)
           this.form.controls['subject'].patchValue('Demander une démo');
+        if (data.askJoinUs)
+          this.form.controls['subject'].patchValue('Postuler');
       });
   }
-
   private initializeForm(): void {
     this.form = this.formBuilder.group({
       name: ['', [Validators.required, Validators.minLength(2)]],
@@ -134,48 +131,19 @@ export class ContactComponent implements OnInit {
   submit() {
     this.submitted = true;
     if (this.validateForm()) {
-      this.recaptchaV3Service
-        .execute('contact')
-        .pipe(
-          switchMap((token) => {
-            return this.contactService.sendContactForm({
-              ...this.form.getRawValue(),
-              token,
-            });
-          }),
-          catchError((error) => {
-            this.errorMsg = this.errorString(error);
-            return of({ message: this.errorMsg, hasError: true });
+      this.response$ = this.recaptchaV3Service.execute('contact').pipe(
+        switchMap((token) =>
+          this.contactService.sendContactForm({
+            ...this.form.getRawValue(),
+            token,
           })
         )
-        .subscribe({
-          next: this.submitSuccess,
-          error: this.submitErrorToken,
-          complete: this.submitCompleted,
-        });
+      );
     }
   }
 
-  private submitSuccess = (result?: {
-    message?: string;
-    hasError?: boolean;
-  }) => {
-    console.log(result?.hasError);
-
-    setTimeout(() => {
-      this.window.alert(result?.message || 'Le mail est parti');
-    });
-  };
-
-  private submitErrorToken = (error: HttpErrorResponse) => {
-    this.errorMsg = this.errorString(error);
-    console.log('here');
-    setTimeout(() => {
-      this.window.alert(this.errorMsg);
-    });
-  };
-
-  private submitCompleted = () => {
-    this.errorMsg = undefined;
-  };
+  onCloseModal(code: number) {
+    if (code === HttpStatusCode.Created) this.form.reset();
+    this.response$ = undefined;
+  }
 }

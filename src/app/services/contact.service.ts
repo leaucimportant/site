@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { lastValueFrom } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { ContactForm } from '../interfaces';
 
@@ -10,14 +9,9 @@ import { ContactForm } from '../interfaces';
 export class ContactService {
   constructor(private http: HttpClient) {}
 
-  async sendContactForm(
-    contactForm: ContactForm
-  ): Promise<{ statusCode: number; message: string; error: string }> {
-    return await lastValueFrom(
-      this.http.post<{ statusCode: number; message: string; error: string }>(
-        environment.contactUri,
-        contactForm
-      )
-    );
+  sendContactForm(contactForm: ContactForm) {
+    return this.http.post<{
+      statusCode: number;
+    }>(environment.contactUri, contactForm);
   }
 }
