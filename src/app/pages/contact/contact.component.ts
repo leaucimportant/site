@@ -1,5 +1,10 @@
 import { HttpStatusCode } from '@angular/common/http';
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  ChangeDetectorRef,
+  Component,
+  OnInit,
+} from '@angular/core';
 import {
   AbstractControl,
   FormBuilder,
@@ -9,7 +14,7 @@ import {
 } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { ReCaptchaV3Service } from 'ng-recaptcha';
-import { first, map, Observable, switchMap } from 'rxjs';
+import { first, map, switchMap } from 'rxjs';
 import {
   Config,
   ContactService,
@@ -31,7 +36,8 @@ export class ContactComponent implements OnInit {
     private route: ActivatedRoute,
     private window: Window,
     private recaptchaV3Service: ReCaptchaV3Service,
-    private contactService: ContactService
+    private contactService: ContactService,
+    private ref: ChangeDetectorRef
   ) {}
 
   phone = '';
@@ -49,19 +55,15 @@ export class ContactComponent implements OnInit {
   });
 
   submitted = false;
-  response$?: Observable<{
-    statusCode: number;
-  }>;
-
+  success = false;
+  isLoading = false;
   successGif = 'assets/images/forms/success.gif';
   errorGif = 'assets/images/forms/error.gif';
 
-  message = (status: number) => {
-    if (status === HttpStatusCode.Created)
-      return 'Votre message a bien été envoyé';
-    if (status === HttpStatusCode.TooManyRequests)
-      return "Trop d'essais. Veuillez réessayer plus tard";
-    return 'Erreur Serveur. Veuillez réessayer plus tard';
+  errorMessage = (status: number) => {
+    return status === HttpStatusCode.TooManyRequests
+      ? "Trop d'essais. Veuillez réessayer plus tard"
+      : 'Erreur Serveur. Veuillez réessayer plus tard';
   };
 
   ngOnInit(): void {
@@ -131,19 +133,43 @@ export class ContactComponent implements OnInit {
   submit() {
     this.submitted = true;
     if (this.validateForm()) {
-      this.response$ = this.recaptchaV3Service.execute('contact').pipe(
-        switchMap((token) =>
-          this.contactService.sendContactForm({
-            ...this.form.getRawValue(),
-            token,
-          })
+      this.isLoading = true;
+      this.recaptchaV3Service
+        .execute('contact')
+        .pipe(
+          switchMap((token) =>
+            this.contactService.sendContactForm({
+              ...this.form.getRawValue(),
+              token,
+            })
+          )
         )
-      );
+        .subscribe({
+          next: this.submitSuccess,
+          error: this.submitError,
+        });
     }
   }
 
-  onCloseModal(code: number) {
-    if (code === HttpStatusCode.Created) this.form.reset();
-    this.response$ = undefined;
+  private submitSuccess = () => {
+    this.success = true;
+    this.isLoading = false;
+    this.ref.detectChanges();
+  };
+
+  private submitError = (response: any) => {
+    console.log(response);
+    this.errorMsg = response.error.statusCode
+      ? this.errorMessage(response.error.statusCode)
+      : JSON.stringify(response);
+    this.success = false;
+    this.isLoading = false;
+    this.ref.detectChanges();
+  };
+
+  onCloseModal(success: boolean) {
+    if (success) this.form.reset();
+    this.success = false;
+    this.errorMsg = undefined;
   }
 }
