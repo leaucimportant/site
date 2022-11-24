@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgxGlideModule } from 'ngx-glide';
 
-const libsImportsAndExports = [NgxGlideModule, RouterModule];
+const libsImportsAndExports = [NgxGlideModule, RouterModule, NgbTooltipModule];
 
 @NgModule({
   declarations: [],

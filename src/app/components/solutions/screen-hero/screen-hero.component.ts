@@ -1,11 +1,11 @@
 import { DOCUMENT } from '@angular/common';
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { Config } from 'src/app/services';
 
 @Component({
   selector: 'impactiv-screen-hero',
   templateUrl: './screen-hero.component.html',
-  styleUrls: ['./screen-hero.component.scss']
+  styleUrls: ['./screen-hero.component.scss'],
 })
 export class ScreenHeroComponent {
   readonly routes = Config.impactivRoutes;
