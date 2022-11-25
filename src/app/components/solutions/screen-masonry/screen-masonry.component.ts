@@ -33,7 +33,7 @@ export class ScreenMasonryComponent implements OnInit {
     icon: 'assets/images/icons/screen/applications.svg',
     image: 'assets/images/contents/solutions/screen/app.png',
     black: true,
-    imagefill: false,
+    imagefill: true,
     imageright: false,
     imagetop: false,
   };
@@ -45,7 +45,7 @@ export class ScreenMasonryComponent implements OnInit {
     icon: 'assets/images/icons/screen/backoffice.svg',
     image: 'assets/images/contents/solutions/screen/back.png',
     black: false,
-    imagefill: false,
+    imagefill: true,
     imageright: false,
     imagetop: false,
   };
@@ -121,7 +121,7 @@ export class ScreenMasonryComponent implements OnInit {
     icon: 'assets/images/icons/screen/gestion.svg',
     image: 'assets/images/contents/solutions/screen/gestion.png',
     black: false,
-    imagefill: false,
+    imagefill: true,
     imageright: false,
     imagetop: false,
   };
