@@ -30,7 +30,7 @@ export class HeaderService {
       } else {
         this.body.style.overflow = 'auto';
         overlay.style.display = 'none';
-        navbar.style.backgroundColor = 'unset';
+        navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.8)';
       }
     }
   }

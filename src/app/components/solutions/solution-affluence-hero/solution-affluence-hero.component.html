@@ -12,25 +12,26 @@
       <div>
         <a
           class="btn btn-secondary btn-contact-us-fill"
-          [routerLink]="['/', routes.contact]"
+          (click)="scrollTo('SolutionAffluenceGrid')"
         >
           <span class="align-middle impactiv-button-regular"
-            >Nous contacter</span
+            >Découvrir la solution</span
           ><i
-            class="hero__arrow bi bi-arrow-right-short fs-5 align-middle"
+            class="hero__arrow bi bi-arrow-down-circle ms-2 fs-5 align-middle"
             aria-hidden="true"
           ></i>
         </a>
         <a
           type="button"
-          class="ms-0 ms-lg-2 mt-3 mt-lg-0 btn btn-gray-outline"
-          (click)="scrollTo('SolutionAffluenceGrid')"
+          class="ms-0 ms-lg-2 mt-3 mt-lg-0 btn btn-download-outline"
+          href="assets/pdfs/affluence.pdf"
+          download="Impactiv - Affluence.pdf"
         >
           <span class="align-middle impactiv-button-regular text-secondary"
-            >Découvrir la solution</span
+            >Télécharger la fiche produit</span
           >
           <i
-            class="hero__arrow bi bi-arrow-right-short fs-5 align-middle"
+            class="hero__arrow bi bi-download ms-2 fs-5 align-middle"
             aria-hidden="true"
           ></i>
         </a>

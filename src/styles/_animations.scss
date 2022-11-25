@@ -44,3 +44,17 @@
     background-size: 120% 120%;
   }
 }
+
+@keyframes slide-bottom {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(0, 5px);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
