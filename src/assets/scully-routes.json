@@ -1,13 +1,1 @@
-[
-  { "route": "/" },
-  { "route": "/contact" },
-  { "route": "/entreprise" },
-  { "route": "/solutions/application-collaborateurs" },
-  { "route": "/solutions/developpement-sur-mesure" },
-  { "route": "/solutions/affluence" },
-  { "route": "/solutions/affichage-dynamique" },
-  { "route": "/cas-clients/sodexo" },
-  { "route": "/cas-clients/la-mira" },
-  { "route": "/mentions-legales" },
-  { "route": "/non-trouvee" }
-]
+[{"route":"/"},{"route":"/contact"},{"route":"/entreprise"},{"route":"/solutions/application-collaborateurs"},{"route":"/solutions/developpement-sur-mesure"},{"route":"/solutions/affluence"},{"route":"/solutions/affichage-dynamique"},{"route":"/cas-clients/sodexo"},{"route":"/cas-clients/la-mira"},{"route":"/mentions-legales"},{"route":"/non-trouvee"}]

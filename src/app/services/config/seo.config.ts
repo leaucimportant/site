@@ -7,7 +7,10 @@ export const seoMeta: Record<ImpactivRoutesEnum, Required<OgMeta> | null> = {
   home: {
     title: 'Partenaire de votre digitalisation',
     type: 'website',
-    image: Location.joinWithSlash(environment.siteUri, 'assets/seo/home.png'),
+    image: Location.joinWithSlash(
+      environment.siteUri,
+      'assets/images/seo/home.png'
+    ),
     url: environment.siteUri,
     description:
       'Découvrez nos solutions digitales 360°. Pour une digitalisation maîtrisée, orientée expérience utilisateur et excellence opérationnelle.',
@@ -15,7 +18,10 @@ export const seoMeta: Record<ImpactivRoutesEnum, Required<OgMeta> | null> = {
   screenSolution: {
     title: 'Un monde de solutions audiovisuelles et digitales !',
     type: 'website',
-    image: Location.joinWithSlash(environment.siteUri, 'assets/seo/screen.png'),
+    image: Location.joinWithSlash(
+      environment.siteUri,
+      'assets/images/seo/screen.png'
+    ),
     url: Location.joinWithSlash(
       environment.siteUri,
       impactivRoutes.screenSolution
@@ -26,7 +32,10 @@ export const seoMeta: Record<ImpactivRoutesEnum, Required<OgMeta> | null> = {
   webAppSolution: {
     title: 'Plongez dans un écosystème complet et performant',
     type: 'website',
-    image: Location.joinWithSlash(environment.siteUri, 'assets/seo/webapp.png'),
+    image: Location.joinWithSlash(
+      environment.siteUri,
+      'assets/images/seo/webapp.png'
+    ),
     url: Location.joinWithSlash(
       environment.siteUri,
       impactivRoutes.webAppSolution
@@ -40,7 +49,7 @@ export const seoMeta: Record<ImpactivRoutesEnum, Required<OgMeta> | null> = {
     type: 'website',
     image: Location.joinWithSlash(
       environment.siteUri,
-      'assets/seo/affluence.png'
+      'assets/images/seo/affluence.png'
     ),
     url: Location.joinWithSlash(
       environment.siteUri,
@@ -53,7 +62,10 @@ export const seoMeta: Record<ImpactivRoutesEnum, Required<OgMeta> | null> = {
     title:
       'Votre partenaire privilégié au service de votre transformation digitale !',
     type: 'website',
-    image: Location.joinWithSlash(environment.siteUri, 'assets/seo/dsm.png'),
+    image: Location.joinWithSlash(
+      environment.siteUri,
+      'assets/images/seo/dsm.png'
+    ),
     url: Location.joinWithSlash(
       environment.siteUri,
       impactivRoutes.dsmSolution
@@ -66,7 +78,7 @@ export const seoMeta: Record<ImpactivRoutesEnum, Required<OgMeta> | null> = {
     type: 'website',
     image: Location.joinWithSlash(
       environment.siteUri,
-      'assets/seo/company.png'
+      'assets/images/seo/company.png'
     ),
     url: Location.joinWithSlash(environment.siteUri, impactivRoutes.company),
     description:
@@ -77,7 +89,7 @@ export const seoMeta: Record<ImpactivRoutesEnum, Required<OgMeta> | null> = {
     type: 'website',
     image: Location.joinWithSlash(
       environment.siteUri,
-      'assets/seo/contact.png'
+      'assets/images/seo/contact.png'
     ),
     url: Location.joinWithSlash(environment.siteUri, impactivRoutes.contact),
     description:
