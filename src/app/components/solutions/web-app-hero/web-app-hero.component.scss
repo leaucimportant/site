@@ -17,21 +17,16 @@
   }
   &__button {
     position: relative;
-    &:hover {
-      .bi::before {
-        animation: slide-right 0.8s ease-in-out infinite;
-      }
-    }
     &-light {
       border: 1px solid var(--bs-gray-100);
       border-radius: var(--bs-border-radius-sm);
-      .bi-arrow-right-short {
+      .bi-download {
         color: var(--bs-gray-200);
       }
       &:hover {
         background-color: var(--bs-gray-100);
         transition: background-color 0.2s ease;
-        .bi-arrow-right-short {
+        .bi-download {
           color: var(--bs-gray-1000);
           transition: color 0.2s ease;
         }
@@ -42,6 +37,9 @@
       &:hover {
         background-color: var(--bs-gray-900);
         transition: background-color 0.2s ease;
+        .bi::before {
+          animation: slide-bottom 0.8s ease-in-out infinite;
+        }
       }
     }
   }

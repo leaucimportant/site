@@ -113,3 +113,6 @@
   border: none;
   height: 3.5rem;
 }
+.btn-download-outline:hover .bi::before {
+  animation: slide-right 0.8s ease-in-out infinite;
+}

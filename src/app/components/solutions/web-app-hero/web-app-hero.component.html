@@ -14,25 +14,26 @@
       <div>
         <a
           class="btn btn-secondary hero__button hero__button-dark"
-          [routerLink]="['/', routes.contact]"
+          (click)="scrollTo('ourSolutions')"
         >
           <span class="align-middle impactiv-button-regular"
-            >Nous contacter</span
+            >Découvrir la solution</span
           ><i
-            class="hero__arrow bi bi-arrow-right-short fs-5 align-middle"
+            class="hero__arrow bi bi-arrow-down-circle ms-2 fs-5 align-middle"
             aria-hidden="true"
           ></i>
         </a>
         <a
           type="button"
-          class="ms-0 ms-lg-2 mt-3 mt-lg-0 btn btn-outline hero__button hero__button-light"
-          (click)="scrollTo('ourSolutions')"
+          class="ms-0 ms-lg-2 mt-3 mt-lg-0 btn btn-download-outline hero__button hero__button-light"
+          href="assets/pdfs/web-app.pdf"
+          download="Impactiv - Web App.pdf"
         >
           <span class="align-middle impactiv-button-regular text-secondary"
-            >Découvrir la solution</span
+            >Télécharger la fiche produit</span
           >
           <i
-            class="hero__arrow bi bi-arrow-right-short fs-5 align-middle"
+            class="hero__arrow bi bi-download ms-2 fs-5 align-middle"
             aria-hidden="true"
           ></i>
         </a>

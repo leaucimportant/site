@@ -22,8 +22,11 @@
   &:hover {
     background-color: var(--bs-gray-900);
     transition: background-color 0.2s ease;
-    .bi::before {
+    .bi-arrow-right-short::before {
       animation: slide-right 0.8s ease-in-out infinite;
+    }
+    .bi-arrow-down-circle::before {
+      animation: slide-bottom 0.8s ease-in-out infinite;
     }
   }
 }
@@ -35,7 +38,8 @@
   .bi::before {
     margin-left: 0.2rem;
   }
-  .bi-arrow-right-short {
+  .bi-arrow-right-short,
+  .bi-download {
     color: var(--bs-gray-200);
   }
   &:hover {
@@ -46,7 +50,7 @@
       color: var(--bs-gray-1000);
       transition: color 0.2s ease;
     }
-    .bi::before {
+    .bi-arrow-right-short::before {
       animation: slide-right 0.8s ease-in-out infinite;
     }
   }
@@ -99,6 +103,7 @@
 .btn-download-outline {
   position: relative;
   border: 1px solid var(--bs-gray-100);
+  background-color: var(--bs-blue-003);
   border-radius: var(--bs-border-radius-sm);
   .bi::before {
     margin-left: 0.5rem;
