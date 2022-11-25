@@ -127,6 +127,9 @@
     }
     .nav-link {
       color: var(--bs-white);
+      &:hover {
+        background-color: var(--bs-gray-900);
+      }
     }
     .btn-linkedin {
       color: var(--bs-white) !important;
@@ -164,8 +167,8 @@
       }
 
       .dropdown-item.active {
-        background-color: var(--bs-gray-100);
-        color: var(--bs-body-color);
+        background-color: var(--bs-gray-900);
+        color: var(--bs-white);
       }
     }
     .solutions {
@@ -187,6 +190,11 @@
     }
     .btn {
       width: 100%;
+    }
+
+    a[aria-expanded="true"] {
+      background-color: var(--bs-gray-900);
+      color: var(--bs-white);
     }
   }
   @media (max-width: 767.98px) {
