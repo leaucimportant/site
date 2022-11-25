@@ -131,6 +131,10 @@ export class SolutionDSMComponent implements OnInit {
       src: 'assets/images/contents/solutions/dsm/cdv.png',
       alt: 'Carte des vins',
     },
+    {
+      src: 'assets/images/contents/solutions/dsm/aspp.png',
+      alt: 'ASPP',
+    },
   ];
 
   ngOnInit(): void {
