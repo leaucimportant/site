@@ -35,22 +35,22 @@ export class HeaderComponent implements OnInit, OnDestroy {
     {
       title: 'Application collaborateurs',
       description: 'Créer des applications dédiées pour le web.',
-      icon: 'affichage.svg',
-      alt: 'affichage',
+      icon: 'app.svg',
+      alt: 'app',
       route: impactivRoutes.webAppSolution,
     },
     {
       title: 'Mesure d’affluence',
       description: 'Mesurer l’affluence en temps-réel.',
-      icon: 'affluence.svg',
+      icon: 'affluence.png',
       alt: 'affluence',
       route: impactivRoutes.affluenceSolution,
     },
     {
       title: 'Développement sur-mesure',
       description: 'Créer des outils métier à forte valeur ajoutée.',
-      icon: 'security.svg',
-      alt: 'sécurité',
+      icon: 'integration.svg',
+      alt: 'integration',
       route: impactivRoutes.dsmSolution,
     },
   ];

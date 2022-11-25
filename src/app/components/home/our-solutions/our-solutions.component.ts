@@ -28,7 +28,7 @@ export class OurSolutionsComponent {
       description:
         'De la Web App aux applications natives & PWA. La solution tout-en-un au service de vos collaborateurs. Une solution digitale déployée à votre identité intégrant l’ensemble des services mis à disposition de vos clients/consommateurs !',
       icon: {
-        src: 'affichage.svg',
+        src: 'app.svg',
         alt: 'affichage',
       },
       image: {
@@ -42,7 +42,7 @@ export class OurSolutionsComponent {
       description:
         'Mesurez et analysez l’affluence dans votre établissement, améliorez la fluidité et l’expérience de vos clients !  En retail ou restauration, un outil au service de vos décisions stratégiques.',
       icon: {
-        src: 'affluence.svg',
+        src: 'affluence.png',
         alt: 'affluence',
       },
       image: {
@@ -56,8 +56,8 @@ export class OurSolutionsComponent {
       description:
         'Développement sur-mesure ou intégration ambitieuse, nous créons pour vous des outils métier à forte valeur ajoutée.',
       icon: {
-        src: 'security.svg',
-        alt: 'sécurité',
+        src: 'integration.svg',
+        alt: 'integration',
       },
       image: {
         src: 'integration.png',
