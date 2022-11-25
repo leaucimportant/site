@@ -25,12 +25,9 @@
     }
     &-light {
       border: 1px solid var(--bs-gray-100);
+      background-color: var(--bs-gray-100);
       border-radius: var(--bs-border-radius-sm);
-      .bi-arrow-right-short {
-        color: var(--bs-gray-200);
-      }
       &:hover {
-        background-color: var(--bs-gray-100);
         transition: background-color 0.2s ease;
         .bi-arrow-right-short {
           color: var(--bs-gray-1000);

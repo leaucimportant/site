@@ -1,5 +1,4 @@
 .skills-container {
-  
   &__title,
   &__carousel {
     padding-bottom: 2rem;
@@ -46,10 +45,6 @@
 }
 
 @media (max-width: 1199.98px) {
-  .skills-container {
-    
-  }
-
   .skill {
     padding: 1rem;
     flex-wrap: wrap;
