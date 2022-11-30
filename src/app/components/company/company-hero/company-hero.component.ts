@@ -70,5 +70,21 @@ export class CompanyHeroComponent {
       url: 'assets/images/contents/company/william.png',
       alt: 'William',
     },
+    {
+      url: 'assets/images/contents/company/albert.png',
+      alt: 'Albert',
+    },
+    {
+      url: 'assets/images/contents/company/julie.png',
+      alt: 'Julie',
+    },
+    {
+      url: 'assets/images/contents/company/wouf.png',
+      alt: 'Wouf',
+    },
+    {
+      url: 'assets/images/contents/company/xavier.png',
+      alt: 'Xavier',
+    },
   ];
 }
