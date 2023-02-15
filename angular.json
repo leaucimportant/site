@@ -46,6 +46,10 @@
                   "maximumError": "8kb"
                 }
               ],
+              "index": {
+                "input": "src/environments/index.prod.html",
+                "output": "index.html"
+              },
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
