@@ -1,5 +1,5 @@
 import { HttpClientModule } from '@angular/common/http';
-import { NgModule } from '@angular/core';
+import { APP_INITIALIZER, LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
@@ -9,7 +9,7 @@ import {
   RECAPTCHA_LANGUAGE,
   RECAPTCHA_V3_SITE_KEY,
 } from 'ng-recaptcha';
-import { environment } from 'src/environments/environment';
+import { environment, loadLocalTranslations } from 'src/environments';
 import { AppComponent } from './app.component';
 import { PagesModule } from './pages/pages.module';
 @NgModule({
@@ -31,6 +31,14 @@ import { PagesModule } from './pages/pages.module';
       useValue: environment.recaptchaSiteKey,
     },
     { provide: RECAPTCHA_LANGUAGE, useValue: 'fr' },
+    {
+      provide: APP_INITIALIZER,
+      useFactory: () => () => {
+        loadLocalTranslations();
+      },
+      multi: true,
+    },
+    { provide: LOCALE_ID, useValue: 'fr-FR' },
   ],
   bootstrap: [AppComponent],
 })
