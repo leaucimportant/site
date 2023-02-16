@@ -78,4 +78,8 @@ export const impactivFr = {
   'LEGAL-NOTICE': 'Mentions Légales',
   'REALISED-WITH': 'Réalisé avec',
   'REALISED-BY': 'par notre équipe.',
+  'SCREEN-HERO-TITLE': 'Un monde de solutions audiovisuelles et digitales !',
+  'SCREEN-HERO-DESCRIPTION':
+    " Expert, intégrateur de solutions d'affichage dynamique tous supports, nous vous accompagnons de A à Z ! Communiquez et informez efficacement en temps réel. De l'étiquette connectée aux murs LEDs XXL.",
+  'DOWNLOAD-PDF': 'Télécharger la fiche produit',
 };
