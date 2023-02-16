@@ -43,4 +43,12 @@ export const impactivFr = {
     'Développement sur-mesure ou intégration ambitieuse, nous créons pour vous des outils métier à forte valeur ajoutée.',
   'USE-CASE-RESUME-TITLE': 'Découvrez nos derniers cas client.',
   'USE-CASE-RESUME-READ': 'Lire le cas client',
+  'NUMBERS-DEPLOYMENTS': 'Déploiements en Europe',
+  'NUMBERS-EXPERIENCE': "D'expérience",
+  'NUMBERS-DEPLOYED-SCREENS': 'Écrans déployés',
+  'NUMBERS-MILLION': 'Million',
+  'NUMBERS-MILLIONS': 'Millions',
+  'NUMBERS-YEARS': 'ans',
+  'NUMBERS-TOTAL-CODE': 'De lignes de code',
+  'NUMBERS-CODE': 'Soumissions de code sur les 3 derniers mois',
 };
