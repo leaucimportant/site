@@ -52,7 +52,6 @@ export const impactivFr = {
   'NUMBERS-TOTAL-CODE': 'De lignes de code',
   'NUMBERS-CODE': 'Soumissions de code sur les 3 derniers mois',
   'NUMBERS-USAGE': 'De personnes utilisent nos solutions au quotidien !',
-
   'OUR-SKILLS-TITLE': 'Une équipe dédiée à chacun de vos besoins.',
   'OUR-SKILLS-UX': "La conception de l'expérience utilisateur.",
   'OUR-SKILLS-UX-DESCRIPTION':
@@ -69,4 +68,8 @@ export const impactivFr = {
   'OUR-SKILLS-FOLLOW-UP': 'Un suivi à chaque étape de votre projet.',
   'OUR-SKILLS-FOLLOW-UP-DESCRIPTION':
     "En intégrant l'ensemble de la valeur de votre projet en interne, nous vous accompagnons sur toute la durée de votre projet, de la co-création de votre cahier des charges au déploiement et au-delà.",
+  'BANNER-TITLE': 'Votre expérience commence ici !',
+  'BANNER-DESCRIPTION':
+    'Vous souhaitez échanger sur votre projet ? Avoir une démonstration de nos solutions ? Nos équipes se tiennent à votre disposition.',
+  'BANNER-TALK-EXPERT': 'Parler à un expert',
 };

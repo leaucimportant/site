@@ -1,14 +1,26 @@
 <div class="container container-impactiv">
   <div class="banner" style="min-height: 392px">
     <div class="banner__text">
-      <h1 class="impactiv-display-small mb-3">{{ banner.title }}</h1>
-      <p class="impactiv-body-regular">{{ banner.description }}</p>
+      <h1
+        class="impactiv-display-small mb-3"
+        i18n="Text|banner title@@BANNER-TITLE"
+      >
+        BANNER-TITLE
+      </h1>
+      <p
+        class="impactiv-body-regular"
+        i18n="Text|banner description@@BANNER-DESCRIPTION"
+      >
+        BANNER-DESCRIPTION
+      </p>
       <a
         [routerLink]="['/', routes.contact]"
         class="banner__btn btn mt-2 mt-sm-4"
       >
-        <span class="align-middle impactiv-body-sub-regular text-white"
-          >Parler à un expert</span
+        <span
+          class="align-middle impactiv-body-sub-regular text-white"
+          i18n="Button|banner cta@@BANNER-TALK-EXPERT"
+          >BANNER-TALK-EXPERT</span
         >
         <i
           class="bi bi-arrow-right-short ms-2 fs-5 align-middle"

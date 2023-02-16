@@ -16,12 +16,6 @@ export class BannerComponent {
 
   readonly routes = Config.impactivRoutes;
 
-  banner = {
-    title: 'Votre expérience commence ici !',
-    description:
-      'Vous souhaitez échanger sur votre projet ? Avoir une démonstration de nos solutions ? Nos équipes se tiennent à votre disposition.',
-  };
-
   prevPosition = 0;
   bannerPositionItem1 = -100;
   bannerPositionItem2 = -200;
