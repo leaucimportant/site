@@ -1,6 +1,6 @@
 export const impactivFr = {
-  'HEADER-COMPONENT-CURRENT-LANGUAGE': 'Langue actuelle :',
-  'HEADER-COMPONENT-CHANGE-LANGUAGE': 'Changer la langue ici :',
+  'HEADER-CURRENT-LANGUAGE': 'Langue actuelle :',
+  'HEADER-CHANGE-LANGUAGE': 'Changer la langue ici :',
   SOLUTIONS: 'Solutions',
   'DIGITAL-SIGNAGE': 'Affichage dynamique',
   'DIGITAL-SIGNAGE-SHORT-DESCRIPTION':
@@ -16,4 +16,9 @@ export const impactivFr = {
   COMPANY: 'Entreprise',
   'FOLLOW-US': 'Suivez-nous',
   'ASK-DEMO': 'Demander une démo',
+  'CONTACT-US': 'Nous contacter',
+  'DISCOVER-SOLUTIONS': 'Découvrir nos solutions',
+  'HOME-HERO-TITLE': 'Découvrez nos solutions digitales',
+  'HOME-HERO-DESCRIPTION':
+    'Pour une digitalisation maîtrisée, orientée expérience utilisateur et excellence opérationnelle.',
 };

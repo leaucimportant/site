@@ -2,11 +2,15 @@
   <div class="hero__container container">
     <div class="hero__content">
       <h1 class="impactiv-display-large mb-3 hero__title">
-        Découvrez nos solutions digitales <span class="circle">360°</span>
+        <span i18n="Title|Home title@@HOME-HERO-TITLE">HOME-HERO-TITLE</span
+        >&nbsp;
+        <span class="circle">360°</span>
       </h1>
-      <p class="hero__subtitle impactiv-body-sub-regular mb-4">
-        Pour une digitalisation maîtrisée, orientée expérience utilisateur et
-        excellence opérationnelle.
+      <p
+        class="hero__subtitle impactiv-body-sub-regular mb-4"
+        i18n="Text|Home description@@HOME-HERO-DESCRIPTION"
+      >
+        HOME-HERO-DESCRIPTION
       </p>
       <div>
         <button
@@ -14,8 +18,10 @@
           class="btn btn-secondary hero__button hero__button-dark"
           [routerLink]="contactRoute"
         >
-          <span class="align-middle impactiv-button-regular"
-            >Nous contacter</span
+          <span
+            class="align-middle impactiv-button-regular"
+            i18n="Button|contact us@@CONTACT-US"
+            >CONTACT-US</span
           ><i
             class="hero__arrow bi bi-arrow-right-short fs-5 align-middle"
             aria-hidden="true"
@@ -26,8 +32,10 @@
           class="ms-0 ms-lg-2 mt-3 mt-lg-0 btn btn-download-outline"
           (click)="scrollTo('ourSolutions')"
         >
-          <span class="align-middle impactiv-button-regular text-secondary"
-            >Découvrir nos solutions</span
+          <span
+            class="align-middle impactiv-button-regular text-secondary"
+            i18n="Button|discover our solutions@@DISCOVER-SOLUTIONS"
+            >DISCOVER-SOLUTIONS</span
           >
           <i
             class="hero__arrow bi bi-arrow-down-circle ms-2 fs-5 align-middle"
