@@ -17,18 +17,16 @@ export class OtherSolutionsComponent implements OnChanges {
     {
       icon: 'rectangle.svg',
       alt: 'affichage dynamique',
-      title: 'Affichage dynamique',
-      description:
-        'Communiquez et informez efficacement en temps réel. De l’étiquette connectée aux murs LEDs XXL.',
+      title: $localize`:Text|card solution @@DIGITAL-SIGNAGE:`,
+      description: $localize`:Text|card description@@CARD-DESCRIPTION-DIGITAL-SIGNAGE:`,
       link: `/${this.routes.screenSolution}`,
       id: this.impactivSolutions.screen,
     },
     {
       icon: 'affluence.png',
       alt: 'affluence',
-      title: 'Gestion d’affluence',
-      description:
-        'Mesurez et analyser l’affluence dans votre établissement, améliorez la fluidité et l’expérience de vos clients ! En retail ou restauration, un outil au service de vos décisions stratégiques.',
+      title: $localize`:Text|card solution@@AFFLUENCE:`,
+      description: $localize`:Text|card description@@CARD-DESCRIPTION-AFFLUENCE:`,
       link: `/${this.routes.affluenceSolution}`,
 
       id: this.impactivSolutions.affluence,
@@ -36,9 +34,8 @@ export class OtherSolutionsComponent implements OnChanges {
     {
       icon: 'integration.svg',
       alt: 'intégration',
-      title: 'Développement sur mesure',
-      description:
-        'Développement sur-mesure ou intégration ambitieuse, nous créons pour vous des outils métier à forte valeur ajoutée.',
+      title: $localize`:Text|card solution@@SPECIFIC-DEVELOPMENT:`,
+      description: $localize`:Text|card description@@CARD-DESCRIPTION-SPECIFIC-DEVELOPMENT:`,
       link: `/${this.routes.dsmSolution}`,
 
       id: this.impactivSolutions.dsm,
@@ -46,9 +43,8 @@ export class OtherSolutionsComponent implements OnChanges {
     {
       icon: 'app.svg',
       alt: 'application',
-      title: 'Application collaborateurs',
-      description:
-        'De la Web App aux applications natives & PWA. La solution tout-en-un au service de vos collaborateurs. Une solution digitale déployée à votre identité intégrant l’ensemble des services mis à disposition de vos clients/consommateurs !',
+      title: $localize`:Text|card solution@@WEB-APP:`,
+      description: $localize`:Text|card description@@CARD-DESCRIPTION-WEB-APP:`,
       link: `/${this.routes.webAppSolution}`,
       id: this.impactivSolutions.webApp,
     },

@@ -7,7 +7,7 @@ export const impactivFr = {
     'Communiquer efficacement en temps réel.',
   'WEB-APP': 'Application collaborateurs',
   'WEB-APP-SHORT-DESCRIPTION': 'Créer des applications dédiées pour le web.',
-  AFFLUENCE: "Mesure d'affluence",
+  AFFLUENCE: "Gestion d'affluence",
   'AFFLUENCE-SHORT-DESCRIPTION': "Mesurer l'affluence en temps-réel.",
   'SPECIFIC-DEVELOPMENT': 'Développement sur-mesure',
   'SPECIFIC-DEVELOPMENT-SHORT-DESCRIPTION':
@@ -80,7 +80,7 @@ export const impactivFr = {
   'REALISED-BY': 'par notre équipe.',
   'SCREEN-HERO-TITLE': 'Un monde de solutions audiovisuelles et digitales !',
   'SCREEN-HERO-DESCRIPTION':
-    " Expert, intégrateur de solutions d'affichage dynamique tous supports, nous vous accompagnons de A à Z ! Communiquez et informez efficacement en temps réel. De l'étiquette connectée aux murs LEDs XXL.",
+    "Expert, intégrateur de solutions d'affichage dynamique tous supports, nous vous accompagnons de A à Z ! Communiquez et informez efficacement en temps réel. De l'étiquette connectée aux murs LEDs XXL.",
   'DOWNLOAD-PDF': 'Télécharger la fiche produit',
   'SCREEN-CAROUSEL-TITLE': 'Un backoffice simple et puissant.',
   'SCREEN-CAROUSEL-DESCRIPTION':
