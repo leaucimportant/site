@@ -21,4 +21,10 @@ export const impactivFr = {
   'HOME-HERO-TITLE': 'Découvrez nos solutions digitales',
   'HOME-HERO-DESCRIPTION':
     'Pour une digitalisation maîtrisée, orientée expérience utilisateur et excellence opérationnelle.',
+  'OUR-CUSTOMERS-TITLE': 'Reconnus par des acteurs majeurs dans leur domaine.',
+  'OUR-CUSTOMERS-DESCRIPTION-NUMBER':
+    "Plus d'un million de convives utilisent déjà nos solutions au quotidien.",
+  'OUR-CUSTOMERS-DESCRIPTION-SOLUTIONS':
+    'Comme eux, accélérez votre développement en adoptant nos solutions.',
+  'OUR-CUSTOMERS-MORE-CUSTOMERS': "et bien d'autres...",
 };
