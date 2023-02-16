@@ -72,4 +72,10 @@ export const impactivFr = {
   'BANNER-DESCRIPTION':
     'Vous souhaitez échanger sur votre projet ? Avoir une démonstration de nos solutions ? Nos équipes se tiennent à votre disposition.',
   'BANNER-TALK-EXPERT': 'Parler à un expert',
+  'ABOUT-US': 'À propos',
+  CONTACT: 'Contact',
+  'JOIN-US': 'Nous rejoindre',
+  'LEGAL-NOTICE': 'Mentions Légales',
+  'REALISED-WITH': 'Réalisé avec',
+  'REALISED-BY': 'par notre équipe.',
 };

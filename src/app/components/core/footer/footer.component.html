@@ -6,32 +6,50 @@
       <img src="assets/images/icons/logo_color.svg" alt="Love Impactiv" />
     </div>
     <div class="col-6 col-md-3 col-lg-2 me-lg-4 mt-4 mt-sm-0 ps-4 ps-sm-0">
-      <span class="impactiv-headline-small">Solutions</span>
+      <span class="impactiv-headline-small" i18n="Footer|Solutions@@SOLUTIONS"
+        >SOLUTIONS</span
+      >
       <ul class="list-unstyled impactiv-body-sub-regular mt-4">
         <li class="mb-2">
-          <a [routerLink]="routes.screenSolution" routerLinkActive="active"
-            >Affichage dynamique</a
+          <a
+            [routerLink]="routes.screenSolution"
+            routerLinkActive="active"
+            i18n="Text|title solution footer@@DIGITAL-SIGNAGE"
+            >DIGITAL-SIGNAGE</a
           >
         </li>
         <li class="mb-2">
-          <a [routerLink]="routes.webAppSolution" routerLinkActive="active"
-            >Application collaborateurs</a
+          <a
+            [routerLink]="routes.webAppSolution"
+            routerLinkActive="active"
+            i18n="Text|title solution footer@@WEB-APP"
+            >WEB-APP</a
           >
         </li>
         <li class="mb-2">
-          <a [routerLink]="routes.affluenceSolution" routerLinkActive="active"
-            >Mesure d’affluence</a
+          <a
+            [routerLink]="routes.affluenceSolution"
+            routerLinkActive="active"
+            i18n="Text|title solution footer@@AFFLUENCE"
+            >AFFLUENCE</a
           >
         </li>
         <li>
-          <a [routerLink]="routes.dsmSolution" routerLinkActive="active"
-            >Développement sur-mesure</a
+          <a
+            [routerLink]="routes.dsmSolution"
+            routerLinkActive="active"
+            i18n="Text|title solution footer@@SPECIFIC-DEVELOPMENT"
+            >SPECIFIC-DEVELOPMENT</a
           >
         </li>
       </ul>
     </div>
     <div class="col-6 col-md-3 col-lg-2 me-lg-4 mt-4 mt-sm-0">
-      <span class="mb-2 impactiv-headline-small">Cas clients</span>
+      <span
+        class="mb-2 impactiv-headline-small"
+        i18n="footer|Use cases@@USE-CASES"
+        >USE-CASES</span
+      >
       <ul class="list-unstyled impactiv-body-sub-regular mt-4">
         <li *ngFor="let useCase of useCases" class="mb-2">
           <a
@@ -43,42 +61,58 @@
       </ul>
     </div>
     <div class="col-6 col-md-3 col-lg-2 me-lg-4 mt-4 mt-sm-0 ps-4 ps-sm-0">
-      <span class="mb-2 impactiv-headline-small">Entreprise</span>
+      <span class="mb-2 impactiv-headline-small" i18n="footer|Company@@COMPANY"
+        >COMPANY</span
+      >
       <ul class="list-unstyled impactiv-body-sub-regular mt-4">
         <li class="mb-2">
-          <a [routerLink]="routes.company" routerLinkActive="active"
-            >À propos</a
+          <a
+            [routerLink]="routes.company"
+            routerLinkActive="active"
+            i18n="footer|about us@@ABOUT-US"
+            >ABOUT-US</a
           >
         </li>
         <li class="mb-2">
-          <a [routerLink]="routes.contact" routerLinkActive="active">Contact</a>
+          <a
+            [routerLink]="routes.contact"
+            routerLinkActive="active"
+            i18n="footer|about us@@CONTACT"
+            >CONTACT</a
+          >
         </li>
         <li class="mb-2">
           <a
             [routerLink]="routes.contact"
             routerLinkActive="active"
             [state]="{ askJoinUs: true }"
-            >Nous rejoindre</a
+            i18n="footer|join us@@JOIN-US"
+            >JOIN-US</a
           >
         </li>
       </ul>
     </div>
     <div class="col-6 col-md-3 col-lg-2 me-lg-4 mt-4 mt-sm-0">
-      <span class="mb-2 impactiv-headline-small">Nous contacter</span>
+      <span
+        class="mb-2 impactiv-headline-small"
+        i18n="footer|about us@@CONTACT-US"
+        >CONTACT-US</span
+      >
       <ul class="list-unstyled impactiv-body-sub-regular mt-4">
         <li class="mb-2">
           <a
             [href]="phone"
             (click)="phone = 'tel:' + phoneAreaCode + phoneStart + phoneEnd"
-            ><i class="bi bi-telephone-forward"></i
-            ><span>{{ setPhone().phoneAreaCode }}</span
+            ><i class="bi bi-telephone-forward"></i>&nbsp;<span>{{
+              setPhone().phoneAreaCode
+            }}</span
             ><span>{{ setPhone().phoneStart }}</span
             ><span>{{ setPhone().phoneEnd }}</span></a
           >
         </li>
         <li>
           <a href="https://linkedin.com/company/impactiv'/" target="_blank"
-            ><i class="bi bi-linkedin"></i> Linkedin</a
+            ><i class="bi bi-linkedin"></i>&nbsp;Linkedin</a
           >
         </li>
       </ul>
@@ -89,16 +123,23 @@
     <div
       class="footer__date col-12 col-md-6 text-md-start text-center impactiv-body-small mb-3 mb-sm-0"
     >
-      © Impactiv {{ year }} - Réalisé avec
+      © Impactiv {{ year }} -&nbsp;<span
+        i18n="footer|realised with @@REALISED-WITH"
+        >REALISED-WITH</span
+      >&nbsp;
       <img
         class="footer__love"
         src="assets/images/icons/heart.png"
         alt="Love by Impactiv"
-      />
-      par notre équipe.
+      />&nbsp;
+      <span i18n="footer|realised by@@REALISED-BY">REALISED-BY</span>
     </div>
     <div class="footer__cookies text-center col-12 col-md-6 text-md-end">
-      <a [routerLink]="routes.mentionsLegales">Mentions Légales</a>
+      <a
+        [routerLink]="routes.mentionsLegales"
+        i18n="footer|legal notice@@LEGAL-NOTICE"
+        >LEGAL-NOTICE</a
+      >
     </div>
   </div>
 </footer>
