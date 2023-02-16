@@ -82,4 +82,7 @@ export const impactivFr = {
   'SCREEN-HERO-DESCRIPTION':
     " Expert, intégrateur de solutions d'affichage dynamique tous supports, nous vous accompagnons de A à Z ! Communiquez et informez efficacement en temps réel. De l'étiquette connectée aux murs LEDs XXL.",
   'DOWNLOAD-PDF': 'Télécharger la fiche produit',
+  'SCREEN-CAROUSEL-TITLE': 'Un backoffice simple et puissant.',
+  'SCREEN-CAROUSEL-DESCRIPTION':
+    "L'expérience de vos clients est toute aussi importante que celle de votre équipe. Pilotez l'ensemble de votre offre et de vos communications depuis un outil simple, performant et intuitif",
 };

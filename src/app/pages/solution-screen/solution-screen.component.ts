@@ -18,9 +18,8 @@ export class SolutionScreenComponent implements OnInit {
   }
 
   solution = Config.impactivSolutions.screen;
-  titleCarousel = 'Un backoffice simple et puissant.';
-  descriptionCarousel =
-    'L’expérience de vos clients est toute aussi importante que celle de votre équipe. Pilotez l’ensemble de votre offre et de vos communications depuis un outil simple, performant et intuitif';
+  titleCarousel = $localize`:Text|title carousel screen@@SCREEN-CAROUSEL-TITLE:`;
+  descriptionCarousel = $localize`:Text|description carousel screen@@SCREEN-CAROUSEL-DESCRIPTION:`;
 
   imagesCarousel = [
     {
