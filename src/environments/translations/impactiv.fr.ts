@@ -41,4 +41,6 @@ export const impactivFr = {
     "Mesurez et analysez l'affluence dans votre établissement, améliorez la fluidité et l'expérience de vos clients !  En retail ou restauration, un outil au service de vos décisions stratégiques.",
   'CARD-DESCRIPTION-SPECIFIC-DEVELOPMENT':
     'Développement sur-mesure ou intégration ambitieuse, nous créons pour vous des outils métier à forte valeur ajoutée.',
+  'USE-CASE-RESUME-TITLE': 'Découvrez nos derniers cas client.',
+  'USE-CASE-RESUME-READ': 'Lire le cas client',
 };

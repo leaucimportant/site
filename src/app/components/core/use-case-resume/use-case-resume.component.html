@@ -1,9 +1,11 @@
 <div class="resume container-impactiv">
   <div class="container">
-    <h1 class="impactiv-display-small text-center mb-4">
-      Découvrez nos derniers cas client.
+    <h1
+      class="impactiv-display-small text-center mb-4"
+      i18n="Title|use case resume@@USE-CASE-RESUME-TITLE"
+    >
+      USE-CASE-RESUME-TITLE
     </h1>
-
     <div class="resume-nav">
       <div class="resume-buttonGroup">
         <button
@@ -61,8 +63,10 @@
             class="btn btn-read mt-3"
             role="button"
             [routerLink]="['/', routes.useCase, currentUseCase.slug]"
-            ><span class=""
-              >Lire le cas client
+            ><span>
+              <span i18n="Button|use case read@@USE-CASE-RESUME-READ"
+                >USE-CASE-RESUME-READ</span
+              >
               <i
                 class="hero__arrow bi bi-arrow-right-short fs-5 align-middle"
                 aria-hidden="true"
