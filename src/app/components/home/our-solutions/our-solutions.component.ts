@@ -10,9 +10,8 @@ export class OurSolutionsComponent {
   impactivRoutes = impactivRoutes;
   solutions = [
     {
-      title: 'Affichage dynamique',
-      description:
-        'Communiquer et informer efficacement en temps réel. De l’étiquette connectée aux murs LEDs XXL.',
+      title: $localize`:Text|title our solutions@@DIGITAL-SIGNAGE:`,
+      description: $localize`:Text|card description@@CARD-DESCRIPTION-DIGITAL-SIGNAGE:`,
       icon: {
         src: 'rectangle.svg',
         alt: 'rectangle',
@@ -24,9 +23,8 @@ export class OurSolutionsComponent {
       route: impactivRoutes.screenSolution,
     },
     {
-      title: 'Application collaborateurs',
-      description:
-        'De la Web App aux applications natives & PWA. La solution tout-en-un au service de vos collaborateurs. Une solution digitale déployée à votre identité intégrant l’ensemble des services mis à disposition de vos clients/consommateurs !',
+      title: $localize`:Text|title our solutions@@WEB-APP:`,
+      description: $localize`:Text|card description@@CARD-DESCRIPTION-WEB-APP:`,
       icon: {
         src: 'app.svg',
         alt: 'affichage',
@@ -38,9 +36,8 @@ export class OurSolutionsComponent {
       route: impactivRoutes.webAppSolution,
     },
     {
-      title: 'Gestion d’affluence',
-      description:
-        'Mesurez et analysez l’affluence dans votre établissement, améliorez la fluidité et l’expérience de vos clients !  En retail ou restauration, un outil au service de vos décisions stratégiques.',
+      title: $localize`:Text|title our solutions@@AFFLUENCE:`,
+      description: $localize`:Text|card description@@CARD-DESCRIPTION-AFFLUENCE:`,
       icon: {
         src: 'affluence.png',
         alt: 'affluence',
@@ -52,9 +49,8 @@ export class OurSolutionsComponent {
       route: impactivRoutes.affluenceSolution,
     },
     {
-      title: 'Développement sur mesure',
-      description:
-        'Développement sur-mesure ou intégration ambitieuse, nous créons pour vous des outils métier à forte valeur ajoutée.',
+      title: $localize`:Text|title our solutions@@SPECIFIC-DEVELOPMENT:`,
+      description: $localize`:Text|card description@@CARD-DESCRIPTION-SPECIFIC-DEVELOPMENT:`,
       icon: {
         src: 'integration.svg',
         alt: 'integration',
