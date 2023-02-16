@@ -31,7 +31,11 @@
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              <span class="impactiv-button-regular">Solutions</span>
+              <span
+                class="impactiv-button-regular"
+                i18n="Header|Solutions@@SOLUTIONS"
+                >SOLUTIONS</span
+              >
               <i class="bi bi-chevron-down mx-2"></i>
               <i class="bi bi-chevron-up mx-2"></i>
             </a>
@@ -120,7 +124,11 @@
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              <span class="impactiv-button-regular"> Cas clients</span>
+              <span
+                class="impactiv-button-regular"
+                i18n="Header|Use cases@@USE-CASES"
+                >USE-CASES</span
+              >
               <i class="bi bi-chevron-down mx-2"></i>
               <i class="bi bi-chevron-up mx-2"></i>
             </a>
@@ -164,7 +172,8 @@
               [routerLink]="routes.company"
               routerLinkActive="active"
               (click)="deactivateScroll()"
-              >Entreprise</a
+              i18n="Header|Company@@COMPANY"
+              >COMPANY</a
             >
           </li>
           <li class="nav-item divider align-items-center d-xl-flex">
@@ -178,9 +187,12 @@
               target="_blank"
               (click)="deactivateScroll()"
             >
-              <span class="impactiv-button-regular text-secondary btn-linkedin"
-                >Suivez-nous <i class="bi bi-linkedin icon-linkedin"></i
-              ></span>
+              <span
+                class="impactiv-button-regular text-secondary"
+                i18n="Header|Follow us@@FOLLOW-US"
+                >FOLLOW-US
+              </span>
+              <i class="bi bi-linkedin icon-linkedin"></i>
             </a>
           </li>
           <li class="nav-item">
@@ -194,7 +206,10 @@
               data-bs-target=".navbar-collapse.show"
               (click)="deactivateScroll()"
             >
-              <span class="impactiv-button-regular">Demander une démo</span
+              <span
+                class="impactiv-button-regular"
+                i18n="Header|Ask demo@@ASK-DEMO"
+                >ASK-DEMO</span
               ><i
                 class="bi bi-arrow-right-short ms-2 demo__arrow-icon"
                 aria-hidden="true"

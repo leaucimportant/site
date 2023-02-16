@@ -1,8 +1,8 @@
 import { loadTranslations } from '@angular/localize';
 import '@angular/localize/init';
 
-import { impactivEn } from './translations-en/impactiv.en';
-import { impactivFr } from './translations-fr/impactiv.fr';
+import { impactivEn } from './impactiv.en';
+import { impactivFr } from './impactiv.fr';
 
 export const loadLocalTranslations = () => {
   const lang = getLanguage();

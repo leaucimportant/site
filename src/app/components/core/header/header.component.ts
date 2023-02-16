@@ -26,35 +26,34 @@ export class HeaderComponent implements OnInit, OnDestroy {
   hoveringIndex: null | number = null;
   solutions = [
     {
-      title: 'Affichage dynamique',
-      description: 'Communiquer efficacement en temps réel.',
+      title: $localize`:Text|title solution header@@DIGITAL-SIGNAGE:`,
+      description: $localize`:Text|description solution header@@DIGITAL-SIGNAGE-SHORT-DESCRIPTION:`,
       icon: 'rectangle.svg',
       alt: 'rectangle',
       route: impactivRoutes.screenSolution,
     },
     {
-      title: 'Application collaborateurs',
-      description: 'Créer des applications dédiées pour le web.',
+      title: $localize`:Text|title solution header@@AFFLUENCE:`,
+      description: $localize`:Text|description solution header@@AFFLUENCE-SHORT-DESCRIPTION:`,
       icon: 'app.svg',
       alt: 'app',
       route: impactivRoutes.webAppSolution,
     },
     {
-      title: 'Mesure d’affluence',
-      description: 'Mesurer l’affluence en temps-réel.',
+      title: $localize`:Text|title solution header@@WEB-APP:`,
+      description: $localize`:Text|description solution header@@WEB-APP-SHORT-DESCRIPTION:`,
       icon: 'affluence.png',
       alt: 'affluence',
       route: impactivRoutes.affluenceSolution,
     },
     {
-      title: 'Développement sur-mesure',
-      description: 'Créer des outils métier à forte valeur ajoutée.',
+      title: $localize`:Text|title solution header@@SPECIFIC-DEVELOPMENT:`,
+      description: $localize`:Text|description solution header@@SPECIFIC-DEVELOPMENT-SHORT-DESCRIPTION:`,
       icon: 'integration.svg',
       alt: 'integration',
       route: impactivRoutes.dsmSolution,
     },
   ];
-  expertises = [];
   useCases: {
     name: string;
     slug: string;
