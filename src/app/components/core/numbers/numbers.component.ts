@@ -29,7 +29,7 @@ export class NumbersComponent {
     {
       data: 1,
       suffix: $localize`:Text|suffix number@@NUMBERS-MILLION:`,
-      title: 'De personnes utilisent nos solutions au quotidien !',
+      title: $localize`:Text|title number@@NUMBERS-USAGE:`,
       src: 'assets/images/contents/numbers/personnes.png',
     },
     {

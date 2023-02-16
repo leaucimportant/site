@@ -51,6 +51,8 @@ export const impactivFr = {
   'NUMBERS-YEARS': 'ans',
   'NUMBERS-TOTAL-CODE': 'De lignes de code',
   'NUMBERS-CODE': 'Soumissions de code sur les 3 derniers mois',
+  'NUMBERS-USAGE': 'De personnes utilisent nos solutions au quotidien !',
+
   'OUR-SKILLS-TITLE': 'Une équipe dédiée à chacun de vos besoins.',
   'OUR-SKILLS-UX': "La conception de l'expérience utilisateur.",
   'OUR-SKILLS-UX-DESCRIPTION':
