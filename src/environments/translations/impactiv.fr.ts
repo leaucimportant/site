@@ -176,4 +176,29 @@ export const impactivFr = {
   'AFFLUENCE-GRID-TRANSIT': 'Gestion des passages en groupe',
   'AFFLUENCE-GRID-GLOOMY':
     'Efficace y compris dans des environnements peu lumineux',
+  'AFFLUENCE-MASONRY-TITLE':
+    'Améliorez vos process et la satisfaction client !',
+  'AFFLUENCE-MASONRY-DESCRIPTION':
+    "Ces données sont retraitées via notre infrastructure Cloud et vous sont accessibles au travers d'une API ou d'une interface dédiée (orientée clients et/ou opérationnels). Elles vous permettront ainsi d'adapter votre stratégie selon la fréquentation et vos objectifs commerciaux au sein de votre établissement.",
+  'AFFLUENCE-MASONRY-UX-TITLE': "Améliorez l'expérience utilisateur",
+  'AFFLUENCE-MASONRY-UX-DESCRIPTION':
+    "Fluidifiez l'affluence de votre point de vente, vecteur de satisfaction client.",
+  'AFFLUENCE-MASONRY-SUPPORT-TITLE': 'Métriques consultables multi-supports',
+  'AFFLUENCE-MASONRY-SUPPORT-DESCRIPTION':
+    "Notre solution est livrée avec un back-office simple et intuitif qui vous donne un état des lieux en temps réel de l'affluence de votre point de vente ainsi qu'une API à votre disposition.",
+  'AFFLUENCE-MASONRY-FLUX-TITLE': 'Analysez le flux',
+  'AFFLUENCE-MASONRY-FLUX-DESCRIPTION':
+    "Véritable outil de performance, nos capteurs vous permettront d'avoir une meilleure connaissance de vos clients et de leur parcours. Adaptez votre offre/merchandising en conséquence !",
+  'AFFLUENCE-MASONRY-GRAPH-TITLE': 'Graphiques temps réel',
+  'AFFLUENCE-MASONRY-GRAPH-DESCRIPTION':
+    "Vos clients disposent d'un accès aux données d'affluence, consultable via un simple lien web ou intégré sur votre site/application native client.",
+  'AFFLUENCE-MASONRY-APPS-TITLE': 'De nombreuses applications',
+  'AFFLUENCE-MASONRY-APPS-DESCRIPTION':
+    "Nos capteurs permettent non seulement de mesurer l'affluence de vos clients mais peuvent s'appliquer à d'autres cas d'usage (mesure de stocks avec réapprovisionnement automatique,…).",
+  'AFFLUENCE-MASONRY-PEOPLE-TITLE': 'Limiter le nombre de visiteurs',
+  'AFFLUENCE-MASONRY-PEOPLE-DESCRIPTION':
+    "Vous pouvez, sur la base des données remontées en temps réel, limiter l'accès à votre point de vente en fonction du flux de clients.",
+  'AFFLUENCE-MASONRY-PLUG-PLAY-TITLE': 'Plug and Play',
+  'AFFLUENCE-MASONRY-PLUG-PLAY-DESCRIPTION':
+    "Nos capteurs partent configurés pour votre environnement, vous n'avez plus qu'à les brancher aux prérequis techniques indiqués en amont.",
 };

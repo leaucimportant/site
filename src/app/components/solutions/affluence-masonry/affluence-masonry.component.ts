@@ -16,9 +16,8 @@ export class AffluenceMasonryComponent implements OnInit {
   ngOnInit(): void {}
 
   card1 = {
-    title: 'Améliorez l’expérience utilisateur',
-    description:
-      'Fluidifiez l’affluence de votre point de vente, vecteur de satisfaction client.',
+    title: $localize`:Text|card title@@AFFLUENCE-MASONRY-UX-TITLE:`,
+    description: $localize`:Text|card description@@AFFLUENCE-MASONRY-UX-DESCRIPTION:`,
     icon: 'assets/images/icons/affluence/ux.svg',
     image: 'assets/images/contents/solutions/affluence/masonry/ux.png',
     black: true,
@@ -28,17 +27,15 @@ export class AffluenceMasonryComponent implements OnInit {
   };
 
   card2 = {
-    title: 'Métriques consultables multi-supports',
-    description:
-      'Notre solution est livrée avec un back-office simple et intuitif qui vous donne un état des lieux en temps réel de l’affluence de votre point de vente ainsi qu’une API à votre disposition.',
+    title: $localize`:Text|card title@@AFFLUENCE-MASONRY-SUPPORT-TITLE:`,
+    description: $localize`:Text|card description@@AFFLUENCE-MASONRY-SUPPORT-DESCRIPTION:`,
     icon: 'assets/images/icons/affluence/multi.svg',
     black: false,
   };
 
   card3 = {
-    title: 'Analysez le flux',
-    description:
-      'Véritable outil de performance, nos capteurs vous permettront d’avoir une meilleure connaissance de vos clients et de leur parcours. Adaptez votre offre/merchandising en conséquence !',
+    title: $localize`:Text|card title@@AFFLUENCE-MASONRY-FLUX-TITLE:`,
+    description: $localize`:Text|card description@@AFFLUENCE-MASONRY-FLUX-DESCRIPTION:`,
     icon: 'assets/images/icons/affluence/analyse.svg',
     image: 'assets/images/contents/solutions/affluence/masonry/flux.png',
     black: false,
@@ -48,9 +45,8 @@ export class AffluenceMasonryComponent implements OnInit {
   };
 
   card4 = {
-    title: 'Graphiques temps réel',
-    description:
-      'Vos clients disposent d’un accès aux données d’affluence, consultable via un simple lien web ou intégré sur votre site/application native client.',
+    title: $localize`:Text|card title@@AFFLUENCE-MASONRY-GRAPH-TITLE:`,
+    description: $localize`:Text|card description@@AFFLUENCE-MASONRY-GRAPH-DESCRIPTION:`,
     icon: 'assets/images/icons/affluence/graphique.svg',
     image: 'assets/images/contents/solutions/affluence/masonry/graphique.png',
     black: false,
@@ -60,11 +56,11 @@ export class AffluenceMasonryComponent implements OnInit {
   };
 
   card5 = {
-    title: 'De nombreuses applications',
-    description:
-      'Nos capteurs permettent non seulement de mesurer l’affluence de vos clients mais peuvent s’appliquer à d’autres cas d’usage (mesure de stocks avec réapprovisionnement automatique,…).',
+    title: $localize`:Text|card title@@AFFLUENCE-MASONRY-APPS-TITLE:`,
+    description: $localize`:Text|card description@@AFFLUENCE-MASONRY-APPS-DESCRIPTION:`,
     icon: 'assets/images/icons/affluence/applications.svg',
-    image: 'assets/images/contents/solutions/affluence/masonry/applications.png',
+    image:
+      'assets/images/contents/solutions/affluence/masonry/applications.png',
     black: true,
     imagefill: false,
     imageright: false,
@@ -72,17 +68,15 @@ export class AffluenceMasonryComponent implements OnInit {
   };
 
   card6 = {
-    title: 'Limiter le nombre de visiteurs',
-    description:
-      'Vous pouvez, sur la base des données remontées en temps réel, limiter l’accès à votre point de vente en fonction du flux de clients.',
+    title: $localize`:Text|card title@@AFFLUENCE-MASONRY-PEOPLE-TITLE:`,
+    description: $localize`:Text|card description@@AFFLUENCE-MASONRY-PEOPLE-DESCRIPTION:`,
     icon: 'assets/images/icons/affluence/limiter.svg',
     black: true,
   };
 
   card7 = {
-    title: 'Plug and Play',
-    description:
-      'Nos capteurs partent configurés pour votre environnement, vous n’avez plus qu’à les brancher aux prérequis techniques indiqués en amont.',
+    title: $localize`:Text|card title@@AFFLUENCE-MASONRY-PLUG-PLAY-TITLE:`,
+    description: $localize`:Text|card description@@AFFLUENCE-MASONRY-PLUG-PLAY-DESCRIPTION:`,
     icon: 'assets/images/icons/affluence/plug.svg',
     image: 'assets/images/contents/solutions/affluence/masonry/plug.png',
     black: false,

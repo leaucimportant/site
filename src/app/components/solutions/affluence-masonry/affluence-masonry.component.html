@@ -1,18 +1,26 @@
 <div class="masonry container-impactiv">
   <div class="container masonry__container">
-    <h1 class="impactiv-display-small">
-      Améliorez vos process et la satisfaction client !
+    <h1
+      class="impactiv-display-small"
+      i18n="Text|title@@AFFLUENCE-MASONRY-TITLE"
+    >
+      AFFLUENCE-MASONRY-TITLE
     </h1>
-    <p class="impactiv-body-regular masonry__description">
-      Ces données sont retraitées via notre infrastructure Cloud et vous sont
-      accessibles au travers d’une API ou d’une interface dédiée (orientée
-      clients et/ou opérationnels). Elles vous permettront ainsi d’adapter votre
-      stratégie selon la fréquentation et vos objectifs commerciaux au sein de
-      votre établissement.
+    <p
+      class="impactiv-body-regular masonry__description"
+      i18n="Text|description@@AFFLUENCE-MASONRY-DESCRIPTION"
+    >
+      AFFLUENCE-MASONRY-DESCRIPTION
     </p>
-    <a name="" id="" class="btn btn-contact-us" href="#" role="button" [routerLink]="['/', routes.contact]"
-      ><span class=""
-        >Contactez-nous
+    <a
+      name=""
+      id=""
+      class="btn btn-contact-us"
+      href="#"
+      role="button"
+      [routerLink]="['/', routes.contact]"
+      ><span>
+        <span i18n="Text|contact us two@@CONTACT-US-TWO">CONTACT-US-TWO</span>
         <i
           class="hero__arrow bi bi-arrow-right-short fs-5 align-middle"
           aria-hidden="true"
@@ -23,7 +31,7 @@
         [card]="card1"
         class="masonry__item1"
       ></impactiv-masonry-card-image>
-      
+
       <impactiv-masonry-card-text [card]="card2" class="masonry__item2">
       </impactiv-masonry-card-text>
 

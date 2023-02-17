@@ -83,53 +83,6 @@ export class SolutionAffluenceComponent implements OnInit {
     ],
   };
 
-  dataprocess = {
-    title: 'Améliorez vos process et la satisfaction client !',
-    description:
-      'Ces données sont retraitées via notre infrastructure Cloud et vous sont accessibles au travers d’une API ou d’une interface dédiée (orientée clients et/ou opérationnels). Elles vous permettront ainsi d’adapter votre stratégie selon la fréquentation et vos objectifs commerciaux au sein de votre établissement.',
-    items: [
-      {
-        image: 'ux.png',
-        subtitle: 'Améliorez l’expérience utilisateur',
-        icon: 'account.png',
-      },
-      {
-        image: 'installation.png',
-        subtitle: 'De nombreuses applications',
-        icon: 'widgets.png',
-      },
-      {
-        image: 'capteur.png',
-        subtitle: 'Analysez le flux',
-        icon: 'stats.png',
-      },
-      {
-        image: 'plug.png',
-        subtitle: 'Plug and Play',
-        icon: 'electrical.png',
-      },
-      {
-        image: 'cost.png',
-        subtitle: 'Maîtrise des coûts',
-        icon: 'credit.png',
-      },
-      {
-        image: 'visit.png',
-        subtitle: 'Limiter le nombre de visiteurs',
-        icon: 'person.png',
-      },
-      {
-        image: 'passage.png',
-        subtitle: 'Métriques consultables multi-supports',
-        icon: 'devices.png',
-      },
-      {
-        image: 'graph.png',
-        subtitle: 'Graphiques temps réel',
-        icon: 'chart.png',
-      },
-    ],
-  };
   ngOnInit(): void {
     this.setSeo();
     this.matomoTrack();
