@@ -16,9 +16,17 @@ export const impactivFr = {
   COMPANY: 'Entreprise',
   'FOLLOW-US': 'Suivez-nous',
   'ASK-DEMO': 'Demander une démo',
-  'CONTACT-US': 'Nous contacter',
   'DISCOVER-SOLUTIONS': 'Découvrir nos solutions',
   'DISCOVER-SOLUTION': 'Découvrir la solution',
+  'ABOUT-US': 'À propos',
+  CONTACT: 'Contact',
+  'CONTACT-US': 'Nous contacter',
+  'CONTACT-US-TWO': 'Contactez-nous',
+  'JOIN-US': 'Nous rejoindre',
+  'LEGAL-NOTICE': 'Mentions Légales',
+  'REALISED-WITH': 'Réalisé avec',
+  'REALISED-BY': 'par notre équipe.',
+  'SEE-MORE': 'En voir plus',
   'HOME-HERO-TITLE': 'Découvrez nos solutions digitales',
   'HOME-HERO-DESCRIPTION':
     'Pour une digitalisation maîtrisée, orientée expérience utilisateur et excellence opérationnelle.',
@@ -72,12 +80,6 @@ export const impactivFr = {
   'BANNER-DESCRIPTION':
     'Vous souhaitez échanger sur votre projet ? Avoir une démonstration de nos solutions ? Nos équipes se tiennent à votre disposition.',
   'BANNER-TALK-EXPERT': 'Parler à un expert',
-  'ABOUT-US': 'À propos',
-  CONTACT: 'Contact',
-  'JOIN-US': 'Nous rejoindre',
-  'LEGAL-NOTICE': 'Mentions Légales',
-  'REALISED-WITH': 'Réalisé avec',
-  'REALISED-BY': 'par notre équipe.',
   'SCREEN-HERO-TITLE': 'Un monde de solutions audiovisuelles et digitales !',
   'SCREEN-HERO-DESCRIPTION':
     "Expert, intégrateur de solutions d'affichage dynamique tous supports, nous vous accompagnons de A à Z ! Communiquez et informez efficacement en temps réel. De l'étiquette connectée aux murs LEDs XXL.",
@@ -85,4 +87,45 @@ export const impactivFr = {
   'SCREEN-CAROUSEL-TITLE': 'Un backoffice simple et puissant.',
   'SCREEN-CAROUSEL-DESCRIPTION':
     "L'expérience de vos clients est toute aussi importante que celle de votre équipe. Pilotez l'ensemble de votre offre et de vos communications depuis un outil simple, performant et intuitif",
+  'SCREEN-MASONRY-TITLE': ' Plongez dans un écosystème complet et performant.',
+  'SCREEN-MASONRY-DESCRIPTION':
+    "Intuitives, complémentaires, évolutives, nos solutions sont le parfait allié de vos ambitions digitales. Des outils adaptés pour tous secteurs d'activité au service de vos clients et de votre image de marque.",
+  'SCREEN-MASONRY-CARD-SI-TITLE': 'Interfacé à votre SI',
+  'SCREEN-MASONRY-CARD-SI-DESCRIPTION':
+    'Des solutions interfacées avec votre SI et/ou PIM pour une digitalisation efficiente au service de vos équipe',
+  'SCREEN-MASONRY-CARD-APP-TITLE': 'De nombreuses applications',
+  'SCREEN-MASONRY-CARD-APP-DESCRIPTION':
+    'Proposez vos menus, services et/ou produits à vos clients - à chaque produit son utilisation',
+  'SCREEN-MASONRY-CARD-BO-TITLE': 'Un backoffice simple et performant',
+  'SCREEN-MASONRY-CARD-BO-DESCRIPTION':
+    "L'expérience de vos clients est toute aussi importante que celle de votre équipe. Pilotez l'ensemble de votre offre et de vos communications depuis un outil simple.",
+  'SCREEN-MASONRY-CARD-FAST-TITLE': 'Des données affichées en temps réel',
+  'SCREEN-MASONRY-CARD-FAST-DESCRIPTION':
+    'Notre réseau de diffusion assure fiabilité et haute disponibilité de vos informations ainsi que des mises à jours en temps réel.',
+  'SCREEN-MASONRY-CARD-IMFORM-TITLE': 'Informez vos clients',
+  'SCREEN-MASONRY-CARD-IMFORM-DESCRIPTION':
+    "Bénéficiez de notre socle technologique basé sur le temps réel pour qu'ils bénéficient de vos dernières informations.",
+  'SCREEN-MASONRY-CARD-UX-TITLE': "Améliorez l'expérience utilisateur",
+  'SCREEN-MASONRY-CARD-UX-DESCRIPTION':
+    'Développez votre activité en proposant à vos clients une expérience immersive.',
+  'SCREEN-MASONRY-CARD-IT-TITLE': "Intégrez n'importe quel flux",
+  'SCREEN-MASONRY-CARD-IT-DESCRIPTION':
+    'Un socle technologique unique suffisamment flexible pour réaliser des intégrations propres à votre métier',
+  'SCREEN-MASONRY-CARD-SALE-TITLE': 'Animez votre point de vente',
+  'SCREEN-MASONRY-CARD-SALE-DESCRIPTION':
+    'Bien plus attractif que le papier, poussez vos communications et vos offres en quelques clics',
+  'SCREEN-MASONRY-CARD-COMMUNICATE-TITLE': 'Communiquez efficacement',
+  'SCREEN-MASONRY-CARD-COMMUNICATE-DESCRIPTION':
+    'En fonction de la saison ou des heures de la journée, programmez le contenu pertinent au bon moment grâce à notre outil de gestion de playlists.',
+  'SCREEN-MASONRY-CARD-MANAGEMENT-TITLE': 'Gestion centralisée et/ou locale',
+  'SCREEN-MASONRY-CARD-MANAGEMENT-DESCRIPTION':
+    "Orientées tous clients, nos solutions favorisent aussi bien l'uniformisation centralisée de vos communications que la créativité propre à chaque point de vente.",
+  'SCREEN-MASONRY-CARD-UPGRADE-COMMUNICATE-TITLE':
+    'Modernisez votre communication',
+  'SCREEN-MASONRY-CARD-UPGRADE-COMMUNICATE-DESCRIPTION':
+    "Nos solutions d'affichage dynamique permettent de valoriser votre image de marque et votre communication",
+  'SCREEN-MASONRY-CARD-RESPONSIVE-TITLE':
+    "Des formats adaptés selon l'affichage",
+  'SCREEN-MASONRY-CARD-RESPONSIVE-DESCRIPTION':
+    "Parce que le contenu est la clé, nos solutions d'affichage s'adaptent à vos besoins et votre stratégie —> des étiquettes connectées aux écrans LEDs XXL",
 };

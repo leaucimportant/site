@@ -1,16 +1,26 @@
 <div class="container masonry container-impactiv">
   <div class="masonry__container">
-    <h1 class="impactiv-display-small">
-      Plongez dans un écosystème complet et performant.
+    <h1
+      class="impactiv-display-small"
+      i18n="Text|screen masonry title@@SCREEN-MASONRY-TITLE"
+    >
+      SCREEN-MASONRY-TITLE
     </h1>
-    <p class="impactiv-body-regular masonry__description">
-      Intuitives, complémentaires, évolutives, nos solutions sont le parfait
-      allié de vos ambitions digitales. Des outils adaptés pour tous secteurs
-      d’activité au service de vos clients et de votre image de marque.
+    <p
+      class="impactiv-body-regular masonry__description"
+      i18n="Text|screen masonry title@@SCREEN-MASONRY-DESCRIPTION"
+    >
+      SCREEN-MASONRY-DESCRIPTION
     </p>
-    <a name="" id="" class="btn btn-contact-us" href="#" role="button" [routerLink]="['/', routes.contact]"
-      ><span class=""
-        >Contactez-nous
+    <a
+      name=""
+      id=""
+      class="btn btn-contact-us"
+      href="#"
+      role="button"
+      [routerLink]="['/', routes.contact]"
+      ><span i18n="Text|contact us two@@CONTACT-US-TWO"
+        >CONTACT-US-TWO
         <i
           class="hero__arrow bi bi-arrow-right-short fs-5 align-middle"
           aria-hidden="true"
@@ -78,8 +88,9 @@
       class="btn btn-secondary masonry__button mb-5 mt-3"
       (click)="isActive = !isActive"
       [ngClass]="isActive ? 'hide' : 'show'"
+      i18n="Button|see more@@SEE-MORE"
     >
-      En voir plus
+      SEE-MORE
     </button>
   </div>
 </div>
