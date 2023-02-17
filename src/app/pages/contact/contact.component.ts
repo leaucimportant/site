@@ -59,6 +59,10 @@ export class ContactComponent implements OnInit {
   isLoading = false;
   successGif = 'assets/images/forms/success.gif';
   errorGif = 'assets/images/forms/error.gif';
+  placeholderName = $localize`:Text|contact name placeholder@@CONTACT-NAME:`;
+  placeholderCompany = $localize`:Text|contact company placeholder@@CONTACT-COMPANY:`;
+  placeholderEmail = $localize`:Text|contact company placeholder@@CONTACT-EMAIL-EXAMPLE:`;
+  placeholderMessage = $localize`:Text|contact company placeholder@@CONTACT-MESSAGE-EXAMPLE:`;
   successMessage = $localize`:Text|contact success message@@CONTACT-SUCCESS-RESPONSE:`;
   continueMessage = $localize`:Text|contact continue message@@CONTACT-CONTINUE:`;
   tryAgainMessage = $localize`:Text|contact try again message@@CONTACT-TRY-AGAIN:`;
