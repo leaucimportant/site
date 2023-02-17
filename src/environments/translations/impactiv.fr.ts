@@ -132,4 +132,28 @@ export const impactivFr = {
     'La solution tout-en-un au service de vos collaborateurs',
   'WEBAPP-HERO-DESCRIPTION':
     "Une solution digitale déployée à votre identité intégrant l'ensemble des services mis à disposition de vos clients/consommateurs !",
+  'WEBAPP-FEATURE-RESERVATION-TITLE': 'Réservation de table',
+  'WEBAPP-FEATURE-RESERVATION-DESCRIPTION':
+    'La solution qui facilite le quotidien de vos clients et de vos gérant(e)s.',
+  'WEBAPP-FEATURE-MENU-TITLE': 'Consultation de menu',
+  'WEBAPP-FEATURE-MENU-DESCRIPTION':
+    'Communiquez vos menus en temps réel, des photos aux allergènes.',
+  'WEBAPP-FEATURE-FEEDBACK-TITLE': 'Feedback clients',
+  'WEBAPP-FEATURE-FEEDBACK-DESCRIPTION':
+    "Agrégez les avis de vos clients et atteignez l'excellence !",
+  'WEBAPP-FEATURE-COMMUNICATE-TITLE': 'Communications et évenements',
+  'WEBAPP-FEATURE-COMMUNICATE-DESCRIPTION':
+    'Communiquez efficacement avec vos clients, localement et/ou centralement.',
+  'WEBAPP-FEATURE-AFFLUENCE-TITLE': 'Affluence en temps réel',
+  'WEBAPP-FEATURE-AFFLUENCE-DESCRIPTION':
+    'Un outil au service de vos décisions stratégiques résolument orienté client.',
+  'WEBAPP-FEATURE-LINKS-TITLE': 'Liens externes',
+  'WEBAPP-FEATURE-LINKS-DESCRIPTION':
+    'Intégrez en un clic tout ou partie de vos services externes.',
+  'WEBAPP-FEATURE-SALES-TITLE': 'Multi-points de ventes',
+  'WEBAPP-FEATURE-SALES-DESCRIPTION':
+    "Pilotez l'ensemble de vos restaurants au sein d'un seul et même outil.",
+  'WEBAPP-FEATURE-RESPONSIVE-TITLE': 'Multi-supports',
+  'WEBAPP-FEATURE-RESPONSIVE-DESCRIPTION':
+    '... le service privilégié en mobilité comme au bureau.',
 };
