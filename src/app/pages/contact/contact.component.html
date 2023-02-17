@@ -1,11 +1,17 @@
 <div class="contact-container">
   <div class="container d-flex contact-container-column">
     <section class="contact-container__infos">
-      <h1 class="impactiv-display-small">Contactez nos experts</h1>
-      <p class="impactiv-body-regular">
-        Une demande d’information, de présentation ou démonstration de nos
-        solutions, un dépôt de candidature, une suggestion ou un commentaire
-        relatif à notre site, ce formulaire est fait pour vous !
+      <h1
+        class="impactiv-display-small"
+        i18n="Text|contact title@@CONTACT-TITLE"
+      >
+        CONTACT-TITLE
+      </h1>
+      <p
+        class="impactiv-body-regular"
+        i18n="Text|contact description@@CONTACT-DESCRIPTION"
+      >
+        CONTACT-DESCRIPTION
       </p>
       <div class="contact-container__infos--buttons">
         <a
@@ -14,7 +20,10 @@
           [href]="phone"
           (click)="phone = 'tel:' + phoneAreaCode + phoneStart + phoneEnd"
         >
-          <span class="align-middle impactiv-button-regular">Appelez-nous</span
+          <span
+            class="align-middle impactiv-button-regular"
+            i18n="Text|contact call us@@CONTACT-CALL-US"
+            >CONTACT-CALL-US</span
           ><i
             class="bi bi-arrow-right-short ms-2 fs-5 align-middle contact-container__infos--buttons--arrow-icon"
             aria-hidden="true"
@@ -26,8 +35,10 @@
           href="https://linkedin.com/company/impactiv'/"
           target="_blank"
         >
-          <span class="align-middle impactiv-button-regular text-secondary"
-            >Retrouvez-nous sur Linkedin</span
+          <span
+            class="align-middle impactiv-button-regular text-secondary"
+            i18n="Text|contact redirect lk@@CONTACT-GO-LK"
+            >CONTACT-GO-LK</span
           >
           <i
             class="bi bi-arrow-right-short fs-5 align-middle contact-container__infos--buttons--arrow-icon"
@@ -52,7 +63,12 @@
     <section class="contact-container__form impactiv-button-regular">
       <form [formGroup]="form" novalidate (submit)="submit()">
         <div>
-          <label for="subjectInput" class="mb-1">Objet de votre demande</label>
+          <label
+            for="subjectInput"
+            class="mb-1"
+            i18n="Text|contact subject title@@CONTACT-SUBJECT"
+            >CONTACT-SUBJECT</label
+          >
           <select
             class="form-select"
             aria-label="Default select example"
@@ -67,31 +83,28 @@
               (f['subject'].dirty || f['subject'].touched)
             "
           >
-            <option value="Proposer un partenariat">
-              Proposer un partenariat
+            <option *ngFor="let subject of subjects" [value]="subject">
+              {{ subject }}
             </option>
-            <option value="Postuler">Postuler</option>
-            <option value="Echanger sur un projet">
-              Echanger sur un projet
-            </option>
-            <option value="Demander une démo">Demander une démo</option>
-            <option value="Une demande SAV / hotline">
-              Une demande SAV / hotline
-            </option>
-            <option value="Autre">Autre</option>
           </select>
           <label
             class="text-danger"
             for="subject"
             *ngIf="submitted && f['subject'].errors"
-            >Veuillez sélectionner l'objet de votre demande.
+            i18n="Text|contact subject error@@CONTACT-SUBJECT-ERROR"
+            >CONTACT-SUBJECT-ERROR
           </label>
         </div>
         <div class="contact-container__form--row">
           <div
             class="contact-container__form--row--input impactiv-button-regular"
           >
-            <label for="nameInput" class="mb-1">Nom et Prénom</label>
+            <label
+              for="nameInput"
+              class="mb-1"
+              i18n="Text|contact name label@@CONTACT-NAME"
+              >CONTACT-NAME</label
+            >
             <input
               type="text"
               name="name"
@@ -113,13 +126,19 @@
               class="text-danger"
               for="nameInput"
               *ngIf="submitted && f['name'].errors"
-              >Veuillez saisir un nom valide</label
+              i18n="Text|contact name error@@CONTACT-NAME-ERROR"
+              >CONTACT-NAME-ERROR</label
             >
           </div>
           <div
             class="contact-container__form--row--input impactiv-button-regular"
           >
-            <label for="companyInput" class="mb-1">Société</label>
+            <label
+              for="companyInput"
+              class="mb-1"
+              i18n="Text|contact company label@@CONTACT-COMPANY"
+              >CONTACT-COMPANY</label
+            >
             <input
               type="text"
               name="company"
@@ -135,7 +154,12 @@
           <div
             class="contact-container__form--row--input impactiv-button-regular"
           >
-            <label for="phoneInput" class="mb-1">Téléphone</label>
+            <label
+              for="phoneInput"
+              class="mb-1"
+              i18n="Text|contact phone label@@CONTACT-PHONE"
+              >CONTACT-PHONE</label
+            >
             <input
               type="text"
               name="phone"
@@ -156,13 +180,19 @@
               class="text-danger"
               for="phoneInput"
               *ngIf="submitted && f['phone'].errors && f['phone'].value"
-              >Veuillez saisir un numéro valide</label
+              i18n="Text|contact phone error@@CONTACT-PHONE-ERROR"
+              >CONTACT-PHONE-ERROR</label
             >
           </div>
           <div
             class="contact-container__form--row--input impactiv-button-regular"
           >
-            <label for="emailInput" class="mb-1">Email professionnel</label>
+            <label
+              for="emailInput"
+              class="mb-1"
+              i18n="Text|contact email label@@CONTACT-EMAIL"
+              >CONTACT-EMAIL</label
+            >
             <input
               type="text"
               name="email"
@@ -184,13 +214,17 @@
               class="text-danger"
               for="emailInput"
               *ngIf="submitted && f['email'].errors"
-              >Veuillez saisir un email valide</label
+              i18n="Text|contact email error@@CONTACT-EMAIL-ERROR"
+              >CONTACT-EMAIL-ERROR</label
             >
           </div>
         </div>
         <div class="contact-container__form--single-row">
-          <label for="textarea1" class="form-label impactiv-button-regular"
-            >Comment pouvons-nous vous aider ?</label
+          <label
+            for="textarea1"
+            class="form-label impactiv-button-regular"
+            i18n="Text|contact message label@@CONTACT-MESSAGE"
+            >CONTACT-MESSAGE</label
           >
           <textarea
             class="form-control"
@@ -211,8 +245,10 @@
             data-bs-toggle="modal"
             data-bs-target="#staticBackdrop"
           >
-            <span class="align-middle impactiv-button-regular"
-              >Envoyer le message</span
+            <span
+              class="align-middle impactiv-button-regular"
+              i18n="Text|contact send form@@CONTACT-SEND-FORM"
+              >CONTACT-SEND-FORM</span
             ><i
               class="bi bi-arrow-right-short ms-2 fs-5 align-middle contact-container__infos--buttons--arrow-icon"
               aria-hidden="true"
@@ -223,18 +259,21 @@
           class="impactiv-body-sub-regular contact-container__form--single-row contact-container__form--text mb-0"
         >
           <small>
-            Ce site est protégé par reCAPTCHA et par
-            <a
+            <span i18n="Text|contact recaptcha@@CONTACT-RECAPTCHA-ONE"
+              >CONTACT-RECAPTCHA-ONE</span
+            >&nbsp;<a
               href="https://www.google.com/intl/fr/policies/privacy/"
               class="text-reset"
-              >les règles de confidentialité de Google</a
-            >.
-            <a
+              i18n="Text|contact recaptcha@@CONTACT-RECAPTCHA-TWO"
+              >CONTACT-RECAPTCHA-TWO</a
+            >.&nbsp;<a
               href="https://www.google.com/intl/fr/policies/terms/"
               class="text-reset"
-              >Les conditions de service</a
+              i18n="Text|contact recaptcha@@CONTACT-RECAPTCHA-THREE"
+              >CONTACT-RECAPTCHA-THREE</a
+            >&nbsp;<span i18n="Text|contact recaptcha@@CONTACT-RECAPTCHA-FOUR"
+              >CONTACT-RECAPTCHA-FOUR</span
             >
-            s'appliquent.
           </small>
         </p>
       </form>
@@ -260,7 +299,7 @@
             [alt]="success ? 'Succès' : 'Erreur'"
           />
           <span class="py-4 text-center">
-            {{ success ? "Votre message a bien été envoyé" : errorMsg }}</span
+            {{ success ? successMessage : errorMsg }}</span
           >
           <button
             type="button"
@@ -268,7 +307,7 @@
             data-bs-dismiss="modal"
             (click)="onCloseModal(success)"
           >
-            {{ success ? "Continuer" : "Essayer à nouveau" }}
+            {{ success ? continueMessage : tryAgainMessage }}
           </button>
         </div>
       </div>

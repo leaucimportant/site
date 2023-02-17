@@ -3,14 +3,20 @@
     class="container notfound__contain d-flex align-items-center justify-content-between"
   >
     <div class="notfound__content">
-      <a class="btn text-primary notfound__btn">Erreur 404</a>
-
-      <h1 class="impactiv-display-small mb-4 mt-2">
-        Désolé, la page que vous cherchez n'a pas été trouvée.
+      <a
+        class="btn text-primary notfound__btn"
+        i18n="Text|not found title@@NOT-FOUND-TITLE"
+        >NOT-FOUND-TITLE</a
+      >
+      <h1
+        class="impactiv-display-small mb-4 mt-2"
+        i18n="Text|not found description@@NOT-FOUND-DESCRIPTION"
+      >
+        NOT-FOUND-DESCRIPTION
       </h1>
       <a class="btn btn-contact-us" [routerLink]="['/']" role="button"
-        ><span
-          >Retourner à l'accueil
+        ><span>
+          <span i18n="Text|go home@@NOT-FOUND-GO-HOME"> NOT-FOUND-GO-HOME</span>
           <i
             class="hero__arrow bi bi-arrow-right-short fs-5 align-middle"
             aria-hidden="true"

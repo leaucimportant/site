@@ -59,11 +59,23 @@ export class ContactComponent implements OnInit {
   isLoading = false;
   successGif = 'assets/images/forms/success.gif';
   errorGif = 'assets/images/forms/error.gif';
+  successMessage = $localize`:Text|contact success message@@CONTACT-SUCCESS-RESPONSE:`;
+  continueMessage = $localize`:Text|contact continue message@@CONTACT-CONTINUE:`;
+  tryAgainMessage = $localize`:Text|contact try again message@@CONTACT-TRY-AGAIN:`;
+
+  subjects = [
+    $localize`:Text|contact item subject@@CONTACT-SUBJECT-PARTNERSHIP:`,
+    $localize`:Text|contact item subject@@CONTACT-SUBJECT-POSTULATE:`,
+    $localize`:Text|contact item subject@@CONTACT-SUBJECT-DISCUSS:`,
+    $localize`:Text|contact item subject@@CONTACT-SUBJECT-DEMO:`,
+    $localize`:Text|contact item subject@@CONTACT-SUBJECT-HOTLINE:`,
+    $localize`:Text|contact item subject@@CONTACT-SUBJECT-OTHER:`,
+  ];
 
   errorMessage = (status: number) => {
     return status === HttpStatusCode.TooManyRequests
-      ? "Trop d'essais. Veuillez réessayer plus tard"
-      : 'Erreur Serveur. Veuillez réessayer plus tard';
+      ? $localize`:Text|contact many try message@@CONTACT-MANY-TRY:`
+      : $localize`:Text|contact error server message@@CONTACT-ERROR-SERVER:`;
   };
 
   ngOnInit(): void {
@@ -77,9 +89,13 @@ export class ContactComponent implements OnInit {
       )
       .subscribe((data) => {
         if (data.askDemo)
-          this.form.controls['subject'].patchValue('Demander une démo');
+          this.form.controls['subject'].patchValue(
+            $localize`:Text|contact item subject@@CONTACT-SUBJECT-DEMO:`
+          );
         if (data.askJoinUs)
-          this.form.controls['subject'].patchValue('Postuler');
+          this.form.controls['subject'].patchValue(
+            $localize`:Text|contact item subject@@CONTACT-SUBJECT-POSTULATE:`
+          );
       });
   }
   private initializeForm(): void {
