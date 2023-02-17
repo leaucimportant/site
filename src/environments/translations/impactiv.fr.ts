@@ -160,4 +160,8 @@ export const impactivFr = {
     '... le service privilégié en mobilité comme au bureau.',
   'WEBAPP-CAROUSEL-DESCRIPTION':
     "L'expérience de vos clients est toute aussi importante que celle de votre équipe. Pilotez l'ensemble des services déployés depuis un outil simple et intuitif.",
+  'AFFLUENCE-HERO-TITLE':
+    "Nos capteurs d'affluence au service de votre transformation digitale !",
+  'AFFLUENCE-HERO-DESCRIPTION':
+    "Mesurez et analysez l'affluence dans votre établissement, améliorez la fluidité et l'expérience de vos clients ! En retail ou restauration, un outil au service de vos décisions stratégiques.",
 };
