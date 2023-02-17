@@ -207,4 +207,6 @@ export const impactivFr = {
   'DSM-HERO-TITLE': "Adaptez vos projets aux process et non l'inverse !",
   'DSM-HERO-DESCRIPTION':
     'Développement sur-mesure ou intégration ambitieuse, nous créons pour vous des outils métier à forte valeur ajoutée.',
+  'DSM-QUOTE':
+    "Notre philosophie, inspirée de l'agilité, est de toujours intégrer à la réflexion et la conception l'ensemble des parties prenantes du projet. Le principe de cocréation entre nos clients décideurs, les utilisateurs opérationnels et nos équipes nous permet de confronter les idées, besoins et visions pour s'assurer de développer un outil efficace, pertinent et fonctionnel.",
 };
