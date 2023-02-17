@@ -14,12 +14,11 @@ export class CompanyComponent implements OnInit {
 
   imageQuote = 'assets/images/icons/dg-quote.png';
 
-  textQuote =
-    'Nous sommes producteur de solutions à forte valeur ajoutée, nos expertises, compétences et choix technologiques, qui composent notre écosystème, sont totalement impliqués sur chacun de nos projets pour le plus grand bénéfice de nos clients.';
+  textQuote = $localize`:Text|quote@@COMPANY-QUOTE:`;
 
   authorQuote = {
     name: 'Jean-Christophe Allegret',
-    job: '- Directeur Général, Impactiv',
+    job: $localize`:Text|name job@@COMPANY-GM:`,
   };
 
   titleSkills = 'Une équipe dédiée à chacun de vos besoins.';

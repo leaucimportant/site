@@ -289,4 +289,7 @@ export const impactivFr = {
   'COMPANY-HERO-TITLE': 'Notre vision, nos racines.',
   'COMPANY-HERO-DESCRIPTION':
     "Innovation, écoute et agilité sont les principes fondateurs de notre entreprise. Avec les années, l'expérience complète ces valeurs et notre ambition consiste à accompagner durablement celle de nos clients.",
+  'COMPANY-QUOTE':
+    'Nous sommes producteur de solutions à forte valeur ajoutée, nos expertises, compétences et choix technologiques, qui composent notre écosystème, sont totalement impliqués sur chacun de nos projets pour le plus grand bénéfice de nos clients.',
+  'COMPANY-GM': 'Directeur Général, Impactiv',
 };

@@ -8,8 +8,11 @@
     </div>
     <p class="quote-text impactiv-quote">“{{ text }}”</p>
     <p class="impactiv-body-regular text-white">
-      {{ author.name }}
-      <span class="quote-author impactiv-body-regular">{{ author.job }}</span>
+      {{ author.name }}&nbsp;<span
+        class="quote-author impactiv-body-regular"
+        *ngIf="author.job"
+        >-&nbsp;{{ author.job }}</span
+      >
     </p>
   </div>
 </div>
