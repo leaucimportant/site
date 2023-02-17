@@ -13,9 +13,8 @@ export class SolutionAffluenceComponent implements OnInit {
   ) {}
   solution = Config.impactivSolutions.affluence;
 
-  titleCarousel = 'A chaque usage, une solution IoT sur mesure.';
-  descriptionCarousel =
-    'Parce que vos besoins métier sont uniques, nous déployons des solutions de gestion d’affluence orientées expérience utilisateur et excellence opérationnelle.';
+  titleCarousel = $localize`:Text|title affluence carousel@@AFFLUENCE-CAROUSEL-TITLE:`;
+  descriptionCarousel = $localize`:Text|description affluence carousel@@AFFLUENCE-CAROUSEL-DESCRIPTION:`;
 
   imagesCarousel = [
     {

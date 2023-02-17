@@ -201,4 +201,7 @@ export const impactivFr = {
   'AFFLUENCE-MASONRY-PLUG-PLAY-TITLE': 'Plug and Play',
   'AFFLUENCE-MASONRY-PLUG-PLAY-DESCRIPTION':
     "Nos capteurs partent configurés pour votre environnement, vous n'avez plus qu'à les brancher aux prérequis techniques indiqués en amont.",
+  'AFFLUENCE-CAROUSEL-TITLE': 'A chaque usage, une solution IoT sur mesure.',
+  'AFFLUENCE-CAROUSEL-DESCRIPTION':
+    "Parce que vos besoins métier sont uniques, nous déployons des solutions de gestion d'affluence orientées expérience utilisateur et excellence opérationnelle.",
 };
