@@ -55,56 +55,53 @@ export class SolutionDSMComponent implements OnInit {
     },
   ];
 
-  titleExpertise = 'Notre expertise';
+  titleExpertise = $localize`:Text|dsm quote@@DSM-EXPERTISE-TITLE:`;
 
   expertises = [
     {
-      title: 'Méthodologies',
+      title: $localize`:Text|dsm methodologies@@DSM-EXPERTISE-METHODOLOGIES:`,
       items: [
-        'Cahier des charges et recettages',
-        'Intégration continue',
-        'Déploiement continu',
-        'Tests unitaires et fonctionnels',
-        'Privacy by Design & Privacy by Default',
+        $localize`:Text|dsm item methodologies@@DSM-EXPERTISE-METHODOLOGIES-SPECIFICATIONS:`,
+        $localize`:Text|dsm item methodologies@@DSM-EXPERTISE-METHODOLOGIES-CI:`,
+        $localize`:Text|dsm item methodologies@@DSM-EXPERTISE-METHODOLOGIES-CD:`,
+        $localize`:Text|dsm item methodologies@@DSM-EXPERTISE-METHODOLOGIES-TEST:`,
+        $localize`:Text|dsm item methodologies@@DSM-EXPERTISE-METHODOLOGIES-PRIVACY:`,
       ],
       image: 'assets/images/contents/solutions/common/methods.png',
       alt: 'alt',
     },
     {
-      title: 'Développements',
+      title: $localize`:Text|dsm developments@@DSM-EXPERTISE-DEVELOPMENTS:`,
       items: [
-        'Développement Frontend',
-        'Développement Backend',
-        'Progressive Web App',
-        'Applications natives',
+        $localize`:Text|dsm item developments@@DSM-EXPERTISE-DEVELOPMENTS-FRONT:`,
+        $localize`:Text|dsm item developments@@DSM-EXPERTISE-DEVELOPMENTS-BACK:`,
+        $localize`:Text|dsm item developments@@DSM-EXPERTISE-DEVELOPMENTS-PWA:`,
+        $localize`:Text|dsm item developments@@DSM-EXPERTISE-DEVELOPMENTS-NATIVE:`,
       ],
-
       image: 'assets/images/contents/solutions/common/dev.png',
       alt: 'alt',
     },
     {
-      title: 'Technologies',
+      title: $localize`:Text|dsm technologies@@DSM-EXPERTISE-TECHNOLOGIES:`,
       items: [
-        'Serverless',
-        'Micro Services',
-        'Micro Frontends',
-        'BDD relationnelle & orientée documents',
-        'Agent de messages',
+        $localize`:Text|dsm item technologies@@DSM-EXPERTISE-TECHNOLOGIES-SERVERLESS:`,
+        $localize`:Text|dsm item technologies@@DSM-EXPERTISE-TECHNOLOGIES-SERVICES:`,
+        $localize`:Text|dsm item technologies@@DSM-EXPERTISE-TECHNOLOGIES-FRONT:`,
+        $localize`:Text|dsm item technologies@@DSM-EXPERTISE-TECHNOLOGIES-BDD:`,
+        $localize`:Text|dsm item technologies@@DSM-EXPERTISE-TECHNOLOGIES-MESSAGE:`,
       ],
-
       image: 'assets/images/contents/solutions/common/stack.png',
       alt: 'alt',
     },
     {
-      title: 'API & services',
+      title: $localize`:Text|dsm api@@DSM-EXPERTISE-API:`,
       items: [
-        'Authentification (SSO, OpenID…)',
-        'API (GraphQL, REST)',
-        'Emailing',
-        'Analytics',
-        'Passerelles de paiement (VAD)',
+        $localize`:Text|dsm item api@@DSM-EXPERTISE-API-AUTH:`,
+        $localize`:Text|dsm item api@@DSM-EXPERTISE-API-API:`,
+        $localize`:Text|dsm item api@@DSM-EXPERTISE-API-EMAIL:`,
+        $localize`:Text|dsm item api@@DSM-EXPERTISE-API-ANALYTICS:`,
+        $localize`:Text|dsm item api@@DSM-EXPERTISE-API-VAD:`,
       ],
-
       image: 'assets/images/contents/solutions/common/api.png',
       alt: 'alt',
     },
