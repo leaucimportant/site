@@ -204,4 +204,7 @@ export const impactivFr = {
   'AFFLUENCE-CAROUSEL-TITLE': 'A chaque usage, une solution IoT sur mesure.',
   'AFFLUENCE-CAROUSEL-DESCRIPTION':
     "Parce que vos besoins métier sont uniques, nous déployons des solutions de gestion d'affluence orientées expérience utilisateur et excellence opérationnelle.",
+  'DSM-HERO-TITLE': "Adaptez vos projets aux process et non l'inverse !",
+  'DSM-HERO-DESCRIPTION':
+    'Développement sur-mesure ou intégration ambitieuse, nous créons pour vous des outils métier à forte valeur ajoutée.',
 };
