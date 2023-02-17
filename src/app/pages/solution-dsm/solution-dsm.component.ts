@@ -107,9 +107,9 @@ export class SolutionDSMComponent implements OnInit {
     },
   ];
 
-  titleCarousel = 'Des solutions adaptées à vos besoins métier !';
-  descriptionCarousel =
-    'Parce que vos besoins métier sont uniques, nous déployons des solutions sur mesure orientées expérience utilisateur et excellence opérationnelle.';
+  titleCarousel = $localize`:Text|dsm carousel@@DSM-CAROUSEL-TITLE:`;
+  descriptionCarousel = $localize`:Text|dsm carousel@@DSM-CAROUSEL-DESCRIPTION:`;
+
   imagesCarousel = [
     {
       src: 'assets/images/contents/solutions/dsm/sodexo.png',

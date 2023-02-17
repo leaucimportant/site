@@ -248,4 +248,7 @@ export const impactivFr = {
   'DSM-EXPERTISE-API-EMAIL': 'Emailing',
   'DSM-EXPERTISE-API-ANALYTICS': 'Analytics',
   'DSM-EXPERTISE-API-VAD': 'Passerelles de paiement (VAD)',
+  'DSM-CAROUSEL-TITLE': 'Des solutions adaptées à vos besoins métier !',
+  'DSM-CAROUSEL-DESCRIPTION':
+    'Parce que vos besoins métier sont uniques, nous déployons des solutions sur mesure orientées expérience utilisateur et excellence opérationnelle.',
 };
