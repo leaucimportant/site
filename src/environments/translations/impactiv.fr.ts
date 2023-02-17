@@ -295,4 +295,31 @@ export const impactivFr = {
   'PARTNERS-TITLE': 'Des partenaires de confiance depuis 10 ans.',
   'PARTNERS-DESCRIPTION':
     'Référents technologiques dans leur secteur, ils composent, valorisent et pérennisent notre écosystème sans oublier un réseau de partenaires sur tout le territoire pour les installations et le SAV.',
+  'TIMELINE-TITLE-ONE': 'De la',
+  'TIMELINE-TITLE-TWO': 'vision',
+  'TIMELINE-TITLE-THREE': 'à la réalité.',
+  'TIMELINE-DESCRIPTION':
+    "D'un constat de nécessité de développer l'affichage dynamique sur le marché français à notre place actuelle d'acteur multi-solutions incontournable dans l'écosystème retail & restauration, retrouvez ci-dessous quelques étapes clés de notre aventure",
+  'TIMELINE-2012-ONE': 'La création,',
+  'TIMELINE-2012-TWO':
+    "notrevision, bouleverser le secteur de l'Affichage Dynamique, par une approche clé en main.",
+  'TIMELINE-2013-ONE': 'La naissance de MyPlay,',
+  'TIMELINE-2013-TWO': 'solution logicielle de gestion de contenu temps réel.',
+  'TIMELINE-2015-ONE': 'Un premier cap symbolique,',
+  'TIMELINE-2015-TWO':
+    "100 sites équipés par nos solutions d'affichage dynamique.",
+  'TIMELINE-2017-ONE': 'MyPlay v2 voit le jour,',
+  'TIMELINE-2017-TWO':
+    'solution 100% SaaS intégrant de nouvelles fonctionnalités majeures.',
+  'TIMELINE-2018-ONE': 'Une décision stratégique,',
+  'TIMELINE-2018-TWO': 'création du pôle développement de solutions digitales.',
+  'TIMELINE-2020-ONE': 'Premier contrat,',
+  'TIMELINE-2020-TWO':
+    'de prestation pour un leader des services de qualité de vie.',
+  'TIMELINE-2021-ONE': 'Accords de prestations,',
+  'TIMELINE-2021-TWO':
+    "solution de mesure d'affluence et intégration d'une solution d'étiquettes connectées.",
+  'TIMELINE-2022-ONE': '10 ans déjà,',
+  'TIMELINE-2022-TWO':
+    'poursuivre et intensifier notre croissance sur de nouveaux marchés et de nouveaux territoires.',
 };
