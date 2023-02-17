@@ -372,4 +372,18 @@ export const impactivFr = {
   'NOT-FOUND-DESCRIPTION':
     "Désolé, la page que vous cherchez n'a pas été trouvée.",
   'NOT-FOUND-GO-HOME': "Retourner à l'accueil",
+  'LEGALNOTICES-TITLE': 'Mentions légales',
+  'LEGALNOTICES-COMPANY-NAME': 'Raison sociale',
+  'LEGALNOTICES-LEGAL-FORM': 'Forme juridique',
+  'LEGALNOTICES-CAPITAL': 'Capital social',
+  'LEGALNOTICES-HEAD-OFFICE': 'Siège social',
+  'LEGALNOTICES-EMAIL': 'Email',
+  'LEGALNOTICES-RCS': 'RCS',
+  'LEGALNOTICES-SIRET': 'N° de SIRET',
+  'LEGALNOTICES-TVA': 'TVA intracommunautaire',
+  'LEGALNOTICES-PUBLICATION': 'Directeur de la publication',
+  'LEGALNOTICES-HOSTING': 'Hébergement',
+  'LEGALNOTICES-PHOTOS': 'Crédits photos',
+  'LEGALNOTICES-PHOTOS-DESCRIPTION':
+    "Toutes les photos et illustrations sont la propriété d'IMPACTIV' et/ou Getty Images.",
 };
