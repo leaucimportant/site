@@ -86,8 +86,8 @@ export const impactivFr = {
   'DOWNLOAD-PDF': 'Télécharger la fiche produit',
   'SCREEN-CAROUSEL-TITLE': 'Un backoffice simple et puissant.',
   'SCREEN-CAROUSEL-DESCRIPTION':
-    "L'expérience de vos clients est toute aussi importante que celle de votre équipe. Pilotez l'ensemble de votre offre et de vos communications depuis un outil simple, performant et intuitif",
-  'SCREEN-MASONRY-TITLE': ' Plongez dans un écosystème complet et performant.',
+    "L'expérience de vos clients est toute aussi importante que celle de votre équipe. Pilotez l'ensemble de votre offre et de vos communications depuis un outil simple, performant et intuitif.",
+  'SCREEN-MASONRY-TITLE': 'Plongez dans un écosystème complet et performant',
   'SCREEN-MASONRY-DESCRIPTION':
     "Intuitives, complémentaires, évolutives, nos solutions sont le parfait allié de vos ambitions digitales. Des outils adaptés pour tous secteurs d'activité au service de vos clients et de votre image de marque.",
   'SCREEN-MASONRY-CARD-SI-TITLE': 'Interfacé à votre SI',
@@ -132,6 +132,8 @@ export const impactivFr = {
     'La solution tout-en-un au service de vos collaborateurs',
   'WEBAPP-HERO-DESCRIPTION':
     "Une solution digitale déployée à votre identité intégrant l'ensemble des services mis à disposition de vos clients/consommateurs !",
+  'WEBAPP-FEATURE-DESCRIPTION':
+    "Améliorez la qualité de vie au travail et le quotidien de vos clients grâce aux nombreuses fonctionnalités existantes et à venir. Facilitez la gestion opérationnelle de vos équipes à travers l'intégration et l'agrégation de vos outils et/ou ceux de vos prestataires.",
   'WEBAPP-FEATURE-RESERVATION-TITLE': 'Réservation de table',
   'WEBAPP-FEATURE-RESERVATION-DESCRIPTION':
     'La solution qui facilite le quotidien de vos clients et de vos gérant(e)s.',
@@ -156,4 +158,6 @@ export const impactivFr = {
   'WEBAPP-FEATURE-RESPONSIVE-TITLE': 'Multi-supports',
   'WEBAPP-FEATURE-RESPONSIVE-DESCRIPTION':
     '... le service privilégié en mobilité comme au bureau.',
+  'WEBAPP-CAROUSEL-DESCRIPTION':
+    "L'expérience de vos clients est toute aussi importante que celle de votre équipe. Pilotez l'ensemble des services déployés depuis un outil simple et intuitif.",
 };

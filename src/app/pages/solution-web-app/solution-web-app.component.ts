@@ -12,10 +12,8 @@ export class SolutionWebAppComponent implements OnInit {
     private matomoService: MatomoService
   ) {}
   solution = Config.impactivSolutions.webApp;
-
-  titleCarousel = 'Un backoffice simple et puissant.';
-  descriptionCarousel =
-    'L’expérience de vos clients est toute aussi importante que celle de votre équipe. Pilotez l’ensemble des services déployés depuis un outil simple et intuitif.';
+  titleCarousel = $localize`:Text|title carousel screen@@SCREEN-CAROUSEL-TITLE:`;
+  descriptionCarousel = $localize`:Text|description carousel screen@@WEBAPP-CAROUSEL-DESCRIPTION:`;
   imagesCarousel = [
     {
       src: 'assets/images/contents/solutions/webapp/admin_menu.png',
