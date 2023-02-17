@@ -37,48 +37,47 @@ export class SolutionAffluenceComponent implements OnInit {
   ];
 
   data = {
-    title: 'Une solution de comptage et d’analyse de vos flux.',
-    description:
-      'Mesurez le nombre de personnes entrantes et/ou sortantes de tout type d’espace tout en protégeant l’anonymat des passants avec une précision sans pareil grâce à l’utilisation de la technologie Time-of-flight. ',
+    title: $localize`:Text|title affluence grid@@AFFLUENCE-GRID-TITLE:`,
+    description: $localize`:Text|affluence description grid@@CARD-DESCRIPTION-DIGITAL-DESCRIPTION:`,
     items: [
       {
         image: 'rgpd.gif',
-        subtitle: 'Respect de la vie privée (RGPD)',
+        subtitle: $localize`:Text|subtitle affluence grid@@AFFLUENCE-GRID-RGPD:`,
         icon: 'lock.png',
       },
       {
         image: 'fiabilite.png',
-        subtitle: 'Fiabilité à 98+%',
+        subtitle: $localize`:Text|subtitle affluence grid@@AFFLUENCE-GRID-RELIABILITY:`,
         icon: 'graph.png',
       },
       {
         image: 'capteur.png',
-        subtitle: 'Capteur 3D ToF',
+        subtitle: $localize`:Text|subtitle affluence grid@@AFFLUENCE-GRID-SENSOR:`,
         icon: 'camera.png',
       },
       {
         image: 'installation.png',
-        subtitle: 'Installation simple et discrète',
+        subtitle: $localize`:Text|subtitle affluence grid@@AFFLUENCE-GRID-INSTALLATION:`,
         icon: 'visibility.png',
       },
       {
         image: 'donnees.png',
-        subtitle: 'Données en temps réel',
+        subtitle: $localize`:Text|subtitle affluence grid@@AFFLUENCE-GRID-FAST:`,
         icon: 'schedule.png',
       },
       {
         image: 'lorawan.png',
-        subtitle: 'PoE ou LoRaWAN',
+        subtitle: $localize`:Text|subtitle affluence grid@@AFFLUENCE-GRID-POE:`,
         icon: 'podcasts.png',
       },
       {
         image: 'passage.png',
-        subtitle: 'Gestion des passages en groupe',
+        subtitle: $localize`:Text|subtitle affluence grid@@AFFLUENCE-GRID-TRANSIT:`,
         icon: 'people.png',
       },
       {
         image: 'sombre.png',
-        subtitle: 'Efficace y compris dans des environnements peu lumineux',
+        subtitle: $localize`:Text|subtitle affluence grid@@AFFLUENCE-GRID-GLOOMY:`,
         icon: 'brightness.png',
       },
     ],

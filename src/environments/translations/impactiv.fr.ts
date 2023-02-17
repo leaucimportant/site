@@ -164,4 +164,16 @@ export const impactivFr = {
     "Nos capteurs d'affluence au service de votre transformation digitale !",
   'AFFLUENCE-HERO-DESCRIPTION':
     "Mesurez et analysez l'affluence dans votre établissement, améliorez la fluidité et l'expérience de vos clients ! En retail ou restauration, un outil au service de vos décisions stratégiques.",
+  'AFFLUENCE-GRID-TITLE': "Une solution de comptage et d'analyse de vos flux.",
+  'AFFLUENCE-GRID-DESCRIPTION':
+    "Mesurez le nombre de personnes entrantes et/ou sortantes de tout type d'espace tout en protégeant l'anonymat des passants avec une précision sans pareil grâce à l'utilisation de la technologie Time-of-flight.",
+  'AFFLUENCE-GRID-RGPD': 'Respect de la vie privée (RGPD)',
+  'AFFLUENCE-GRID-RELIABILITY': 'Fiabilité à 98+%',
+  'AFFLUENCE-GRID-SENSOR': 'Capteur 3D ToF',
+  'AFFLUENCE-GRID-INSTALLATION': 'Installation simple et discrète',
+  'AFFLUENCE-GRID-FAST': 'Données en temps réel',
+  'AFFLUENCE-GRID-POE': 'PoE ou LoRaWAN',
+  'AFFLUENCE-GRID-TRANSIT': 'Gestion des passages en groupe',
+  'AFFLUENCE-GRID-GLOOMY':
+    'Efficace y compris dans des environnements peu lumineux',
 };
