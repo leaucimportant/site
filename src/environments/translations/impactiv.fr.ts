@@ -79,6 +79,8 @@ export const impactivFr = {
   'BANNER-TITLE': 'Votre expérience commence ici !',
   'BANNER-DESCRIPTION':
     'Vous souhaitez échanger sur votre projet ? Avoir une démonstration de nos solutions ? Nos équipes se tiennent à votre disposition.',
+  'OTHERS-SOLUTIONS-TITLE': 'Des solutions qui couvrent tous vos besoins',
+  'OTHERS-SOLUTIONS-DESCRIPTION': 'Des solutions qui couvrent tous vos besoins',
   'BANNER-TALK-EXPERT': 'Parler à un expert',
   'SCREEN-HERO-TITLE': 'Un monde de solutions audiovisuelles et digitales !',
   'SCREEN-HERO-DESCRIPTION':
@@ -284,4 +286,7 @@ export const impactivFr = {
   'DSM-MASONRY-MONITORING-TITLE': 'Surveillance',
   'DSM-MASONRY-MONITORING-DESCRIPTION':
     "La surveillance (ou monitoring) est le processus de collecte de métriques sur le fonctionnement du matériel et des logiciels d'un environnement, qui permet de s'assurer que les applications et les services sont pris en charge comme prévu.",
+  'COMPANY-HERO-TITLE': 'Notre vision, nos racines.',
+  'COMPANY-HERO-DESCRIPTION':
+    "Innovation, écoute et agilité sont les principes fondateurs de notre entreprise. Avec les années, l'expérience complète ces valeurs et notre ambition consiste à accompagner durablement celle de nos clients.",
 };
