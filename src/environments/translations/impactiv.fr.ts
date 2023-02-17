@@ -251,4 +251,37 @@ export const impactivFr = {
   'DSM-CAROUSEL-TITLE': 'Des solutions adaptées à vos besoins métier !',
   'DSM-CAROUSEL-DESCRIPTION':
     'Parce que vos besoins métier sont uniques, nous déployons des solutions sur mesure orientées expérience utilisateur et excellence opérationnelle.',
+  'DSM-MASONRY-TITLE': 'Gestion des infrastructures',
+  'DSM-MASONRY-DESCRIPTION':
+    "Le passage au cloud est un investissement judicieux pour l'avenir de votre business : vous devenez plus agile, vous pouvez adapter votre infrastructure à votre croissance et améliorer la sécurité. Quel que soit votre objectif, notre expertise peut vous aider à mener facilement à bien vos projets cloud.",
+  'DSM-MASONRY-CLOUD-TITLE': 'Architecture Cloud',
+  'DSM-MASONRY-CLOUD-DESCRIPTION':
+    "L'architecture Cloud est la manière dont les composants technologiques se combinent pour créer un Cloud.",
+  'DSM-MASONRY-IAC-TITLE': 'Infrastructure en tant que code',
+  'DSM-MASONRY-IAC-DESCRIPTION':
+    "L'IaC (Infrastructure-as-Code) consiste à gérer et à approvisionner une infrastructure à l'aide de lignes de code plutôt que par des processus manuels. Ceci permet d'assurer que le même environnement est fourni à chaque fois.",
+  'DSM-MASONRY-STORAGE-TITLE': 'Stockage',
+  'DSM-MASONRY-STORAGE-DESCRIPTION':
+    'Le stockage cloud est un service qui vous permet de stocker des données en les transférant via Internet ou via un autre réseau vers un système de stockage hors site géré par une tierce partie.',
+  'DSM-MASONRY-SCALABILITY-TITLE': 'Scalabilité',
+  'DSM-MASONRY-SCALABILITY-DESCRIPTION':
+    "La scalabilité d'un service désigne la capacité de l'application et de l'infrastructure à s'adapter automatiquement pour traiter un niveau de sollicitation variable.",
+  'DSM-MASONRY-SECURITY-TITLE': 'Sécurité',
+  'DSM-MASONRY-SECURITY-DESCRIPTION':
+    "Le cloud comporte ses propres risques de sécurité en matière de cybersécurité. Il est donc impératif de s'en protéger !",
+  'DSM-MASONRY-SLA-TITLE': 'SLA',
+  'DSM-MASONRY-SLA-DESCRIPTION':
+    'Le service-level agreement (SLA) ou « accord de niveau de service » est un document qui définit la qualité de service entre un fournisseur de service et son client.',
+  'DSM-MASONRY-METRICS-TITLE': 'Métriques',
+  'DSM-MASONRY-METRICS-DESCRIPTION':
+    "Le terme de métrique (ou metric en anglais) désigne une unité ou un indicateur de mesure utilisé pour juger de l'efficacité d'une activité.    ",
+  'DSM-MASONRY-TRACEABILITY-TITLE': 'Traçabilité (tracing et tracking)',
+  'DSM-MASONRY-TRACEABILITY-DESCRIPTION':
+    "Le tracing suggère à la fois l'idée de suivre une piste et retracer son origine. Le tracking est l'aptitude à retrouver l'historique, l'utilisation ou la localisation d'une entité au moyen d'identifications enregistrées.",
+  'DSM-MASONRY-BACKUP-TITLE': 'Sauvegarde',
+  'DSM-MASONRY-BACKUP-DESCRIPTION':
+    "La sécurisation des données est un enjeu de plus en plus complexe. Pour obtenir l'assurance que ces données soient toujours disponibles en cas d'incident, et ce peu importe leur localisation, la mise en place d'une stratégie de sauvegarde constitue la réponse idéale.",
+  'DSM-MASONRY-MONITORING-TITLE': 'Surveillance',
+  'DSM-MASONRY-MONITORING-DESCRIPTION':
+    "La surveillance (ou monitoring) est le processus de collecte de métriques sur le fonctionnement du matériel et des logiciels d'un environnement, qui permet de s'assurer que les applications et les services sont pris en charge comme prévu.",
 };
