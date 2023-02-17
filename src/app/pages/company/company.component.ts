@@ -21,40 +21,50 @@ export class CompanyComponent implements OnInit {
     job: $localize`:Text|name job@@COMPANY-GM:`,
   };
 
-  titleSkills = 'Une équipe dédiée à chacun de vos besoins.';
+  titleSkills = $localize`:Text|quote@@SKILLS-TITLE:`;
   skills = [
     {
-      title: 'Design',
-      items: ['UX & UI', 'Direction artistique', 'Motion', 'Print'],
+      title: $localize`:Text|company skills@@COMPANY-SKILLS-DESIGN:`,
+      items: [
+        $localize`:Text|company item design@@COMPANY-SKILLS-UX-UI:`,
+        $localize`:Text|company item design@@COMPANY-SKILLS-ART:`,
+        $localize`:Text|company item design@@COMPANY-SKILLS-MOTION:`,
+        $localize`:Text|company item design@@COMPANY-SKILLS-PRINT:`,
+      ],
       image: 'assets/images/contents/solutions/common/design.png',
       alt: 'alt',
     },
     {
-      title: 'Développement',
+      title: $localize`:Text|company skills@@COMPANY-SKILLS-DEVELOPMENT:`,
       items: [
-        'PWA & App Native',
-        'Micro services',
-        'Micro frontends',
-        'Serverless & CaaS',
+        $localize`:Text|company item design@@COMPANY-SKILLS-PWA:`,
+        $localize`:Text|company item design@@DSM-EXPERTISE-TECHNOLOGIES-SERVICES:`,
+        $localize`:Text|company item design@@DSM-EXPERTISE-TECHNOLOGIES-FRONT:`,
+        $localize`:Text|company item design@@COMPANY-SKILLS-SERVERLESS:`,
       ],
 
       image: 'assets/images/contents/solutions/common/dev.png',
       alt: 'alt',
     },
     {
-      title: 'Infrastructure',
-      items: ['Cloud & Sur Site', 'IaC', 'Déploiement continu', 'SLA'],
+      title: $localize`:Text|company skills@@COMPANY-SKILLS-INFRASTRUCTURE:`,
+      items: [
+        $localize`:Text|company item design@@COMPANY-SKILLS-CLOUD:`,
+        $localize`:Text|company item design@@COMPANY-SKILLS-IAC:`,
+        $localize`:Text|company item design@@DSM-EXPERTISE-METHODOLOGIES-CI:`,
+        $localize`:Text|company item design@@DSM-MASONRY-SLA-TITLE:`,
+      ],
 
       image: 'assets/images/contents/solutions/common/stack.png',
       alt: 'alt',
     },
     {
-      title: 'Méthodologies',
+      title: $localize`:Text|company skills@@DSM-EXPERTISE-METHODOLOGIES:`,
       items: [
-        'Agile',
-        'Intégration continue',
-        'Interlocuteurs dédiés',
-        'Co-création',
+        $localize`:Text|company item design@@COMPANY-SKILLS-AGILE:`,
+        $localize`:Text|company item design@@DSM-EXPERTISE-METHODOLOGIES-CD:`,
+        $localize`:Text|company item design@@COMPANY-SKILLS-CONTACT:`,
+        $localize`:Text|company item design@@COMPANY-SKILLS-CREATION:`,
       ],
       image: 'assets/images/contents/solutions/common/methods.png',
       alt: 'alt',
