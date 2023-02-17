@@ -209,4 +209,17 @@ export const impactivFr = {
     'Développement sur-mesure ou intégration ambitieuse, nous créons pour vous des outils métier à forte valeur ajoutée.',
   'DSM-QUOTE':
     "Notre philosophie, inspirée de l'agilité, est de toujours intégrer à la réflexion et la conception l'ensemble des parties prenantes du projet. Le principe de cocréation entre nos clients décideurs, les utilisateurs opérationnels et nos équipes nous permet de confronter les idées, besoins et visions pour s'assurer de développer un outil efficace, pertinent et fonctionnel.",
+  'DSM-BLOCK-LISTENING-TITLE': "Une équipe à l'écoute de vos besoins !",
+  'DSM-BLOCK-LISTENING-DESCRIPTION':
+    "Nous avons conscience que la demande de l'utilisateur final change constamment et votre produit numérique doit s'adapter. L'évolution de votre solution ne doit pas se faire au dépend de vos équipes opérationnelles, nous mesurons aussi la réussite d'un projet à la simplicité d'utilisation des applications par vos équipes.",
+  'DSM-BLOCK-INVOLVEMENT-TITLE': "Une équipe à l'écoute de vos besoins !",
+  'DSM-BLOCK-INVOLVEMENT-DESCRIPTION':
+    "Pour aligner votre besoin aux développements, les méthodologies et technologies employées doivent être en parfaite adéquation avec vos projets. En tant que propriétaire de produit, vous restez impliqué en permanence dans son développement et n'avez jamais de surprises.",
+  'DSM-BLOCK-APP-TITLE': 'Une application sur mesure à forte valeur ajoutée.',
+  'DSM-BLOCK-APP-DESCRIPTION':
+    "La qualité est importante mais ce n'est certainement pas le seul ingrédient d'une application réussie. Il est important que vous développiez le bon produit et une application à valeur ajoutée, adaptée aux besoins de votre groupe.",
+  'DSM-BLOCK-STRATEGIC-TITLE':
+    "Une approche stratégique et un état d'esprit ouvert.",
+  'DSM-BLOCK-STRATEGIC-DESCRIPTION':
+    "Cela nécessite un état d'esprit ouvert dans lequel, en tant que partenaire stratégique, nous nous devons d'être à même de répondre. Une approche stratégique dans laquelle nous explorons les possibilités avec vous et vos utilisateurs.",
 };

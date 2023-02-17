@@ -22,36 +22,32 @@ export class SolutionDSMComponent implements OnInit {
 
   blocks = [
     {
-      title: 'Une équipe à l’écoute de vos besoins !',
-      description:
-        "Nous avons conscience que la demande de l'utilisateur final change constamment et votre produit numérique doit s'adapter. L’évolution de votre solution ne doit pas se faire au dépend de vos équipes opérationnelles, nous mesurons aussi la réussite d'un projet à la simplicité d’utilisation des applications par vos équipes.",
+      title: $localize`:Text|dsm title block@@DSM-BLOCK-LISTENING-TITLE:`,
+      description: $localize`:Text|dsm description block@@DSM-BLOCK-LISTENING-DESCRIPTION:`,
       image: {
         src: 'assets/images/contents/solutions/dsm/team.png',
         alt: 'affluence',
       },
     },
     {
-      title: 'Une implication en permanence sans mauvaise surprise.',
-      description:
-        "Pour aligner votre besoin aux développements, les méthodologies et technologies employées doivent être en parfaite adéquation avec vos projets. En tant que propriétaire de produit, vous restez impliqué en permanence dans son développement et n'avez jamais de surprises.",
+      title: $localize`:Text|dsm title block@@DSM-BLOCK-INVOLVEMENT-TITLE:`,
+      description: $localize`:Text|dsm description block@@DSM-BLOCK-INVOLVEMENT-DESCRIPTION:`,
       image: {
         src: 'assets/images/contents/solutions/dsm/note.png',
         alt: 'affluence',
       },
     },
     {
-      title: 'Une application sur mesure à forte valeur ajoutée.',
-      description:
-        "La qualité est importante mais ce n'est certainement pas le seul ingrédient d'une application réussie. Il est important que vous développiez le bon produit et une application à valeur ajoutée, adaptée aux besoins de votre groupe. ",
+      title: $localize`:Text|dsm title block@@DSM-BLOCK-APP-TITLE:`,
+      description: $localize`:Text|dsm description block@@DSM-BLOCK-APP-DESCRIPTION:`,
       image: {
         src: 'assets/images/contents/solutions/dsm/dev.png',
         alt: 'affluence',
       },
     },
     {
-      title: 'Une approche stratégique et un état d’esprit ouvert.',
-      description:
-        "Cela nécessite un état d'esprit ouvert dans lequel, en tant que partenaire stratégique, nous nous devons d’être à même de répondre. Une approche stratégique dans laquelle nous explorons les possibilités avec vous et vos utilisateurs.",
+      title: $localize`:Text|dsm title block@@DSM-BLOCK-STRATEGIC-TITLE:`,
+      description: $localize`:Text|dsm description block@@DSM-BLOCK-STRATEGIC-DESCRIPTION:`,
       image: {
         src: 'assets/images/contents/solutions/dsm/talk.png',
         alt: 'affluence',
