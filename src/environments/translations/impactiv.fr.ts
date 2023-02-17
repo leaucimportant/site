@@ -128,4 +128,8 @@ export const impactivFr = {
     "Des formats adaptés selon l'affichage",
   'SCREEN-MASONRY-CARD-RESPONSIVE-DESCRIPTION':
     "Parce que le contenu est la clé, nos solutions d'affichage s'adaptent à vos besoins et votre stratégie —> des étiquettes connectées aux écrans LEDs XXL",
+  'WEBAPP-HERO-TITLE':
+    'La solution tout-en-un au service de vos collaborateurs',
+  'WEBAPP-HERO-DESCRIPTION':
+    "Une solution digitale déployée à votre identité intégrant l'ensemble des services mis à disposition de vos clients/consommateurs !",
 };
