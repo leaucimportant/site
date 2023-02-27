@@ -1,6 +1,4 @@
 export const impactivFr = {
-  'HEADER-CURRENT-LANGUAGE': 'Langue actuelle :',
-  'HEADER-CHANGE-LANGUAGE': 'Changer la langue ici :',
   SOLUTIONS: 'Solutions',
   'DIGITAL-SIGNAGE': 'Affichage dynamique',
   'DIGITAL-SIGNAGE-SHORT-DESCRIPTION':
@@ -374,7 +372,6 @@ export const impactivFr = {
   'NOT-FOUND-DESCRIPTION':
     "Désolé, la page que vous cherchez n'a pas été trouvée.",
   'NOT-FOUND-GO-HOME': "Retourner à l'accueil",
-  'LEGALNOTICES-TITLE': 'Mentions légales',
   'LEGALNOTICES-COMPANY-NAME': 'Raison sociale',
   'LEGALNOTICES-LEGAL-FORM': 'Forme juridique',
   'LEGALNOTICES-CAPITAL': 'Capital social',
